@@ -207,6 +207,56 @@ footer {
     margin-bottom: 40px;
 }
 
+/* ✅ Tableaux côte à côte */
+.table-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.table-flex .table-container {
+    flex: 1 1 48%;
+}
+
+/* ✅ Styles des tableaux */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.table-tarifs {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 2px 6px rgba(0,0,0,1);
+}
+
+.table-tarifs th {
+    background-color: #B22222;
+    color: #fff;
+    padding: 12px;
+    font-weight: bold;
+    border: 2px solid #000;
+}
+
+.table-tarifs td {
+    padding: 10px;
+    border: 2px solid #000;
+    font-weight: bold;
+}
+
+.table-tarifs tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-tarifs tr:hover {
+    background-color: #f1f1f1;
+}
+
 /* =========================
    Icônes
 ========================= */
@@ -222,7 +272,6 @@ footer {
 ========================= */
 @media (max-width: 768px) {
 
-    /* Header */
     header {
         height: 70px;
         padding: 0 15px;
@@ -232,7 +281,6 @@ footer {
         height: 70px;
     }
 
-    /* Slogan */
     .slogan {
         padding: 30px 20px;
     }
@@ -245,12 +293,10 @@ footer {
         font-size: 1em;
     }
 
-    /* Titres */
     h2 {
         font-size: 2em;
     }
 
-    /* Cartes Présentation */
     .presentation-container.prestation-card {
         flex-direction: column;
         gap: 20px;
@@ -265,15 +311,32 @@ footer {
         font-size: 18px;
     }
 
-    /* Photos Profil */
     .photo-profil {
         width: 150px;
         height: 150px;
     }
 
-    /* Icônes */
     .icon {
         width: 30px;
         height: 30px;
+    }
+
+    .table-flex {
+        flex-direction: column;
+    }
+
+    .table-flex .table-container {
+        width: 130%;
+    }
+}
+
+/* Ajout à la fin du CSS */
+@media (max-width: 768px) {
+    .table-flex .table-container {
+        width: 100%;
+    }
+
+    .table-container {
+        overflow-x: auto;
     }
 }
