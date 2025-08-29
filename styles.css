@@ -207,7 +207,7 @@ footer {
     margin-bottom: 40px;
 }
 
-/* ✅ Tableaux côte à côte */
+/* Tableaux côte à côte */
 .table-flex {
     display: flex;
     flex-wrap: wrap;
@@ -219,7 +219,7 @@ footer {
     flex: 1 1 48%;
 }
 
-/* ✅ Styles des tableaux */
+/* Styles des tableaux */
 .table-container {
     overflow-x: auto;
     margin-top: 20px;
@@ -271,7 +271,6 @@ footer {
    Media Queries pour Mobile
 ========================= */
 @media (max-width: 768px) {
-
     header {
         height: 70px;
         padding: 0 15px;
@@ -326,36 +325,43 @@ footer {
     }
 
     .table-flex .table-container {
-        width: 130%;
-    }
-}
-
-/* Ajout à la fin du CSS */
-@media (max-width: 768px) {
-    .table-flex .table-container {
         width: 100%;
     }
-
-    .table-container {
-        overflow-x: auto;
-    }
 }
 
-
- #contact-bubble {
+/* =========================
+   Bulle de contact (visibilité améliorée)
+========================= */
+#contact-bubble {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #007bff;
-    color: white;
-    padding: 12px 18px;
+    background: #FF5722;
+    color: #fff;
+    padding: 14px 20px;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-weight: bold;
     font-family: sans-serif;
-  }
+    font-size: 18px;
+    z-index: 2000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    animation: pulse 2s infinite;
+}
 
-  #contact-form {
+#contact-bubble:hover {
+    transform: scale(1.05);
+    background-color: #E64A19;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.6); }
+    70% { box-shadow: 0 0 0 12px rgba(255, 87, 34, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
+}
+
+#contact-form {
     position: fixed;
     bottom: 70px;
     right: 20px;
@@ -363,29 +369,30 @@ footer {
     border: 1px solid #ddd;
     padding: 15px;
     width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     font-family: sans-serif;
-  }
+    z-index: 2000;
+}
 
-  #contact-form input,
-  #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     width: 100%;
     margin-bottom: 10px;
     padding: 8px;
     border: 1px solid #ccc;
     font-size: 14px;
-  }
+}
 
-  #contact-form button {
+#contact-form button {
     width: 100%;
     padding: 10px;
-    background: #007bff;
+    background: #FF5722;
     border: none;
     color: white;
     font-size: 14px;
     cursor: pointer;
-  }
+}
 
-  #contact-form button:hover {
-    background: #0056b3;
-  }
+#contact-form button:hover {
+    background: #E64A19;
+}
