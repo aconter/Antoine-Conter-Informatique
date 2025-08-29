@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://aconter.github.io/Antoine-Conter-Informatique/sitemap.xml
