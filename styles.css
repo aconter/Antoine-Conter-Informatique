@@ -223,6 +223,7 @@ footer {
     margin-top: 20px;
 }
 
+/* Styles communs avec ombre pour les tableaux */
 .table-tarifs {
     width: 100%;
     border-collapse: collapse;
@@ -322,13 +323,13 @@ footer {
         flex-direction: column;
     }
 
-    .table-flex .table-container {
+    .table-container {
         width: 100%;
     }
 }
 
 /* =========================
-   Bouton "Me contacter" (statique, avec hover) 
+   Contact Button (hover effect)
 ========================= */
 #contact-bubble {
     position: fixed;
@@ -353,7 +354,7 @@ footer {
 }
 
 /* =========================
-   Formulaire de contact & fermeture
+   Contact Form & Close Button
 ========================= */
 #contact-form {
     position: fixed;
