@@ -207,7 +207,6 @@ footer {
     margin-bottom: 40px;
 }
 
-/* Tableaux côte à côte */
 .table-flex {
     display: flex;
     flex-wrap: wrap;
@@ -219,7 +218,6 @@ footer {
     flex: 1 1 48%;
 }
 
-/* Styles des tableaux */
 .table-container {
     overflow-x: auto;
     margin-top: 20px;
@@ -268,7 +266,7 @@ footer {
 }
 
 /* =========================
-   Media Queries pour Mobile
+   Responsive
 ========================= */
 @media (max-width: 768px) {
     header {
@@ -330,14 +328,14 @@ footer {
 }
 
 /* =========================
-   Bulle de contact (visibilité améliorée)
+   Bouton "Me contacter" (statique, avec hover) 
 ========================= */
 #contact-bubble {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #FF5722;
-    color: #fff;
+    color: white;
     padding: 14px 20px;
     border-radius: 25px;
     cursor: pointer;
@@ -346,41 +344,65 @@ footer {
     font-size: 18px;
     z-index: 2000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease;
-    animation: pulse 2s infinite;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 #contact-bubble:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     background-color: #E64A19;
 }
 
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.6); }
-    70% { box-shadow: 0 0 0 12px rgba(255, 87, 34, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 87, 34, 0); }
-}
-
+/* =========================
+   Formulaire de contact & fermeture
+========================= */
 #contact-form {
     position: fixed;
     bottom: 70px;
     right: 20px;
     background: #fff;
     border: 1px solid #ddd;
-    padding: 15px;
-    width: 250px;
+    padding: 30px 15px 15px 15px;
+    width: 270px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     font-family: sans-serif;
     z-index: 2000;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#close-form {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    z-index: 2100;
+    padding: 0;
+    line-height: 1;
+}
+
+#close-form:hover {
+    color: #000;
 }
 
 #contact-form input,
 #contact-form textarea {
     width: 100%;
+    margin-top: 15px;
     margin-bottom: 10px;
     padding: 8px;
     border: 1px solid #ccc;
     font-size: 14px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    height: 120px;
+    resize: vertical;
 }
 
 #contact-form button {
@@ -391,6 +413,8 @@ footer {
     color: white;
     font-size: 14px;
     cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 #contact-form button:hover {
