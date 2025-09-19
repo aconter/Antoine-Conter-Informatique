@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <!-- X-UA-Compatible retiré (obsolète) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Empêche iOS de transformer les numéros en liens -->
+  <meta name="format-detection" content="telephone=no">
 
   <title>Services informatiques à Plouguerneau - Dépannage, formation & création de site</title>
   <meta name="description" content="Antoine Conter – Dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau et ses alentours. Service honnête, simple et humain.">
@@ -38,6 +40,12 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+  <!-- Sécurité anti-clic (au cas où un <a> se glisse) -->
+  <style>
+    #contact .no-link,
+    #contact a { pointer-events: none; text-decoration: none; color: inherit; }
+  </style>
+
   <!-- Redirection client: GitHub Pages / www -> domaine canonique -->
   <script>
     (function() {
@@ -53,7 +61,7 @@
     })();
   </script>
 
-  <!-- JSON-LD : LocalBusiness (corrigé + communes étendues) -->
+  <!-- JSON-LD : LocalBusiness (email sans mailto:) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -64,7 +72,7 @@
     "image":"https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp",
     "logo":"https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp",
     "telephone":"+33641537334",
-    "email":"mailto:antoine.conter@outlook.com",
+    "email":"antoine.conter@outlook.com",
     "description":"Dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau et ses alentours.",
     "priceRange":"15 €–300 €",
     "inLanguage":"fr-FR",
@@ -124,7 +132,7 @@
   }
   </script>
 
-  <!-- JSON-LD : WebSite (lien vers le business) -->
+  <!-- JSON-LD : WebSite -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -137,7 +145,7 @@
   }
   </script>
 
-  <!-- JSON-LD : Services (@graph conservé) -->
+  <!-- JSON-LD : Services -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -315,12 +323,9 @@
   <h2 class="titre-section">Me contacter</h2>
   <div class="presentation-container prestation-card">
     <div class="presentation-texte">
-      <p><img src="/phone.webp" alt="Icône téléphone" class="icon"> <strong>Téléphone :</strong>
-        <a href="tel:+33641537334">06 41 53 73 34</a></p>
-      <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon"> <strong>WhatsApp :</strong>
-        <a href="https://wa.me/33641537334" rel="nofollow noopener">+33 6 41 53 73 34</a></p>
-      <p><img src="/mail.webp" alt="Icône email" class="icon"> <strong>Email :</strong>
-        <a href="mailto:antoine.conter@outlook.com">antoine.conter@outlook.com</a></p>
+      <p><img src="/phone.webp" alt="Icône téléphone" class="icon"> <strong>Téléphone :</strong> <span class="no-link">06 41 53 73 34</span></p>
+      <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon"> <strong>WhatsApp :</strong> <span class="no-link">+33 6 41 53 73 34</span></p>
+      <p><img src="/mail.webp" alt="Icône email" class="icon"> <strong>Email :</strong> <span class="no-link">antoine.conter@outlook.com</span></p>
       <p><img src="/watch.webp" alt="Icône disponibilité" class="icon"> <strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous</p>
     </div>
   </div>
