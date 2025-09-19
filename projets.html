@@ -19,7 +19,7 @@
 
     header {
       background-color: #f0f0f0;
-      height: 80px;
+      height: 100px;
       padding: 0 30px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: fixed;
@@ -32,9 +32,31 @@
     }
 
     .logo {
-      height: 60px;
+      height: 100px;
       width: auto;
       object-fit: contain;
+    }
+
+    /* === Bouton RETOUR centré dans la bannière === */
+    .btn-retour-header {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: #B22222;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      transition: background 0.25s ease, transform 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-retour-header:hover {
+      background: #8b1a1a;
+      transform: translate(-50%, -50%) scale(1.05);
     }
 
     section#projets {
@@ -108,8 +130,8 @@
     }
 
     .img-reduite {
-      width: 60%;
-      max-width: 300px;
+      width: 45%;
+      max-width: 120px;
       display: block;
       margin: 0 auto 15px;
       border-radius: 15px;
@@ -121,6 +143,29 @@
       transform: scale(1.03);
     }
 
+    /* Bulle de contact */
+    #contact-bubble {
+      position: fixed;
+      bottom: 20px;
+      right: 100px; /* décalé vers la gauche pour anticiper d’autres bulles */
+      background: #FF5722;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      font-family: sans-serif;
+      font-size: 18px;
+      z-index: 2000;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    #contact-bubble:hover {
+      transform: scale(1.1);
+      background-color: #E64A19;
+    }
+
     @media (max-width: 768px) {
       header {
         height: 70px;
@@ -129,6 +174,12 @@
 
       .logo {
         height: 50px;
+      }
+
+      /* on réduit un peu le bouton au centre sur mobile */
+      .btn-retour-header {
+        font-size: 14px;
+        padding: 8px 16px;
       }
 
       section#projets {
@@ -146,6 +197,85 @@
       .texte-projet p {
         font-size: 16px;
       }
+
+      .img-reduite {
+        width: 55%;
+        max-width: 200px;
+      }
+
+      #contact-bubble {
+        right: 20px; /* sur mobile on remet près du bord */
+      }
+    } /* <-- FIN correcte de la media query */
+
+    /* =========================
+       Contact Form & Close Button
+    ========================= */
+    #contact-form {
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 30px 15px 15px 15px;
+      width: 270px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      font-family: sans-serif;
+      z-index: 2000;
+      border-radius: 8px;
+      box-sizing: border-box;
+      display: none; /* caché par défaut */
+    }
+
+    #close-form {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      color: #888;
+      cursor: pointer;
+      z-index: 2100;
+      padding: 0;
+      line-height: 1;
+    }
+
+    #close-form:hover {
+      color: #000;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    #contact-form textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    #contact-form button {
+      width: 100%;
+      padding: 10px;
+      background: #FF5722;
+      border: none;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    #contact-form button:hover {
+      background: #E64A19;
     }
   </style>
 </head>
@@ -155,6 +285,8 @@
     <a href="index.html">
       <img src="Antoine-CONTER-informatique-Logo.webp" alt="Logo Antoine Conter Informatique" class="logo">
     </a>
+    <!-- Bouton retour centré dans la bannière -->
+    <a href="index.html" class="btn-retour-header">⬅ Revenir à la page principale</a>
   </header>
 
   <section id="projets">
@@ -168,13 +300,27 @@
         <div class="texte-projet">
           <h3>Bruno L’Hostis – Professeur indépendant</h3>
           <p>
-            Conception d’un site pour présenter l’activité de Bruno L’Hostis, professeur de mathématiques et physique-chimie. Le site valorise sa pédagogie bienveillante, tout en facilitant les prises de contact avec les familles et les organismes de formation.
+            Conception d’un site pour présenter l’activité de Bruno L’Hostis, professeur de mathématiques et physique-chimie. 
+            Le site valorise sa pédagogie bienveillante, tout en facilitant les prises de contact avec les familles et les organismes de formation.
           </p>
         </div>
       </div>
 
     </div>
   </section>
+
+  <!-- Bulle de contact -->
+  <div id="contact-bubble" onclick="document.getElementById('contact-form').style.display='block'">📩 Contact</div>
+
+  <!-- Formulaire de contact (caché par défaut) -->
+  <div id="contact-form">
+    <button id="close-form" onclick="document.getElementById('contact-form').style.display='none'">×</button>
+    <form action="https://formspree.io/f/xdklavag" method="POST">
+      <input type="email" name="email" placeholder="Votre email" required><br>
+      <textarea name="message" placeholder="Votre message" required></textarea><br>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
 
 </body>
 </html>

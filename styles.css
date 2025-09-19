@@ -421,3 +421,64 @@ footer {
 #contact-form button:hover {
     background: #E64A19;
 }
+/* =========================
+   Section "D'autres projets"
+========================= */
+/* Style spécifique au titre "D'autres Projets" */
+/* =========================
+   Section "D'autres projets" (alignée sur "Qui suis-je ?")
+========================= */
+#projets-lien {
+    padding: 80px 20px;            /* bande blanche plus longue (haut/bas) */
+    text-align: center;
+    border-left: 3px solid #B22222;
+    border-right: 3px solid #B22222;
+    position: relative;
+    z-index: 1;
+}
+
+#projets-lien::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+/* Titre comme les autres sections (même typographie que "Qui suis-je ?") */
+#projets-lien h2 {
+    font-size: 2.4em;              /* même taille que les h2 globaux */
+    font-weight: 500;
+    color: #005f99;                 /* même bleu */
+    margin: 0 0 40px 0;
+    position: relative;
+}
+
+#projets-lien h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #B22222;     /* barre rouge identique */
+    margin: 10px auto 0;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+
+
+/* Le lien hérite du style du titre mais est bien identifiable comme cliquable */
+#projets-lien h2 a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;                  /* main au survol */
+    transition: color 0.3s ease;      /* effet fluide */
+}
+
+#projets-lien h2 a:hover {
+    color: #B22222;                   /* passe en rouge au survol */
+    text-decoration: underline;       /* + soulignement */
+}
+
