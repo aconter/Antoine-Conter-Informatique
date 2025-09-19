@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes Projets – Antoine Conter Informatique</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 22px;
+      margin: 0;
+      padding: 0;
+      background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #f0f0f0;
+      height: 80px;
+      padding: 0 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    section#projets {
+      position: relative;
+      z-index: 1;
+      padding: 120px 20px 60px;
+      border-left: 3px solid #B22222;
+      border-right: 3px solid #B22222;
+    }
+
+    section#projets::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(2px);
+      z-index: -1;
+    }
+
+    h2 {
+      font-size: 2.4em;
+      font-weight: 500;
+      color: #005f99;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: #B22222;
+      margin: 10px auto 0;
+      border-radius: 3px;
+      opacity: 0.9;
+    }
+
+    .projets-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .bulle-projet {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border: 2px solid #B22222;
+      width: 100%;
+      text-align: left;
+      max-width: 700px;
+    }
+
+    .texte-projet h3 {
+      font-size: 1.4em;
+      color: #005f99;
+      margin-bottom: 10px;
+    }
+
+    .texte-projet p {
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .img-reduite {
+      width: 60%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .img-reduite:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        height: 70px;
+        padding: 0 15px;
+      }
+
+      .logo {
+        height: 50px;
+      }
+
+      section#projets {
+        padding-top: 100px;
+      }
+
+      .bulle-projet {
+        padding: 20px;
+      }
+
+      .texte-projet h3 {
+        font-size: 1.2em;
+      }
+
+      .texte-projet p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="Antoine-CONTER-informatique-Logo.webp" alt="Logo Antoine Conter Informatique" class="logo">
+    </a>
+  </header>
+
+  <section id="projets">
+    <h2>Des projets à suivre </h2>
+    <div class="projets-container">
+
+      <div class="bulle-projet">
+        <a href="https://bruno-lhostis.fr" target="_blank">
+          <img src="Bruno-LHOSTIS-logo.webp" alt="Site Bruno Lhostis" class="img-reduite">
+        </a>
+        <div class="texte-projet">
+          <h3>Bruno L’Hostis – Professeur indépendant</h3>
+          <p>
+            Conception d’un site pour présenter l’activité de Bruno L’Hostis, professeur de mathématiques et physique-chimie. Le site valorise sa pédagogie bienveillante, tout en facilitant les prises de contact avec les familles et les organismes de formation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
