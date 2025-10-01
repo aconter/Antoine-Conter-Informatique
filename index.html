@@ -2,9 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <!-- X-UA-Compatible retiré (obsolète) -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Empêche iOS de transformer les numéros en liens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
 
   <title>Services informatiques à Plouguerneau - Dépannage, formation & création de site</title>
@@ -33,7 +31,7 @@
   <meta name="twitter:description" content="Dépannage informatique, formation, virus, site web – Service honnête et humain.">
   <meta name="twitter:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp">
 
-  <!-- Favicon (WebP) -->
+  <!-- Favicon -->
   <link rel="icon" href="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" type="image/webp">
 
   <!-- Styles -->
@@ -49,7 +47,7 @@
   <script>
     (function() {
       var CANONICAL_HOST = 'informatique-plouguerneau-antoine-conter.fr';
-      var GITHUB_HOST = ''; // Facultatif: 'votreutilisateur.github.io'
+      var GITHUB_HOST = '';
       var host = location.hostname.toLowerCase();
       var isGithub = host.endsWith('.github.io') || (GITHUB_HOST && host === GITHUB_HOST);
       var isWwwVariant = host === ('www.' + CANONICAL_HOST);
@@ -60,7 +58,7 @@
     })();
   </script>
 
-  <!-- JSON-LD : LocalBusiness (email sans mailto:) -->
+  <!-- JSON-LD : LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -322,34 +320,31 @@
   <h2 class="titre-section">Me contacter</h2>
   <div class="presentation-container prestation-card">
     <div class="presentation-texte">
-      <p><img src="/phone.webp" alt="Icône téléphone" class="icon"> 
+      <p><img src="/phone.webp" alt="Icône téléphone" class="icon">
          <strong>Téléphone :</strong> <span class="no-link">06 41 53 73 34</span>
       </p>
-      <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon"> 
+      <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon">
          <strong>WhatsApp :</strong> <span class="no-link">+33 6 41 53 73 34</span>
       </p>
-      <p><img src="/mail.webp" alt="Icône email" class="icon"> 
+      <p><img src="/mail.webp" alt="Icône email" class="icon">
          <strong>Email :</strong> <span class="no-link">antoine.conter@outlook.com</span>
       </p>
-      <p><img src="/watch.webp" alt="Icône disponibilité" class="icon"> 
+      <p><img src="/watch.webp" alt="Icône disponibilité" class="icon">
          <strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous
       </p>
 
-      <!-- Accroche -->
-      <p class="accroche-contact">Plongez au cœur de ma façon de mon travail</p>
+      <p class="accroche-contact">Plongez au cœur de mon travail</p>
 
-      <!-- Instagram -->
       <p>
-        <img src="/instagram.png" alt="Icône Instagram" class="icon">
+        <img src="/instagram.webp" alt="Icône Instagram" class="icon">
         <strong>Instagram :</strong>
         <a class="contact-link" href="https://www.instagram.com/antoine_conter_informatique" target="_blank" rel="noopener">
           @antoine-conter-informatique
         </a>
       </p>
 
-      <!-- Facebook ajouté sous Instagram -->
       <p>
-        <img src="/facebook.png" alt="Icône Facebook" class="icon">
+        <img src="/facebook.webp" alt="Icône Facebook" class="icon">
         <strong>Facebook :</strong>
         <a class="contact-link" href="https://www.facebook.com/antoine_conter_informatique" target="_blank" rel="noopener">
           @antoine-conter-informatique
@@ -359,16 +354,16 @@
   </div>
 </section>
 
-
 <!-- Bulle de contact -->
-<div id="contact-bubble" onclick="document.getElementById('contact-form').style.display='block'">
-  💬 Me contacter
+<div id="contact-bubble" aria-controls="contact-form" aria-expanded="false">
+  Me contacter
 </div>
 
 <!-- Formulaire de contact -->
-<div id="contact-form" style="display: none;">
-  <button id="close-form" onclick="document.getElementById('contact-form').style.display='none'">×</button>
+<div id="contact-form" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="contact-form-title">
+  <button id="close-form" aria-label="Fermer le formulaire">×</button>
   <form action="https://formspree.io/f/xdklavag" method="POST">
+    <h3 id="contact-form-title" style="margin:0 0 8px 0;">Contact</h3>
     <input type="email" name="email" placeholder="Votre email" required><br>
     <textarea name="message" placeholder="Votre message" required></textarea><br>
     <button type="submit">Envoyer</button>
@@ -380,6 +375,26 @@
     <a href="projets.html">D'autres Projets</a>
   </h2>
 </section>
+
+<script>
+  // Ouverture/fermeture propre de la bulle et du formulaire
+  (function () {
+    var bubble = document.getElementById('contact-bubble');
+    var form = document.getElementById('contact-form');
+    var closeBtn = document.getElementById('close-form');
+
+    bubble.addEventListener('click', function () {
+      var isOpen = form.style.display === 'block';
+      form.style.display = isOpen ? 'none' : 'block';
+      bubble.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    closeBtn.addEventListener('click', function () {
+      form.style.display = 'none';
+      bubble.setAttribute('aria-expanded', 'false');
+    });
+  })();
+</script>
 
 </body>
 </html>
