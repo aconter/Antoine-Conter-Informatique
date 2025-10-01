@@ -56,7 +56,7 @@ header {
 #accueil {
     height: 100vh;
     margin-top: 100px;
-    background: url('fond_antoine_conter_inoformatique.webp') no-repeat center center fixed;
+    background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -187,6 +187,32 @@ h2::after {
 }
 
 /* =========================
+   Accroche dans la bulle Contact
+========================= */
+#contact .accroche-contact {
+    display: inline-block;
+    margin: 15px 0 5px;
+    font-size: clamp(1.2rem, 2vw, 1.5rem); /* plus petit + adaptable */
+    font-weight: 600;
+    color: #005f99;
+    line-height: 1.2;
+    padding-bottom: 6px;
+    position: relative;
+    white-space: nowrap; /* une seule ligne */
+}
+
+#contact .accroche-contact::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #B22222;
+    margin: 8px auto 0;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+
+/* =========================
    Footer
 ========================= */
 footer {
@@ -223,7 +249,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Styles communs avec ombre pour les tableaux */
 .table-tarifs {
     width: 100%;
     border-collapse: collapse;
@@ -267,65 +292,17 @@ footer {
 }
 
 /* =========================
-   Responsive
+   Lien Instagram cliquable
 ========================= */
-@media (max-width: 768px) {
-    header {
-        height: 70px;
-        padding: 0 15px;
-    }
-
-    .logo {
-        height: 70px;
-    }
-
-    .slogan {
-        padding: 30px 20px;
-    }
-
-    .slogan h1 {
-        font-size: 1.8em;
-    }
-
-    .slogan p {
-        font-size: 1em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    .presentation-container.prestation-card {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .presentation-texte {
-        text-align: center;
-    }
-
-    .presentation-texte p {
-        font-size: 18px;
-    }
-
-    .photo-profil {
-        width: 150px;
-        height: 150px;
-    }
-
-    .icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .table-flex {
-        flex-direction: column;
-    }
-
-    .table-container {
-        width: 100%;
-    }
+#contact a.contact-link {
+    pointer-events: auto;
+    text-decoration: underline;
+    color: #005f99;
+    font-weight: 600;
+}
+#contact a.contact-link:hover {
+    color: #B22222;
+    text-decoration: none;
 }
 
 /* =========================
@@ -421,15 +398,12 @@ footer {
 #contact-form button:hover {
     background: #E64A19;
 }
+
 /* =========================
    Section "D'autres projets"
 ========================= */
-/* Style spécifique au titre "D'autres Projets" */
-/* =========================
-   Section "D'autres projets" (alignée sur "Qui suis-je ?")
-========================= */
 #projets-lien {
-    padding: 80px 20px;            /* bande blanche plus longue (haut/bas) */
+    padding: 80px 20px;
     text-align: center;
     border-left: 3px solid #B22222;
     border-right: 3px solid #B22222;
@@ -447,11 +421,10 @@ footer {
     z-index: -1;
 }
 
-/* Titre comme les autres sections (même typographie que "Qui suis-je ?") */
 #projets-lien h2 {
-    font-size: 2.4em;              /* même taille que les h2 globaux */
+    font-size: 2.4em;
     font-weight: 500;
-    color: #005f99;                 /* même bleu */
+    color: #005f99;
     margin: 0 0 40px 0;
     position: relative;
 }
@@ -461,24 +434,83 @@ footer {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: #B22222;     /* barre rouge identique */
+    background-color: #B22222;
     margin: 10px auto 0;
     border-radius: 3px;
     opacity: 0.9;
 }
 
-
-/* Le lien hérite du style du titre mais est bien identifiable comme cliquable */
 #projets-lien h2 a {
     color: inherit;
     text-decoration: none;
     font-weight: 600;
-    cursor: pointer;                  /* main au survol */
-    transition: color 0.3s ease;      /* effet fluide */
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 #projets-lien h2 a:hover {
-    color: #B22222;                   /* passe en rouge au survol */
-    text-decoration: underline;       /* + soulignement */
+    color: #B22222;
+    text-decoration: underline;
 }
 
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+    header {
+        height: 70px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .slogan {
+        padding: 30px 20px;
+    }
+
+    .slogan h1 {
+        font-size: 1.8em;
+    }
+
+    .slogan p {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .presentation-container.prestation-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .presentation-texte {
+        text-align: center;
+    }
+
+    .presentation-texte p {
+        font-size: 18px;
+    }
+
+    .photo-profil {
+        width: 150px;
+        height: 150px;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .table-flex {
+        flex-direction: column;
+    }
+
+    .table-container {
+        width: 100%;
+    }
+}

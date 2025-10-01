@@ -40,10 +40,9 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-  <!-- Sécurité anti-clic (au cas où un <a> se glisse) -->
+  <!-- Sécurité anti-clic : ne bloque QUE les éléments .no-link -->
   <style>
-    #contact .no-link,
-    #contact a { pointer-events: none; text-decoration: none; color: inherit; }
+    #contact .no-link { pointer-events: none; text-decoration: none; color: inherit; }
   </style>
 
   <!-- Redirection client: GitHub Pages / www -> domaine canonique -->
@@ -323,13 +322,43 @@
   <h2 class="titre-section">Me contacter</h2>
   <div class="presentation-container prestation-card">
     <div class="presentation-texte">
-      <p><img src="/phone.webp" alt="Icône téléphone" class="icon"> <strong>Téléphone :</strong> <span class="no-link">06 41 53 73 34</span></p>
-      <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon"> <strong>WhatsApp :</strong> <span class="no-link">+33 6 41 53 73 34</span></p>
-      <p><img src="/mail.webp" alt="Icône email" class="icon"> <strong>Email :</strong> <span class="no-link">antoine.conter@outlook.com</span></p>
-      <p><img src="/watch.webp" alt="Icône disponibilité" class="icon"> <strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous</p>
+      <p><img src="/phone.webp" alt="Icône téléphone" class="icon"> 
+         <strong>Téléphone :</strong> <span class="no-link">06 41 53 73 34</span>
+      </p>
+      <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon"> 
+         <strong>WhatsApp :</strong> <span class="no-link">+33 6 41 53 73 34</span>
+      </p>
+      <p><img src="/mail.webp" alt="Icône email" class="icon"> 
+         <strong>Email :</strong> <span class="no-link">antoine.conter@outlook.com</span>
+      </p>
+      <p><img src="/watch.webp" alt="Icône disponibilité" class="icon"> 
+         <strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous
+      </p>
+
+      <!-- Accroche -->
+      <p class="accroche-contact">Venez découvrir comment je travaille</p>
+
+      <!-- Instagram -->
+      <p>
+        <img src="/instagram.webp" alt="Icône Instagram" class="icon">
+        <strong>Instagram :</strong>
+        <a class="contact-link" href="https://www.instagram.com/antoine_conter_informatique" target="_blank" rel="noopener">
+          @antoine-conter-informatique
+        </a>
+      </p>
+
+      <!-- Facebook ajouté sous Instagram -->
+      <p>
+        <img src="/facebook.webp" alt="Icône Facebook" class="icon">
+        <strong>Facebook :</strong>
+        <a class="contact-link" href="https://www.facebook.com/antoine_conter_informatique" target="_blank" rel="noopener">
+          @antoine-conter-informatique
+        </a>
+      </p>
     </div>
   </div>
 </section>
+
 
 <!-- Bulle de contact -->
 <div id="contact-bubble" onclick="document.getElementById('contact-form').style.display='block'">
@@ -345,12 +374,12 @@
     <button type="submit">Envoyer</button>
   </form>
 </div>
+
 <section id="projets-lien">
   <h2>
     <a href="projets.html">D'autres Projets</a>
   </h2>
 </section>
-
 
 </body>
 </html>
