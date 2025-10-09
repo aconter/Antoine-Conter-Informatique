@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
 
-  <title>Services informatiques à Plouguerneau - Dépannage, formation & création de site</title>
-  <meta name="description" content="Antoine Conter – Dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau et ses alentours. Service honnête, simple et humain.">
+  <!-- Titre optimisé pour les recherches locales : inclut quelques communes voisines -->
+  <title>Services informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours</title>
+  <!-- Description enrichie avec des mots‑clés géolocalisés pour améliorer le référencement local -->
+  <meta name="description" content="Antoine Conter – dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau, Lannilis, Landéda, Saint‑Pabu et dans tout le nord Finistère. Service honnête, simple et humain, proche de chez vous.">
+
+  <!-- Mots‑clés locaux (facultatif) : certaines plateformes tiennent encore compte de cette balise -->
+  <meta name="keywords" content="dépannage informatique Plouguerneau, dépannage informatique Lannilis, dépannage informatique Landéda, formation bureautique Landéda, création de site internet Plouguerneau, services informatiques nord Finistère">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta http-equiv="content-language" content="fr">
 
@@ -41,7 +46,32 @@
   <!-- Sécurité anti-clic : ne bloque QUE les éléments .no-link -->
   <style>
     #contact .no-link { pointer-events: none; text-decoration: none; color: inherit; }
+    /*
+      Masque les listes ou sections sans les retirer du code. Les éléments
+      déplacés hors de l’écran restent présents pour les moteurs de recherche.
+    */
+    .hidden-list {
+      position: absolute;
+      left: -9999px;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
   </style>
+
+  <!-- Suivi de performance : Google Analytics 4
+       Remplacez G‑XXXXXXXXXX par votre identifiant de mesure GA4 pour activer le suivi.
+       Cette intégration permet de mesurer la fréquentation et d’ajuster votre stratégie SEO.
+  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // Configuration du suivi – à personnaliser avec votre identifiant
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <!-- Redirection client: GitHub Pages / www -> domaine canonique -->
   <script>
@@ -241,8 +271,11 @@
 
 <section id="accueil">
   <div class="slogan animate__animated animate__fadeInDown">
-    <h1>Rendre l'informatique simple, juste et humaine</h1>
-    <p>Un accompagnement personnalisé pour particuliers, PME et associations sur Plouguerneau et ses alentours.</p>
+    <!-- Titre principal contenant les mots‑clés locaux -->
+    <h1>Services informatiques à Plouguerneau, Lannilis, Landéda et alentours</h1>
+    <!-- Slogan inspirant sous‑titre -->
+    <p>Rendre l'informatique simple, juste et humaine</p>
+    <p>Un accompagnement personnalisé pour particuliers, PME et associations sur Plouguerneau et toutes les communes voisines.</p>
   </div>
 </section>
 
@@ -250,7 +283,7 @@
   <h2 class="titre-section">Aperçu de mes services</h2>
   <div class="services-banner">
     <img src="map-antoine-conter-informatique.webp"
-         alt="Services informatiques à Plouguerneau – dépannage, formation et création de site"
+         alt="Carte des communes desservies : Plouguerneau, Lannilis, Landéda, Saint‑Pabu et alentours – dépannage informatique, formation et création de site"
          loading="lazy" decoding="async" />
   </div>
 </section>
@@ -303,7 +336,43 @@
   </div>
 </section>
 
+<section id="zones-desservies" class="hidden-list">
+  <h2 class="titre-section">Zones d’intervention</h2>
+  <p>J’interviens dans toutes les communes du nord Finistère autour de Plouguerneau :</p>
+  <ul class="zones-desservies">
+    <li>Plouguerneau</li>
+    <li>Lannilis</li>
+    <li>Landéda</li>
+    <li>Saint-Pabu</li>
+    <li>Tréglonou</li>
+    <li>Plouguin</li>
+    <li>Bourg-Blanc</li>
+    <li>Plouvien</li>
+    <li>Plabennec</li>
+    <li>Kersaint-Plabennec</li>
+    <li>Le Drennec</li>
+    <li>Coat-Méal</li>
+    <li>Loc-Brévalaire</li>
+    <li>Lesneven</li>
+    <li>Le Folgoët</li>
+    <li>Kernilis</li>
+    <li>Kernouës</li>
+    <li>Lanarvily</li>
+    <li>Ploudaniel</li>
+    <li>Plouider</li>
+    <li>Guissény</li>
+    <li>Goulven</li>
+    <li>Kerlouan</li>
+    <li>Plounéour-Brignogan-Plages</li>
+    <li>Saint-Frégant</li>
+    <li>Saint-Méen</li>
+    <li>Trégarantec</li>
+  </ul>
+</section>
+
+<!-- Section présentation : repositionnée après les zones desservies pour clarifier la structure -->
 <section id="presentation">
+
   <h2 class="titre-section">Qui suis-je ?</h2>
   <div class="presentation-container prestation-card">
     <img src="moi.webp" alt="Photo d’Antoine Conter – Informaticien à Plouguerneau"
