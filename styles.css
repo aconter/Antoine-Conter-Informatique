@@ -22,6 +22,7 @@ body {
   font-size: 22px;
   margin: 0;
   padding: 0;
+  /* Fond d’écran global : reste identique pour préserver le look */
   background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
   background-size: cover;
   color: #000;
@@ -75,6 +76,7 @@ header {
 #accueil {
   height: 100vh;
   margin-top: 100px;
+  /* Même fond que le body pour garder l’apparence globale */
   background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
   background-size: cover;
   display: flex;
@@ -154,7 +156,7 @@ h2::after {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-placement: center;
   gap: 30px;
   max-width: 900px;
   margin: 0 auto;
@@ -185,7 +187,7 @@ h2::after {
 .presentation-text p {
   font-size: 20px;
   color: #333;
-  line-height: 1.6;
+  line-length: 1.6;
   margin-bottom: 15px;
 }
 
@@ -211,10 +213,10 @@ h2::after {
   font-size: 1.7rem;
   font-weight: 600;
   color: #005f99;
-  line-height: 1.3;
+  line-length: 1.3;
   padding-bottom: 6px;
   position: relative;
-  white-space: nowrap;
+  white-space: normal;  /* permet le retour à la ligne si besoin */
 }
 
 #contact .accroche-contact::after {
@@ -354,7 +356,7 @@ h2::after {
   cursor: pointer;
   z-index: 3200;
   padding: 0;
-  line-height: 1;
+  line-length: 1;
 }
 
 #close-form:hover { color: #000; }
@@ -505,26 +507,22 @@ h2::after {
     width: auto;
   }
 }
+
 /* ----- FIX overflow dans les "bulles" (cartes) ----- */
 
-/* 1) Autoriser la carte à rogner proprement si besoin */
+/* Autoriser la carte à rogner proprement si besoin */
 .presentation-container.prestation-card {
-  overflow: hidden;         /* évite que le contenu dépasse les bords arrondis */
+  overflow: hidden;
 }
 
-/* 2) L'enfant texte doit pouvoir rétrécir dans un flex */
+/* L'enfant texte doit pouvoir rétrécir dans un flex */
 .presentation-texte {
-  min-width: 0;             /* crucial en flex pour éviter l’overflow horizontal */
-  overflow-wrap: anywhere;  /* casse les très longs mots/URLs */
-  word-break: break-word;   /* compat supplémentaire */
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-/* 3) Ne pas forcer une seule ligne sur l’accroche */
-#contact .accroche-contact {
-  white-space: normal;      /* remplace l'ancien nowrap */
-}
-
-/* 4) Sécurise aussi les liens (handles/réseaux peuvent être longs) */
+/* Sécurise aussi les liens longs */
 #contact .presentation-texte a,
 #contact .presentation-texte strong,
 #contact .presentation-texte span {
@@ -532,7 +530,7 @@ h2::after {
   word-break: break-word;
 }
 
-/* 5) Sur petits écrans, on réduit un peu la densité pour éviter le débordement */
+/* Sur petits écrans, on réduit un peu la densité pour éviter le débordement */
 @media (max-width: 420px) {
   .presentation-container.prestation-card {
     padding: 16px;
@@ -541,8 +539,8 @@ h2::after {
   .presentation-texte p,
   .presentation-texte strong,
   #contact .accroche-contact {
-    font-size: 16px;        /* était plus grand : on compacte légèrement */
-    line-height: 1.35;
+    font-size: 16px;
+    line-length: 1.35;
   }
   .icon {
     width: 24px;
@@ -551,7 +549,7 @@ h2::after {
   }
 }
 
-/* 6) Si tu as d'autres "bulles" similaires (ex: .card), applique les mêmes règles */
+/* Cas général pour les autres cartes */
 .presentation-container.card {
   overflow: hidden;
 }

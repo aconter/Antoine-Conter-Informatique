@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- Titre optimisé pour les recherches locales : inclut quelques communes voisines -->
-  <title>Services informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours</title>
-  <!-- Description enrichie avec des mots‑clés géolocalisés pour améliorer le référencement local -->
+  <!-- Titre optimisé pour les recherches locales -->
+  <title>Services informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours</title>
   <meta name="description" content="Antoine Conter – dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau, Lannilis, Landéda, Saint‑Pabu et dans tout le nord Finistère. Service honnête, simple et humain, proche de chez vous.">
-
-  <!-- Mots‑clés locaux (facultatif) : certaines plateformes tiennent encore compte de cette balise -->
   <meta name="keywords" content="dépannage informatique Plouguerneau, dépannage informatique Lannilis, dépannage informatique Landéda, formation bureautique Landéda, création de site internet Plouguerneau, services informatiques nord Finistère">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta http-equiv="content-language" content="fr">
@@ -39,6 +36,11 @@
   <!-- Favicon -->
   <link rel="icon" href="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" type="image/webp">
 
+  <!-- Préchargement : image LCP et feuilles de style -->
+  <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.webp" type="image/webp">
+  <link rel="preload" as="style" href="/styles.css">
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
   <!-- Styles -->
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -46,10 +48,7 @@
   <!-- Sécurité anti-clic : ne bloque QUE les éléments .no-link -->
   <style>
     #contact .no-link { pointer-events: none; text-decoration: none; color: inherit; }
-    /*
-      Masque les listes ou sections sans les retirer du code. Les éléments
-      déplacés hors de l’écran restent présents pour les moteurs de recherche.
-    */
+    /* Masque les listes ou sections sans les retirer du code. Les éléments restent indexables par les moteurs. */
     .hidden-list {
       position: absolute;
       left: -9999px;
@@ -60,20 +59,16 @@
     }
   </style>
 
-  <!-- Suivi de performance : Google Analytics 4
-       Remplacez G‑XXXXXXXXXX par votre identifiant de mesure GA4 pour activer le suivi.
-       Cette intégration permet de mesurer la fréquentation et d’ajuster votre stratégie SEO.
-  -->
+  <!-- Google Analytics 4 (facultatif) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    // Configuration du suivi – à personnaliser avec votre identifiant
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <!-- Redirection client: GitHub Pages / www -> domaine canonique -->
+  <!-- Redirection client : GitHub Pages / www -> domaine canonique -->
   <script>
     (function() {
       var CANONICAL_HOST = 'informatique-plouguerneau-antoine-conter.fr';
@@ -210,7 +205,7 @@
         "@type":"Service",
         "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-install-logiciel",
         "name":"Installation de logiciel",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
+        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter-fr/#business"},
         "offers":{"@type":"Offer","price":"30","priceCurrency":"EUR"}
       },
       {
@@ -271,9 +266,7 @@
 
 <section id="accueil">
   <div class="slogan animate__animated animate__fadeInDown">
-    <!-- Titre principal contenant les mots‑clés locaux -->
     <h1>Services informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours.</h1>
-    <!-- Slogan inspirant sous‑titre -->
     <p>Rendre l'informatique simple, juste et humaine</p>
     <p>Un accompagnement personnalisé pour particuliers, PME et associations sur Plouguerneau et toutes les communes voisines.</p>
   </div>
@@ -370,16 +363,14 @@
   </ul>
 </section>
 
-<!-- Section présentation : repositionnée après les zones desservies pour clarifier la structure -->
 <section id="presentation">
-
-  <h2 class="titre-section">Qui suis-je ?</h2>
+  <h2 class="titre-section">Qui suis-je ?</h2>
   <div class="presentation-container prestation-card">
     <img src="moi.webp" alt="Photo d’Antoine Conter – Informaticien à Plouguerneau"
          class="photo-profil" loading="lazy" decoding="async">
     <div class="presentation-texte">
       <p>Étudiant en école d’ingénieurs en informatique à l’ISEN Brest, actuellement en apprentissage en entreprise à Brest.</p>
-      <p>Mon objectif : rendre l’informatique compréhensible, humaine et honnête.</p>
+      <p>Mon objectif : rendre l’informatique compréhensible, humaine et honnête.</p>
       <p>À l’écoute et pédagogue, je propose des solutions concrètes et adaptées aux besoins de chacun.</p>
     </div>
   </div>
@@ -390,10 +381,10 @@
   <div class="presentation-container prestation-card">
     <div class="presentation-texte">
       <p><img src="/phone.webp" alt="Icône téléphone" class="icon">
-         <strong>Téléphone :</strong> <span class="no-link">06 41 53 73 34</span>
+         <strong>Téléphone :</strong> <span class="no-link">06 41 53 73 34</span>
       </p>
       <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon">
-         <strong>WhatsApp :</strong> <span class="no-link">+33 6 41 53 73 34</span>
+         <strong>WhatsApp :</strong> <span class="no-link">+33 6 41 53 73 34</span>
       </p>
       <p><img src="/mail.webp" alt="Icône email" class="icon">
          <strong>Email :</strong> <span class="no-link">antoine.conter@outlook.com</span>
@@ -445,7 +436,7 @@
 </section>
 
 <script>
-  // Ouverture/fermeture propre de la bulle et du formulaire
+  // Gestion de la bulle et du formulaire de contact
   (function () {
     var bubble = document.getElementById('contact-bubble');
     var form = document.getElementById('contact-form');
