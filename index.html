@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#005f99">
 
-  <!-- Titre optimisé pour les recherches locales -->
-  <title>Services informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours</title>
-  <meta name="description" content="Antoine Conter – dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau, Lannilis, Landéda, Saint‑Pabu et dans tout le nord Finistère. Service honnête, simple et humain, proche de chez vous.">
-  <meta name="keywords" content="dépannage informatique Plouguerneau, dépannage informatique Lannilis, dépannage informatique Landéda, formation bureautique Landéda, création de site internet Plouguerneau, services informatiques nord Finistère">
+  <title>Services / dépannages informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours</title>
+  <meta name="description" content="Antoine Conter – dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau, Lannilis, Landéda, Saint-Pabu et dans tout le nord Finistère. Service honnête, simple et humain, proche de chez vous.">
+  <meta name="keywords" content="dépannage informatique Plouguerneau, dépannage informatique Lannilis, dépannage informatique Landéda, formation bureautique Landéda, création de site internet Plouguerneau, services informatiques nord Finistère">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta http-equiv="content-language" content="fr">
+
+  <!-- Perf réseau -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
 
   <!-- Canonical / hreflang -->
   <link rel="canonical" href="https://informatique-plouguerneau-antoine-conter.fr/">
@@ -36,7 +42,7 @@
   <!-- Favicon -->
   <link rel="icon" href="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" type="image/webp">
 
-  <!-- Préchargement : image LCP et feuilles de style -->
+  <!-- Préchargements -->
   <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.webp" type="image/webp">
   <link rel="preload" as="style" href="/styles.css">
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -45,40 +51,23 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-  <!-- Sécurité anti-clic : ne bloque QUE les éléments .no-link -->
-  <style>
-    #contact .no-link { pointer-events: none; text-decoration: none; color: inherit; }
-    /* Masque les listes ou sections sans les retirer du code. Les éléments restent indexables par les moteurs. */
-    .hidden-list {
-      position: absolute;
-      left: -9999px;
-      height: 1px;
-      width: 1px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-  </style>
-
-  <!-- Google Analytics 4 (facultatif) -->
+  <!-- GA4 (facultatif) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config','G-XXXXXXXXXX');
   </script>
 
-  <!-- Redirection client : GitHub Pages / www -> domaine canonique -->
+  <!-- Redirection domaine canonique -->
   <script>
-    (function() {
-      var CANONICAL_HOST = 'informatique-plouguerneau-antoine-conter.fr';
-      var GITHUB_HOST = '';
-      var host = location.hostname.toLowerCase();
-      var isGithub = host.endsWith('.github.io') || (GITHUB_HOST && host === GITHUB_HOST);
-      var isWwwVariant = host === ('www.' + CANONICAL_HOST);
-      if (isGithub || isWwwVariant) {
-        var target = 'https://' + CANONICAL_HOST + location.pathname + location.search + location.hash;
-        if (location.href !== target) location.replace(target);
+    (function(){
+      var CANONICAL_HOST='informatique-plouguerneau-antoine-conter.fr';
+      var host=location.hostname.toLowerCase();
+      var isGithub=host.endsWith('.github.io');
+      var isWww=host==='www.'+CANONICAL_HOST;
+      if(isGithub||isWww){
+        var target='https://'+CANONICAL_HOST+location.pathname+location.search+location.hash;
+        if(location.href!==target) location.replace(target);
       }
     })();
   </script>
@@ -98,13 +87,7 @@
     "description":"Dépannage informatique, formation bureautique, suppression de virus et création de sites internet à Plouguerneau et ses alentours.",
     "priceRange":"15 €–300 €",
     "inLanguage":"fr-FR",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Plouguerneau",
-      "postalCode":"29880",
-      "addressRegion":"Bretagne",
-      "addressCountry":"FR"
-    },
+    "address":{"@type":"PostalAddress","addressLocality":"Plouguerneau","postalCode":"29880","addressRegion":"Bretagne","addressCountry":"FR"},
     "geo":{"@type":"GeoCoordinates","latitude":48.60,"longitude":-4.50},
     "hasMap":"https://www.google.com/maps/search/?api=1&query=Plouguerneau%2029880",
     "openingHoursSpecification":[
@@ -116,55 +99,14 @@
       {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"18:00"},
       {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"18:00"}
     ],
-    "areaServed":[
-      {"@type":"AdministrativeArea","name":"Plouguerneau"},
-      {"@type":"AdministrativeArea","name":"Lannilis"},
-      {"@type":"AdministrativeArea","name":"Landéda"},
-      {"@type":"AdministrativeArea","name":"Saint-Pabu"},
-      {"@type":"AdministrativeArea","name":"Tréglonou"},
-      {"@type":"AdministrativeArea","name":"Plouguin"},
-      {"@type":"AdministrativeArea","name":"Bourg-Blanc"},
-      {"@type":"AdministrativeArea","name":"Plouvien"},
-      {"@type":"AdministrativeArea","name":"Plabennec"},
-      {"@type":"AdministrativeArea","name":"Kersaint-Plabennec"},
-      {"@type":"AdministrativeArea","name":"Le Drennec"},
-      {"@type":"AdministrativeArea","name":"Coat-Méal"},
-      {"@type":"AdministrativeArea","name":"Loc-Brévalaire"},
-      {"@type":"AdministrativeArea","name":"Lesneven"},
-      {"@type":"AdministrativeArea","name":"Le Folgoët"},
-      {"@type":"AdministrativeArea","name":"Kernilis"},
-      {"@type":"AdministrativeArea","name":"Kernouës"},
-      {"@type":"AdministrativeArea","name":"Lanarvily"},
-      {"@type":"AdministrativeArea","name":"Ploudaniel"},
-      {"@type":"AdministrativeArea","name":"Plouider"},
-      {"@type":"AdministrativeArea","name":"Guissény"},
-      {"@type":"AdministrativeArea","name":"Goulven"},
-      {"@type":"AdministrativeArea","name":"Kerlouan"},
-      {"@type":"AdministrativeArea","name":"Plounéour-Brignogan-Plages"},
-      {"@type":"AdministrativeArea","name":"Saint-Frégant"},
-      {"@type":"AdministrativeArea","name":"Saint-Méen"},
-      {"@type":"AdministrativeArea","name":"Trégarantec"}
-    ],
-    "contactPoint":{
-      "@type":"ContactPoint",
-      "contactType":"service client",
-      "telephone":"+33641537334",
-      "availableLanguage":["fr"]
-    }
+    "areaServed":[{"@type":"AdministrativeArea","name":"Plouguerneau"},{"@type":"AdministrativeArea","name":"Lannilis"},{"@type":"AdministrativeArea","name":"Landéda"},{"@type":"AdministrativeArea","name":"Saint-Pabu"},{"@type":"AdministrativeArea","name":"Tréglonou"},{"@type":"AdministrativeArea","name":"Plouguin"},{"@type":"AdministrativeArea","name":"Bourg-Blanc"},{"@type":"AdministrativeArea","name":"Plouvien"},{"@type":"AdministrativeArea","name":"Plabennec"},{"@type":"AdministrativeArea","name":"Kersaint-Plabennec"},{"@type":"AdministrativeArea","name":"Le Drennec"},{"@type":"AdministrativeArea","name":"Coat-Méal"},{"@type":"AdministrativeArea","name":"Loc-Brévalaire"},{"@type":"AdministrativeArea","name":"Lesneven"},{"@type":"AdministrativeArea","name":"Le Folgoët"},{"@type":"AdministrativeArea","name":"Kernilis"},{"@type":"AdministrativeArea","name":"Kernouës"},{"@type":"AdministrativeArea","name":"Lanarvily"},{"@type":"AdministrativeArea","name":"Ploudaniel"},{"@type":"AdministrativeArea","name":"Plouider"},{"@type":"AdministrativeArea","name":"Guissény"},{"@type":"AdministrativeArea","name":"Goulven"},{"@type":"AdministrativeArea","name":"Kerlouan"},{"@type":"AdministrativeArea","name":"Plounéour-Brignogan-Plages"},{"@type":"AdministrativeArea","name":"Saint-Frégant"},{"@type":"AdministrativeArea","name":"Saint-Méen"},{"@type":"AdministrativeArea","name":"Trégarantec"}],
+    "contactPoint":{"@type":"ContactPoint","contactType":"service client","telephone":"+33641537334","availableLanguage":["fr"]}
   }
   </script>
 
   <!-- JSON-LD : WebSite -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "@id":"https://informatique-plouguerneau-antoine-conter.fr/#website",
-    "url":"https://informatique-plouguerneau-antoine-conter.fr/",
-    "name":"Antoine Conter – Services informatiques",
-    "inLanguage":"fr-FR",
-    "publisher":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"}
-  }
+  {"@context":"https://schema.org","@type":"WebSite","@id":"https://informatique-plouguerneau-antoine-conter.fr/#website","url":"https://informatique-plouguerneau-antoine-conter.fr/","name":"Antoine Conter – Services informatiques","inLanguage":"fr-FR","publisher":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"}}
   </script>
 
   <!-- JSON-LD : Services -->
@@ -172,86 +114,15 @@
   {
     "@context":"https://schema.org",
     "@graph":[
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-depannage",
-        "name":"Dépannage informatique",
-        "serviceType":"Assistance et réparation à domicile",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "areaServed":"Plouguerneau et alentours",
-        "offers":{
-          "@type":"AggregateOffer",
-          "priceCurrency":"EUR",
-          "lowPrice":"30",
-          "highPrice":"90",
-          "offerCount":"3",
-          "offers":[
-            {"@type":"Offer","price":"30","priceCurrency":"EUR","name":"Dépannage 1 h"},
-            {"@type":"Offer","price":"60","priceCurrency":"EUR","name":"Dépannage 2 h"},
-            {"@type":"Offer","price":"90","priceCurrency":"EUR","name":"Dépannage 3 h"}
-          ]
-        }
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-virus",
-        "name":"Suppression de virus",
-        "serviceType":"Sécurisation et nettoyage",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "offers":{"@type":"Offer","price":"50","priceCurrency":"EUR"},
-        "description":"Analyse, suppression de malwares et conseils de prévention."
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-install-logiciel",
-        "name":"Installation de logiciel",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter-fr/#business"},
-        "offers":{"@type":"Offer","price":"30","priceCurrency":"EUR"}
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-install-pc",
-        "name":"Installation d’un ordinateur",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "offers":{"@type":"Offer","price":"50","priceCurrency":"EUR"}
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-optimisation",
-        "name":"Nettoyage et optimisation",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "offers":{"@type":"Offer","price":"50","priceCurrency":"EUR"}
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-conseil-achat",
-        "name":"Conseil sur l’achat d’un ordinateur",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "offers":{"@type":"Offer","price":"15","priceCurrency":"EUR"}
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-aide-personne",
-        "name":"Aide à la personne (informatique)",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "offers":{"@type":"Offer","price":"30","priceCurrency":"EUR"},
-        "description":"Accompagnement personnalisé – 1 heure."
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-sauvegarde",
-        "name":"Sauvegarde / transfert de données",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "offers":{"@type":"Offer","price":"50","priceCurrency":"EUR"}
-      },
-      {
-        "@type":"Service",
-        "@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-creation-site",
-        "name":"Création de site internet simple",
-        "provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},
-        "offers":{"@type":"Offer","price":"300","priceCurrency":"EUR"},
-        "description":"Site vitrine simple, mise en ligne incluse."
-      }
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-depannage","name":"Dépannage informatique","serviceType":"Assistance et réparation à domicile","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"areaServed":"Plouguerneau et alentours","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"30","highPrice":"90","offerCount":"3","offers":[{"@type":"Offer","price":"30","priceCurrency":"EUR","name":"Dépannage 1 h"},{"@type":"Offer","price":"60","priceCurrency":"EUR","name":"Dépannage 2 h"},{"@type":"Offer","price":"90","priceCurrency":"EUR","name":"Dépannage 3 h"}]}},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-virus","name":"Suppression de virus","serviceType":"Sécurisation et nettoyage","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"40","priceCurrency":"EUR"},"description":"Analyse, suppression de malwares et conseils de prévention."},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-install-logiciel","name":"Installation de logiciel","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"30","priceCurrency":"EUR"}},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-install-pc","name":"Installation d’un ordinateur","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"50","priceCurrency":"EUR"}},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-optimisation","name":"Nettoyage et optimisation","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"40","priceCurrency":"EUR"}},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-conseil-achat","name":"Conseil sur l’achat d’un ordinateur","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"30","priceCurrency":"EUR"}},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-aide-personne","name":"Aide à la personne (informatique)","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"30","priceCurrency":"EUR"},"description":"Accompagnement personnalisé – 1 heure."},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-sauvegarde","name":"Sauvegarde / transfert de données","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"40","priceCurrency":"EUR"}},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-creation-site","name":"Création de site internet simple","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"200","priceCurrency":"EUR"},"description":"Site vitrine simple, mise en ligne incluse."}
     ]
   }
   </script>
@@ -261,27 +132,33 @@
 <header>
   <img src="Antoine-CONTER-informatique-Logo.webp"
        alt="Logo Antoine Conter – Services informatiques Plouguerneau"
-       class="logo" loading="eager" decoding="async">
+       class="logo" loading="eager" decoding="async" width="200" height="100">
+
+  <!-- TOC à droite du logo (fond blanc, liens bleus) -->
+  <nav class="toc-banner" aria-label="Navigation des sections principales" aria-expanded="true">
+    <button class="toc-toggle" aria-expanded="false" aria-controls="toc-list" aria-label="Ouvrir la navigation">☰</button>
+    <ul id="toc-list" class="toc-list"></ul>
+  </nav>
 </header>
 
-<section id="accueil">
+<section id="accueil" class="reveal">
   <div class="slogan animate__animated animate__fadeInDown">
-    <h1>Services informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours.</h1>
+    <h1>Services / dépannages informatiques à Plouguerneau, Lannilis, Landéda et leurs alentours.</h1>
     <p>Rendre l'informatique simple, juste et humaine</p>
     <p>Un accompagnement personnalisé pour particuliers, PME et associations sur Plouguerneau et toutes les communes voisines.</p>
   </div>
 </section>
 
-<section id="services">
+<section id="services" class="reveal">
   <h2 class="titre-section">Aperçu de mes services</h2>
   <div class="services-banner">
     <img src="map-antoine-conter-informatique.webp"
-         alt="Carte des communes desservies : Plouguerneau, Lannilis, Landéda, Saint‑Pabu et alentours – dépannage informatique, formation et création de site"
-         loading="lazy" decoding="async" />
+         alt="Carte des communes desservies : Plouguerneau, Lannilis, Landéda, Saint-Pabu et alentours – dépannage informatique, formation et création de site"
+         loading="lazy" decoding="async" width="1000" height="600" />
   </div>
 </section>
 
-<section id="tarifs">
+<section id="tarifs" class="reveal">
   <h2 class="titre-section">Tarifs et Forfaits</h2>
   <div class="presentation-container prestation-card bulle-tarif">
     <div class="presentation-texte">
@@ -295,13 +172,13 @@
               <tr><th>Prestation</th><th>Prix (€)</th></tr>
             </thead>
             <tbody>
-              <tr><td>Dépannage informatique 1h</td><td>20 €</td></tr>
+              <tr><td>Dépannage informatique 1h</td><td>30 €</td></tr>
               <tr><td>Suppression de virus</td><td>40 €</td></tr>
-              <tr><td>Installation de logiciel</td><td>20 €</td></tr>
-              <tr><td>Installation d’un ordinateur</td><td>40 €</td></tr>
+              <tr><td>Installation de logiciel</td><td>30 €</td></tr>
+              <tr><td>Installation d’un ordinateur</td><td>50 €</td></tr>
               <tr><td>Nettoyage et optimisation</td><td>40 €</td></tr>
-              <tr><td>Conseil sur l’achat d’un ordinateur</td><td>15 €</td></tr>
-              <tr><td>Aide à la personne 1h</td><td>20 €</td></tr>
+              <tr><td>Conseil sur l’achat d’un ordinateur</td><td>30 €</td></tr>
+              <tr><td>Aide à la personne 1h</td><td>30 €</td></tr>
               <tr><td>Sauvegarde / transfert de données</td><td>40 €</td></tr>
               <tr><td>Création de site internet simple</td><td>200 €</td></tr>
               <tr><td>Autres demandes</td><td>/</td></tr>
@@ -315,10 +192,10 @@
               <tr><th>Formation</th><th>Prix (€)</th></tr>
             </thead>
             <tbody>
-              <tr><td>Formation bureautique 1h</td><td>20 €</td></tr>
-              <tr><td>Formation bureautique 3h</td><td>60 €</td></tr>
-              <tr><td>Formation bureautique 5h</td><td>100 €</td></tr>
-              <tr><td>Découverte de l’IA</td><td>20 €</td></tr>
+              <tr><td>Formation bureautique 1h</td><td>30 €</td></tr>
+              <tr><td>Formation bureautique 3h</td><td>90 €</td></tr>
+              <tr><td>Formation bureautique 5h</td><td>150 €</td></tr>
+              <tr><td>Découverte de l’IA</td><td>30 €</td></tr>
               <tr><td>Autres demandes</td><td>/</td></tr>
             </tbody>
           </table>
@@ -331,72 +208,87 @@
 
 <section id="zones-desservies" class="hidden-list">
   <h2 class="titre-section">Zones d’intervention</h2>
-  <p>J’interviens dans toutes les communes du nord Finistère autour de Plouguerneau :</p>
+  <p>J’interviens dans toutes les communes du nord Finistère autour de Plouguerneau :</p>
   <ul class="zones-desservies">
-    <li>Plouguerneau</li>
-    <li>Lannilis</li>
-    <li>Landéda</li>
-    <li>Saint-Pabu</li>
-    <li>Tréglonou</li>
-    <li>Plouguin</li>
-    <li>Bourg-Blanc</li>
-    <li>Plouvien</li>
-    <li>Plabennec</li>
-    <li>Kersaint-Plabennec</li>
-    <li>Le Drennec</li>
-    <li>Coat-Méal</li>
-    <li>Loc-Brévalaire</li>
-    <li>Lesneven</li>
-    <li>Le Folgoët</li>
-    <li>Kernilis</li>
-    <li>Kernouës</li>
-    <li>Lanarvily</li>
-    <li>Ploudaniel</li>
-    <li>Plouider</li>
-    <li>Guissény</li>
-    <li>Goulven</li>
-    <li>Kerlouan</li>
-    <li>Plounéour-Brignogan-Plages</li>
-    <li>Saint-Frégant</li>
-    <li>Saint-Méen</li>
-    <li>Trégarantec</li>
+    <li>Plouguerneau</li><li>Lannilis</li><li>Landéda</li><li>Saint-Pabu</li><li>Tréglonou</li><li>Plouguin</li><li>Bourg-Blanc</li><li>Plouvien</li><li>Plabennec</li><li>Kersaint-Plabennec</li><li>Le Drennec</li><li>Coat-Méal</li><li>Loc-Brévalaire</li><li>Lesneven</li><li>Le Folgoët</li><li>Kernilis</li><li>Kernouës</li><li>Lanarvily</li><li>Ploudaniel</li><li>Plouider</li><li>Guissény</li><li>Goulven</li><li>Kerlouan</li><li>Plounéour-Brignogan-Plages</li><li>Saint-Frégant</li><li>Saint-Méen</li><li>Trégarantec</li>
   </ul>
 </section>
 
-<section id="presentation">
-  <h2 class="titre-section">Qui suis-je ?</h2>
+<section id="presentation" class="reveal">
+  <h2 class="titre-section">Qui suis-je ?</h2>
   <div class="presentation-container prestation-card">
     <img src="moi.webp" alt="Photo d’Antoine Conter – Informaticien à Plouguerneau"
-         class="photo-profil" loading="lazy" decoding="async">
+         class="photo-profil" loading="lazy" decoding="async" width="180" height="180">
     <div class="presentation-texte">
       <p>Étudiant en école d’ingénieurs en informatique à l’ISEN Brest, actuellement en apprentissage en entreprise à Brest.</p>
-      <p>Mon objectif : rendre l’informatique compréhensible, humaine et honnête.</p>
+      <p>Mon objectif : rendre l’informatique compréhensible, humaine et honnête.</p>
       <p>À l’écoute et pédagogue, je propose des solutions concrètes et adaptées aux besoins de chacun.</p>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="reveal">
   <h2 class="titre-section">Me contacter</h2>
   <div class="presentation-container prestation-card">
     <div class="presentation-texte">
-      <p><img src="/phone.webp" alt="Icône téléphone" class="icon">
-         <strong>Téléphone :</strong> <span class="no-link">06 41 53 73 34</span>
-      </p>
-      <p><img src="/whatapp.webp" alt="Icône WhatsApp" class="icon">
-         <strong>WhatsApp :</strong> <span class="no-link">+33 6 41 53 73 34</span>
-      </p>
-      <p><img src="/mail.webp" alt="Icône email" class="icon">
-         <strong>Email :</strong> <span class="no-link">antoine.conter@outlook.com</span>
-      </p>
-      <p><img src="/watch.webp" alt="Icône disponibilité" class="icon">
+
+      <ul class="contact-list">
+        <!-- Téléphone -->
+        <li class="contact-row">
+          <img src="/phone.webp" alt="" class="icon" width="40" height="40" aria-hidden="true">
+          <div class="contact-body">
+            <span class="contact-label">Téléphone</span>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="tel:+33641537334" aria-label="Appeler le 06 41 53 73 34">
+                06&nbsp;41&nbsp;53&nbsp;73&nbsp;34
+              </a>
+              <button class="btn btn-ghost copy-btn" data-copy="0641537334" aria-label="Copier le numéro">Copier</button>
+            </div>
+          </div>
+        </li>
+
+        <!-- WhatsApp -->
+        <li class="contact-row">
+          <img src="/whatapp.webp" alt="" class="icon" width="40" height="40" aria-hidden="true">
+          <div class="contact-body">
+            <span class="contact-label">WhatsApp</span>
+            <div class="contact-actions">
+              <a class="btn btn-primary" 
+                 href="https://wa.me/33641537334?text=Bonjour%20Antoine%2C%20j%E2%80%99ai%20besoin%20d%E2%80%99un%20coup%20de%20main%20informatique%20🙂"
+                 target="_blank" rel="noopener"
+                 aria-label="Ouvrir une conversation WhatsApp">
+                Discuter sur WhatsApp
+              </a>
+              <button class="btn btn-ghost copy-btn" data-copy="+33641537334" aria-label="Copier le numéro WhatsApp">Copier</button>
+            </div>
+          </div>
+        </li>
+
+        <!-- Email -->
+        <li class="contact-row">
+          <img src="/mail.webp" alt="" class="icon" width="40" height="40" aria-hidden="true">
+          <div class="contact-body">
+            <span class="contact-label">Email</span>
+            <div class="contact-actions">
+              <a class="btn btn-primary" 
+                 href="mailto:antoine.conter@outlook.com?subject=Demande%20d%27infos%20-%20Services%20informatiques&body=Bonjour%20Antoine%2C"
+                 aria-label="Envoyer un email à antoine.conter@outlook.com">
+                antoine.conter@outlook.com
+              </a>
+              <button class="btn btn-ghost copy-btn" data-copy="antoine.conter@outlook.com" aria-label="Copier l’email">Copier</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <p><img src="/watch.webp" alt="Icône disponibilité" class="icon" width="40" height="40">
          <strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous
       </p>
 
       <p class="accroche-contact">Plongez au cœur de mon travail</p>
 
       <p>
-        <img src="/instagram.webp" alt="Icône Instagram" class="icon">
+        <img src="/instagram.webp" alt="Icône Instagram" class="icon" width="40" height="40">
         <strong>Instagram :</strong>
         <a class="contact-link" href="https://www.instagram.com/antoine_conter_informatique" target="_blank" rel="noopener">
           @antoine-conter-informatique
@@ -404,7 +296,7 @@
       </p>
 
       <p>
-        <img src="/facebook.webp" alt="Icône Facebook" class="icon">
+        <img src="/facebook.webp" alt="Icône Facebook" class="icon" width="40" height="40">
         <strong>Facebook :</strong>
         <a class="contact-link" href="https://www.facebook.com/antoine_conter_informatique" target="_blank" rel="noopener">
           @antoine-conter-informatique
@@ -429,30 +321,192 @@
   </form>
 </div>
 
-<section id="projets-lien">
+<section id="projets-lien" class="reveal">
   <h2>
     <a href="projets.html">D'autres Projets</a>
   </h2>
 </section>
 
-<script>
-  // Gestion de la bulle et du formulaire de contact
+<!-- Zone de feedback accessible -->
+<div id="live-region" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<!-- ======= JS UX / SEO / PERF ======= -->
+<script defer>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Met à jour la variable CSS --header-real-height en fonction de la hauteur réelle du header
+  function syncHeaderHeight(){
+    var header = document.querySelector('header');
+    if(!header) return;
+    document.documentElement.style.setProperty('--header-real-height', header.offsetHeight + 'px');
+  }
+  window.addEventListener('load', syncHeaderHeight);
+  window.addEventListener('resize', syncHeaderHeight);
+
+  // Smooth scroll compensé (hauteur réelle du header)
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if(!el) return;
+    e.preventDefault();
+    var header = document.querySelector('header');
+    var offset = (header ? header.offsetHeight : 0) + 12;
+    var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    history.pushState(null, '', '#' + id);
+  }, {passive:true});
+
+  // Génération auto de la TOC depuis les H2
+  (function(){
+    var container = document.getElementById('toc-list');
+    var tocBanner = document.querySelector('.toc-banner');
+    if(!container || !tocBanner) return;
+
+    // Récupère tous les h2 visibles (ignore .hidden-list)
+    var headings = Array.from(document.querySelectorAll('section:not(.hidden-list) h2.titre-section, section:not(.hidden-list) > h2'));
+    if(!headings.length) { tocBanner.style.display = 'none'; return; }
+
+    // Assure un id de section pour chaque H2
+    headings.forEach(function(h2, idx){
+      var parentSection = h2.closest('section');
+      if(parentSection && !parentSection.id){
+        var base = (h2.textContent || 'section-'+(idx+1))
+          .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+          .replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'').slice(0,40);
+        var unique = base, i = 2;
+        while(document.getElementById(unique)){ unique = base + '-' + i++; }
+        parentSection.id = unique || ('section-'+(idx+1));
+      }
+    });
+
+    // Construit la liste des liens
+    var links = headings.map(function(h2){
+      var sec = h2.closest('section');
+      if(!sec || !sec.id) return null;
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#'+sec.id;
+      a.textContent = h2.textContent.trim();
+      li.appendChild(a);
+      return li;
+    }).filter(Boolean);
+
+    if(!links.length){ tocBanner.style.display='none'; return; }
+
+    links.forEach(function(li){ container.appendChild(li); });
+
+    // Mobile toggle (hamburger)
+    var toggle = document.querySelector('.toc-toggle');
+    if(toggle){
+      var open = false;
+      function setState(state){
+        open = state;
+        toggle.setAttribute('aria-expanded', String(open));
+        container.classList.toggle('is-open', open);
+        tocBanner.setAttribute('aria-expanded', String(open));
+        syncHeaderHeight(); // adapte la hauteur si la nav s'ouvre en mobile
+      }
+      toggle.addEventListener('click', function(){ setState(!open); });
+      // init: fermé en mobile, ouvert en desktop
+      var mq = window.matchMedia('(max-width: 992px)');
+      function applyMQ(){ setState(!mq.matches); }
+      applyMQ();
+      mq.addEventListener ? mq.addEventListener('change', applyMQ) : mq.addListener(applyMQ);
+    }
+  })();
+
+  // Bulle formulaire
   (function () {
     var bubble = document.getElementById('contact-bubble');
     var form = document.getElementById('contact-form');
     var closeBtn = document.getElementById('close-form');
+    if(!bubble || !form || !closeBtn) return;
 
-    bubble.addEventListener('click', function () {
-      var isOpen = form.style.display === 'block';
-      form.style.display = isOpen ? 'none' : 'block';
-      bubble.setAttribute('aria-expanded', String(!isOpen));
-    });
-
-    closeBtn.addEventListener('click', function () {
-      form.style.display = 'none';
-      bubble.setAttribute('aria-expanded', 'false');
+    function toggle(open){
+      var isOpen = typeof open === 'boolean' ? open : form.style.display !== 'block';
+      form.style.display = isOpen ? 'block' : 'none';
+      bubble.setAttribute('aria-expanded', String(isOpen));
+    }
+    bubble.addEventListener('click', function(){ toggle(true); });
+    closeBtn.addEventListener('click', function(){ toggle(false); });
+    document.addEventListener('click', function(e){
+      if(!form.contains(e.target) && e.target !== bubble){ toggle(false); }
     });
   })();
+
+  // Reveal au scroll
+  (function(){
+    var targets = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window) || reduceMotion){
+      targets.forEach(function(t){ t.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          entry.target.classList.add('animate__animated','animate__fadeInUp');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    targets.forEach(function(t){ io.observe(t); });
+  })();
+
+  // Copie + feedback (tous les .copy-btn)
+  (function(){
+    var toast = document.getElementById('live-region');
+    function showToast(msg){
+      if(!toast) return;
+      toast.textContent = msg;
+      toast.classList.add('show');
+      window.setTimeout(function(){ toast.classList.remove('show'); }, 1600);
+    }
+    document.addEventListener('click', function(e){
+      var btn = e.target.closest('.copy-btn');
+      if(!btn) return;
+      e.preventDefault();
+      var value = btn.getAttribute('data-copy') || '';
+      if(!value) return;
+      (navigator.clipboard ? navigator.clipboard.writeText(value) : Promise.reject())
+        .then(()=> showToast('Copié : ' + value))
+        .catch(()=> showToast('Impossible de copier.'));
+    });
+  })();
+
+  // Prefetch projets.html
+  (function(){
+    var link = document.querySelector('#projets-lien a[href$="projets.html"]');
+    if(!link) return;
+    function prefetch(){
+      if(link.dataset.prefetched) return;
+      var l = document.createElement('link');
+      l.rel = 'prefetch'; l.href = link.href;
+      document.head.appendChild(l);
+      link.dataset.prefetched = '1';
+    }
+    link.addEventListener('mouseenter', prefetch, {passive:true});
+    link.addEventListener('focus', prefetch, {passive:true});
+    if('requestIdleCallback' in window){ requestIdleCallback(prefetch, {timeout: 2000}); }
+  })();
+
+  // Service worker (optionnel si tu ajoutes /sw.js)
+  if('serviceWorker' in navigator){
+    window.addEventListener('load', function(){
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    });
+  }
+
+  // Respect reduced-motion (désactive animate.css)
+  if(reduceMotion){
+    document.querySelectorAll('[class*="animate__"]').forEach(function(el){
+      el.className = el.className.replace(/\banimate__\S+\b/g,'').trim();
+    });
+  }
+})();
 </script>
 
 </body>
