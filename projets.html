@@ -1,326 +1,215 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mes Projets – Antoine Conter Informatique</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#005f99" />
+
+  <title>Mes projets – Démonstrations & sites réalisés | Antoine Conter Informatique</title>
+  <meta name="description" content="Découvrez une sélection de projets réalisés par Antoine Conter : sites vitrines, accompagnement numérique et intégration web. Qualité, pédagogie et simplicité." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://informatique-plouguerneau-antoine-conter.fr/projets.html" />
+
+  <!-- Perf -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Mes projets – Antoine Conter Informatique" />
+  <meta property="og:description" content="Exemples concrets de sites et d’accompagnements réalisés." />
+  <meta property="og:url" content="https://informatique-plouguerneau-antoine-conter.fr/projets.html" />
+  <meta property="og:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" />
+  <meta property="og:image:alt" content="Logo Antoine Conter – Services informatiques" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Antoine Conter – Services informatiques" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mes projets – Antoine Conter Informatique" />
+  <meta name="twitter:description" content="Exemples concrets de sites et d’accompagnements réalisés." />
+  <meta name="twitter:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" type="image/webp" />
+
+  <!-- Préchargements + styles globaux -->
+  <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.webp" type="image/webp" />
+  <link rel="preload" as="style" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Styles spécifiques page Projets -->
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 22px;
-      margin: 0;
-      padding: 0;
+    :root { --brand-blue:#005f99; --brand-blue-hover:#0a6fb8; --brand-red:#B22222; }
+
+    body{
       background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
       background-size: cover;
-      color: #000;
-      scroll-behavior: smooth;
     }
 
-    header {
-      background-color: #f0f0f0;
-      height: 100px;
-      padding: 0 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
+    /* Header cohérent avec l’accueil (sticky, couleurs de marque) */
+    header{
+      background:#fff;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:0 30px;
+      position:sticky; top:0; width:100%; z-index:1000;
+      box-shadow:0 2px 5px rgba(0,0,0,.06);
+      min-height:100px; flex-wrap:wrap;
+    }
+    .logo{ height:100px; width:auto; object-fit:contain; }
+    .header-actions{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .btn-retour{ text-decoration:none; }
+
+    /* Section principale */
+    #projets{
+      position:relative; z-index:1; padding:60px 20px;
+      border-left:3px solid var(--brand-red); border-right:3px solid var(--brand-red);
+      text-align:center;
+    }
+    #projets::before{
+      content:""; position:absolute; inset:0;
+      background:rgba(255,255,255,.85); backdrop-filter:blur(2px); z-index:-1;
     }
 
-    .logo {
-      height: 100px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    /* === Bouton RETOUR centré dans la bannière === */
-    .btn-retour-header {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      background: #B22222;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 24px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 700;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-      transition: background 0.25s ease, transform 0.2s ease;
-      white-space: nowrap;
-    }
-    .btn-retour-header:hover {
-      background: #8b1a1a;
-      transform: translate(-50%, -50%) scale(1.05);
-    }
-
-    section#projets {
+    /* Titres dans le bleu + soulignement rouge (comme le reste du site) */
+    #projets .titre-section {
+      color: var(--brand-blue);
       position: relative;
-      z-index: 1;
-      padding: 120px 20px 60px;
-      border-left: 3px solid #B22222;
-      border-right: 3px solid #B22222;
-    }
-
-    section#projets::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(2px);
-      z-index: -1;
-    }
-
-    h2 {
-      font-size: 2.4em;
+      margin: 0 0 40px 0;
       font-weight: 500;
-      color: #005f99;
-      margin-bottom: 40px;
-      text-align: center;
-      position: relative;
+      font-size: 2.4em;
     }
-
-    h2::after {
+    #projets .titre-section::after {
       content: '';
       display: block;
       width: 80px;
       height: 3px;
-      background-color: #B22222;
+      background-color: var(--brand-red);
       margin: 10px auto 0;
       border-radius: 3px;
       opacity: 0.9;
     }
 
-    .projets-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      max-width: 900px;
-      margin: 0 auto;
+    .projet-title { color: var(--brand-blue); }
+
+    .intro{
+      max-width:900px; margin:0 auto 24px; text-align:center; color:#333; font-size:18px;
     }
 
-    .bulle-projet {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 25px;
-      padding: 25px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      border: 2px solid #B22222;
-      width: 100%;
-      text-align: left;
-      max-width: 700px;
+    /* Grille de projets */
+    .projets-grid{
+      max-width:1000px; margin:0 auto; display:grid; gap:20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      text-align:left;
     }
-
-    .texte-projet h3 {
-      font-size: 1.4em;
-      color: #005f99;
-      margin-bottom: 10px;
+    .projet-card{
+      display:grid; gap:14px; background:#fff; border:1px solid var(--brand-red);
+      border-radius:14px; padding:18px; box-shadow:0 4px 10px rgba(178,34,34,.1);
     }
-
-    .texte-projet p {
-      font-size: 18px;
-      color: #333;
-      line-height: 1.6;
+    .projet-media{ display:flex; justify-content:center; }
+    .projet-media img{
+      width:180px; height:auto; border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,.2);
+      transition:transform .2s ease;
     }
+    .projet-media img:hover{ transform:scale(1.03); }
+    .projet-title{ font-size:1.2rem; margin:0; }
+    .projet-desc{ margin:0; color:#333; font-size:16px; line-height:1.6; }
+    .projet-actions{ display:flex; gap:8px; flex-wrap:wrap; }
 
-    .img-reduite {
-      width: 45%;
-      max-width: 120px;
-      display: block;
-      margin: 0 auto 15px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
-    }
-
-    .img-reduite:hover {
-      transform: scale(1.03);
-    }
-
-    /* Bulle de contact */
-    #contact-bubble {
-      position: fixed;
-      bottom: 20px;
-      right: 100px; /* décalé vers la gauche pour anticiper d’autres bulles */
-      background: #FF5722;
-      color: white;
-      padding: 14px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: bold;
-      font-family: sans-serif;
-      font-size: 18px;
-      z-index: 2000;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-
-    #contact-bubble:hover {
-      transform: scale(1.1);
-      background-color: #E64A19;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        height: 70px;
-        padding: 0 15px;
-      }
-
-      .logo {
-        height: 50px;
-      }
-
-      /* on réduit un peu le bouton au centre sur mobile */
-      .btn-retour-header {
-        font-size: 14px;
-        padding: 8px 16px;
-      }
-
-      section#projets {
-        padding-top: 100px;
-      }
-
-      .bulle-projet {
-        padding: 20px;
-      }
-
-      .texte-projet h3 {
-        font-size: 1.2em;
-      }
-
-      .texte-projet p {
-        font-size: 16px;
-      }
-
-      .img-reduite {
-        width: 55%;
-        max-width: 200px;
-      }
-
-      #contact-bubble {
-        right: 20px; /* sur mobile on remet près du bord */
-      }
-    } /* <-- FIN correcte de la media query */
-
-    /* =========================
-       Contact Form & Close Button
-    ========================= */
-    #contact-form {
-      position: fixed;
-      bottom: 70px;
-      right: 20px;
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 30px 15px 15px 15px;
-      width: 270px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      font-family: sans-serif;
-      z-index: 2000;
-      border-radius: 8px;
-      box-sizing: border-box;
-      display: none; /* caché par défaut */
-    }
-
-    #close-form {
-      position: absolute;
-      top: 8px;
-      right: 10px;
-      background: transparent;
-      border: none;
-      font-size: 24px;
-      color: #888;
-      cursor: pointer;
-      z-index: 2100;
-      padding: 0;
-      line-height: 1;
-    }
-
-    #close-form:hover {
-      color: #000;
-    }
-
-    #contact-form input,
-    #contact-form textarea {
-      width: 100%;
-      margin-top: 15px;
-      margin-bottom: 10px;
-      padding: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    #contact-form textarea {
-      height: 120px;
-      resize: vertical;
-    }
-
-    #contact-form button {
-      width: 100%;
-      padding: 10px;
-      background: #FF5722;
-      border: none;
-      color: white;
-      font-size: 14px;
-      cursor: pointer;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-
-    #contact-form button:hover {
-      background: #E64A19;
+    /* Responsive */
+    @media (max-width: 768px){
+      header{ padding:8px 15px; min-height:70px; }
+      .logo{ height:70px; }
+      #projets{ padding:44px 16px; }
     }
   </style>
+
+  <!-- Redirection domaine canonique (sécurité) -->
+  <script>
+    (function(){
+      var CANONICAL_HOST='informatique-plouguerneau-antoine-conter.fr';
+      var host=location.hostname.toLowerCase();
+      var isGithub=host.endsWith('.github.io');
+      var isWww=host==='www.'+CANONICAL_HOST;
+      if(isGithub||isWww){
+        var target='https://'+CANONICAL_HOST+location.pathname+location.search+location.hash;
+        if(location.href!==target) location.replace(target);
+      }
+    })();
+  </script>
 </head>
 <body>
 
-  <header>
-    <a href="index.html">
-      <img src="Antoine-CONTER-informatique-Logo.webp" alt="Logo Antoine Conter Informatique" class="logo">
+  <!-- Header -->
+  <header role="banner">
+    <a href="/index.html" class="logo-link" aria-label="Retour à l’accueil">
+      <img src="Antoine-CONTER-informatique-Logo.webp" width="200" height="100"
+           alt="Logo Antoine Conter – Services informatiques" class="logo" loading="eager" decoding="async">
     </a>
-    <!-- Bouton retour centré dans la bannière -->
-    <a href="index.html" class="btn-retour-header">⬅ Revenir à la page principale</a>
+    <div class="header-actions">
+      <a class="btn btn-ghost btn-retour" href="/index.html" aria-label="Revenir à la page principale">⬅ Revenir à l’accueil</a>
+      <a class="btn btn-primary" href="/index.html#contact" aria-label="Aller à la section Me contacter">Me contacter</a>
+    </div>
   </header>
 
-  <section id="projets">
-    <h2>Des projets à suivre </h2>
-    <div class="projets-container">
+  <main id="contenu" role="main">
+    <!-- Fil d’Ariane supprimé -->
 
-      <div class="bulle-projet">
-        <a href="https://bruno-lhostis.fr" target="_blank">
-          <img src="Bruno-LHOSTIS-logo.webp" alt="Site Bruno Lhostis" class="img-reduite">
-        </a>
-        <div class="texte-projet">
-          <h3>Bruno L’Hostis – Professeur indépendant</h3>
-          <p>
-            Conception d’un site pour présenter l’activité de Bruno L’Hostis, professeur de mathématiques et physique-chimie. 
-            Le site valorise sa pédagogie bienveillante, tout en facilitant les prises de contact avec les familles et les organismes de formation.
+    <section id="projets" class="reveal" aria-labelledby="titre-projets">
+      <h1 id="titre-projets" class="titre-section">Mes projets</h1>
+
+      <p class="intro">
+        <strong>Découvrez quelques créations récentes, développées pour gagner en visibilité sur le web tout en restant simples et agréables à utiliser.</strong>
+      </p>
+
+      <div class="projets-grid">
+        <!-- Projet 1 -->
+        <article class="projet-card" itemscope itemtype="https://schema.org/CreativeWork">
+          <div class="projet-media">
+            <a href="https://bruno-lhostis.fr" target="_blank" rel="noopener" itemprop="url">
+              <img src="Bruno-LHOSTIS-logo.webp"
+                   width="240" height="240"
+                   alt="Logo du site de Bruno L’Hostis, professeur indépendant"
+                   loading="lazy" decoding="async" itemprop="image">
+            </a>
+          </div>
+          <h2 class="projet-title" itemprop="name">Bruno L’Hostis – Professeur indépendant</h2>
+          <p class="projet-desc" itemprop="description">
+            Conception d’un site vitrine pour présenter l’activité (mathématiques / physique-chimie),
+            mettre en avant la pédagogie et faciliter les prises de contact pour familles et organismes.
           </p>
-        </div>
+          <div class="projet-actions">
+            <a class="btn btn-primary" href="https://bruno-lhostis.fr" target="_blank" rel="noopener" aria-label="Visiter le site Bruno L’Hostis">Visiter le site</a>
+            <a class="btn btn-ghost" href="/index.html#contact" aria-label="Contacter Antoine Conter pour un projet similaire">Demander un site similaire</a>
+          </div>
+        </article>
+
+        <!-- Duplique <article> pour ajouter d’autres projets -->
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
-  <!-- Bulle de contact -->
-  <div id="contact-bubble" onclick="document.getElementById('contact-form').style.display='block'">📩 Contact</div>
-
-  <!-- Formulaire de contact (caché par défaut) -->
-  <div id="contact-form">
-    <button id="close-form" onclick="document.getElementById('contact-form').style.display='none'">×</button>
-    <form action="https://formspree.io/f/xdklavag" method="POST">
-      <input type="email" name="email" placeholder="Votre email" required><br>
-      <textarea name="message" placeholder="Votre message" required></textarea><br>
-      <button type="submit">Envoyer</button>
-    </form>
-  </div>
-
+  <!-- Reveal minimal -->
+  <script>
+    (function(){
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var targets = document.querySelectorAll('.reveal');
+      if(!('IntersectionObserver' in window) || reduceMotion){
+        targets.forEach(function(t){ t.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
 </body>
 </html>
