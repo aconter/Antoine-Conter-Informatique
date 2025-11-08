@@ -335,30 +335,6 @@
 (function(){
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Met à jour la variable CSS --header-real-height en fonction de la hauteur réelle du header
-  function syncHeaderHeight(){
-    var header = document.querySelector('header');
-    if(!header) return;
-    document.documentElement.style.setProperty('--header-real-height', header.offsetHeight + 'px');
-  }
-  window.addEventListener('load', syncHeaderHeight);
-  window.addEventListener('resize', syncHeaderHeight);
-
-  // Smooth scroll compensé (hauteur réelle du header)
-  document.addEventListener('click', function(e){
-    var a = e.target.closest('a[href^="#"]');
-    if(!a) return;
-    var id = a.getAttribute('href').slice(1);
-    var el = document.getElementById(id);
-    if(!el) return;
-    e.preventDefault();
-    var header = document.querySelector('header');
-    var offset = (header ? header.offsetHeight : 0) + 12;
-    var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-    history.pushState(null, '', '#' + id);
-  }, {passive:true});
-
   // Génération auto de la TOC depuis les H2
   (function(){
     var container = document.getElementById('toc-list');
@@ -407,7 +383,6 @@
         toggle.setAttribute('aria-expanded', String(open));
         container.classList.toggle('is-open', open);
         tocBanner.setAttribute('aria-expanded', String(open));
-        syncHeaderHeight(); // adapte la hauteur si la nav s'ouvre en mobile
       }
       toggle.addEventListener('click', function(){ setState(!open); });
       // init: fermé en mobile, ouvert en desktop

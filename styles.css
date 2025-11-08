@@ -10,8 +10,7 @@
 ========================= */
 :root {
   --bubble-height: 56px;
-  --header-height: 100px;             /* hauteur mini du header */
-  --header-real-height: 100px;        /* maj en JS selon contenu réel */
+  --header-height: 100px;             /* hauteur de base du header */
   --brand-blue: #005f99;
   --brand-blue-hover: #0a6fb8;
   --brand-red: #B22222;
@@ -36,6 +35,8 @@
 /* =========================
    Globals
 ========================= */
+html { scroll-behavior: smooth; }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 22px;
@@ -43,7 +44,6 @@ body {
   background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
   background-size: cover;
   color: #000;
-  scroll-behavior: smooth;
   padding-bottom: calc(var(--bubble-height) + 20px);
 }
 
@@ -53,18 +53,18 @@ section:not(#accueil)::before {
   background: rgba(255,255,255,0.85); backdrop-filter: blur(2px); z-index: -1;
 }
 
-/* Evite que le contenu passe sous le header fixe */
-section { scroll-margin-top: calc(var(--header-real-height) + 12px); }
+/* Ancrages compensés par la hauteur de base du header */
+section { scroll-margin-top: calc(var(--header-height) + 12px); }
 
 /* =========================
    Header & Logo + TOC à droite
 ========================= */
 header {
-  background-color: #fff;           /* fond blanc */
-  min-height: var(--header-height); /* plus de hauteur fixe */
+  background-color: #fff;
+  min-height: var(--header-height);
   padding: 0 30px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.06);
-  position: fixed; width: 100%; top: 0; z-index: 1000;
+  position: sticky; top: 0; z-index: 1000;   /* sticky au lieu de fixed */
   display: flex; align-items: center; justify-content: space-between;
   gap: 16px; flex-wrap: wrap;       /* wrap si la nav prend deux lignes */
 }
@@ -101,9 +101,9 @@ header {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700; font-size: 16px;
-  color: var(--brand-blue);                   /* bleu sur fond blanc */
-  border: 2px solid var(--brand-blue);        /* contour bleu */
-  background: #fff;                           /* fond blanc */
+  color: var(--brand-blue);
+  border: 2px solid var(--brand-blue);
+  background: #fff;
   transition: background-color .2s ease, color .2s ease;
   white-space: nowrap;
 }
@@ -117,8 +117,7 @@ header {
    Accueil
 ========================= */
 #accueil {
-  height: 100vh;
-  margin-top: var(--header-real-height); /* compense la hauteur réelle du header */
+  min-height: calc(100svh - var(--header-height)); /* plein écran sous le header */
   background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
   background-size: cover;
   display: flex; justify-content: center; align-items: center; text-align: center;
