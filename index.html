@@ -99,7 +99,35 @@
       {"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"18:00"},
       {"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"18:00"}
     ],
-    "areaServed":[{"@type":"AdministrativeArea","name":"Plouguerneau"},{"@type":"AdministrativeArea","name":"Lannilis"},{"@type":"AdministrativeArea","name":"Landéda"},{"@type":"AdministrativeArea","name":"Saint-Pabu"},{"@type":"AdministrativeArea","name":"Tréglonou"},{"@type":"AdministrativeArea","name":"Plouguin"},{"@type":"AdministrativeArea","name":"Bourg-Blanc"},{"@type":"AdministrativeArea","name":"Plouvien"},{"@type":"AdministrativeArea","name":"Plabennec"},{"@type":"AdministrativeArea","name":"Kersaint-Plabennec"},{"@type":"AdministrativeArea","name":"Le Drennec"},{"@type":"AdministrativeArea","name":"Coat-Méal"},{"@type":"AdministrativeArea","name":"Loc-Brévalaire"},{"@type":"AdministrativeArea","name":"Lesneven"},{"@type":"AdministrativeArea","name":"Le Folgoët"},{"@type":"AdministrativeArea","name":"Kernilis"},{"@type":"AdministrativeArea","name":"Kernouës"},{"@type":"AdministrativeArea","name":"Lanarvily"},{"@type":"AdministrativeArea","name":"Ploudaniel"},{"@type":"AdministrativeArea","name":"Plouider"},{"@type":"AdministrativeArea","name":"Guissény"},{"@type":"AdministrativeArea","name":"Goulven"},{"@type":"AdministrativeArea","name":"Kerlouan"},{"@type":"AdministrativeArea","name":"Plounéour-Brignogan-Plages"},{"@type":"AdministrativeArea","name":"Saint-Frégant"},{"@type":"AdministrativeArea","name":"Saint-Méen"},{"@type":"AdministrativeArea","name":"Trégarantec"}],
+    "areaServed":[
+      {"@type":"AdministrativeArea","name":"Plouguerneau"},
+      {"@type":"AdministrativeArea","name":"Lannilis"},
+      {"@type":"AdministrativeArea","name":"Landéda"},
+      {"@type":"AdministrativeArea","name":"Saint-Pabu"},
+      {"@type":"AdministrativeArea","name":"Tréglonou"},
+      {"@type":"AdministrativeArea","name":"Plouguin"},
+      {"@type":"AdministrativeArea","name":"Bourg-Blanc"},
+      {"@type":"AdministrativeArea","name":"Plouvien"},
+      {"@type":"AdministrativeArea","name":"Plabennec"},
+      {"@type":"AdministrativeArea","name":"Kersaint-Plabennec"},
+      {"@type":"AdministrativeArea","name":"Le Drennec"},
+      {"@type":"AdministrativeArea","name":"Coat-Méal"},
+      {"@type":"AdministrativeArea","name":"Loc-Brévalaire"},
+      {"@type":"AdministrativeArea","name":"Lesneven"},
+      {"@type":"AdministrativeArea","name":"Le Folgoët"},
+      {"@type":"AdministrativeArea","name":"Kernilis"},
+      {"@type":"AdministrativeArea","name":"Kernouës"},
+      {"@type":"AdministrativeArea","name":"Lanarvily"},
+      {"@type":"AdministrativeArea","name":"Ploudaniel"},
+      {"@type":"AdministrativeArea","name":"Plouider"},
+      {"@type":"AdministrativeArea","name":"Guissény"},
+      {"@type":"AdministrativeArea","name":"Goulven"},
+      {"@type":"AdministrativeArea","name":"Kerlouan"},
+      {"@type":"AdministrativeArea","name":"Plounéour-Brignogan-Plages"},
+      {"@type":"AdministrativeArea","name":"Saint-Frégant"},
+      {"@type":"AdministrativeArea","name":"Saint-Méen"},
+      {"@type":"AdministrativeArea","name":"Trégarantec"}
+    ],
     "contactPoint":{"@type":"ContactPoint","contactType":"service client","telephone":"+33641537334","availableLanguage":["fr"]}
   }
   </script>
@@ -322,6 +350,12 @@
 </div>
 
 <section id="projets-lien" class="reveal">
+  <!-- >>> Indicateur CLIQUE ICI au-dessus du titre <<< -->
+  <p class="projet-hint projet-hint--top">
+    <span class="hint-text">Clique ici</span>
+    <span class="hint-arrow">↓</span>
+  </p>
+
   <h2>
     <a href="projets.html">D'autres Projets</a>
   </h2>
@@ -341,11 +375,9 @@
     var tocBanner = document.querySelector('.toc-banner');
     if(!container || !tocBanner) return;
 
-    // Récupère tous les h2 visibles (ignore .hidden-list)
     var headings = Array.from(document.querySelectorAll('section:not(.hidden-list) h2.titre-section, section:not(.hidden-list) > h2'));
     if(!headings.length) { tocBanner.style.display = 'none'; return; }
 
-    // Assure un id de section pour chaque H2
     headings.forEach(function(h2, idx){
       var parentSection = h2.closest('section');
       if(parentSection && !parentSection.id){
@@ -358,7 +390,6 @@
       }
     });
 
-    // Construit la liste des liens
     var links = headings.map(function(h2){
       var sec = h2.closest('section');
       if(!sec || !sec.id) return null;
@@ -374,7 +405,6 @@
 
     links.forEach(function(li){ container.appendChild(li); });
 
-    // Mobile toggle (hamburger)
     var toggle = document.querySelector('.toc-toggle');
     if(toggle){
       var open = false;
@@ -385,7 +415,6 @@
         tocBanner.setAttribute('aria-expanded', String(open));
       }
       toggle.addEventListener('click', function(){ setState(!open); });
-      // init: fermé en mobile, ouvert en desktop
       var mq = window.matchMedia('(max-width: 992px)');
       function applyMQ(){ setState(!mq.matches); }
       applyMQ();
