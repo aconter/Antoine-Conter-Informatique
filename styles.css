@@ -41,7 +41,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 22px;
   margin: 0; padding: 0;
-  background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
+  background: url('fond_antoine_conter_informatique.avif') no-repeat center center fixed;
   background-size: cover;
   color: #000;
   padding-bottom: calc(var(--bubble-height) + 20px);
@@ -118,7 +118,7 @@ header {
 ========================= */
 #accueil {
   min-height: calc(100svh - var(--header-height)); /* plein écran sous le header */
-  background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
+  background: url('fond_antoine_conter_informatique.avif') no-repeat center center fixed;
   background-size: cover;
   display: flex; justify-content: center; align-items: center; text-align: center;
 }

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#005f99" />
+
+  <!-- SEO orienté offre locale -->
+  <title>Création de site vitrine pour associations & PME – Finistère Nord (Plouguerneau, Lannilis, Landéda) | Antoine Conter</title>
+  <meta name="description" content="Sites vitrines rapides, clairs et efficaces pour associations et PME du Finistère Nord (Plouguerneau, Lannilis, Landéda…). Design soigné, SEO local, mise en ligne incluse. Devis simple et rapide." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://informatique-plouguerneau-antoine-conter.fr/projets.html" />
+
+  <!-- Perf -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Création de site vitrine – Associations & PME – Finistère Nord" />
+  <meta property="og:description" content="Site vitrine clé en main, optimisé pour la visibilité locale. Plouguerneau, Lannilis, Landéda et alentours." />
+  <meta property="og:url" content="https://informatique-plouguerneau-antoine-conter.fr/projets.html" />
+  <meta property="og:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" />
+  <meta property="og:image:alt" content="Logo Antoine Conter – Services informatiques" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Antoine Conter – Services informatiques" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Création de site vitrine – Associations & PME – Finistère Nord" />
+  <meta name="twitter:description" content="Site vitrine rapide, accessible et bien référencé localement. Plouguerneau, Lannilis, Landéda." />
+  <meta name="twitter:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.webp" type="image/webp" />
+
+  <!-- Préchargements + styles globaux -->
+  <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.webp" type="image/webp" />
+  <link rel="preload" as="style" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Styles spécifiques page Projets (léger, dans ta charte) -->
+  <style>
+    :root { --brand-blue:#005f99; --brand-blue-hover:#0a6fb8; --brand-red:#B22222; }
+
+    body{
+      background: url('fond_antoine_conter_informatique.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header{
+      background:#fff;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:0 30px;
+      position:sticky; top:0; width:100%; z-index:1000;
+      box-shadow:0 2px 5px rgba(0,0,0,.06);
+      min-height:100px; flex-wrap:wrap;
+    }
+    .logo{ height:100px; width:auto; object-fit:contain; }
+    .header-actions{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    .btn-retour{ text-decoration:none; }
+
+    /* Bandeau HERO “Offre site vitrine” */
+    .hero-offre{
+      position:relative; z-index:1; padding:54px 20px 40px;
+      border-left:3px solid var(--brand-red); border-right:3px solid var(--brand-red);
+      text-align:center;
+    }
+    .hero-offre::before{
+      content:""; position:absolute; inset:0;
+      background:rgba(255,255,255,.88); backdrop-filter:blur(1.5px); z-index:-1;
+    }
+    .hero-title{
+      color:var(--brand-blue); font-size:2.2rem; margin:0 0 10px; font-weight:700;
+    }
+    .hero-sub{ max-width:960px; margin:0 auto 16px; color:#333; font-size:1.05rem; }
+    .hero-badges{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:14px 0 20px; }
+    .badge{
+      border:2px solid var(--brand-blue); color:var(--brand-blue); background:#fff;
+      padding:6px 12px; border-radius:999px; font-weight:700; font-size:.95rem;
+    }
+    .cta-row{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; height:42px; padding:0 16px;
+      border-radius:999px; border:2px solid transparent; cursor:pointer; text-decoration:none;
+      font-weight:800; font-size:16px; transition:transform .06s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+    }
+    .btn:active{ transform:translateY(1px); }
+    .btn-primary{ background:var(--brand-blue); color:#fff; box-shadow:0 6px 16px rgba(0,0,0,.18); }
+    .btn-primary:hover{ background:var(--brand-blue-hover); }
+    .btn-ghost{ background:#fff; color:var(--brand-blue); border-color:var(--brand-blue); }
+    .btn-ghost:hover{ background:rgba(0,95,153,.06); }
+
+    /* Section projets existants */
+    #projets{
+      position:relative; z-index:1; padding:48px 20px;
+      border-left:3px solid var(--brand-red); border-right:3px solid var(--brand-red);
+      text-align:center;
+    }
+    #projets::before{
+      content:""; position:absolute; inset:0;
+      background:rgba(255,255,255,.85); backdrop-filter:blur(1px); z-index:-1;
+    }
+    #projets .titre-section{
+      color:var(--brand-blue); font-weight:500; font-size:2.2rem; margin:0 0 36px; position:relative;
+    }
+    #projets .titre-section::after{
+      content:''; display:block; width:80px; height:3px; background-color:var(--brand-red);
+      margin:10px auto 0; border-radius:3px; opacity:.9;
+    }
+    .intro{ max-width:900px; margin:0 auto 22px; color:#333; font-size:1.02rem; }
+
+    .projets-grid{
+      max-width:1000px; margin:0 auto; display:grid; gap:20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); text-align:left;
+    }
+    .projet-card{
+      display:grid; gap:14px; background:#fff; border:1px solid var(--brand-red);
+      border-radius:14px; padding:18px; box-shadow:0 4px 10px rgba(178,34,34,.1);
+    }
+    .projet-media{ display:flex; justify-content:center; }
+    .projet-media img{
+      width:180px; height:auto; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,.2); transition:transform .2s ease;
+    }
+    .projet-media img:hover{ transform:scale(1.03); }
+    .projet-title{ color:var(--brand-blue); font-size:1.2rem; margin:0; }
+    .projet-desc{ margin:0; color:#333; font-size:16px; line-height:1.6; }
+    .projet-actions{ display:flex; gap:8px; flex-wrap:wrap; }
+
+    /* Étapes + Zones + FAQ */
+    .section-soft{
+      position:relative; z-index:1; padding:40px 20px;
+      border-left:3px solid var(--brand-red); border-right:3px solid var(--brand-red); text-align:center;
+    }
+    .section-soft::before{
+      content:""; position:absolute; inset:0; background:rgba(255,255,255,.86); backdrop-filter:blur(1px); z-index:-1;
+    }
+    .grid-3{
+      max-width:1000px; margin:0 auto; display:grid; gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card-soft{
+      background:#fff; border:1px solid var(--brand-red); border-radius:14px; padding:18px;
+      box-shadow:0 4px 10px rgba(178,34,34,.1); text-align:left;
+    }
+    .card-soft h3{ color:var(--brand-blue); margin:0 0 8px; font-size:1.1rem; }
+    .zones-list{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:10px 0 0; padding:0; list-style:none; }
+    .zones-list li{ border:2px solid var(--brand-blue); color:var(--brand-blue); background:#fff; padding:6px 10px; border-radius:999px; font-weight:700; font-size:.95rem; }
+
+    details{
+      background:#fff; border:1px solid var(--brand-red); border-radius:12px; padding:14px 16px; max-width:1000px; margin:0 auto 12px;
+      text-align:left; box-shadow:0 4px 10px rgba(178,34,34,.08);
+    }
+    summary{ cursor:pointer; color:var(--brand-blue); font-weight:700; }
+    details[open]{ border-color: var(--brand-blue); }
+
+    /* Bandes CTA */
+    .cta-band{
+      position:relative; z-index:1; padding:26px 16px; text-align:center;
+      border-left:3px solid var(--brand-red); border-right:3px solid var(--brand-red);
+    }
+    .cta-band::before{
+      content:""; position:absolute; inset:0; background:rgba(255,255,255,.9); z-index:-1;
+    }
+    .cta-band p{ margin:8px 0 14px; }
+
+    @media (max-width: 768px){
+      header{ padding:8px 15px; min-height:70px; }
+      .logo{ height:70px; }
+      .hero-title{ font-size:1.7rem; }
+      #projets{ padding:40px 16px; }
+    }
+  </style>
+
+  <!-- Redirection domaine canonique (cohérence) -->
+  <script>
+    (function(){
+      var CANONICAL_HOST='informatique-plouguerneau-antoine-conter.fr';
+      var host=location.hostname.toLowerCase();
+      var isGithub=host.endsWith('.github.io');
+      var isWww=host==='www.'+CANONICAL_HOST;
+      if(isGithub||isWww){
+        var target='https://'+CANONICAL_HOST+location.pathname+location.search+location.hash;
+        if(location.href!==target) location.replace(target);
+      }
+    })();
+  </script>
+
+  <!-- JSON-LD Service (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Création de site vitrine",
+    "serviceType":"WebDesignService",
+    "areaServed":{
+      "@type":"AdministrativeArea",
+      "name":"Finistère Nord (Plouguerneau, Lannilis, Landéda et alentours)"
+    },
+    "provider":{
+      "@type":"LocalBusiness",
+      "name":"Antoine Conter – Services informatiques",
+      "url":"https://informatique-plouguerneau-antoine-conter.fr/"
+    },
+    "hasOfferCatalog":{
+      "@type":"OfferCatalog",
+      "name":"Sites vitrines clé en main",
+      "itemListElement":[
+        {"@type":"Offer","name":"Site vitrine simple","priceCurrency":"EUR","price":"200"},
+        {"@type":"Offer","name":"Accompagnement SEO local","priceCurrency":"EUR","price":"40"},
+        {"@type":"Offer","name":"Maintenance mensuelle","priceCurrency":"EUR","price":"30"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header role="banner">
+    <a href="/index.html" class="logo-link" aria-label="Retour à l’accueil">
+      <img src="Antoine-CONTER-informatique-Logo.webp" width="200" height="100"
+           alt="Logo Antoine Conter – Services informatiques" class="logo" loading="eager" decoding="async">
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-ghost btn-retour" href="/index.html" aria-label="Revenir à la page principale">⬅ Accueil</a>
+      <a class="btn btn-primary" href="/index.html#contact" aria-label="Aller à la section Me contacter">Me contacter</a>
+    </div>
+  </header>
+
+  <!-- HERO OFFRE SITE VITRINE -->
+  <section class="hero-offre">
+    <h1 class="hero-title">Création de sites vitrines pour associations & PME – Finistère Nord</h1>
+    <p class="hero-sub">
+      Sites rapides, clairs et simples à maintenir, pensés pour <strong>être trouvés localement</strong> (Plouguerneau, Lannilis, Landéda, Lesneven…).
+      Mise en ligne et accompagnement compris.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">SEO local</span>
+      <span class="badge">Responsive</span>
+      <span class="badge">Chargement rapide</span>
+      <span class="badge">Accompagnement humain</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/index.html#contact">Demander un devis</a>
+      <a class="btn btn-ghost" href="#projets">Voir des exemples</a>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <main id="contenu" role="main">
+    <section id="projets" class="reveal" aria-labelledby="titre-projets">
+      <h2 id="titre-projets" class="titre-section">Exemples de réalisations</h2>
+
+      <p class="intro">
+        <strong>Quelques créations récentes conçues pour booster la visibilité locale</strong> tout en restant sobres, rapides et faciles à faire évoluer.
+      </p>
+
+      <div class="projets-grid">
+        <!-- Projet 1 -->
+        <article class="projet-card" itemscope itemtype="https://schema.org/CreativeWork">
+          <div class="projet-media">
+            <a href="https://bruno-lhostis.fr" target="_blank" rel="noopener" itemprop="url">
+              <img src="Bruno-LHOSTIS-logo.webp"
+                   width="240" height="240"
+                   alt="Logo du site de Bruno L’Hostis, professeur indépendant"
+                   loading="lazy" decoding="async" itemprop="image">
+            </a>
+          </div>
+          <h3 class="projet-title" itemprop="name">Bruno L’Hostis – Professeur indépendant</h3>
+          <p class="projet-desc" itemprop="description">
+            Site vitrine axé <strong>prise de contact</strong> + <strong>réassurance locale</strong> (zones desservies, disponibilité).
+            Optimisations : balisage sémantique, images légères, CTA visibles.
+          </p>
+          <div class="projet-actions">
+            <a class="btn btn-primary" href="https://bruno-lhostis.fr" target="_blank" rel="noopener" aria-label="Visiter le site Bruno L’Hostis">Visiter le site</a>
+            <a class="btn btn-ghost" href="/index.html#contact" aria-label="Contacter Antoine Conter pour un projet similaire">Demander un site similaire</a>
+          </div>
+        </article>
+
+        <!-- (Duplique l’article pour d’autres projets) -->
+      </div>
+    </section>
+
+    <!-- Étapes + Différenciants -->
+    <section class="section-soft" aria-labelledby="steps-title">
+      <h2 id="steps-title" class="titre-section">Comment ça se passe ?</h2>
+      <div class="grid-3">
+        <div class="card-soft">
+          <h3>1. Cadrage express</h3>
+          <p>Objectif, pages, contenus, photos : on va à l’essentiel. Je te propose une structure claire et efficace.</p>
+        </div>
+        <div class="card-soft">
+          <h3>2. Maquette & intégration</h3>
+          <p>Design sobre dans ta charte, mobile-first, performance en ligne de mire (images légères, code propre).</p>
+        </div>
+        <div class="card-soft">
+          <h3>3. SEO local & mise en ligne</h3>
+          <p>Balises optimisées, pages “zones desservies”, connexion au domaine, hébergement et suivi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zones desservies (renforce le local) -->
+    <section class="section-soft" aria-labelledby="zones-title">
+      <h2 id="zones-title" class="titre-section">Où j’interviens ?</h2>
+      <ul class="zones-list">
+        <li>Plouguerneau</li><li>Lannilis</li><li>Landéda</li><li>Saint-Pabu</li>
+        <li>Lesneven</li><li>Le Folgoët</li><li>Kerlouan</li><li>Plouvien</li>
+      </ul>
+      <p class="intro">Déplacement possible dans tout le Finistère Nord et accompagnement à distance si besoin.</p>
+    </section>
+
+    <!-- FAQ (utile SEO + rassurance) -->
+    <section class="section-soft" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="titre-section">Questions fréquentes</h2>
+      <details>
+        <summary>Combien coûte un site vitrine&nbsp;?</summary>
+        <p>Un site simple démarre à <strong>200 €</strong> (mise en ligne incluse). Des options (textes, photos, SEO étendu, maintenance) peuvent s’ajouter selon le besoin.</p>
+      </details>
+      <details>
+        <summary>Les sites sont-ils optimisés pour Google&nbsp;?</summary>
+        <p>Oui, balisage sémantique, métadonnées, images compressées et pages orientées <strong>SEO local</strong> (communes ciblées) font partie de la base.</p>
+      </details>
+      <details>
+        <summary>Je n’ai pas de photos ni de contenus&nbsp;: tu peux m’aider&nbsp;?</summary>
+        <p>Oui. Je peux t’accompagner sur la rédaction et proposer un tri de visuels libres de droits si besoin.</p>
+      </details>
+    </section>
+
+    <!-- Bande CTA finale -->
+    <section class="cta-band">
+      <h2 class="titre-section">Prêt à donner de la visibilité à ton activité&nbsp;?</h2>
+      <p>Discutons 10 minutes de ton projet (gratuit et sans engagement).</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/index.html#contact">Demander un devis</a>
+        <a class="btn btn-ghost" href="/index.html#services">Voir mes autres services</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reveal minimal -->
+  <script>
+    (function(){
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var targets = document.querySelectorAll('.reveal');
+      if(!('IntersectionObserver' in window) || reduceMotion){
+        targets.forEach(function(t){ t.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+      targets.forEach(function(t){ io.observe(t); });
+    })();
+  </script>
+
+  <!-- JSON-LD FAQ (renforce le SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Combien coûte un site vitrine ?",
+        "acceptedAnswer":{"@type":"Answer","text":"Un site simple démarre à 200 € (mise en ligne incluse). Des options (textes, photos, SEO étendu, maintenance) peuvent s’ajouter selon le besoin."}
+      },
+      {
+        "@type":"Question",
+        "name":"Les sites sont-ils optimisés pour Google ?",
+        "acceptedAnswer":{"@type":"Answer","text":"Oui, balisage sémantique, métadonnées, images compressées et pages orientées SEO local (communes ciblées) font partie de la base."}
+      },
+      {
+        "@type":"Question",
+        "name":"Je n’ai pas de photos ni de contenus : vous pouvez m’aider ?",
+        "acceptedAnswer":{"@type":"Answer","text":"Oui. Je peux accompagner la rédaction et proposer un tri de visuels libres de droits si besoin."}
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
