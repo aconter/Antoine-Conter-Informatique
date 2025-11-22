@@ -142,7 +142,7 @@
   {
     "@context":"https://schema.org",
     "@graph":[
-      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-depannage","name":"Dépannage informatique","serviceType":"Assistance et réparation à domicile","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"areaServed":"Plouguerneau et alentours","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"30","highPrice":"90","offerCount":"3","offers":[{"@type":"Offer","price":"30","priceCurrency":"EUR","name":"Dépannage 1 h"},{"@type":"Offer","price":"60","priceCurrency":"EUR","name":"Dépannage 2 h"},{"@type":"Offer","price":"90","priceCurrency":"EUR","name":"Dépannage 3 h"}]}},
+      {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-depannage","name":"Dépannage informatique","serviceType":"Assistance et réparation à domicile","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"areaServed":"Plouguerneau et alentours","offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":"30","highPrice":"90","offerCount":"3","offers":[{"@type":"Offer","price":"30","priceCurrency":"EUR","name":"Dépannage 1 h"},{"@type":"Offer","price":"60","priceCurrency":"EUR","name":"Dépannage 2 h"},{"@type":"Offer","price":"90","priceCurrency":"EUR","name":"Dépannage 3 h"}]}}},
       {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-virus","name":"Suppression de virus","serviceType":"Sécurisation et nettoyage","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"40","priceCurrency":"EUR"},"description":"Analyse, suppression de malwares et conseils de prévention."},
       {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-install-logiciel","name":"Installation de logiciel","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"30","priceCurrency":"EUR"}},
       {"@type":"Service","@id":"https://informatique-plouguerneau-antoine-conter.fr/#service-install-pc","name":"Installation d’un ordinateur","provider":{"@id":"https://informatique-plouguerneau-antoine-conter.fr/#business"},"offers":{"@type":"Offer","price":"50","priceCurrency":"EUR"}},
@@ -186,51 +186,89 @@
   </div>
 </section>
 
+<!-- =========================
+     SECTION TARIFS : 3 CARTES FORFAITS
+========================= -->
 <section id="tarifs" class="reveal">
   <h2 class="titre-section">Tarifs et Forfaits</h2>
+
   <div class="presentation-container prestation-card bulle-tarif">
     <div class="presentation-texte">
-      <h3>Forfaits</h3>
-      <p>Voici les différents forfaits que je propose avec les tarifs associés.</p>
-
-      <div class="table-flex">
-        <div class="table-container">
-          <table class="table-tarifs">
-            <thead>
-              <tr><th>Prestation</th><th>Prix (€)</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Dépannage informatique 1h</td><td>30 €</td></tr>
-              <tr><td>Suppression de virus</td><td>40 €</td></tr>
-              <tr><td>Installation de logiciel</td><td>30 €</td></tr>
-              <tr><td>Installation d’un ordinateur</td><td>50 €</td></tr>
-              <tr><td>Nettoyage et optimisation</td><td>40 €</td></tr>
-              <tr><td>Conseil sur l’achat d’un ordinateur</td><td>30 €</td></tr>
-              <tr><td>Aide à la personne 1h</td><td>30 €</td></tr>
-              <tr><td>Sauvegarde / transfert de données</td><td>40 €</td></tr>
-              <tr><td>Création de site internet simple</td><td>200 €</td></tr>
-              <tr><td>Autres demandes</td><td>/</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-container">
-          <table class="table-tarifs">
-            <thead>
-              <tr><th>Formation</th><th>Prix (€)</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Formation bureautique 1h</td><td>30 €</td></tr>
-              <tr><td>Formation bureautique 3h</td><td>90 €</td></tr>
-              <tr><td>Formation bureautique 5h</td><td>150 €</td></tr>
-              <tr><td>Découverte de l’IA</td><td>30 €</td></tr>
-              <tr><td>Autres demandes</td><td>/</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
+      <h3>Des forfaits clairs, sans surprise</h3>
     </div>
+
+    <div class="pricing-grid" aria-label="Forfaits de services informatiques">
+      <!-- Forfait 1 : Dépannage 1h -->
+      <article class="pricing-card">
+        <header class="pricing-header">
+          <h3 class="pricing-title">Forfait Dépannage 1h</h3>
+          <p class="pricing-tagline">Pour un problème ponctuel à régler rapidement.</p>
+        </header>
+        <p class="pricing-price">
+          30&nbsp;€
+          <span>/ heure à domicile</span>
+        </p>
+        <ul class="pricing-list">
+          <li>Dépannage informatique à domicile</li>
+          <li>Diagnostic complet du problème</li>
+          <li>Résolution de pannes courantes (Wi-Fi, imprimante, logiciel…)</li>
+        </ul>
+        <p class="pricing-note">
+          Idéal pour une panne, un bug, un souci de connexion ou un logiciel qui ne répond plus.
+        </p>
+        <a href="#contact" class="pricing-cta">Demander ce forfait</a>
+      </article>
+
+      <!-- Forfait 2 : Formation bureautique & logiciels du quotidien (mis en avant) -->
+      <article class="pricing-card pricing-card-featured">
+        <header class="pricing-header">
+          <h3 class="pricing-title">Forfait Formation 1h</h3>
+          <p class="pricing-tagline">Prendre en main l’ordinateur et les logiciels du quotidien, pas à pas.</p>
+        </header>
+        <p class="pricing-price">
+          30&nbsp;€
+          <span>/ heure à domicile</span>
+        </p>
+        <ul class="pricing-list">
+          <li>Découverte / remise à niveau sur Word, Excel, PowerPoint…</li>
+          <li>Gestion des emails et navigation Internet en toute sécurité</li>
+          <li>Organisation de ses fichiers et sauvegardes</li>
+          <li>Séances personnalisées selon vos besoins (PC, tablette, smartphone)</li>
+        </ul>
+        <p class="pricing-note">
+          Idéal pour gagner en autonomie, poser toutes vos questions sans jugement
+          et se sentir enfin à l’aise avec l’informatique du quotidien.
+        </p>
+        <a href="#contact" class="pricing-cta pricing-cta-primary">Je veux ce forfait</a>
+      </article>
+
+      <!-- Forfait 3 : Installation d’ordinateur -->
+      <article class="pricing-card">
+        <header class="pricing-header">
+          <h3 class="pricing-title">Forfait Installation d’ordinateur</h3>
+          <p class="pricing-tagline">La nouvelle jeunesse de votre ordinateur, sans prise de tête.</p>
+        </header>
+        <p class="pricing-price">
+          50&nbsp;€
+          <span>/ à partir de </span>
+        </p>
+        <ul class="pricing-list">
+          <li>Installation Windows 11/ Remise à niveau</li>
+          <li>Transfert de vos données (documents, photos…)</li>
+          <li>Installation des logiciels essentiels</li>
+          <li>Configuration mails, imprimante &amp; accès internet</li>
+        </ul>
+        <p class="pricing-note">
+          Idéal lorsque vous changez d’ordinateur ou que vous voulez repartir sur un PC propre, prêt à l’usage.
+        </p>
+        <a href="#contact" class="pricing-cta">Parler de mon besoin</a>
+      </article>
+    </div>
+
+    <p class="pricing-footer">
+      Besoin d’un cas particulier (association, PME, projet spécifique, création de site internet…) ?
+      <strong>Les demandes sur-mesure sont possibles</strong> : contactez-moi, on trouve ensemble la solution la plus adaptée.
+    </p>
   </div>
 </section>
 
@@ -257,6 +295,7 @@
 
 <section id="contact" class="reveal">
   <h2 class="titre-section">Me contacter</h2>
+
   <div class="presentation-container prestation-card">
     <div class="presentation-texte">
 
@@ -270,7 +309,9 @@
               <a class="btn btn-primary" href="tel:+33641537334" aria-label="Appeler le 06 41 53 73 34">
                 06&nbsp;41&nbsp;53&nbsp;73&nbsp;34
               </a>
-              <button class="btn btn-ghost copy-btn" data-copy="0641537334" aria-label="Copier le numéro">Copier</button>
+              <button class="btn btn-ghost copy-btn" data-copy="0641537334" aria-label="Copier le numéro">
+                Copier
+              </button>
             </div>
           </div>
         </li>
@@ -287,7 +328,9 @@
                  aria-label="Ouvrir une conversation WhatsApp">
                 Discuter sur WhatsApp
               </a>
-              <button class="btn btn-ghost copy-btn" data-copy="+33641537334" aria-label="Copier le numéro WhatsApp">Copier</button>
+              <button class="btn btn-ghost copy-btn" data-copy="+33641537334" aria-label="Copier le numéro WhatsApp">
+                Copier
+              </button>
             </div>
           </div>
         </li>
@@ -303,36 +346,46 @@
                  aria-label="Envoyer un email à antoine.conter@outlook.com">
                 antoine.conter@outlook.com
               </a>
-              <button class="btn btn-ghost copy-btn" data-copy="antoine.conter@outlook.com" aria-label="Copier l’email">Copier</button>
+              <button class="btn btn-ghost copy-btn" data-copy="antoine.conter@outlook.com" aria-label="Copier l’email">
+                Copier
+              </button>
             </div>
           </div>
         </li>
       </ul>
 
-      <p><img src="/watch.avif" alt="Icône disponibilité" class="icon" width="40" height="40">
-         <strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous
+      <!-- Disponibilité -->
+      <p>
+        <img src="/watch.avif" alt="Icône disponibilité" class="icon" width="40" height="40">
+        <strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous
       </p>
 
       <p class="accroche-contact">Plongez au cœur de mon travail</p>
 
+      <!-- Instagram -->
       <p>
         <img src="/instagram.avif" alt="Icône Instagram" class="icon" width="40" height="40">
         <strong>Instagram :</strong>
-        <a class="contact-link" href="https://www.instagram.com/antoine_conter_informatique" target="_blank" rel="noopener">
-          @antoine-conter-informatique
+        <a class="contact-link" href="https://www.instagram.com/antoine_conter_informatique" 
+           target="_blank" rel="noopener">
+          @antoine_conter_informatique
         </a>
       </p>
 
+      <!-- Facebook -->
       <p>
         <img src="/facebook.avif" alt="Icône Facebook" class="icon" width="40" height="40">
         <strong>Facebook :</strong>
-        <a class="contact-link" href="https://www.facebook.com/antoine_conter_informatique" target="_blank" rel="noopener">
-          @antoine-conter-informatique
+        <a class="contact-link" href="https://www.facebook.com/antoine_conter_informatique" 
+           target="_blank" rel="noopener">
+          @antoine_conter_informatique
         </a>
       </p>
+
     </div>
   </div>
 </section>
+
 
 <!-- Bulle de contact -->
 <div id="contact-bubble" aria-controls="contact-form" aria-expanded="false">
@@ -351,7 +404,7 @@
 
 <section id="projets-lien" class="reveal">
   <!-- >>> Indicateur CLIQUE ICI au-dessus du titre <<< -->
-  <p class="projet-hint projet-hint--top">
+  <p class="projet-hint.projet-hint--top">
     <span class="hint-text">Clique ici</span>
     <span class="hint-arrow">↓</span>
   </p>
