@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#005f99">
+
+  <title>Partenaires locaux – Antoine Conter</title>
+  <meta name="description" content="Communes, commerces et associations qui soutiennent Antoine Conter – services informatiques à Plouguerneau et alentours.">
+
+  <!-- Styles principaux de ton site -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Antoine-CONTER-informatique-Logo.avif" type="image/avif">
+
+  <!-- Styles spécifiques PARTENAIRES -->
+  <style>
+    #partenaires {
+      padding: 60px 20px;
+      text-align: center;
+      border-left: 3px solid var(--brand-red);
+      border-right: 3px solid var(--brand-red);
+    }
+
+    #partenaires h1 {
+      font-size: 2.4em;
+      font-weight: 500;
+      color: var(--brand-blue);
+      margin-bottom: 16px;
+    }
+
+    #partenaires h1 span {
+      color: var(--brand-red);
+    }
+
+    #partenaires .intro-text {
+      max-width: 800px;
+      margin: 0 auto 26px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .partners-toolbar {
+      max-width: 1100px;
+      margin: 28px auto 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .partners-search-wrapper {
+      position: relative;
+      flex: 1 1 260px;
+      max-width: 430px;
+    }
+
+    .partners-search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    .partners-search-input {
+      width: 100%;
+      padding: 10px 14px 10px 32px;
+      border-radius: 999px;
+      border: 2px solid var(--brand-blue);
+      font-size: 0.95rem;
+      outline: none;
+      background: rgba(255,255,255,0.95);
+    }
+
+    .partners-search-input:focus {
+      border-color: var(--brand-red);
+      background: #fff;
+    }
+
+    .partners-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .partners-filter-chip {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 2px solid var(--brand-blue);
+      background: #fff;
+      color: var(--brand-blue);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .partners-filter-chip.active {
+      background: var(--brand-blue);
+      color: #fff;
+    }
+
+    .partners-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .partner-card {
+      background: rgba(255,255,255,0.96);
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      padding: 16px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .partner-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .partner-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+
+    .partner-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .partner-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--brand-blue);
+    }
+
+    .partner-type {
+      font-size: 0.65rem;
+      margin-left: 6px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--brand-red);
+      color: var(--brand-red);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .partner-city {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .partner-thanks {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .partner-contact {
+      font-size: 0.85rem;
+      color: #444;
+    }
+
+    .partner-contact span {
+      display: block;
+    }
+
+    .partners-empty {
+      margin-top: 30px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 992px) {
+      .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .partners-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Antoine-CONTER-informatique-Logo.avif"
+       alt="Logo Antoine Conter – Services informatiques Plouguerneau"
+       class="logo"
+       loading="eager"
+       decoding="async"
+       width="200"
+       height="100">
+
+  <nav class="toc-banner">
+    <button class="toc-toggle">☰</button>
+    <ul class="toc-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#tarifs">Tarifs</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="partenaires">
+  <h1>Partenaires locaux & <span>remerciements</span></h1>
+  <p class="intro-text">
+    Merci aux communes, commerces et associations qui m’aident à faire connaître mes services dans le nord Finistère.
+  </p>
+
+  <div class="partners-toolbar">
+    <div class="partners-search-wrapper">
+      <span class="partners-search-icon">🔎</span>
+      <input id="partnersSearch" type="search" class="partners-search-input" placeholder="Rechercher une commune ou un commerce…">
+    </div>
+
+    <div class="partners-filters">
+      <button class="partners-filter-chip active" data-filter="all">Tout</button>
+      <button class="partners-filter-chip" data-filter="commune">Communes</button>
+      <button class="partners-filter-chip" data-filter="commerce">Commerces</button>
+      <button class="partners-filter-chip" data-filter="association">Associations</button>
+    </div>
+  </div>
+
+  <div id="partnersGrid" class="partners-grid"></div>
+  <div id="partnersEmpty" class="partners-empty" style="display:none;">
+    <strong>Aucun partenaire trouvé.</strong>
+  </div>
+</section>
+
+<script>
+  const partners = [
+    {
+      name: "Mairie de Plouguerneau",
+      type: "commune",
+      logo: "images/partenaires/plouguerneau.png",
+      city: "Plouguerneau",
+      address: "Place de l'Europe, 29880 Plouguerneau",
+      phone: "02 98 37 13 35",
+      website: "https://www.plouguerneau.bzh",
+      zone: "Plouguerneau et alentours",
+      message: "Affichage en mairie et soutien à un service informatique local."
+    },
+    {
+      name: "Mairie de Lannilis",
+      type: "commune",
+      logo: "images/partenaires/lannilis.png",
+      city: "Lannilis",
+      address: "29870 Lannilis",
+      website: "https://www.lannilis.bzh",
+      message: "Merci pour le relais d’information auprès des habitants."
+    },
+    {
+      name: "Commerce partenaire – Exemple",
+      type: "commerce",
+      logo: "images/partenaires/commerce-exemple.png",
+      city: "Plouguerneau",
+      address: "Centre-bourg",
+      phone: "02 00 00 00 00",
+      email: "contact@exemple.fr",
+      message: "Affichage en vitrine + recommandations aux clients."
+    }
+  ];
+
+  const grid = document.getElementById("partnersGrid");
+  const empty = document.getElementById("partnersEmpty");
+  const search = document.getElementById("partnersSearch");
+  const filters = document.querySelectorAll(".partners-filter-chip");
+
+  let currentFilter = "all";
+  let currentSearch = "";
+
+  function renderPartners() {
+    grid.innerHTML = "";
+
+    const filtered = partners.filter(p => {
+      const matchType = currentFilter === "all" || p.type === currentFilter;
+
+      const text = (p.name + " " + p.city + " " + p.zone).toLowerCase();
+      const matchSearch = text.includes(currentSearch.toLowerCase());
+
+      return matchType && matchSearch;
+    });
+
+    if (filtered.length === 0) {
+      empty.style.display = "block";
+      return;
+    } else {
+      empty.style.display = "none";
+    }
+
+    filtered.forEach(p => {
+      const card = document.createElement("div");
+      card.className = "partner-card";
+
+      card.innerHTML = `
+        <div class="partner-header">
+          <div class="partner-logo">
+            ${p.logo ? `<img src="${p.logo}" alt="${p.name}">` : "🏙️"}
+          </div>
+          <div>
+            <div class="partner-name">${p.name}<span class="partner-type">${p.type}</span></div>
+            <div class="partner-city">${p.city || ""}</div>
+          </div>
+        </div>
+
+        <div class="partner-thanks"><strong>Merci.</strong> ${p.message || ""}</div>
+
+        <div class="partner-contact">
+          ${p.address ? `<span>📍 ${p.address}</span>` : ""}
+          ${p.phone ? `<span>📞 ${p.phone}</span>` : ""}
+          ${p.website ? `<span>🌐 <a href="${p.website}" target="_blank">${p.website}</a></span>` : ""}
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  }
+
+  filters.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filters.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      renderPartners();
+    });
+  });
+
+  search.addEventListener("input", e => {
+    currentSearch = e.target.value;
+    renderPartners();
+  });
+
+  renderPartners();
+</script>
+
+</body>
+</html>
