@@ -191,6 +191,12 @@
       font-size: 0.95rem;
     }
 
+    /* MODIFICATION 1 : Styles pour le logo à gauche */
+    .logo-link {
+      display: flex;
+      align-items: center;
+    }
+
     @media (max-width: 992px) {
       .partners-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -211,30 +217,27 @@
 </head>
 <body>
 
+<!-- MODIFICATION 2 : Header modifié - logo à gauche, seulement bouton "Revenir à l'accueil" -->
 <header>
-  <img src="Antoine-CONTER-informatique-Logo.avif"
-       alt="Logo Antoine Conter – Services informatiques Plouguerneau"
-       class="logo"
-       loading="eager"
-       decoding="async"
-       width="200"
-       height="100">
-
-  <nav class="toc-banner">
-    <button class="toc-toggle">☰</button>
-    <ul class="toc-list">
-      <li><a href="/">Accueil</a></li>
-      <li><a href="/#services">Services</a></li>
-      <li><a href="/#tarifs">Tarifs</a></li>
-      <li><a href="/#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <a href="/index.html" class="logo-link" aria-label="Retour à l'accueil">
+    <img src="Antoine-CONTER-informatique-Logo.avif"
+         alt="Logo Antoine Conter – Services informatiques Plouguerneau"
+         class="logo"
+         loading="eager"
+         decoding="async"
+         width="200"
+         height="100">
+  </a>
+  
+  <div class="header-actions">
+    <a class="btn btn-ghost btn-retour" href="/index.html" aria-label="Revenir à la page principale">⬅ Revenir à l'accueil</a>
+  </div>
 </header>
 
 <section id="partenaires">
   <h1>Partenaires locaux & <span>remerciements</span></h1>
   <p class="intro-text">
-    Merci aux communes, commerces et associations qui m’aident à faire connaître mes services dans le nord Finistère.
+    Merci aux communes, commerces et associations qui m'aident à faire connaître mes services dans le nord Finistère.
   </p>
 
   <div class="partners-toolbar">
@@ -260,34 +263,31 @@
 <script>
   const partners = [
     {
-      name: "Mairie de Plouguerneau",
+      name: "Médiathèque",
       type: "commune",
-      logo: "images/partenaires/plouguerneau.png",
+      logo: "médiathéque_ploug.avif",
       city: "Plouguerneau",
-      address: "Place de l'Europe, 29880 Plouguerneau",
-      phone: "02 98 37 13 35",
-      website: "https://www.plouguerneau.bzh",
-      zone: "Plouguerneau et alentours",
-      message: "Affichage en mairie et soutien à un service informatique local."
+      address: "5 Rue du Colombier",
+      phone: "02 98 37 13 75",
+      website: "https://mediatheque.plouguerneau.fr",
     },
     {
-      name: "Mairie de Lannilis",
-      type: "commune",
-      logo: "images/partenaires/lannilis.png",
-      city: "Lannilis",
-      address: "29870 Lannilis",
-      website: "https://www.lannilis.bzh",
-      message: "Merci pour le relais d’information auprès des habitants."
+      name: "Rugby Club Plabennec",
+      type: "association",
+      logo: "Plab.avif",
+      city: "Plabennec",
+      address: "Kervéguen",
+      phone: "06 50 01 07 45",
+      website: "https://www.rugbyclubplabennec.com/",
     },
     {
-      name: "Commerce partenaire – Exemple",
+      name: "Cycle des abers",
       type: "commerce",
-      logo: "images/partenaires/commerce-exemple.png",
-      city: "Plouguerneau",
-      address: "Centre-bourg",
-      phone: "02 00 00 00 00",
-      email: "contact@exemple.fr",
-      message: "Affichage en vitrine + recommandations aux clients."
+      logo: "Cycles_des_Abers_petit.avif",
+      city: "Lannilis",
+      address: "10 Rue de la Roche",
+      phone: "06 99 44 83 76",
+      website: "https://www.cyclesdesabers.com",
     }
   ];
 
@@ -305,7 +305,7 @@
     const filtered = partners.filter(p => {
       const matchType = currentFilter === "all" || p.type === currentFilter;
 
-      const text = (p.name + " " + p.city + " " + p.zone).toLowerCase();
+      const text = (p.name + " " + p.city + " " + (p.zone || "")).toLowerCase();
       const matchSearch = text.includes(currentSearch.toLowerCase());
 
       return matchType && matchSearch;
@@ -332,8 +332,6 @@
             <div class="partner-city">${p.city || ""}</div>
           </div>
         </div>
-
-        <div class="partner-thanks"><strong>Merci.</strong> ${p.message || ""}</div>
 
         <div class="partner-contact">
           ${p.address ? `<span>📍 ${p.address}</span>` : ""}
