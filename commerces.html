@@ -5,361 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#005f99">
-
   <title>Partenaires locaux – Antoine Conter</title>
   <meta name="description" content="Communes, commerces et associations qui soutiennent Antoine Conter – services informatiques à Plouguerneau et alentours.">
-
-  <!-- Styles principaux de ton site -->
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-  <!-- Favicon -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://informatique-plouguerneau-antoine-conter.fr/commerces.html">
+  <meta property="og:title" content="Partenaires locaux – Antoine Conter">
+  <meta property="og:description" content="Communes, commerces et associations qui soutiennent Antoine Conter.">
+  <meta property="og:url" content="https://informatique-plouguerneau-antoine-conter.fr/commerces.html">
+  <meta property="og:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.avif">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="Antoine-CONTER-informatique-Logo.avif" type="image/avif">
+  <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.avif" type="image/avif">
 
-  <!-- Styles spécifiques PARTENAIRES -->
   <style>
-    #partenaires {
-      padding: 60px 20px;
-      text-align: center;
-      border-left: 3px solid var(--brand-red);
-      border-right: 3px solid var(--brand-red);
-    }
-
-    #partenaires h1 {
-      font-size: 2.4em;
-      font-weight: 500;
-      color: var(--brand-blue);
-      margin-bottom: 16px;
-    }
-
-    #partenaires h1 span {
-      color: var(--brand-red);
-    }
-
-    #partenaires .intro-text {
-      max-width: 800px;
-      margin: 0 auto 26px;
-      font-size: 1rem;
-      color: #333;
-    }
-
-    .partners-toolbar {
-      max-width: 1100px;
-      margin: 28px auto 22px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .partners-search-wrapper {
-      position: relative;
-      flex: 1 1 260px;
-      max-width: 430px;
-    }
-
-    .partners-search-icon {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-
-    .partners-search-input {
-      width: 100%;
-      padding: 10px 14px 10px 32px;
-      border-radius: 999px;
-      border: 2px solid var(--brand-blue);
-      font-size: 0.95rem;
-      outline: none;
-      background: rgba(255,255,255,0.95);
-    }
-
-    .partners-search-input:focus {
-      border-color: var(--brand-red);
-      background: #fff;
-    }
-
-    .partners-filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .partners-filter-chip {
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 2px solid var(--brand-blue);
-      background: #fff;
-      color: var(--brand-blue);
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .partners-filter-chip.active {
-      background: var(--brand-blue);
-      color: #fff;
-    }
-
-    .partners-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .partner-card {
-      background: rgba(255,255,255,0.96);
-      border-radius: 14px;
-      border: 1px solid rgba(0,0,0,0.08);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-      padding: 16px 16px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      text-align: left;
-    }
-
-    .partner-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .partner-logo {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: #f3f4f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border: 1px solid #ddd;
-    }
-
-    .partner-logo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .partner-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--brand-blue);
-    }
-
-    .partner-type {
-      font-size: 0.65rem;
-      margin-left: 6px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--brand-red);
-      color: var(--brand-red);
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .partner-city {
-      font-size: 0.9rem;
-      color: #444;
-    }
-
-    .partner-thanks {
-      font-size: 0.9rem;
-      color: #333;
-    }
-
-    .partner-contact {
-      font-size: 0.85rem;
-      color: #444;
-    }
-
-    .partner-contact span {
-      display: block;
-    }
-
-    .partners-empty {
-      margin-top: 30px;
-      font-size: 0.95rem;
-    }
-
-    /* MODIFICATION 1 : Styles pour le logo à gauche */
-    .logo-link {
-      display: flex;
-      align-items: center;
-    }
-
-    @media (max-width: 992px) {
-      .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 700px) {
-      .partners-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .partners-toolbar {
-        flex-direction: column;
-        align-items: stretch;
-      }
-    }
+    *,*::before,*::after{box-sizing:border-box}
+    :root{--bubble-height:56px;--header-height:100px;--brand-blue:#005f99;--brand-blue-hover:#0a6fb8;--brand-red:#B22222}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:22px;margin:0;padding:0;background:url('fond_antoine_conter_informatique.avif') no-repeat center center fixed;background-size:cover;color:#000;padding-bottom:calc(var(--bubble-height) + 20px)}
+    header{background:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 30px;position:sticky;top:0;width:100%;z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,.06);min-height:var(--header-height);flex-wrap:wrap}
+    .logo{height:100px;width:auto;object-fit:contain}
+    .logo-link{display:flex;align-items:center}
+    .header-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 14px;border-radius:999px;border:2px solid transparent;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;transition:transform .06s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease;will-change:transform}.btn:active{transform:translateY(1px)}
+    .btn-primary{background:var(--brand-blue);color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.18)}.btn-primary:hover{background:var(--brand-blue-hover);box-shadow:0 8px 18px rgba(0,0,0,.22)}
+    .btn-ghost{background:#fff;color:var(--brand-blue);border-color:var(--brand-blue)}.btn-ghost:hover{background:rgba(0,95,153,.06)}
+    #partenaires{position:relative;z-index:1;padding:60px 20px;text-align:center;border-left:3px solid var(--brand-red);border-right:3px solid var(--brand-red)}
+    #partenaires::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.85);backdrop-filter:blur(2px);z-index:-1}
+    #partenaires h1{font-size:2.4em;font-weight:500;color:var(--brand-blue);margin-bottom:16px;position:relative}
+    #partenaires h1::after{content:'';display:block;width:80px;height:3px;background-color:var(--brand-red);margin:10px auto 0;border-radius:3px;opacity:0.9}
+    #partenaires h1 span{color:var(--brand-red)}
+    .intro-text{max-width:800px;margin:0 auto 26px;font-size:1rem;color:#333}
+    .partners-toolbar{max-width:1100px;margin:28px auto 22px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+    .partners-search-wrapper{position:relative;flex:1 1 260px;max-width:430px}
+    .partners-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:0.9rem;opacity:0.6}
+    .partners-search-input{width:100%;padding:10px 14px 10px 32px;border-radius:999px;border:2px solid var(--brand-blue);font-size:0.95rem;outline:none;background:rgba(255,255,255,0.95)}.partners-search-input:focus{border-color:var(--brand-red);background:#fff}
+    .partners-filters{display:flex;flex-wrap:wrap;gap:8px}
+    .partners-filter-chip{padding:6px 12px;border-radius:999px;border:2px solid var(--brand-blue);background:#fff;color:var(--brand-blue);font-size:0.75rem;font-weight:700;text-transform:uppercase;cursor:pointer;transition:background-color .2s ease,color .2s ease}.partners-filter-chip:hover{background:rgba(0,95,153,.06)}.partners-filter-chip.active{background:var(--brand-blue);color:#fff}
+    .partners-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .partner-card{background:rgba(255,255,255,0.96);border-radius:14px;border:1px solid var(--brand-red);box-shadow:0 6px 16px rgba(0,0,0,0.12);padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;text-align:left;transition:transform .18s ease,box-shadow .18s ease}.partner-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,0.18)}
+    .partner-header{display:flex;align-items:center;gap:12px}
+    .partner-logo{width:56px;height:56px;border-radius:14px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #ddd}.partner-logo img{max-width:100%;max-height:100%;object-fit:contain}
+    .partner-name{font-size:1rem;font-weight:700;color:var(--brand-blue)}
+    .partner-type{font-size:0.65rem;margin-left:6px;padding:3px 8px;border-radius:999px;border:1px solid var(--brand-red);color:var(--brand-red);text-transform:uppercase;font-weight:700}
+    .partner-city{font-size:0.9rem;color:#444}
+    .partner-contact{font-size:0.85rem;color:#444}.partner-contact span{display:block}.partner-contact a{color:var(--brand-blue);text-decoration:none}.partner-contact a:hover{color:var(--brand-red);text-decoration:underline}
+    .partners-empty{margin-top:30px;font-size:0.95rem}
+    #contact-bubble{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);background:#FF5722;color:#fff;padding:12px 18px;border-radius:9999px;cursor:pointer;font-weight:700;font-family:sans-serif;font-size:16px;z-index:3000;box-shadow:0 8px 16px rgba(0,0,0,0.3);transition:transform 0.2s ease,background-color 0.2s ease;text-decoration:none}#contact-bubble:hover{transform:scale(1.06);background-color:#E64A19}
+    #contact-form{position:fixed;right:16px;bottom:calc(var(--bubble-height) + env(safe-area-inset-bottom,0px) + 18px);background:#fff;border:1px solid #ddd;padding:30px 15px 15px 15px;width:min(320px,92vw);box-shadow:0 4px 10px rgba(0,0,0,0.15);font-family:sans-serif;z-index:3100;border-radius:8px;box-sizing:border-box}
+    #close-form{position:absolute;top:8px;right:10px;background:transparent;border:none;font-size:24px;color:#888;cursor:pointer;z-index:3200;padding:0;line-height:1}#close-form:hover{color:#000}
+    #contact-form input,#contact-form textarea{width:100%;margin-top:15px;margin-bottom:10px;padding:8px;border:1px solid #ccc;font-size:14px;border-radius:4px;box-sizing:border-box}#contact-form textarea{height:120px;resize:vertical}
+    #contact-form button{width:100%;padding:10px;background:#FF5722;border:none;color:white;font-size:14px;cursor:pointer;border-radius:4px;font-weight:bold}#contact-form button:hover{background:#E64A19}
+    @media(max-width:992px){.partners-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:768px){:root{--header-height:70px}header{padding:8px 15px;min-height:70px}.logo{height:70px}#partenaires{padding:44px 16px}#partenaires h1{font-size:2em}.btn{height:38px;font-size:15px;padding:0 12px}#contact-bubble{left:50%;right:auto;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}#contact-form{left:50%;right:auto;transform:translateX(-50%);bottom:calc(var(--bubble-height) + env(safe-area-inset-bottom,0px) + 18px);width:min(360px,92vw)}}
+    @media(max-width:700px){.partners-grid{grid-template-columns:1fr}.partners-toolbar{flex-direction:column;align-items:stretch}}
+    @media(max-width:420px){.header-actions{width:100%;justify-content:center}#contact-bubble{left:16px;right:16px;transform:none;text-align:center;font-size:15px;padding:12px 16px}#contact-form{left:16px;right:16px;transform:none;width:auto}}
   </style>
 </head>
 <body>
 
-<!-- MODIFICATION 2 : Header modifié - logo à gauche, seulement bouton "Revenir à l'accueil" -->
 <header>
-  <a href="/index.html" class="logo-link" aria-label="Retour à l'accueil">
-    <img src="Antoine-CONTER-informatique-Logo.avif"
-         alt="Logo Antoine Conter – Services informatiques Plouguerneau"
-         class="logo"
-         loading="eager"
-         decoding="async"
-         width="200"
-         height="100">
+  <a href="index.html" class="logo-link" aria-label="Retour à l'accueil">
+    <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter – Services informatiques Plouguerneau" class="logo" loading="eager" decoding="async" width="200" height="100">
   </a>
-  
   <div class="header-actions">
-    <a class="btn btn-ghost btn-retour" href="/index.html" aria-label="Revenir à la page principale">⬅ Revenir à l'accueil</a>
+    <a class="btn btn-ghost" href="index.html" aria-label="Revenir à la page principale">⬅ Revenir à l'accueil</a>
+    <a class="btn btn-primary" href="index.html#contact" aria-label="Me contacter">Me contacter</a>
   </div>
 </header>
 
-<section id="partenaires">
-  <h1>Partenaires locaux & <span>remerciements</span></h1>
-  <p class="intro-text">
-    Merci aux communes, commerces et associations qui m'aident à faire connaître mes services dans le nord Finistère.
-  </p>
+<main>
+  <section id="partenaires">
+    <h1>Partenaires locaux & <span>remerciements</span></h1>
+    <p class="intro-text">Merci aux communes, commerces et associations qui m'aident à faire connaître mes services dans le nord Finistère.</p>
 
-  <div class="partners-toolbar">
-    <div class="partners-search-wrapper">
-      <span class="partners-search-icon">🔎</span>
-      <input id="partnersSearch" type="search" class="partners-search-input" placeholder="Rechercher une commune ou un commerce…">
+    <div class="partners-toolbar">
+      <div class="partners-search-wrapper">
+        <span class="partners-search-icon">🔎</span>
+        <input id="partnersSearch" type="search" class="partners-search-input" placeholder="Rechercher une commune ou un commerce…">
+      </div>
+      <div class="partners-filters">
+        <button class="partners-filter-chip active" data-filter="all">Tout</button>
+        <button class="partners-filter-chip" data-filter="commune">Communes</button>
+        <button class="partners-filter-chip" data-filter="commerce">Commerces</button>
+        <button class="partners-filter-chip" data-filter="association">Associations</button>
+      </div>
     </div>
 
-    <div class="partners-filters">
-      <button class="partners-filter-chip active" data-filter="all">Tout</button>
-      <button class="partners-filter-chip" data-filter="commune">Communes</button>
-      <button class="partners-filter-chip" data-filter="commerce">Commerces</button>
-      <button class="partners-filter-chip" data-filter="association">Associations</button>
-    </div>
-  </div>
+    <div id="partnersGrid" class="partners-grid"></div>
+    <div id="partnersEmpty" class="partners-empty" style="display:none;"><strong>Aucun partenaire trouvé.</strong></div>
+  </section>
+</main>
 
-  <div id="partnersGrid" class="partners-grid"></div>
-  <div id="partnersEmpty" class="partners-empty" style="display:none;">
-    <strong>Aucun partenaire trouvé.</strong>
-  </div>
-</section>
+<div id="contact-bubble" aria-controls="contact-form" aria-expanded="false">Me contacter</div>
+<div id="contact-form" style="display:none;" role="dialog" aria-modal="true">
+  <button id="close-form" aria-label="Fermer le formulaire">×</button>
+  <form action="https://formspree.io/f/xdklavag" method="POST">
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
 
 <script>
-  const partners = [
-    {
-      name: "Médiathèque",
-      type: "commune",
-      logo: "médiathéque_ploug.avif",
-      city: "Plouguerneau",
-      address: "5 Rue du Colombier",
-      phone: "02 98 37 13 75",
-      website: "https://mediatheque.plouguerneau.fr",
-    },
-    {
-      name: "Rugby Club Plabennec",
-      type: "association",
-      logo: "Plab.avif",
-      city: "Plabennec",
-      address: "Kervéguen",
-      phone: "06 50 01 07 45",
-      website: "https://www.rugbyclubplabennec.com/",
-    },
-    {
-      name: "Cycle des abers",
-      type: "commerce",
-      logo: "Cycles_des_Abers_petit.avif",
-      city: "Lannilis",
-      address: "10 Rue de la Roche",
-      phone: "06 99 44 83 76",
-      website: "https://www.cyclesdesabers.com",
-    }
-  ];
+(function(){
+  var C='informatique-plouguerneau-antoine-conter.fr',h=location.hostname.toLowerCase();
+  if(h.endsWith('.github.io')||h==='www.'+C){var t='https://'+C+location.pathname+location.search+location.hash;if(location.href!==t)location.replace(t);}
+  // Bulle contact
+  var bu=document.getElementById('contact-bubble'),fo=document.getElementById('contact-form'),cl=document.getElementById('close-form');
+  if(bu&&fo&&cl){function tg(op){var is=typeof op==='boolean'?op:fo.style.display!=='block';fo.style.display=is?'block':'none';bu.setAttribute('aria-expanded',String(is));}bu.addEventListener('click',function(){tg(true);});cl.addEventListener('click',function(){tg(false);});document.addEventListener('click',function(e){if(!fo.contains(e.target)&&e.target!==bu)tg(false);});}
+})();
 
-  const grid = document.getElementById("partnersGrid");
-  const empty = document.getElementById("partnersEmpty");
-  const search = document.getElementById("partnersSearch");
-  const filters = document.querySelectorAll(".partners-filter-chip");
-
-  let currentFilter = "all";
-  let currentSearch = "";
-
-  function renderPartners() {
-    grid.innerHTML = "";
-
-    const filtered = partners.filter(p => {
-      const matchType = currentFilter === "all" || p.type === currentFilter;
-
-      const text = (p.name + " " + p.city + " " + (p.zone || "")).toLowerCase();
-      const matchSearch = text.includes(currentSearch.toLowerCase());
-
-      return matchType && matchSearch;
-    });
-
-    if (filtered.length === 0) {
-      empty.style.display = "block";
-      return;
-    } else {
-      empty.style.display = "none";
-    }
-
-    filtered.forEach(p => {
-      const card = document.createElement("div");
-      card.className = "partner-card";
-
-      card.innerHTML = `
-        <div class="partner-header">
-          <div class="partner-logo">
-            ${p.logo ? `<img src="${p.logo}" alt="${p.name}">` : "🏙️"}
-          </div>
-          <div>
-            <div class="partner-name">${p.name}<span class="partner-type">${p.type}</span></div>
-            <div class="partner-city">${p.city || ""}</div>
-          </div>
-        </div>
-
-        <div class="partner-contact">
-          ${p.address ? `<span>📍 ${p.address}</span>` : ""}
-          ${p.phone ? `<span>📞 ${p.phone}</span>` : ""}
-          ${p.website ? `<span>🌐 <a href="${p.website}" target="_blank">${p.website}</a></span>` : ""}
-        </div>
-      `;
-
-      grid.appendChild(card);
-    });
-  }
-
-  filters.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filters.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentFilter = btn.dataset.filter;
-      renderPartners();
-    });
+// Partenaires
+const partners=[
+  {name:"Médiathèque",type:"commune",logo:"médiathéque_ploug.avif",city:"Plouguerneau",address:"5 Rue du Colombier",phone:"02 98 37 13 75",website:"https://mediatheque.plouguerneau.fr"},
+  {name:"Rugby Club Plabennec",type:"association",logo:"Plab.avif",city:"Plabennec",address:"Kervéguen",phone:"06 50 01 07 45",website:"https://www.rugbyclubplabennec.com/"},
+  {name:"Cycle des abers",type:"commerce",logo:"Cycles_des_Abers_petit.avif",city:"Lannilis",address:"10 Rue de la Roche",phone:"06 99 44 83 76",website:"https://www.cyclesdesabers.com"}
+];
+const grid=document.getElementById("partnersGrid"),empty=document.getElementById("partnersEmpty"),search=document.getElementById("partnersSearch"),filters=document.querySelectorAll(".partners-filter-chip");
+let currentFilter="all",currentSearch="";
+function renderPartners(){
+  grid.innerHTML="";
+  const filtered=partners.filter(p=>{
+    const matchType=currentFilter==="all"||p.type===currentFilter;
+    const text=(p.name+" "+p.city+" "+(p.zone||"")).toLowerCase();
+    const matchSearch=text.includes(currentSearch.toLowerCase());
+    return matchType&&matchSearch;
   });
-
-  search.addEventListener("input", e => {
-    currentSearch = e.target.value;
-    renderPartners();
+  if(filtered.length===0){empty.style.display="block";return;}else{empty.style.display="none";}
+  filtered.forEach(p=>{
+    const card=document.createElement("div");card.className="partner-card";
+    card.innerHTML=`<div class="partner-header"><div class="partner-logo">${p.logo?`<img src="${p.logo}" alt="${p.name}">`:"🏙️"}</div><div><div class="partner-name">${p.name}<span class="partner-type">${p.type}</span></div><div class="partner-city">${p.city||""}</div></div></div><div class="partner-contact">${p.address?`<span>📍 ${p.address}</span>`:""}${p.phone?`<span>📞 ${p.phone}</span>`:""}${p.website?`<span>🌐 <a href="${p.website}" target="_blank" rel="noopener">${p.website}</a></span>`:""}</div>`;
+    grid.appendChild(card);
   });
-
-  renderPartners();
+}
+filters.forEach(btn=>{btn.addEventListener("click",()=>{filters.forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentFilter=btn.dataset.filter;renderPartners();});});
+search.addEventListener("input",e=>{currentSearch=e.target.value;renderPartners();});
+renderPartners();
 </script>
-
 </body>
 </html>
