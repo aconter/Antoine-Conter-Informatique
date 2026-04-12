@@ -2,296 +2,463 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#005f99">
   <title>Création de sites internet – Nord Finistère | Antoine Conter</title>
-  <meta name="description" content="Création de sites internet simples et efficaces pour artisans, commerçants et indépendants du nord Finistère. Découvrez mes réalisations : sites vitrines clés en main, accompagnement personnalisé.">
-  <meta name="keywords" content="création site internet Finistère, site vitrine Plouguerneau, site web artisan Lannilis, création site Landéda, webmaster nord Finistère">
+  <meta name="description" content="Création de sites internet simples et efficaces pour artisans, commerçants et indépendants du nord Finistère. Sites vitrines clés en main, accompagnement personnalisé à Plouguerneau, Lannilis, Lesneven.">
+  <meta name="keywords" content="création site internet Finistère, site vitrine Plouguerneau, site web artisan Lannilis, webmaster nord Finistère, création site Lesneven">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Antoine Conter">
   <link rel="canonical" href="https://informatique-plouguerneau-antoine-conter.fr/projets.html">
   <meta property="og:title" content="Création de sites internet – Nord Finistère | Antoine Conter">
   <meta property="og:description" content="Sites vitrines simples et efficaces pour les professionnels du nord Finistère. Découvrez mes réalisations.">
   <meta property="og:url" content="https://informatique-plouguerneau-antoine-conter.fr/projets.html">
   <meta property="og:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.avif">
-  <meta property="og:image:alt" content="Logo Antoine Conter – Création de sites internet">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Antoine Conter – Services informatiques">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Création de sites internet – Nord Finistère">
-  <meta name="twitter:description" content="Sites vitrines simples et efficaces pour les professionnels du nord Finistère.">
+  <meta name="twitter:title" content="Création de sites internet – Nord Finistère | Antoine Conter">
   <meta name="twitter:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.avif">
-  <link rel="icon" href="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.avif" type="image/avif">
-  <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.avif" type="image/avif">
+  <link rel="icon" href="Antoine-CONTER-informatique-Logo.avif" type="image/avif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://informatique-plouguerneau-antoine-conter.fr/"},{"@type":"ListItem","position":2,"name":"Réalisations","item":"https://informatique-plouguerneau-antoine-conter.fr/projets.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Réalisations – Sites internet nord Finistère","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"CreativeWork","name":"Boucherie Armoricaine","description":"Site vitrine pour un atelier de découpe de viandes","url":"https://boucheriearmoricaine.com"}},{"@type":"ListItem","position":2,"item":{"@type":"CreativeWork","name":"Bruno L'Hostis","description":"Site vitrine pour un professeur indépendant","url":"https://bruno-lhostis.fr"}}]}
+  </script>
 
   <style>
-    *,*::before,*::after{box-sizing:border-box}
-    :root{--bubble-height:56px;--header-height:100px;--brand-blue:#005f99;--brand-blue-hover:#0a6fb8;--brand-red:#B22222;--shadow-soft:0 4px 20px rgba(0,0,0,0.08);--shadow-medium:0 8px 30px rgba(0,0,0,0.12);--shadow-strong:0 12px 40px rgba(0,0,0,0.18)}
-    html{scroll-behavior:smooth}
-    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:18px;margin:0;padding:0;background:url('fond_antoine_conter_informatique.avif') no-repeat center center fixed;background-size:cover;color:#000;padding-bottom:20px;line-height:1.6}
-    
-    /* Animations */
-    .reveal{opacity:0;transform:translateY(20px)}.reveal.is-visible{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
-    .reveal-delay-1{transition-delay:0.1s}.reveal-delay-2{transition-delay:0.2s}.reveal-delay-3{transition-delay:0.3s}
-    
-    /* Header */
-    header{background:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 30px;position:sticky;top:0;width:100%;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.08);min-height:var(--header-height);flex-wrap:wrap}
-    .logo{height:100px;width:auto;object-fit:contain}
-    .logo-link{display:flex;align-items:center}
-    .header-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 20px;border-radius:999px;border:2px solid transparent;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;transition:all .25s ease;will-change:transform}.btn:active{transform:translateY(1px)}
-    .btn-primary{background:var(--brand-blue);color:#fff;box-shadow:0 6px 20px rgba(0,95,153,.3)}.btn-primary:hover{background:var(--brand-blue-hover);box-shadow:0 8px 25px rgba(0,95,153,.4);transform:translateY(-2px)}
-    .btn-ghost{background:#fff;color:var(--brand-blue);border-color:var(--brand-blue)}.btn-ghost:hover{background:var(--brand-blue);color:#fff}
-    .btn-large{height:52px;padding:0 28px;font-size:18px}
-    .btn-retour{text-decoration:none}
-    
-    /* Section base */
-    section{position:relative;z-index:1;border-left:3px solid var(--brand-red);border-right:3px solid var(--brand-red)}
-    section::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.92);backdrop-filter:blur(3px);z-index:-1}
-    
-    /* Hero Section */
-    #hero{padding:80px 20px 60px;text-align:center}
-    .hero-badge{display:inline-block;background:linear-gradient(135deg,var(--brand-blue),var(--brand-blue-hover));color:#fff;padding:8px 20px;border-radius:999px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;box-shadow:var(--shadow-soft)}
-    .hero-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:var(--brand-blue);margin:0 0 20px;line-height:1.2}
-    .hero-title span{color:var(--brand-red)}
-    .hero-subtitle{font-size:clamp(1.1rem,2.5vw,1.4rem);color:#444;max-width:700px;margin:0 auto 30px;line-height:1.5}
-    .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-    
-    /* Stats */
-    .stats-bar{display:flex;justify-content:center;gap:40px;margin-top:50px;flex-wrap:wrap}
-    .stat-item{text-align:center}
-    .stat-number{font-size:2.5rem;font-weight:800;color:var(--brand-blue);line-height:1}
-    .stat-label{font-size:14px;color:#666;margin-top:4px;font-weight:500}
-    
-    /* Section Titles */
-    .section-title{color:var(--brand-blue);position:relative;margin:0 0 20px 0;font-weight:600;font-size:2.2em;text-align:center}
-    .section-title::after{content:'';display:block;width:80px;height:4px;background:linear-gradient(90deg,var(--brand-red),var(--brand-blue));margin:12px auto 0;border-radius:4px}
-    .section-intro{text-align:center;max-width:700px;margin:0 auto 40px;color:#555;font-size:1.1rem}
-    
-    /* Projects Section */
-    #projets{padding:70px 20px}
-    .projets-grid{max-width:1100px;margin:0 auto;display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-    
-    /* Project Cards */
-    .projet-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-medium);transition:all .3s ease;border:1px solid rgba(0,0,0,0.05)}
-    .projet-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-strong)}
-    .projet-image{position:relative;height:200px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .projet-image img{max-width:70%;max-height:140px;object-fit:contain;transition:transform .3s ease}
-    .projet-card:hover .projet-image img{transform:scale(1.05)}
-    .projet-badge{position:absolute;top:12px;right:12px;background:var(--brand-red);color:#fff;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase}
-    .projet-content{padding:24px}
-    .projet-title{font-size:1.3rem;margin:0 0 8px;color:var(--brand-blue);font-weight:700}
-    .projet-client{font-size:14px;color:#888;margin:0 0 12px;font-weight:500}
-    .projet-desc{margin:0 0 20px;color:#555;font-size:15px;line-height:1.6}
-    .projet-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-    .projet-tag{background:#f0f7ff;color:var(--brand-blue);padding:4px 12px;border-radius:999px;font-size:13px;font-weight:600}
-    .projet-actions{display:flex;gap:10px;flex-wrap:wrap}
-    .projet-actions .btn{height:40px;font-size:14px;padding:0 16px}
-    
-    /* Services Section */
-    #services-offerts{padding:70px 20px;background:linear-gradient(180deg,rgba(240,248,255,0.5),rgba(255,255,255,0.5))}
-    #services-offerts::before{background:rgba(255,255,255,.88)}
-    .services-grid{max-width:1000px;margin:0 auto;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    .service-card{background:#fff;border-radius:16px;padding:28px;text-align:center;box-shadow:var(--shadow-soft);border:2px solid transparent;transition:all .3s ease}
-    .service-card:hover{border-color:var(--brand-blue);transform:translateY(-4px)}
-    .service-icon{font-size:3rem;margin-bottom:16px;display:block}
-    .service-title{font-size:1.2rem;color:var(--brand-blue);margin:0 0 10px;font-weight:700}
-    .service-desc{color:#666;font-size:15px;margin:0;line-height:1.5}
-    
-    /* CTA Section */
-    #cta-final{padding:80px 20px;text-align:center}
-    .cta-box{max-width:800px;margin:0 auto;background:linear-gradient(145deg,var(--brand-blue),#004d7a);border-radius:24px;padding:50px 40px;color:#fff;box-shadow:0 20px 50px rgba(0,95,153,0.3)}
-    .cta-title{font-size:clamp(1.6rem,4vw,2.4rem);margin:0 0 16px;font-weight:700}
-    .cta-text{font-size:1.1rem;margin:0 0 30px;opacity:0.9;max-width:500px;margin-left:auto;margin-right:auto}
-    .cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-    .btn-white{background:#fff;color:var(--brand-blue);border-color:#fff}.btn-white:hover{background:#f0f7ff;transform:translateY(-2px)}
-    .btn-outline-white{background:transparent;color:#fff;border-color:#fff}.btn-outline-white:hover{background:rgba(255,255,255,0.15)}
-    
-    /* Responsive */
-    @media(max-width:768px){
-      :root{--header-height:70px}
-      header{padding:8px 15px;min-height:70px}
-      .logo{height:70px}
-      #hero{padding:50px 16px 40px}
-      #projets,#services-offerts,#cta-final{padding:50px 16px}
-      .btn{height:42px;font-size:15px;padding:0 16px}
-      .btn-large{height:48px;padding:0 22px}
-      .stats-bar{gap:24px}
-      .stat-number{font-size:2rem}
-      .cta-box{padding:40px 24px;border-radius:18px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#005f99;--blue-dark:#004070;--blue-hover:#0a6fb8;--blue-light:#e8f4fd;
+      --red:#B22222;--red-light:#cc2c2c;
+      --white:#fff;--off:#F8FAFC;--gray:#6B7280;--gray-light:#E5E7EB;--dark:#111827;
+      --font-body:'Inter',system-ui,sans-serif;--font-display:'Playfair Display',Georgia,serif;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg:0 10px 40px rgba(0,0,0,.14);--shadow-blue:0 8px 30px rgba(0,95,153,.25);
+      --radius:12px;--hh:72px;
     }
-    @media(max-width:420px){
-      .header-actions{width:100%;justify-content:center}
-      .projet-card{border-radius:16px}
-      .projets-grid{grid-template-columns:1fr}
-      .hero-cta{flex-direction:column;align-items:center}
-      .hero-cta .btn{width:100%;max-width:280px}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font-body);font-size:16px;background:var(--off);color:var(--dark);line-height:1.65;overflow-x:hidden}
+
+    /* HEADER */
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,95,153,.08);box-shadow:0 2px 12px rgba(0,0,0,.06);height:var(--hh)}
+    .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+    .logo-wrap{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .logo-wrap img{height:44px;width:auto;object-fit:contain}
+    .logo-name{font-size:.9rem;font-weight:700;color:var(--blue);white-space:nowrap}
+    .site-nav{display:flex;align-items:center;gap:.25rem}
+    .site-nav a{padding:.45rem .85rem;border-radius:8px;font-size:.85rem;font-weight:500;color:var(--gray);text-decoration:none;transition:all .2s ease}
+    .site-nav a:hover{color:var(--blue);background:var(--blue-light)}
+    .site-nav a.active{color:var(--blue);font-weight:600;background:var(--blue-light)}
+    .site-nav a.nav-cta{background:var(--blue);color:#fff;padding:.45rem 1rem;box-shadow:var(--shadow-blue)}
+    .site-nav a.nav-cta:hover{background:var(--blue-hover)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+    .hamburger span{width:22px;height:2px;background:var(--dark);display:block;transition:all .3s ease;border-radius:2px}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;inset:var(--hh) 0 0 0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-size:1.3rem;font-weight:600;color:var(--dark);text-decoration:none;padding:.5rem 1rem;transition:color .2s}
+    .mobile-menu a:hover{color:var(--blue)}
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .s1{transition-delay:.06s}.s2{transition-delay:.14s}.s3{transition-delay:.22s}.s4{transition-delay:.30s}
+
+    /* HERO */
+    #hero{
+      background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 60%,#0a6fb8 100%);
+      padding:7rem 2rem 5rem;text-align:center;position:relative;overflow:hidden;
+    }
+    .hero-circles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    .hero-circle{
+      position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.06);
+      animation:floatY 6s ease-in-out infinite;
+    }
+    .hc1{width:400px;height:400px;top:-100px;right:-80px;animation-delay:0s}
+    .hc2{width:250px;height:250px;bottom:-60px;left:-40px;animation-delay:-2s}
+    .hc3{width:160px;height:160px;top:40%;left:10%;animation-delay:-4s;background:rgba(255,255,255,.02)}
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:.5rem;
+      background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+      padding:.4rem 1rem;border-radius:999px;
+      font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);
+      margin-bottom:1.5rem;
+      opacity:0;animation:fadeUp .8s ease .2s forwards;
+    }
+    .hero-title{
+      font-family:var(--font-display);
+      font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;
+      color:#fff;line-height:1.05;margin-bottom:1.25rem;
+      opacity:0;animation:fadeUp .9s ease .35s forwards;
+    }
+    .hero-title span{color:#7dd3fc}
+    .hero-sub{
+      font-size:clamp(.95rem,2vw,1.15rem);color:rgba(255,255,255,.65);
+      max-width:580px;margin:0 auto 2rem;font-weight:300;line-height:1.75;
+      opacity:0;animation:fadeUp .9s ease .5s forwards;
+    }
+    .hero-btns{
+      display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;
+      opacity:0;animation:fadeUp .9s ease .65s forwards;
+    }
+    .hero-stats{
+      display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;
+      margin-top:3.5rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,.1);
+      opacity:0;animation:fadeUp .9s ease .85s forwards;
+    }
+    .hs-item{text-align:center}
+    .hs-value{font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:#fff;display:block;line-height:1}
+    .hs-label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.3rem;display:block}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:8px;font-family:var(--font-body);font-size:.88rem;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:all .25s ease;white-space:nowrap}
+    .btn-white{background:#fff;color:var(--blue)}
+    .btn-white:hover{background:var(--blue-light);transform:translateY(-2px)}
+    .btn-outline-white{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+    .btn-outline-white:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:var(--shadow-blue)}
+    .btn-primary:hover{background:var(--blue-hover);transform:translateY(-2px)}
+    .btn-ghost{background:#fff;color:var(--blue);border-color:var(--blue)}
+    .btn-ghost:hover{background:var(--blue);color:#fff}
+
+    /* SECTIONS */
+    .section{padding:5.5rem 2rem;max-width:1200px;margin:0 auto}
+    .section-bg{background:#fff;padding:5.5rem 2rem}
+    .section-bg-off{background:var(--off);padding:5.5rem 2rem}
+    .section-inner{max-width:1200px;margin:0 auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem}
+    .eyebrow-line{width:24px;height:2px;background:var(--red);border-radius:2px}
+    .section-title{font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:900;color:var(--dark);line-height:1.15;margin-bottom:1rem}
+    .section-title span{color:var(--blue)}
+    .section-intro{font-size:1rem;color:var(--gray);max-width:600px;line-height:1.75;margin-bottom:2.5rem}
+
+    /* PROJECTS GRID */
+    .projets-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.75rem}
+    .projet-card{
+      background:#fff;border-radius:16px;border:1px solid var(--gray-light);
+      box-shadow:var(--shadow-sm);overflow:hidden;
+      transition:all .35s cubic-bezier(.16,1,.3,1);
+      display:flex;flex-direction:column;
+    }
+    .projet-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:rgba(0,95,153,.15)}
+    .projet-img{
+      height:200px;background:linear-gradient(135deg,var(--blue-light),#dbeafe);
+      display:flex;align-items:center;justify-content:center;
+      position:relative;overflow:hidden;
+    }
+    .projet-img img{max-width:65%;max-height:130px;object-fit:contain;transition:transform .35s ease}
+    .projet-card:hover .projet-img img{transform:scale(1.06)}
+    .projet-badge{
+      position:absolute;top:.75rem;right:.75rem;
+      background:var(--red);color:#fff;padding:.25rem .7rem;border-radius:999px;
+      font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+    }
+    .projet-body{padding:1.5rem;display:flex;flex-direction:column;gap:.75rem;flex:1}
+    .projet-title{font-size:1.15rem;font-weight:700;color:var(--blue)}
+    .projet-client{font-size:.82rem;color:var(--gray);font-weight:500}
+    .projet-desc{font-size:.9rem;color:#555;line-height:1.65;flex:1}
+    .projet-tags{display:flex;gap:.5rem;flex-wrap:wrap}
+    .projet-tag{background:var(--blue-light);color:var(--blue);padding:.25rem .75rem;border-radius:999px;font-size:.75rem;font-weight:600}
+    .projet-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:.25rem}
+    .projet-actions .btn{height:38px;font-size:.8rem;padding:0 1rem}
+
+    /* SERVICES PROPOSÉS */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .svc-card{
+      background:#fff;border-radius:var(--radius);padding:2rem;
+      border:1px solid var(--gray-light);box-shadow:var(--shadow-sm);
+      text-align:center;transition:all .35s cubic-bezier(.16,1,.3,1);
+    }
+    .svc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:rgba(0,95,153,.2)}
+    .svc-icon{font-size:2.5rem;display:block;margin-bottom:1rem}
+    .svc-title{font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:.4rem}
+    .svc-desc{font-size:.88rem;color:var(--gray);line-height:1.65}
+
+    /* CTA */
+    .cta-box{
+      max-width:800px;margin:0 auto;
+      background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+      border-radius:20px;padding:4rem 3rem;text-align:center;
+      box-shadow:0 20px 60px rgba(0,95,153,.3);
+      position:relative;overflow:hidden;
+    }
+    .cta-box::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.04)}
+    .cta-box::after{content:'';position:absolute;bottom:-40px;left:-40px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.03)}
+    .cta-title{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:1rem;position:relative}
+    .cta-text{font-size:1rem;color:rgba(255,255,255,.7);margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;position:relative}
+    .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative}
+
+    /* FOOTER */
+    .site-footer{background:#111827;padding:3rem 2rem;color:rgba(255,255,255,.5)}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-brand{display:flex;align-items:center;gap:.75rem}
+    .footer-brand img{height:36px;width:auto;filter:brightness(0) invert(1);opacity:.7}
+    .footer-brand span{font-size:.88rem;font-weight:600;color:rgba(255,255,255,.65)}
+    .footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+    .footer-links a{font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:rgba(255,255,255,.8)}
+    .footer-legal{font-size:.72rem;color:rgba(255,255,255,.25);width:100%;text-align:center;border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;margin-top:.25rem}
+
+    /* BUBBLE */
+    #contact-bubble{position:fixed;right:1.25rem;bottom:calc(env(safe-area-inset-bottom,0px) + 1.25rem);background:var(--red);color:#fff;padding:.75rem 1.25rem;border-radius:999px;font-family:var(--font-body);font-size:.85rem;font-weight:700;z-index:3000;box-shadow:0 8px 24px rgba(178,34,34,.35);border:none;cursor:pointer;transition:all .25s ease;text-decoration:none}
+    #contact-bubble:hover{background:var(--red-light);transform:translateY(-2px)}
+
+    @media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:768px){
+      :root{--hh:60px}
+      .site-nav{display:none}.hamburger{display:flex}
+      .section,.section-bg,.section-bg-off{padding:4rem 1.25rem}
+      .cta-box{padding:2.5rem 1.5rem}
+      .hero-stats{gap:2rem}
+    }
+    @media(max-width:540px){
+      .services-grid{grid-template-columns:1fr}
+      .hero-btns{flex-direction:column;align-items:center}
+      .hero-btns .btn{width:100%;max-width:280px;justify-content:center}
+      .cta-btns{flex-direction:column;align-items:center}
+      .cta-btns .btn{width:100%;max-width:260px;justify-content:center}
     }
   </style>
 </head>
 <body>
 
-<header role="banner">
-  <a href="index.html" class="logo-link" aria-label="Retour à l'accueil">
-    <img src="Antoine-CONTER-informatique-Logo.avif" width="200" height="100" alt="Logo Antoine Conter – Services informatiques" class="logo" loading="eager" decoding="async">
-  </a>
-  <div class="header-actions">
-    <a class="btn btn-ghost btn-retour" href="index.html" aria-label="Revenir à la page principale">⬅ Accueil</a>
-    <a class="btn btn-primary" href="index.html#contact" aria-label="Me contacter pour un projet">Lancer mon projet</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap" aria-label="Antoine Conter Informatique – Accueil">
+      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter" width="110" height="44" loading="eager">
+      <span class="logo-name">Antoine Conter</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="projets.html" class="active">Réalisations</a>
+      <a href="commerces.html">Partenaires</a>
+      <a href="index.html#contact" class="nav-cta">Me contacter</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<main id="contenu" role="main">
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html" onclick="closeMenu()">Accueil</a>
+  <a href="index.html#tarifs" onclick="closeMenu()">Tarifs</a>
+  <a href="projets.html" onclick="closeMenu()">Réalisations</a>
+  <a href="commerces.html" onclick="closeMenu()">Partenaires</a>
+  <a href="index.html#contact" onclick="closeMenu()" style="color:var(--blue);font-weight:700">Me contacter</a>
+</nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="reveal" aria-labelledby="hero-title">
-    <span class="hero-badge">🌐 Création de sites internet</span>
-    <h1 id="hero-title" class="hero-title">Un site web <span>simple et efficace</span><br>pour votre activité</h1>
-    <p class="hero-subtitle">Artisans, commerçants, indépendants du nord Finistère : gagnez en visibilité avec un site vitrine clé en main, à votre image, sans prise de tête.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary btn-large" href="index.html#contact">Discuter de mon projet</a>
-      <a class="btn btn-ghost btn-large" href="#projets">Voir mes réalisations ↓</a>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-circles">
+    <div class="hero-circle hc1"></div>
+    <div class="hero-circle hc2"></div>
+    <div class="hero-circle hc3"></div>
+  </div>
+  <div style="position:relative;z-index:2;max-width:760px;margin:0 auto">
+    <div class="hero-badge">🌐 Création de sites internet</div>
+    <h1 class="hero-title">Un site web <span>simple & efficace</span><br>pour votre activité</h1>
+    <p class="hero-sub">Artisans, commerçants, indépendants du nord Finistère — gagnez en visibilité avec un site vitrine clé en main, sans prise de tête.</p>
+    <div class="hero-btns">
+      <a href="index.html#contact" class="btn btn-white">Discuter de mon projet</a>
+      <a href="#projets" class="btn btn-outline-white">Voir mes réalisations ↓</a>
     </div>
-    <div class="stats-bar">
-      <div class="stat-item">
-        <div class="stat-number">Local</div>
-        <div class="stat-label">Nord Finistère</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">Simple</div>
-        <div class="stat-label">Sans jargon technique</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">Sur-mesure</div>
-        <div class="stat-label">Adapté à votre activité</div>
-      </div>
+    <div class="hero-stats">
+      <div class="hs-item"><span class="hs-value">Local</span><span class="hs-label">Nord Finistère</span></div>
+      <div class="hs-item"><span class="hs-value">Simple</span><span class="hs-label">Sans jargon technique</span></div>
+      <div class="hs-item"><span class="hs-value">Sur-mesure</span><span class="hs-label">Adapté à votre activité</span></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Projects Section -->
-  <section id="projets" aria-labelledby="titre-projets">
-    <h2 id="titre-projets" class="section-title reveal">Mes réalisations</h2>
-    <p class="section-intro reveal">Découvrez quelques sites créés pour des professionnels de la région. Chaque projet est unique, pensé pour mettre en valeur l'activité de mon client.</p>
-    
+<!-- PROJETS -->
+<div class="section-bg" id="projets">
+  <div class="section-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-line"></div><span>Portfolio</span></div>
+    <h2 class="section-title reveal">Mes <span>réalisations</span></h2>
+    <p class="section-intro reveal">Chaque projet est unique, pensé pour mettre en valeur l'activité de mon client et attirer de nouveaux contacts.</p>
     <div class="projets-grid">
-      
-      <!-- Projet 1 : Boucherie Armoricaine -->
-      <article class="projet-card reveal reveal-delay-1" itemscope itemtype="https://schema.org/CreativeWork">
-        <div class="projet-image">
+
+      <article class="projet-card reveal s1" itemscope itemtype="https://schema.org/CreativeWork">
+        <div class="projet-img">
           <span class="projet-badge">Nouveau</span>
           <a href="https://boucheriearmoricaine.com" target="_blank" rel="noopener" itemprop="url">
-            <img src="logo-noir.avif" width="240" height="240" alt="Logo Boucherie Armoricaine" loading="lazy" decoding="async" itemprop="image">
+            <img src="logo-noir.avif" width="240" height="160" alt="Logo Boucherie Armoricaine" loading="lazy" decoding="async" itemprop="image">
           </a>
         </div>
-        <div class="projet-content">
+        <div class="projet-body">
           <h3 class="projet-title" itemprop="name">Boucherie Armoricaine</h3>
-          <p class="projet-client">Atelier de découpe • Nord Finistère</p>
-          <p class="projet-desc" itemprop="description">Site vitrine pour un atelier spécialisé dans la découpe de carcasses. Présentation des prestations, des savoir-faire et prise de contact facilitée pour éleveurs et particuliers.</p>
+          <p class="projet-client">Atelier de découpe · Lesneven, Nord Finistère</p>
+          <p class="projet-desc" itemprop="description">Site vitrine pour un atelier spécialisé dans la découpe de carcasses. Présentation des prestations, grilles tarifaires et prise de contact facilitée pour éleveurs et particuliers.</p>
           <div class="projet-tags">
             <span class="projet-tag">Site vitrine</span>
             <span class="projet-tag">Artisan</span>
             <span class="projet-tag">Responsive</span>
+            <span class="projet-tag">SEO local</span>
           </div>
           <div class="projet-actions">
-            <a class="btn btn-primary" href="https://boucheriearmoricaine.com" target="_blank" rel="noopener" aria-label="Visiter le site Boucherie Armoricaine">Visiter le site</a>
-            <a class="btn btn-ghost" href="index.html#contact" aria-label="Demander un site similaire">Site similaire ?</a>
+            <a class="btn btn-primary" href="https://boucheriearmoricaine.com" target="_blank" rel="noopener">Visiter le site</a>
+            <a class="btn btn-ghost" href="index.html#contact">Site similaire ?</a>
           </div>
         </div>
       </article>
-      
-      <!-- Projet 2 : Bruno L'Hostis -->
-      <article class="projet-card reveal reveal-delay-2" itemscope itemtype="https://schema.org/CreativeWork">
-        <div class="projet-image">
+
+      <article class="projet-card reveal s2" itemscope itemtype="https://schema.org/CreativeWork">
+        <div class="projet-img">
           <a href="https://bruno-lhostis.fr" target="_blank" rel="noopener" itemprop="url">
-            <img src="Bruno-LHOSTIS-logo.avif" width="240" height="240" alt="Logo Bruno L'Hostis – Professeur indépendant" loading="lazy" decoding="async" itemprop="image">
+            <img src="Bruno-LHOSTIS-logo.avif" width="240" height="160" alt="Logo Bruno L'Hostis – Professeur indépendant" loading="lazy" decoding="async" itemprop="image">
           </a>
         </div>
-        <div class="projet-content">
+        <div class="projet-body">
           <h3 class="projet-title" itemprop="name">Bruno L'Hostis</h3>
-          <p class="projet-client">Professeur indépendant • Mathématiques & Physique-Chimie</p>
-          <p class="projet-desc" itemprop="description">Site vitrine présentant l'activité de cours particuliers, la pédagogie proposée et facilitant la prise de contact pour les familles et organismes.</p>
+          <p class="projet-client">Professeur indépendant · Mathématiques & Physique-Chimie</p>
+          <p class="projet-desc" itemprop="description">Site vitrine présentant l'activité de cours particuliers, la pédagogie proposée et facilitant la prise de contact pour les familles et organismes de financement.</p>
           <div class="projet-tags">
             <span class="projet-tag">Site vitrine</span>
             <span class="projet-tag">Indépendant</span>
             <span class="projet-tag">Éducation</span>
+            <span class="projet-tag">Responsive</span>
           </div>
           <div class="projet-actions">
-            <a class="btn btn-primary" href="https://bruno-lhostis.fr" target="_blank" rel="noopener" aria-label="Visiter le site Bruno L'Hostis">Visiter le site</a>
-            <a class="btn btn-ghost" href="index.html#contact" aria-label="Demander un site similaire">Site similaire ?</a>
+            <a class="btn btn-primary" href="https://bruno-lhostis.fr" target="_blank" rel="noopener">Visiter le site</a>
+            <a class="btn btn-ghost" href="index.html#contact">Site similaire ?</a>
           </div>
         </div>
       </article>
-      
-    </div>
-  </section>
 
-  <!-- Services Section -->
-  <section id="services-offerts" aria-labelledby="titre-services">
-    <h2 id="titre-services" class="section-title reveal">Ce que je vous propose</h2>
-    <p class="section-intro reveal">Un accompagnement de A à Z, adapté à votre budget et à vos besoins.</p>
-    
+      <!-- Placeholder futur projet -->
+      <div class="projet-card reveal s3" style="border:2px dashed var(--gray-light);background:var(--off);box-shadow:none;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3rem 2rem;gap:1rem;min-height:300px">
+        <div style="font-size:2.5rem">🚀</div>
+        <div style="font-size:1rem;font-weight:700;color:var(--gray)">Votre projet ici ?</div>
+        <p style="font-size:.88rem;color:var(--gray);line-height:1.65">Discutons de votre activité et créons ensemble votre vitrine en ligne.</p>
+        <a href="index.html#contact" class="btn btn-primary" style="font-size:.82rem;padding:.6rem 1.2rem">Lancer mon projet</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CE QUE JE PROPOSE -->
+<div class="section-bg-off" id="services-offerts">
+  <div class="section-inner">
+    <div class="eyebrow reveal" style="justify-content:center"><div class="eyebrow-line"></div><span>Mon offre</span></div>
+    <h2 class="section-title reveal" style="text-align:center">Ce que je vous <span>propose</span></h2>
+    <p class="section-intro reveal" style="margin-left:auto;margin-right:auto;text-align:center">Un accompagnement de A à Z, adapté à votre budget et à vos besoins.</p>
     <div class="services-grid">
-      <div class="service-card reveal reveal-delay-1">
-        <span class="service-icon">🎨</span>
-        <h3 class="service-title">Design sur-mesure</h3>
-        <p class="service-desc">Un site à votre image, avec vos couleurs et votre identité. Pas de template générique.</p>
+      <div class="svc-card reveal s1">
+        <span class="svc-icon">🎨</span>
+        <div class="svc-title">Design sur-mesure</div>
+        <p class="svc-desc">Un site à votre image, avec vos couleurs et votre identité. Pas de template générique.</p>
       </div>
-      <div class="service-card reveal reveal-delay-2">
-        <span class="service-icon">📱</span>
-        <h3 class="service-title">Adapté mobile</h3>
-        <p class="service-desc">Votre site s'affiche parfaitement sur téléphone, tablette et ordinateur.</p>
+      <div class="svc-card reveal s2">
+        <span class="svc-icon">📱</span>
+        <div class="svc-title">Adapté mobile</div>
+        <p class="svc-desc">Votre site s'affiche parfaitement sur téléphone, tablette et ordinateur.</p>
       </div>
-      <div class="service-card reveal reveal-delay-3">
-        <span class="service-icon">🚀</span>
-        <h3 class="service-title">Rapide & optimisé</h3>
-        <p class="service-desc">Chargement ultra-rapide et bien référencé sur Google pour être trouvé facilement.</p>
+      <div class="svc-card reveal s3">
+        <span class="svc-icon">🚀</span>
+        <div class="svc-title">Rapide & optimisé SEO</div>
+        <p class="svc-desc">Chargement rapide et bien référencé sur Google pour être trouvé localement.</p>
       </div>
-      <div class="service-card reveal reveal-delay-1">
-        <span class="service-icon">🤝</span>
-        <h3 class="service-title">Accompagnement humain</h3>
-        <p class="service-desc">Je vous explique tout simplement, sans jargon technique. Vous restez maître de votre site.</p>
+      <div class="svc-card reveal s1">
+        <span class="svc-icon">🤝</span>
+        <div class="svc-title">Accompagnement humain</div>
+        <p class="svc-desc">Je vous explique tout simplement, sans jargon. Vous restez maître de votre site.</p>
       </div>
-      <div class="service-card reveal reveal-delay-2">
-        <span class="service-icon">💰</span>
-        <h3 class="service-title">Tarif honnête</h3>
-        <p class="service-desc">Prix transparent, adapté aux petites structures. Pas de mauvaise surprise.</p>
+      <div class="svc-card reveal s2">
+        <span class="svc-icon">💰</span>
+        <div class="svc-title">Tarif honnête</div>
+        <p class="svc-desc">Prix transparent, adapté aux petites structures. Pas de mauvaise surprise.</p>
       </div>
-      <div class="service-card reveal reveal-delay-3">
-        <span class="service-icon">📍</span>
-        <h3 class="service-title">100% local</h3>
-        <p class="service-desc">Basé à Plouguerneau, je me déplace chez vous pour comprendre votre activité.</p>
+      <div class="svc-card reveal s3">
+        <span class="svc-icon">📍</span>
+        <div class="svc-title">100% local</div>
+        <p class="svc-desc">Basé à Plouguerneau, je me déplace chez vous pour comprendre votre activité.</p>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- CTA Section -->
-  <section id="cta-final" aria-labelledby="titre-cta">
+<!-- CTA -->
+<div class="section-bg">
+  <div class="section-inner">
     <div class="cta-box reveal">
-      <h2 id="titre-cta" class="cta-title">Votre projet commence ici 🚀</h2>
+      <h2 class="cta-title">Votre projet commence ici 🚀</h2>
       <p class="cta-text">Discutons ensemble de votre activité et de vos besoins. Premier échange gratuit et sans engagement.</p>
-      <div class="cta-buttons">
-        <a class="btn btn-white btn-large" href="tel:+33641537334">📞 06 41 53 73 34</a>
-        <a class="btn btn-outline-white btn-large" href="index.html#contact">Envoyer un message</a>
+      <div class="cta-btns">
+        <a class="btn btn-white" href="tel:+33641537334">📞 06 41 53 73 34</a>
+        <a class="btn btn-outline-white" href="index.html#contact">Envoyer un message</a>
       </div>
     </div>
-  </section>
+  </div>
+</div>
 
-</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter" width="80" height="36">
+      <span>Antoine Conter – Informatique</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="projets.html">Réalisations</a>
+      <a href="commerces.html">Partenaires</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p class="footer-legal">© 2026 Antoine Conter – Création de sites internet nord Finistère · Plouguerneau (29880)</p>
+  </div>
+</footer>
+
+<a id="contact-bubble" href="index.html#contact">💬 Me contacter</a>
 
 <script>
 (function(){
-  // Canonical redirect
   var C='informatique-plouguerneau-antoine-conter.fr',h=location.hostname.toLowerCase();
   if(h.endsWith('.github.io')||h==='www.'+C){var t='https://'+C+location.pathname+location.search+location.hash;if(location.href!==t)location.replace(t);}
-  
-  // Reveal on scroll
-  var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches,ts=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver'in window)||rm){ts.forEach(function(t){t.classList.add('is-visible');});return;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:0.1});
-  ts.forEach(function(t){io.observe(t);});
+
+  // Menu mobile
+  var hb=document.getElementById('hamburger'),mm=document.getElementById('mobile-menu');
+  function closeMenu(){if(hb)hb.classList.remove('open');if(mm)mm.classList.remove('open');document.body.style.overflow='';}
+  window.closeMenu=closeMenu;
+  if(hb&&mm){hb.addEventListener('click',function(){var o=mm.classList.toggle('open');hb.classList.toggle('open');document.body.style.overflow=o?'hidden':'';hb.setAttribute('aria-expanded',String(o));});}
+
+  // Reveal
+  var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)||rm){els.forEach(function(e){e.classList.add('visible');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -60px 0px',threshold:.06});els.forEach(function(e){io.observe(e);});}
+
+  // Tilt 3D sur les cartes projet
+  if(window.innerWidth>=768){
+    document.querySelectorAll('.projet-card,.svc-card').forEach(function(c){
+      c.addEventListener('mousemove',function(e){
+        var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        c.style.transform='perspective(700px) rotateY('+(x*7)+'deg) rotateX('+(-y*5)+'deg) translateY(-8px)';
+        c.style.transition='none';
+      });
+      c.addEventListener('mouseleave',function(){
+        c.style.transform='';c.style.transition='all .4s cubic-bezier(.16,1,.3,1)';
+      });
+    });
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-72,behavior:'smooth'});}});});
 })();
 </script>
 </body>

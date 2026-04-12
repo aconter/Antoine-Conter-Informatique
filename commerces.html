@@ -5,144 +5,467 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#005f99">
-  <title>Partenaires locaux – Antoine Conter</title>
-  <meta name="description" content="Communes, commerces et associations qui soutiennent Antoine Conter – services informatiques à Plouguerneau et alentours.">
+  <title>Partenaires locaux – Nord Finistère | Antoine Conter Informatique</title>
+  <meta name="description" content="Communes, commerces et associations du nord Finistère qui font confiance à Antoine Conter pour leurs besoins informatiques. Médiathèque de Plouguerneau, Cycles des Abers, Rugby Club Plabennec…">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Antoine Conter">
   <link rel="canonical" href="https://informatique-plouguerneau-antoine-conter.fr/commerces.html">
-  <meta property="og:title" content="Partenaires locaux – Antoine Conter">
-  <meta property="og:description" content="Communes, commerces et associations qui soutiennent Antoine Conter.">
+  <meta property="og:title" content="Partenaires locaux – Antoine Conter Informatique">
+  <meta property="og:description" content="Communes, commerces et associations qui font confiance à Antoine Conter en nord Finistère.">
   <meta property="og:url" content="https://informatique-plouguerneau-antoine-conter.fr/commerces.html">
   <meta property="og:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.avif">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Antoine Conter – Services informatiques">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="Antoine-CONTER-informatique-Logo.avif" type="image/avif">
-  <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.avif" type="image/avif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://informatique-plouguerneau-antoine-conter.fr/"},{"@type":"ListItem","position":2,"name":"Partenaires","item":"https://informatique-plouguerneau-antoine-conter.fr/commerces.html"}]}
+  </script>
 
   <style>
-    *,*::before,*::after{box-sizing:border-box}
-    :root{--bubble-height:56px;--header-height:100px;--brand-blue:#005f99;--brand-blue-hover:#0a6fb8;--brand-red:#B22222}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#005f99;--blue-dark:#004070;--blue-hover:#0a6fb8;--blue-light:#e8f4fd;
+      --red:#B22222;--red-light:#cc2c2c;
+      --white:#fff;--off:#F8FAFC;--gray:#6B7280;--gray-light:#E5E7EB;--dark:#111827;
+      --font-body:'Inter',system-ui,sans-serif;--font-display:'Playfair Display',Georgia,serif;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg:0 10px 40px rgba(0,0,0,.14);--shadow-blue:0 8px 30px rgba(0,95,153,.25);
+      --radius:12px;--hh:72px;
+    }
     html{scroll-behavior:smooth}
-    body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-size:22px;margin:0;padding:0;background:url('fond_antoine_conter_informatique.avif') no-repeat center center fixed;background-size:cover;color:#000;padding-bottom:calc(var(--bubble-height) + 20px)}
-    header{background:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 30px;position:sticky;top:0;width:100%;z-index:1000;box-shadow:0 2px 5px rgba(0,0,0,.06);min-height:var(--header-height);flex-wrap:wrap}
-    .logo{height:100px;width:auto;object-fit:contain}
-    .logo-link{display:flex;align-items:center}
-    .header-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 14px;border-radius:999px;border:2px solid transparent;font-weight:700;font-size:16px;cursor:pointer;text-decoration:none;transition:transform .06s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease;will-change:transform}.btn:active{transform:translateY(1px)}
-    .btn-primary{background:var(--brand-blue);color:#fff;box-shadow:0 6px 16px rgba(0,0,0,.18)}.btn-primary:hover{background:var(--brand-blue-hover);box-shadow:0 8px 18px rgba(0,0,0,.22)}
-    .btn-ghost{background:#fff;color:var(--brand-blue);border-color:var(--brand-blue)}.btn-ghost:hover{background:rgba(0,95,153,.06)}
-    #partenaires{position:relative;z-index:1;padding:60px 20px;text-align:center;border-left:3px solid var(--brand-red);border-right:3px solid var(--brand-red)}
-    #partenaires::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.85);backdrop-filter:blur(2px);z-index:-1}
-    #partenaires h1{font-size:2.4em;font-weight:500;color:var(--brand-blue);margin-bottom:16px;position:relative}
-    #partenaires h1::after{content:'';display:block;width:80px;height:3px;background-color:var(--brand-red);margin:10px auto 0;border-radius:3px;opacity:0.9}
-    #partenaires h1 span{color:var(--brand-red)}
-    .intro-text{max-width:800px;margin:0 auto 26px;font-size:1rem;color:#333}
-    .partners-toolbar{max-width:1100px;margin:28px auto 22px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
-    .partners-search-wrapper{position:relative;flex:1 1 260px;max-width:430px}
-    .partners-search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:0.9rem;opacity:0.6}
-    .partners-search-input{width:100%;padding:10px 14px 10px 32px;border-radius:999px;border:2px solid var(--brand-blue);font-size:0.95rem;outline:none;background:rgba(255,255,255,0.95)}.partners-search-input:focus{border-color:var(--brand-red);background:#fff}
-    .partners-filters{display:flex;flex-wrap:wrap;gap:8px}
-    .partners-filter-chip{padding:6px 12px;border-radius:999px;border:2px solid var(--brand-blue);background:#fff;color:var(--brand-blue);font-size:0.75rem;font-weight:700;text-transform:uppercase;cursor:pointer;transition:background-color .2s ease,color .2s ease}.partners-filter-chip:hover{background:rgba(0,95,153,.06)}.partners-filter-chip.active{background:var(--brand-blue);color:#fff}
-    .partners-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-    .partner-card{background:rgba(255,255,255,0.96);border-radius:14px;border:1px solid var(--brand-red);box-shadow:0 6px 16px rgba(0,0,0,0.12);padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;text-align:left;transition:transform .18s ease,box-shadow .18s ease}.partner-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,0.18)}
-    .partner-header{display:flex;align-items:center;gap:12px}
-    .partner-logo{width:56px;height:56px;border-radius:14px;background:#f3f4f6;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #ddd}.partner-logo img{max-width:100%;max-height:100%;object-fit:contain}
-    .partner-name{font-size:1rem;font-weight:700;color:var(--brand-blue)}
-    .partner-type{font-size:0.65rem;margin-left:6px;padding:3px 8px;border-radius:999px;border:1px solid var(--brand-red);color:var(--brand-red);text-transform:uppercase;font-weight:700}
-    .partner-city{font-size:0.9rem;color:#444}
-    .partner-contact{font-size:0.85rem;color:#444}.partner-contact span{display:block}.partner-contact a{color:var(--brand-blue);text-decoration:none}.partner-contact a:hover{color:var(--brand-red);text-decoration:underline}
-    .partners-empty{margin-top:30px;font-size:0.95rem}
-    #contact-bubble{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);background:#FF5722;color:#fff;padding:12px 18px;border-radius:9999px;cursor:pointer;font-weight:700;font-family:sans-serif;font-size:16px;z-index:3000;box-shadow:0 8px 16px rgba(0,0,0,0.3);transition:transform 0.2s ease,background-color 0.2s ease;text-decoration:none}#contact-bubble:hover{transform:scale(1.06);background-color:#E64A19}
-    #contact-form{position:fixed;right:16px;bottom:calc(var(--bubble-height) + env(safe-area-inset-bottom,0px) + 18px);background:#fff;border:1px solid #ddd;padding:30px 15px 15px 15px;width:min(320px,92vw);box-shadow:0 4px 10px rgba(0,0,0,0.15);font-family:sans-serif;z-index:3100;border-radius:8px;box-sizing:border-box}
-    #close-form{position:absolute;top:8px;right:10px;background:transparent;border:none;font-size:24px;color:#888;cursor:pointer;z-index:3200;padding:0;line-height:1}#close-form:hover{color:#000}
-    #contact-form input,#contact-form textarea{width:100%;margin-top:15px;margin-bottom:10px;padding:8px;border:1px solid #ccc;font-size:14px;border-radius:4px;box-sizing:border-box}#contact-form textarea{height:120px;resize:vertical}
-    #contact-form button{width:100%;padding:10px;background:#FF5722;border:none;color:white;font-size:14px;cursor:pointer;border-radius:4px;font-weight:bold}#contact-form button:hover{background:#E64A19}
-    @media(max-width:992px){.partners-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:768px){:root{--header-height:70px}header{padding:8px 15px;min-height:70px}.logo{height:70px}#partenaires{padding:44px 16px}#partenaires h1{font-size:2em}.btn{height:38px;font-size:15px;padding:0 12px}#contact-bubble{left:50%;right:auto;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}#contact-form{left:50%;right:auto;transform:translateX(-50%);bottom:calc(var(--bubble-height) + env(safe-area-inset-bottom,0px) + 18px);width:min(360px,92vw)}}
-    @media(max-width:700px){.partners-grid{grid-template-columns:1fr}.partners-toolbar{flex-direction:column;align-items:stretch}}
-    @media(max-width:420px){.header-actions{width:100%;justify-content:center}#contact-bubble{left:16px;right:16px;transform:none;text-align:center;font-size:15px;padding:12px 16px}#contact-form{left:16px;right:16px;transform:none;width:auto}}
+    body{font-family:var(--font-body);font-size:16px;background:var(--off);color:var(--dark);line-height:1.65;overflow-x:hidden}
+
+    /* HEADER */
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,95,153,.08);box-shadow:0 2px 12px rgba(0,0,0,.06);height:var(--hh)}
+    .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+    .logo-wrap{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .logo-wrap img{height:44px;width:auto;object-fit:contain}
+    .logo-name{font-size:.9rem;font-weight:700;color:var(--blue);white-space:nowrap}
+    .site-nav{display:flex;align-items:center;gap:.25rem}
+    .site-nav a{padding:.45rem .85rem;border-radius:8px;font-size:.85rem;font-weight:500;color:var(--gray);text-decoration:none;transition:all .2s ease}
+    .site-nav a:hover{color:var(--blue);background:var(--blue-light)}
+    .site-nav a.active{color:var(--blue);font-weight:600;background:var(--blue-light)}
+    .site-nav a.nav-cta{background:var(--blue);color:#fff;padding:.45rem 1rem;box-shadow:var(--shadow-blue)}
+    .site-nav a.nav-cta:hover{background:var(--blue-hover)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+    .hamburger span{width:22px;height:2px;background:var(--dark);display:block;transition:all .3s ease;border-radius:2px}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;inset:var(--hh) 0 0 0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-size:1.3rem;font-weight:600;color:var(--dark);text-decoration:none;padding:.5rem 1rem;transition:color .2s}
+    .mobile-menu a:hover{color:var(--blue)}
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .s1{transition-delay:.06s}.s2{transition-delay:.13s}.s3{transition-delay:.20s}.s4{transition-delay:.27s}
+
+    /* HERO */
+    #hero{
+      background:linear-gradient(135deg,var(--blue-dark) 0%,#005f99 55%,#1a7ab8 100%);
+      padding:6rem 2rem 4rem;text-align:center;position:relative;overflow:hidden;
+    }
+    .hero-wave{position:absolute;bottom:-1px;left:0;right:0;line-height:0}
+    .hero-wave svg{display:block;width:100%;height:60px}
+    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:.4rem 1rem;border-radius:999px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:1.5rem;opacity:0;animation:fadeUp .8s ease .2s forwards}
+    .hero-title{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem;opacity:0;animation:fadeUp .9s ease .35s forwards}
+    .hero-title span{color:#7dd3fc}
+    .hero-sub{font-size:clamp(.9rem,2vw,1.1rem);color:rgba(255,255,255,.65);max-width:560px;margin:0 auto 2rem;font-weight:300;line-height:1.75;opacity:0;animation:fadeUp .9s ease .5s forwards}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.4rem;border-radius:8px;font-family:var(--font-body);font-size:.88rem;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:all .25s ease;white-space:nowrap}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:var(--shadow-blue)}
+    .btn-primary:hover{background:var(--blue-hover);transform:translateY(-2px)}
+    .btn-ghost{background:#fff;color:var(--blue);border-color:var(--blue)}
+    .btn-ghost:hover{background:var(--blue);color:#fff}
+    .btn-outline-white{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+    .btn-outline-white:hover{background:rgba(255,255,255,.1)}
+
+    /* SECTIONS */
+    .section-bg{background:#fff;padding:5rem 2rem}
+    .section-bg-off{background:var(--off);padding:5rem 2rem}
+    .section-inner{max-width:1100px;margin:0 auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem}
+    .eyebrow-line{width:24px;height:2px;background:var(--red);border-radius:2px}
+    .section-title{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.3rem);font-weight:900;color:var(--dark);line-height:1.15;margin-bottom:1rem}
+    .section-title span{color:var(--blue)}
+
+    /* TOOLBAR */
+    .toolbar{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-bottom:2rem}
+    .search-wrap{position:relative;flex:1 1 240px;max-width:380px}
+    .search-icon{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:var(--gray);pointer-events:none}
+    .search-icon svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+    .search-input{
+      width:100%;padding:.65rem 1rem .65rem 2.4rem;
+      border:2px solid var(--gray-light);border-radius:8px;
+      font-family:var(--font-body);font-size:.88rem;color:var(--dark);
+      background:#fff;outline:none;transition:border-color .25s ease,box-shadow .25s ease;
+    }
+    .search-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,95,153,.1)}
+    .search-input::placeholder{color:var(--gray)}
+    .filters{display:flex;flex-wrap:wrap;gap:.5rem}
+    .filter-chip{
+      padding:.4rem .9rem;border-radius:999px;
+      border:2px solid var(--gray-light);background:#fff;
+      font-family:var(--font-body);font-size:.78rem;font-weight:600;color:var(--gray);
+      cursor:pointer;transition:all .2s ease;
+    }
+    .filter-chip:hover{border-color:var(--blue);color:var(--blue)}
+    .filter-chip.active{background:var(--blue);border-color:var(--blue);color:#fff}
+
+    /* PARTNERS GRID */
+    .partners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+    .partner-card{
+      background:#fff;border-radius:var(--radius);
+      border:1px solid var(--gray-light);box-shadow:var(--shadow-sm);
+      padding:1.5rem;display:flex;flex-direction:column;gap:.9rem;
+      transition:all .35s cubic-bezier(.16,1,.3,1);
+      position:relative;overflow:hidden;
+    }
+    .partner-card::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+      background:linear-gradient(90deg,var(--blue),var(--red));
+      transform:scaleX(0);transform-origin:left;
+      transition:transform .35s ease;
+    }
+    .partner-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(0,95,153,.15)}
+    .partner-card:hover::before{transform:scaleX(1)}
+    .partner-head{display:flex;align-items:center;gap:.9rem}
+    .partner-logo{
+      width:54px;height:54px;border-radius:10px;
+      background:var(--blue-light);border:1px solid rgba(0,95,153,.1);
+      display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;
+    }
+    .partner-logo img{max-width:100%;max-height:100%;object-fit:contain}
+    .partner-logo-placeholder{font-size:1.6rem;line-height:1}
+    .partner-name{font-size:1rem;font-weight:700;color:var(--dark)}
+    .partner-type-badge{
+      display:inline-flex;align-items:center;
+      margin-top:.25rem;padding:.15rem .6rem;border-radius:999px;
+      font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+    }
+    .type-commune{background:#dbeafe;color:#1d4ed8}
+    .type-commerce{background:#dcfce7;color:#15803d}
+    .type-association{background:#fef3c7;color:#b45309}
+    .partner-city{font-size:.85rem;color:var(--gray);display:flex;align-items:center;gap:.35rem}
+    .partner-city svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0}
+    .partner-contact{display:flex;flex-direction:column;gap:.35rem}
+    .partner-contact-item{font-size:.82rem;color:var(--gray);display:flex;align-items:center;gap:.4rem}
+    .partner-contact-item svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0;color:var(--blue)}
+    .partner-contact-item a{color:var(--blue);text-decoration:none;font-weight:500;transition:color .2s}
+    .partner-contact-item a:hover{color:var(--blue-hover);text-decoration:underline}
+    .partners-empty{text-align:center;padding:3rem;color:var(--gray);font-size:.95rem}
+    .partners-empty-icon{font-size:2.5rem;display:block;margin-bottom:.75rem}
+
+    /* CTA BOTTOM */
+    .cta-strip{
+      background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+      padding:3.5rem 2rem;text-align:center;
+    }
+    .cta-strip h2{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:#fff;margin-bottom:.75rem}
+    .cta-strip p{font-size:.95rem;color:rgba(255,255,255,.65);margin-bottom:1.75rem;max-width:480px;margin-left:auto;margin-right:auto}
+    .cta-strip .btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-white{background:#fff;color:var(--blue)}
+    .btn-white:hover{background:var(--blue-light);transform:translateY(-2px)}
+
+    /* FOOTER */
+    .site-footer{background:#111827;padding:3rem 2rem;color:rgba(255,255,255,.5)}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-brand{display:flex;align-items:center;gap:.75rem}
+    .footer-brand img{height:36px;width:auto;filter:brightness(0) invert(1);opacity:.7}
+    .footer-brand span{font-size:.88rem;font-weight:600;color:rgba(255,255,255,.65)}
+    .footer-links{display:flex;gap:1.25rem;flex-wrap:wrap}
+    .footer-links a{font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:rgba(255,255,255,.8)}
+    .footer-legal{font-size:.72rem;color:rgba(255,255,255,.25);width:100%;text-align:center;border-top:1px solid rgba(255,255,255,.06);padding-top:1.5rem;margin-top:.25rem}
+
+    /* BUBBLE */
+    #contact-bubble{position:fixed;right:1.25rem;bottom:calc(env(safe-area-inset-bottom,0px) + 1.25rem);background:var(--red);color:#fff;padding:.75rem 1.25rem;border-radius:999px;font-family:var(--font-body);font-size:.85rem;font-weight:700;z-index:3000;box-shadow:0 8px 24px rgba(178,34,34,.35);border:none;cursor:pointer;transition:all .25s ease;text-decoration:none}
+    #contact-bubble:hover{background:var(--red-light);transform:translateY(-2px)}
+
+    /* COUNTER BADGE */
+    .results-count{font-size:.82rem;color:var(--gray);margin-bottom:1rem}
+    .results-count strong{color:var(--blue)}
+
+    @media(max-width:900px){.partners-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:768px){
+      :root{--hh:60px}
+      .site-nav{display:none}.hamburger{display:flex}
+      .section-bg,.section-bg-off{padding:4rem 1.25rem}
+      .toolbar{flex-direction:column;align-items:stretch}
+      .search-wrap{max-width:100%}
+    }
+    @media(max-width:540px){
+      .partners-grid{grid-template-columns:1fr}
+      .cta-strip .btns{flex-direction:column;align-items:center}
+      .cta-strip .btns .btn{width:100%;max-width:260px;justify-content:center}
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <a href="index.html" class="logo-link" aria-label="Retour à l'accueil">
-    <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter – Services informatiques Plouguerneau" class="logo" loading="eager" decoding="async" width="200" height="100">
-  </a>
-  <div class="header-actions">
-    <a class="btn btn-ghost" href="index.html" aria-label="Revenir à la page principale">⬅ Revenir à l'accueil</a>
-    <a class="btn btn-primary" href="index.html#contact" aria-label="Me contacter">Me contacter</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap" aria-label="Antoine Conter Informatique – Accueil">
+      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter" width="110" height="44" loading="eager">
+      <span class="logo-name">Antoine Conter</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="projets.html">Réalisations</a>
+      <a href="commerces.html" class="active">Partenaires</a>
+      <a href="index.html#contact" class="nav-cta">Me contacter</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
-<main>
-  <section id="partenaires">
-    <h1>Partenaires locaux & <span>remerciements</span></h1>
-    <p class="intro-text">Merci aux communes, commerces et associations qui m'aident à faire connaître mes services dans le nord Finistère.</p>
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html" onclick="closeMenu()">Accueil</a>
+  <a href="index.html#tarifs" onclick="closeMenu()">Tarifs</a>
+  <a href="projets.html" onclick="closeMenu()">Réalisations</a>
+  <a href="commerces.html" onclick="closeMenu()">Partenaires</a>
+  <a href="index.html#contact" onclick="closeMenu()" style="color:var(--blue);font-weight:700">Me contacter</a>
+</nav>
 
-    <div class="partners-toolbar">
-      <div class="partners-search-wrapper">
-        <span class="partners-search-icon">🔎</span>
-        <input id="partnersSearch" type="search" class="partners-search-input" placeholder="Rechercher une commune ou un commerce…">
+<!-- HERO -->
+<section id="hero">
+  <div style="position:relative;z-index:2;max-width:700px;margin:0 auto">
+    <div class="hero-badge">🤝 Réseau local nord Finistère</div>
+    <h1 class="hero-title">Partenaires locaux &<br><span>remerciements</span></h1>
+    <p class="hero-sub">Merci aux communes, commerces et associations du nord Finistère qui me font confiance et m'aident à me faire connaître dans la région.</p>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C300,0 900,0 1200,60 L1200,60 L0,60 Z" fill="#F8FAFC"/>
+    </svg>
+  </div>
+</section>
+
+<!-- PARTENAIRES -->
+<div class="section-bg-off" id="partenaires">
+  <div class="section-inner">
+    <div class="eyebrow reveal"><div class="eyebrow-line"></div><span>Ils me font confiance</span></div>
+    <h2 class="section-title reveal">Nos <span>partenaires</span></h2>
+
+    <div class="toolbar reveal">
+      <div class="search-wrap">
+        <span class="search-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input id="searchInput" type="search" class="search-input" placeholder="Rechercher un partenaire, une commune…" aria-label="Rechercher un partenaire">
       </div>
-      <div class="partners-filters">
-        <button class="partners-filter-chip active" data-filter="all">Tout</button>
-        <button class="partners-filter-chip" data-filter="commune">Communes</button>
-        <button class="partners-filter-chip" data-filter="commerce">Commerces</button>
-        <button class="partners-filter-chip" data-filter="association">Associations</button>
+      <div class="filters" role="group" aria-label="Filtrer par catégorie">
+        <button class="filter-chip active" data-filter="all">Tous</button>
+        <button class="filter-chip" data-filter="commune">Communes</button>
+        <button class="filter-chip" data-filter="commerce">Commerces</button>
+        <button class="filter-chip" data-filter="association">Associations</button>
       </div>
     </div>
 
-    <div id="partnersGrid" class="partners-grid"></div>
-    <div id="partnersEmpty" class="partners-empty" style="display:none;"><strong>Aucun partenaire trouvé.</strong></div>
-  </section>
-</main>
+    <p class="results-count" id="resultsCount"><strong id="countNum">3</strong> partenaire(s) affiché(s)</p>
 
-<div id="contact-bubble" aria-controls="contact-form" aria-expanded="false">Me contacter</div>
-<div id="contact-form" style="display:none;" role="dialog" aria-modal="true">
-  <button id="close-form" aria-label="Fermer le formulaire">×</button>
-  <form action="https://formspree.io/f/xdklavag" method="POST">
-    <input type="email" name="email" placeholder="Votre email" required>
-    <textarea name="message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
+    <div id="partnersGrid" class="partners-grid" role="list" aria-live="polite"></div>
+    <div id="partnersEmpty" class="partners-empty" style="display:none" role="status">
+      <span class="partners-empty-icon">🔍</span>
+      <strong>Aucun partenaire trouvé</strong>
+      <p style="margin-top:.5rem">Essayez un autre terme ou une autre catégorie.</p>
+    </div>
+  </div>
 </div>
+
+<!-- DEVENIR PARTENAIRE -->
+<div class="section-bg">
+  <div class="section-inner" style="text-align:center">
+    <div class="eyebrow reveal" style="justify-content:center"><div class="eyebrow-line"></div><span>Rejoindre le réseau</span></div>
+    <h2 class="section-title reveal" style="text-align:center">Vous souhaitez apparaître <span>ici ?</span></h2>
+    <p style="font-size:1rem;color:var(--gray);max-width:540px;margin:0 auto 2rem;line-height:1.75" class="reveal">Vous êtes une commune, un commerce ou une association du nord Finistère ? Contactez-moi pour rejoindre la liste de mes partenaires et profiter d'une visibilité locale.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap" class="reveal">
+      <a href="index.html#contact" class="btn btn-primary">Me contacter</a>
+      <a href="tel:+33641537334" class="btn btn-ghost">06 41 53 73 34</a>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h2 class="reveal">Besoin d'un coup de main informatique ?</h2>
+  <p class="reveal">Dépannage, formation, site internet — je suis disponible du lundi au dimanche sur rendez-vous.</p>
+  <div class="btns reveal">
+    <a href="index.html" class="btn btn-white">Voir tous les services</a>
+    <a href="index.html#contact" class="btn btn-outline-white">Prendre contact</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter" width="80" height="36">
+      <span>Antoine Conter – Informatique</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="projets.html">Réalisations</a>
+      <a href="commerces.html">Partenaires</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p class="footer-legal">© 2026 Antoine Conter – Services informatiques nord Finistère · Plouguerneau (29880)</p>
+  </div>
+</footer>
+
+<a id="contact-bubble" href="index.html#contact">💬 Me contacter</a>
 
 <script>
 (function(){
+  // Canonical
   var C='informatique-plouguerneau-antoine-conter.fr',h=location.hostname.toLowerCase();
   if(h.endsWith('.github.io')||h==='www.'+C){var t='https://'+C+location.pathname+location.search+location.hash;if(location.href!==t)location.replace(t);}
-  // Bulle contact
-  var bu=document.getElementById('contact-bubble'),fo=document.getElementById('contact-form'),cl=document.getElementById('close-form');
-  if(bu&&fo&&cl){function tg(op){var is=typeof op==='boolean'?op:fo.style.display!=='block';fo.style.display=is?'block':'none';bu.setAttribute('aria-expanded',String(is));}bu.addEventListener('click',function(){tg(true);});cl.addEventListener('click',function(){tg(false);});document.addEventListener('click',function(e){if(!fo.contains(e.target)&&e.target!==bu)tg(false);});}
-})();
 
-// Partenaires
-const partners=[
-  {name:"Médiathèque",type:"commune",logo:"médiathéque_ploug.avif",city:"Plouguerneau",address:"5 Rue du Colombier",phone:"02 98 37 13 75",website:"https://mediatheque.plouguerneau.fr"},
-  {name:"Rugby Club Plabennec",type:"association",logo:"Plab.avif",city:"Plabennec",address:"Kervéguen",phone:"06 50 01 07 45",website:"https://www.rugbyclubplabennec.com/"},
-  {name:"Cycle des abers",type:"commerce",logo:"Cycles_des_Abers_petit.avif",city:"Lannilis",address:"10 Rue de la Roche",phone:"06 99 44 83 76",website:"https://www.cyclesdesabers.com"}
-];
-const grid=document.getElementById("partnersGrid"),empty=document.getElementById("partnersEmpty"),search=document.getElementById("partnersSearch"),filters=document.querySelectorAll(".partners-filter-chip");
-let currentFilter="all",currentSearch="";
-function renderPartners(){
-  grid.innerHTML="";
-  const filtered=partners.filter(p=>{
-    const matchType=currentFilter==="all"||p.type===currentFilter;
-    const text=(p.name+" "+p.city+" "+(p.zone||"")).toLowerCase();
-    const matchSearch=text.includes(currentSearch.toLowerCase());
-    return matchType&&matchSearch;
+  // Menu mobile
+  var hb=document.getElementById('hamburger'),mm=document.getElementById('mobile-menu');
+  function closeMenu(){if(hb)hb.classList.remove('open');if(mm)mm.classList.remove('open');document.body.style.overflow='';}
+  window.closeMenu=closeMenu;
+  if(hb&&mm){hb.addEventListener('click',function(){var o=mm.classList.toggle('open');hb.classList.toggle('open');document.body.style.overflow=o?'hidden':'';hb.setAttribute('aria-expanded',String(o));});}
+
+  // Reveal
+  var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)||rm){els.forEach(function(e){e.classList.add('visible');});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{rootMargin:'0px 0px -60px 0px',threshold:.06});els.forEach(function(e){io.observe(e);});}
+
+  // ===== PARTENAIRES DATA =====
+  var partners=[
+    {
+      name:"Médiathèque de Plouguerneau",
+      type:"commune",
+      logo:"médiathéque_ploug.avif",
+      city:"Plouguerneau",
+      address:"5 Rue du Colombier",
+      phone:"02 98 37 13 75",
+      website:"https://mediatheque.plouguerneau.fr"
+    },
+    {
+      name:"Rugby Club Plabennec",
+      type:"association",
+      logo:"Plab.avif",
+      city:"Plabennec",
+      address:"Kervéguen",
+      phone:"06 50 01 07 45",
+      website:"https://www.rugbyclubplabennec.com/"
+    },
+    {
+      name:"Cycles des Abers",
+      type:"commerce",
+      logo:"Cycles_des_Abers_petit.avif",
+      city:"Lannilis",
+      address:"10 Rue de la Roche",
+      phone:"06 99 44 83 76",
+      website:"https://www.cyclesdesabers.com"
+    }
+  ];
+
+  var typeLabels={commune:"Commune",commerce:"Commerce",association:"Association"};
+  var grid=document.getElementById('partnersGrid');
+  var empty=document.getElementById('partnersEmpty');
+  var countNum=document.getElementById('countNum');
+  var searchInput=document.getElementById('searchInput');
+  var filterChips=document.querySelectorAll('.filter-chip');
+  var currentFilter='all', currentSearch='';
+
+  function buildCard(p,idx){
+    var div=document.createElement('article');
+    div.className='partner-card reveal s'+(idx%4+1);
+    div.setAttribute('role','listitem');
+    div.setAttribute('itemscope','');
+    div.setAttribute('itemtype','https://schema.org/Organization');
+
+    var logoHtml=p.logo
+      ? '<img src="'+p.logo+'" alt="Logo '+p.name+'" loading="lazy" decoding="async" itemprop="image">'
+      : '<span class="partner-logo-placeholder">🏙️</span>';
+
+    var typeClass='type-'+p.type;
+
+    var contactLines='';
+    if(p.address) contactLines+='<div class="partner-contact-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span itemprop="address">'+p.address+', '+p.city+'</span></div>';
+    if(p.phone) contactLines+='<div class="partner-contact-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:'+p.phone.replace(/\s/g,'')+'" itemprop="telephone">'+p.phone+'</a></div>';
+    if(p.website) contactLines+='<div class="partner-contact-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="'+p.website+'" target="_blank" rel="noopener" itemprop="url">Voir le site</a></div>';
+
+    div.innerHTML=
+      '<div class="partner-head">'
+        +'<div class="partner-logo">'+logoHtml+'</div>'
+        +'<div>'
+          +'<div class="partner-name" itemprop="name">'+p.name+'</div>'
+          +'<span class="partner-type-badge '+typeClass+'">'+typeLabels[p.type]+'</span>'
+        +'</div>'
+      +'</div>'
+      +(p.city?'<div class="partner-city"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'+p.city+'</div>':'')
+      +'<div class="partner-contact">'+contactLines+'</div>';
+    return div;
+  }
+
+  function render(){
+    grid.innerHTML='';
+    var filtered=partners.filter(function(p){
+      var matchType=currentFilter==='all'||p.type===currentFilter;
+      var text=(p.name+' '+p.city+' '+(p.address||'')).toLowerCase();
+      var matchSearch=text.indexOf(currentSearch.toLowerCase())>-1;
+      return matchType&&matchSearch;
+    });
+    countNum.textContent=filtered.length;
+    if(filtered.length===0){empty.style.display='block';return;}
+    empty.style.display='none';
+    filtered.forEach(function(p,i){
+      var card=buildCard(p,i);
+      grid.appendChild(card);
+    });
+    // Re-observe new cards
+    if('IntersectionObserver'in window&&!rm){
+      document.querySelectorAll('#partnersGrid .reveal').forEach(function(e){
+        if(!e.classList.contains('visible'))io.observe(e);
+        else e.classList.add('visible');
+      });
+      // Force visible for already-scrolled items
+      setTimeout(function(){
+        document.querySelectorAll('#partnersGrid .reveal').forEach(function(e){e.classList.add('visible');});
+      },50);
+    } else {
+      document.querySelectorAll('#partnersGrid .reveal').forEach(function(e){e.classList.add('visible');});
+    }
+    // Tilt
+    if(window.innerWidth>=768){
+      document.querySelectorAll('.partner-card').forEach(function(c){
+        c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(600px) rotateY('+(x*5)+'deg) rotateX('+(-y*4)+'deg) translateY(-6px)';c.style.transition='none';});
+        c.addEventListener('mouseleave',function(){c.style.transform='';c.style.transition='all .4s cubic-bezier(.16,1,.3,1)';});
+      });
+    }
+  }
+
+  filterChips.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      filterChips.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      currentFilter=btn.dataset.filter;
+      render();
+    });
   });
-  if(filtered.length===0){empty.style.display="block";return;}else{empty.style.display="none";}
-  filtered.forEach(p=>{
-    const card=document.createElement("div");card.className="partner-card";
-    card.innerHTML=`<div class="partner-header"><div class="partner-logo">${p.logo?`<img src="${p.logo}" alt="${p.name}">`:"🏙️"}</div><div><div class="partner-name">${p.name}<span class="partner-type">${p.type}</span></div><div class="partner-city">${p.city||""}</div></div></div><div class="partner-contact">${p.address?`<span>📍 ${p.address}</span>`:""}${p.phone?`<span>📞 ${p.phone}</span>`:""}${p.website?`<span>🌐 <a href="${p.website}" target="_blank" rel="noopener">${p.website}</a></span>`:""}</div>`;
-    grid.appendChild(card);
-  });
-}
-filters.forEach(btn=>{btn.addEventListener("click",()=>{filters.forEach(b=>b.classList.remove("active"));btn.classList.add("active");currentFilter=btn.dataset.filter;renderPartners();});});
-search.addEventListener("input",e=>{currentSearch=e.target.value;renderPartners();});
-renderPartners();
+
+  searchInput.addEventListener('input',function(){currentSearch=this.value;render();});
+
+  render();
+})();
 </script>
 </body>
 </html>
