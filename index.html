@@ -582,6 +582,24 @@
     @keyframes screenPulse{0%,100%{opacity:.85}50%{opacity:1}}
     @keyframes floatOrbit{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(180deg)}100%{transform:translateY(0) rotate(360deg)}}
 
+    /* ===== BANNIÈRE ABSENCE TEMPORAIRE ===== */
+    .banniere-absence{
+      background:#FEF3C7;border-bottom:3px solid #F59E0B;
+      padding:.85rem 2rem;text-align:center;
+    }
+    .banniere-absence-inner{
+      max-width:900px;margin:0 auto;
+      display:flex;align-items:center;justify-content:center;
+      gap:.75rem;flex-wrap:wrap;
+    }
+    .banniere-absence-texte{font-size:.95rem;font-weight:500;color:#78350F;line-height:1.5}
+    .banniere-absence-texte strong{font-weight:700;color:#92400E;display:block;margin-bottom:.15rem}
+    .banniere-absence-texte a{color:#92400E;font-weight:700;text-decoration:underline}
+    @media(max-width:600px){
+      .banniere-absence{padding:.75rem 1.25rem}
+      .banniere-absence-texte{font-size:.85rem}
+    }
+
     /* ===== HIDDEN SEO LIST ===== */
     .seo-list{position:absolute;left:-9999px;height:1px;width:1px;overflow:hidden}
 
@@ -661,13 +679,25 @@
   <a href="#contact" onclick="closeMenu()" style="color:var(--blue);font-weight:700">Me contacter</a>
 </nav>
 
+<!-- BANNIÈRE ABSENCE TEMPORAIRE -->
+<div class="banniere-absence" role="alert">
+  <div class="banniere-absence-inner">
+    <span style="font-size:1.4rem">✈️</span>
+    <div class="banniere-absence-texte">
+      <strong>Absent jusqu'à début octobre 2026 — stage en Inde</strong>
+      Je ne suis pas disponible pour des interventions pendant cette période. Pour toute demande, contactez-moi par
+      <a href="mailto:antoine.conter@outlook.com">email</a> ou via le formulaire — je vous répondrai à mon retour.
+    </div>
+  </div>
+</div>
+
 <!-- HERO -->
 <section id="accueil">
   <canvas id="hero-canvas"></canvas>
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <div class="hero-badge"><span class="dot"></span> Disponible en nord Finistère</div>
+      <div class="hero-badge">✈️ Absent jusqu'à début octobre 2026</div>
       <h1 class="hero-h1">Dépannage informatique<em>Plouguerneau · Lannilis · Landéda</em></h1>
       <p class="hero-sub">Formation, virus, installation, création de sites — intervention à domicile à Plouguerneau, Lannilis, Landéda, Lesneven, Le Folgoët et tout le nord Finistère.</p>
       <div class="hero-btns">
@@ -818,7 +848,7 @@
         </div>
         <div class="dispo-row reveal">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <p><strong>Disponibilité :</strong> Du lundi au dimanche sur rendez-vous</p>
+          <p><strong>Absent jusqu'à début octobre 2026</strong> (stage en Inde) — les demandes reçues par email seront traitées à mon retour.</p>
         </div>
         <div class="social-row reveal">
           <a href="https://www.instagram.com/antoine_conter_informatique" target="_blank" rel="noopener" class="social-icon-wrap" aria-label="Instagram">
@@ -944,7 +974,7 @@
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter" width="80" height="40">
+      <img src="Antoine-CONTER-informatique-Logo.png" alt="Logo Antoine Conter" width="80" height="40">
       <span>Antoine Conter – Informatique</span>
     </div>
     <div class="footer-links">
