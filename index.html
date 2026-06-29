@@ -491,7 +491,7 @@
     .site-footer{background:var(--dark);padding:3rem 2rem;color:rgba(255,255,255,.6)}
     .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
     .footer-brand{display:flex;align-items:center;gap:.75rem}
-    .footer-brand img{height:40px;width:auto;filter:brightness(0) invert(1);opacity:.8}
+    .footer-brand img{height:40px;width:auto;opacity:.9}
     .footer-brand span{font-size:.9rem;font-weight:600;color:rgba(255,255,255,.7)}
     .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
     .footer-links a{font-size:.82rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
@@ -662,6 +662,7 @@
       <a href="#presentation">À propos</a>
       <a href="projets.html">Réalisations</a>
       <a href="commerces.html">Partenaires</a>
+      <a href="#avis">Avis</a>
       <a href="#contact" class="nav-cta">Me contacter</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -674,6 +675,7 @@
   <a href="#services" onclick="closeMenu()">Services</a>
   <a href="#tarifs" onclick="closeMenu()">Tarifs</a>
   <a href="#presentation" onclick="closeMenu()">À propos</a>
+  <a href="#avis" onclick="closeMenu()">Avis</a>
   <a href="projets.html" onclick="closeMenu()">Réalisations</a>
   <a href="commerces.html" onclick="closeMenu()">Partenaires</a>
   <a href="#contact" onclick="closeMenu()" style="color:var(--blue);font-weight:700">Me contacter</a>
@@ -893,7 +895,7 @@
     <div class="eyebrow reveal" style="justify-content:center"><div class="eyebrow-line"></div><span>Où je travaille</span></div>
     <h2 class="section-title reveal" style="text-align:center">Ma <span>localisation</span></h2>
     <div class="map-wrapper reveal" style="max-width:900px;margin:0 auto">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42000!2d-4.55!3d48.605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4816b7b0c3e0d3ed%3A0x40ca5cd36e56ed0!2s29880%20Plouguerneau!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Zone d'intervention – Plouguerneau nord Finistère"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150000!2d-4.4409462!3d48.5169768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae66a53b28499ddf%3A0x8481005283e5e994!2sAntoine%20Conter%20Informatique!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Antoine Conter Informatique – Localisation Google Maps"></iframe>
     </div>
     <p class="map-info reveal"><strong>Basé à Plouguerneau</strong>, j'interviens à domicile dans tout le nord Finistère : Lannilis, Landéda, <strong>Lesneven</strong>, <strong>Le Folgoët</strong>, <strong>Plouvien</strong>, <strong>Kernilis</strong>, <strong>Kerlouan</strong>, Guissény, Plabennec et toutes les communes environnantes.</p>
   </div>
@@ -968,6 +970,16 @@
     <li>Installation Windows 11 domicile Plouguerneau</li>
     <li>Dépannage informatique domicile Landerneau Brest nord</li>
   </ul>
+</div>
+
+<!-- AVIS GOOGLE -->
+<div class="section-bg" id="avis">
+  <div class="section-inner" style="text-align:center">
+    <h2 class="section-title reveal">Avis <span>clients</span></h2>
+    <p style="color:rgba(255,255,255,.6);margin-bottom:2rem;">Ce que disent mes clients</p>
+    <script defer async src='https://cdn.trustindex.io/loader.js?d2ea43675ae1347983463502bc0'></script>
+    <div trustindex data-widget-id="d2ea43675ae1347983463502bc0"></div>
+  </div>
 </div>
 
 <!-- FOOTER -->
