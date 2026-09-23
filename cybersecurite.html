@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#005f99">
+  <title>Cybersécurité Finistère Nord · Plouguerneau – Audit OSINT, sensibilisation, test d'intrusion | Antoine Conter</title>
+  <meta name="description" content="Audit OSINT, sensibilisation phishing et test d'intrusion en Finistère Nord. Basé à Plouguerneau, je me déplace sur tout le Pays des Abers et la Côte des Légendes. Devis gratuit.">
+  <meta name="keywords" content="cybersécurité Plouguerneau, cybersécurité Finistère Nord, audit OSINT Finistère, sensibilisation phishing Pays des Abers, test intrusion Bretagne, sécurité informatique nord Finistère, cybersécurité TPE Finistère, audit sécurité Landéda Lannilis">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Antoine Conter">
+  <meta name="geo.region" content="FR-29">
+  <meta name="geo.placename" content="Plouguerneau, Finistère, Bretagne">
+  <meta name="geo.position" content="48.594;-4.505">
+  <meta name="ICBM" content="48.594, -4.505">
+  <link rel="canonical" href="https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html">
+  <meta property="og:title" content="Cybersécurité Finistère Nord – Antoine Conter, Plouguerneau">
+  <meta property="og:description" content="Audit OSINT, sensibilisation phishing, test d'intrusion. Basé à Plouguerneau, Pays des Abers. Devis gratuit.">
+  <meta property="og:url" content="https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html">
+  <meta property="og:image" content="https://informatique-plouguerneau-antoine-conter.fr/Antoine-CONTER-informatique-Logo.avif">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" href="Antoine-CONTER-informatique-Logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="Antoine-CONTER-informatique-Logo.png">
+  <link rel="preload" fetchpriority="high" as="image" href="fond_antoine_conter_informatique.avif" type="image/avif">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":["ProfessionalService","LocalBusiness"],
+        "name":"Antoine Conter — Cybersécurité Finistère Nord",
+        "description":"Audit OSINT, sensibilisation phishing et test d'intrusion en Finistère Nord. Basé à Plouguerneau, intervention sur le Pays des Abers, la Côte des Légendes et Brest.",
+        "url":"https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html",
+        "telephone":"+33641537334",
+        "email":"antoine.conter@outlook.com",
+        "priceRange":"€",
+        "currenciesAccepted":"EUR",
+        "paymentAccepted":"Espèces, virement bancaire",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Plouguerneau",
+          "postalCode":"29880",
+          "addressRegion":"Finistère",
+          "addressCountry":"FR"
+        },
+        "geo":{
+          "@type":"GeoCoordinates",
+          "latitude":48.594,
+          "longitude":-4.505
+        },
+        "areaServed":[
+          {"@type":"City","name":"Plouguerneau"},
+          {"@type":"City","name":"Lannilis"},
+          {"@type":"City","name":"Landéda"},
+          {"@type":"City","name":"Saint-Pabu"},
+          {"@type":"City","name":"Brignogan-Plages"},
+          {"@type":"City","name":"Brest"},
+          {"@type":"City","name":"Landerneau"},
+          {"@type":"AdministrativeArea","name":"Pays des Abers"},
+          {"@type":"AdministrativeArea","name":"Côte des Légendes"},
+          {"@type":"AdministrativeArea","name":"Finistère Nord"}
+        ],
+        "hasOfferCatalog":{
+          "@type":"OfferCatalog",
+          "name":"Prestations cybersécurité",
+          "itemListElement":[
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Audit OSINT","description":"Recherche passive d'informations exposées sur une personne ou une structure"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sensibilisation phishing","description":"Atelier 1h avec démonstration live pour particuliers, associations et entreprises"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Test d'intrusion web","description":"Audit de sécurité de site web selon la méthodologie OWASP Top 10"}},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Accompagnement sécurité","description":"Déploiement de gestionnaire de mots de passe, 2FA et sauvegarde déconnectée"}}
+          ]
+        },
+        "sameAs":"https://informatique-plouguerneau-antoine-conter.fr/"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Vous intervenez dans quelles communes du Finistère ?",
+            "acceptedAnswer":{"@type":"Answer","text":"Principalement sur le Pays des Abers et la Côte des Légendes : Plouguerneau, Lannilis, Landéda, Saint-Pabu, Brignogan-Plages, L'Aber-Wrac'h. Je me déplace aussi sur Brest et Landerneau selon les besoins. Devis gratuit pour toute intervention."}
+          },
+          {
+            "@type":"Question",
+            "name":"C'est légal de faire un test d'intrusion sur son propre site ?",
+            "acceptedAnswer":{"@type":"Answer","text":"Oui, à condition d'avoir l'autorisation du propriétaire du système. Je fais signer un document avant chaque intervention. Sans autorisation explicite, c'est une infraction pénale, même sur votre propre hébergeur si vous n'avez pas les droits contractuels."}
+          },
+          {
+            "@type":"Question",
+            "name":"Je suis particulier, j'ai pas grand-chose à protéger. Pourquoi faire appel à vous ?",
+            "acceptedAnswer":{"@type":"Answer","text":"C'est ce que pensent la plupart des gens avant de se faire pirater. Un compte email compromis suffit pour accéder à votre banque, vos impôts, votre messagerie. Ça n'arrive pas qu'aux entreprises. Un audit OSINT + mise en place de Bitwarden et du 2FA prend moins de 2h et coûte bien moins cher qu'un compte vidé."}
+          },
+          {
+            "@type":"Question",
+            "name":"Combien coûte un audit cybersécurité pour une petite structure en Finistère ?",
+            "acceptedAnswer":{"@type":"Answer","text":"Je ne publie pas de grille tarifaire fixe car chaque situation est différente. Je fais un devis gratuit après un premier échange. Les tarifs sont adaptés aux petites structures locales, pas aux grands cabinets."}
+          },
+          {
+            "@type":"Question",
+            "name":"Vous êtes encore étudiant, ça inspire confiance ?",
+            "acceptedAnswer":{"@type":"Answer","text":"C'est une vraie question et je la comprends. Je suis en cursus ingénieur à l'ISEN Ouest (Brest) avec une spécialisation cybersécurité, plus un stage international en Inde. J'utilise les mêmes outils que les professionnels. La différence : je propose des tarifs adaptés aux petites structures du nord Finistère qui n'ont pas le budget d'une grande agence."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --blue:#005f99;--blue-dark:#004070;--blue-hover:#0a6fb8;--blue-light:#e8f4fd;
+      --red:#B22222;
+      --off:#F8FAFC;--gray:#6B7280;--gray-light:#E5E7EB;--dark:#111827;
+      --ink:#0a1628;
+      --font:'Inter',system-ui,sans-serif;
+      --serif:'Lora',Georgia,serif;
+      --mono:'JetBrains Mono',monospace;
+      --shadow-blue:0 8px 30px rgba(0,95,153,.25);
+      --r:12px;--hh:72px;
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--font);font-size:16px;background:#fff;color:var(--dark);line-height:1.65;overflow-x:hidden}
+
+    /* NAV */
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,95,153,.08);box-shadow:0 2px 12px rgba(0,0,0,.06);height:var(--hh)}
+    .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+    .logo-wrap{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .logo-wrap img{height:48px;width:auto;object-fit:contain}
+    .logo-name{font-size:.95rem;font-weight:700;color:var(--blue);white-space:nowrap}
+    .site-nav{display:flex;align-items:center;gap:.25rem}
+    .site-nav a{padding:.45rem .85rem;border-radius:8px;font-size:.85rem;font-weight:500;color:var(--gray);text-decoration:none;transition:all .2s ease;white-space:nowrap}
+    .site-nav a:hover{color:var(--blue);background:var(--blue-light)}
+    .site-nav a.nav-cta{background:var(--blue);color:#fff;padding:.45rem 1rem;box-shadow:var(--shadow-blue)}
+    .site-nav a.nav-cta:hover{background:var(--blue-hover)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+    .hamburger span{width:22px;height:2px;background:var(--dark);display:block;transition:all .3s;border-radius:2px}
+    .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+    .mobile-menu{display:none;position:fixed;inset:var(--hh) 0 0 0;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
+    .mobile-menu.open{display:flex}
+    .mobile-menu a{font-size:1.3rem;font-weight:600;color:var(--dark);text-decoration:none}
+    .mobile-menu a:hover{color:var(--blue)}
+
+    /* HERO */
+    #hero{
+      position:relative;min-height:calc(88svh - var(--hh));
+      display:flex;align-items:center;
+      overflow:hidden;background:var(--blue-dark);
+    }
+    .hero-inner{display:flex;gap:3rem;align-items:center;width:100%}
+    .hero-text{flex:1;min-width:0}
+    .hero-bg{position:absolute;inset:0;background-image:url('fond_antoine_conter_informatique.avif');background-size:cover;background-position:center;opacity:.35}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,40,80,.6) 0%,rgba(0,20,50,.25) 100%)}
+    .hero-inner{position:relative;z-index:2;max-width:1200px;width:100%;margin:0 auto;padding:3rem 2rem}
+    .hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:.45rem 1.1rem;border-radius:999px;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:2rem;opacity:0;animation:up .8s .15s ease forwards}
+    .hero-badge .dot{width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    h1.hero-h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.5rem);font-weight:900;color:#fff;line-height:1.04;margin-bottom:1.5rem;max-width:680px;opacity:0;animation:up .9s .3s ease forwards}
+    h1.hero-h1 em{display:block;font-style:italic;color:#7dd3fc;font-size:.75em}
+    .hero-sub{font-size:clamp(.95rem,1.8vw,1.12rem);color:rgba(255,255,255,.6);max-width:500px;line-height:1.75;margin-bottom:2.5rem;font-weight:300;opacity:0;animation:up .9s .45s ease forwards}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:up .9s .6s ease forwards}
+    .hero-visual{align-self:center;flex-shrink:0;opacity:0;animation:up .9s .75s ease forwards}
+    .hero-visual img{width:460px;max-width:44vw;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5);display:block}
+    @keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.4rem;border-radius:8px;font-size:.9rem;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:all .22s ease;white-space:nowrap}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:var(--shadow-blue)}
+    .btn-primary:hover{background:var(--blue-hover);transform:translateY(-2px)}
+    .btn-ghost-white{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.22)}
+    .btn-ghost-white:hover{background:rgba(255,255,255,.17);transform:translateY(-2px)}
+
+    /* REVEAL */
+    .rv{opacity:0;transform:translateY(22px);transition:opacity .65s cubic-bezier(.16,1,.3,1),transform .65s cubic-bezier(.16,1,.3,1)}
+    .rv.on{opacity:1;transform:none}
+    .d1{transition-delay:.06s}.d2{transition-delay:.14s}.d3{transition-delay:.22s}
+
+    /* ── STATS ── */
+    .stats{background:var(--ink);padding:2.5rem 2rem}
+    .stats-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+    .stat{text-align:center;padding:1rem;position:relative}
+    .stat+.stat::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,.07)}
+    .stat-n{font-family:var(--serif);font-size:2rem;font-weight:900;color:#fff;display:block;line-height:1}
+    .stat-l{font-size:.67rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:.4rem;display:block;line-height:1.5}
+
+    /* ── INTRO RAPIDE ── */
+    .intro-band{padding:4rem 2rem;background:#fff}
+    .intro-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:center}
+    .intro-text h2{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.3rem);font-weight:900;color:var(--dark);line-height:1.15;margin-bottom:1.1rem}
+    .intro-text h2 em{font-style:italic;color:var(--blue)}
+    .intro-text p{font-size:1rem;color:var(--gray);line-height:1.8;margin-bottom:.9rem}
+    .intro-text p:last-child{margin-bottom:0}
+    .intro-aside{background:var(--off);border-radius:14px;padding:1.75rem;border-left:3px solid var(--blue)}
+    .intro-aside-title{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+    .intro-aside ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .intro-aside li{font-size:.88rem;color:#374151;padding-left:1.3rem;position:relative;line-height:1.5}
+    .intro-aside li::before{content:'→';position:absolute;left:0;color:var(--blue);font-weight:700;font-size:.8rem}
+
+    /* ── CIBLES ── */
+    .cibles{padding:0 2rem 5rem;background:#fff}
+    .cibles-inner{max-width:900px;margin:0 auto}
+    .cibles-inner h2{font-family:var(--serif);font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:900;color:var(--dark);margin-bottom:2rem;padding-top:3rem;border-top:1px solid var(--gray-light)}
+    .cible-strip{display:grid;grid-template-columns:180px 1fr;gap:2rem;padding:2.5rem 0;border-bottom:1px solid var(--gray-light)}
+    .cible-strip:last-child{border-bottom:none}
+    .cible-left{display:flex;flex-direction:column;gap:.4rem}
+    .cible-label{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--dark);line-height:1.2}
+    .cible-sub{font-size:.78rem;color:var(--gray)}
+    .cible-right ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem}
+    .cible-right li{font-size:.9rem;color:#374151;padding-left:1.3rem;position:relative;line-height:1.5}
+    .cible-right li::before{content:'›';position:absolute;left:0;color:var(--blue);font-weight:700;font-size:1.1rem;line-height:1.2}
+    .cible-right li strong{font-weight:600;color:var(--dark)}
+    .cible-risk{font-size:.82rem;color:#92400e;background:#fef3c7;border-left:3px solid #f59e0b;padding:.55rem .85rem;border-radius:0 6px 6px 0;margin-top:1.1rem;line-height:1.6}
+
+    /* ── SERVICES ALTERNÉ ── */
+    .services{padding:5rem 2rem;background:var(--off)}
+    .services-inner{max-width:1100px;margin:0 auto}
+    .services-inner>p{font-size:1.1rem;color:var(--gray);margin-bottom:3.5rem;max-width:560px}
+    .svc{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;padding:3.5rem 0;border-bottom:1px solid var(--gray-light)}
+    .svc:last-child{border-bottom:none;padding-bottom:0}
+    .svc.rev .svc-t{order:2}
+    .svc.rev .svc-v{order:1}
+    .svc-num{font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin-bottom:.4rem;display:block}
+    .svc-h{font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.7rem);font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:.9rem}
+    .svc-p{font-size:.93rem;color:var(--gray);line-height:1.8;margin-bottom:1.25rem}
+    .svc-pts{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+    .svc-pts li{font-size:.88rem;color:#374151;padding-left:1.3rem;position:relative;line-height:1.5}
+    .svc-pts li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-weight:700;font-size:.8rem}
+
+    /* ── MOCKUPS ── */
+    .mockup{border-radius:11px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.2),0 0 0 1px rgba(0,0,0,.08);font-family:var(--mono);font-size:.77rem;line-height:1.6}
+    .mbar{background:#1e2433;padding:.55rem 1rem;display:flex;align-items:center;gap:.45rem}
+    .mdots{display:flex;gap:.32rem}
+    .dr{width:10px;height:10px;border-radius:50%;background:#ff5f57}
+    .dy{width:10px;height:10px;border-radius:50%;background:#ffbd2e}
+    .dg{width:10px;height:10px;border-radius:50%;background:#28ca41}
+    .mtitle{flex:1;text-align:center;font-size:.65rem;color:rgba(255,255,255,.28);font-family:var(--font)}
+    .mbody{background:#0f1624;padding:1.2rem 1.4rem;overflow:hidden}
+    .tp{color:#4ade80}.tc{color:#fff}.tcm{color:rgba(255,255,255,.26)}.tk{color:#7dd3fc}.tv{color:#c3e88d}.tw{color:#fbbf24}.te{color:#ff8a8a}.tok{color:#4ade80}.td{color:rgba(255,255,255,.33)}
+    .tl{display:block;white-space:pre-wrap;word-break:break-all}
+    .tg{display:block;height:.4rem}
+    .vi{display:flex;align-items:flex-start;gap:.7rem;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.05)}
+    .vi:last-child{border-bottom:none}
+    .vb{flex-shrink:0;font-size:.62rem;font-weight:700;padding:.18rem .45rem;border-radius:3px;text-transform:uppercase;letter-spacing:.04em;font-family:var(--font)}
+    .vc{background:rgba(255,50,50,.18);color:#ff8a8a}.vh{background:rgba(249,115,22,.18);color:#fb923c}.vm{background:rgba(251,191,36,.15);color:#fbbf24}.vl{background:rgba(52,211,153,.12);color:#4ade80}
+    .vt{font-size:.76rem;color:rgba(255,255,255,.65);font-family:var(--mono);line-height:1.5}
+    .vt strong{color:#fff;display:block}
+    /* email */
+    .emock{border-radius:11px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.06)}
+    .ebar{background:#f3f4f6;padding:.6rem 1rem;display:flex;align-items:center;gap:.45rem;border-bottom:1px solid #e5e7eb}
+    .etitle{flex:1;text-align:center;font-size:.7rem;color:#9ca3af;font-family:var(--font)}
+    .ebody{background:#fff;padding:1.4rem}
+    .efrom{font-size:.76rem;color:#6b7280;margin-bottom:.2rem;font-family:var(--font)}
+    .efrom strong{color:#111827}
+    .esubj{font-size:.95rem;font-weight:700;color:#111827;margin-bottom:.7rem;font-family:var(--font)}
+    .econt{font-size:.83rem;color:#374151;line-height:1.7;font-family:var(--font)}
+    .ehl{background:#fef3c7;border-left:3px solid #fbbf24;padding:.45rem .7rem;margin:.7rem 0;border-radius:0 6px 6px 0;font-size:.79rem;color:#92400e;font-family:var(--font)}
+    .ebtn{display:inline-block;background:#1d4ed8;color:#fff;padding:.38rem .85rem;border-radius:6px;font-size:.79rem;font-weight:600;margin-top:.45rem;font-family:var(--font);text-decoration:none}
+    .efoot{background:#f9fafb;padding:.7rem 1.4rem;font-size:.7rem;color:#9ca3af;border-top:1px solid #f3f4f6;font-family:var(--font)}
+    /* bitwarden */
+    .bw{border-radius:11px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.16);font-family:var(--font)}
+    .bwbar{background:#175ddc;padding:.65rem .9rem;display:flex;align-items:center;gap:.7rem}
+    .bwlogo{font-size:.9rem;font-weight:800;color:#fff}
+    .bwsrch{flex:1;background:rgba(255,255,255,.14);border:none;border-radius:5px;padding:.32rem .7rem;font-size:.76rem;color:rgba(255,255,255,.65);font-family:var(--font)}
+    .bwbody{background:#fff}
+    .bwi{display:flex;align-items:center;gap:.85rem;padding:.7rem .9rem;border-bottom:1px solid #f3f4f6}
+    .bwi:last-child{border-bottom:none}
+    .bwfav{width:26px;height:26px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0}
+    .bwinf{flex:1;min-width:0}
+    .bwnm{font-size:.83rem;font-weight:600;color:#111827}
+    .bwus{font-size:.73rem;color:#6b7280}
+    .bwstr{display:flex;gap:2px}
+    .bs{width:16px;height:3px;border-radius:2px}
+    .bwfoot{background:#f9fafb;padding:.55rem .9rem;font-size:.72rem;color:#6b7280;border-top:1px solid #f3f4f6;display:flex;align-items:center;gap:.45rem}
+    .bw2fa{background:#ecfdf5;color:#059669;padding:.12rem .45rem;border-radius:999px;font-size:.66rem;font-weight:700}
+
+    /* ── PROFIL ── */
+    .profil{padding:5rem 2rem;background:var(--ink)}
+    .profil-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start}
+    .profil-text h2{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:1.25rem}
+    .profil-text p{font-size:.97rem;color:rgba(255,255,255,.52);line-height:1.85;margin-bottom:1rem}
+    .profil-text p:last-child{margin-bottom:0}
+    .profil-text strong{color:rgba(255,255,255,.85);font-weight:600}
+    /* profil restructuré */
+    .profil-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:340px 1fr;gap:0;border-radius:16px;overflow:hidden}
+    .profil-photo-col{position:relative;min-height:480px}
+    .profil-photo-col img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block}
+    .profil-content{padding:3rem 3rem 3rem 3.5rem;display:flex;flex-direction:column;justify-content:center;gap:.85rem}
+    .profil-content h2{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,1.9rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:.2rem}
+    .profil-content p{font-size:.93rem;color:rgba(255,255,255,.5);line-height:1.85}
+    .profil-content strong{color:rgba(255,255,255,.85);font-weight:600}
+    .edu-items{display:flex;flex-direction:column;gap:.75rem;margin-top:.75rem}
+    .edu-item{display:flex;align-items:center;gap:1.1rem;padding:.9rem 1.1rem;background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.09)}
+    .edu-logo{background:#fff;padding:.3rem .55rem;border-radius:6px;flex-shrink:0;display:flex;align-items:center;height:44px}
+    .edu-logo img{height:32px;width:auto;object-fit:contain;display:block}
+    .edu-info-name{font-size:.9rem;font-weight:600;color:#fff}
+    .edu-info-sub{font-size:.75rem;color:rgba(255,255,255,.38);margin-top:.1rem}
+
+    /* ── FAQ ── */
+    .faq{padding:5rem 2rem;background:var(--off)}
+    .faq-inner{max-width:760px;margin:0 auto}
+    .faq-inner h2{font-family:var(--serif);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:900;color:var(--dark);margin-bottom:2.5rem}
+    .faq-item{border-bottom:1px solid var(--gray-light);padding:1.5rem 0}
+    .faq-item:first-of-type{border-top:1px solid var(--gray-light)}
+    .faq-q{font-size:1rem;font-weight:700;color:var(--dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;list-style:none;line-height:1.4}
+    .faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--blue);flex-shrink:0;transition:transform .25s}
+    .faq-item.open .faq-q::after{transform:rotate(45deg)}
+    .faq-a{font-size:.93rem;color:var(--gray);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease}
+    .faq-item.open .faq-a{max-height:300px;padding-top:.9rem}
+
+    /* ── CONTACT ── */
+    .contact{padding:5rem 2rem;background:linear-gradient(135deg,var(--blue-dark) 0%,#001830 100%)}
+    .contact-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+    .contact-text h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.05;margin-bottom:.9rem}
+    .contact-text p{font-size:.97rem;color:rgba(255,255,255,.45);line-height:1.8}
+    .contact-tel{display:block;font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.6rem);font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.01em;margin-bottom:1.25rem;transition:color .2s}
+    .contact-tel:hover{color:#7dd3fc}
+    .contact-links{display:flex;gap:.75rem;flex-wrap:wrap}
+    .contact-link{display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.15rem;border-radius:8px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);text-decoration:none;font-size:.87rem;font-weight:500;border:1px solid rgba(255,255,255,.1);transition:all .2s}
+    .contact-link:hover{background:rgba(255,255,255,.15);color:#fff}
+
+    /* ── FOOTER ── */
+    .site-footer{background:#0a0e1a;padding:3rem 2rem}
+    .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+    .footer-brand{display:flex;align-items:center;gap:.75rem}
+    .footer-brand img{height:36px;filter:brightness(0) invert(1);opacity:.5}
+    .footer-brand span{font-size:.87rem;font-weight:600;color:rgba(255,255,255,.48)}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+    .footer-links a{font-size:.79rem;color:rgba(255,255,255,.33);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:rgba(255,255,255,.7)}
+    .footer-legal{font-size:.72rem;color:rgba(255,255,255,.2);width:100%;text-align:center;border-top:1px solid rgba(255,255,255,.05);padding-top:1.5rem;margin-top:.5rem}
+
+    /* ── BUBBLE ── */
+    #bubble{position:fixed;right:1.25rem;bottom:calc(env(safe-area-inset-bottom,0px) + 1.25rem);background:var(--red);color:#fff;padding:.7rem 1.2rem;border-radius:999px;font-size:.84rem;font-weight:700;z-index:3000;box-shadow:0 6px 20px rgba(178,34,34,.28);border:none;cursor:pointer;transition:all .2s}
+    #bubble:hover{transform:translateY(-2px)}
+
+    /* RESPONSIVE */
+    @media(max-width:860px){
+      .intro-inner{grid-template-columns:1fr}
+      .profil-inner{grid-template-columns:1fr;border-radius:12px}
+      .profil-photo-col{min-height:260px}
+      .profil-photo-col img{position:relative;inset:auto;height:260px}
+      .profil-content{padding:2rem}
+      .contact-inner{grid-template-columns:1fr;gap:2rem}
+      .svc,.svc.rev .svc-t,.svc.rev .svc-v{grid-template-columns:1fr;order:unset!important}
+      .stats-inner{grid-template-columns:repeat(2,1fr)}
+      .stat+.stat:nth-child(3)::before{display:none}
+      .cible-right ul{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .cible-strip{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      :root{--hh:60px}
+      .site-nav{display:none}
+      .hamburger{display:flex}
+      .hero-inner{flex-direction:column}
+      .hero-visual{display:none}
+      .services,.profil,.contact,.intro-band,.cibles{padding:3.5rem 1.25rem}
+      .stats{padding:2rem 1.25rem}
+      .stats-inner{grid-template-columns:1fr 1fr}
+      .stat+.stat::before{display:none}
+    }
+    @media(max-width:420px){
+      .hero-btns,.contact-btns{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-wrap">
+      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter" width="120" height="48" loading="eager">
+      <span class="logo-name">Antoine Conter</span>
+    </a>
+    <nav class="site-nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="index.html#presentation">À propos</a>
+      <a href="projets.html">Réalisations</a>
+      <a href="index.html#avis">Avis</a>
+      <a href="#contact" class="nav-cta">Cybersécurité</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html#services" onclick="closeMenu()">Services</a>
+  <a href="index.html#tarifs" onclick="closeMenu()">Tarifs</a>
+  <a href="index.html#presentation" onclick="closeMenu()">À propos</a>
+  <a href="projets.html" onclick="closeMenu()">Réalisations</a>
+  <a href="#contact" onclick="closeMenu()" style="color:var(--blue);font-weight:700">Me contacter</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><span class="dot"></span> Nouvelle activité · Nord Finistère</div>
+      <h1 class="hero-h1">Cybersécurité<em>en Finistère Nord.</em></h1>
+      <p class="hero-sub">Audit OSINT, sensibilisation et test d'intrusion. Je suis basé à Plouguerneau, je me déplace chez vous de Lannilis à Landéda, du Pays des Abers à la Côte des Légendes.</p>
+      <div class="hero-btns">
+        <a href="#services" class="btn btn-primary">Ce que je fais</a>
+        <a href="#contact" class="btn btn-ghost-white">Devis gratuit</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="hero-cyber.webp" alt="Cybersécurité — audit, sensibilisation et protection numérique" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat rv d1">
+      <span class="stat-n">43%</span>
+      <span class="stat-l">des TPE-PME visées par phishing en 2025</span>
+    </div>
+    <div class="stat rv d2">
+      <span class="stat-n">+70%</span>
+      <span class="stat-l">de signalements phishing en un an</span>
+    </div>
+    <div class="stat rv">
+      <span class="stat-n">8 Mds</span>
+      <span class="stat-l">de comptes dans les bases de fuites</span>
+    </div>
+    <div class="stat rv">
+      <span class="stat-n">93%</span>
+      <span class="stat-l">des attaques partent d'un phishing ou d'un mot de passe faible</span>
+    </div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="intro-band" id="qui">
+  <div class="intro-inner rv">
+    <div class="intro-text">
+      <h2>Pas un cabinet de conseil.<br><em>Quelqu'un qui se déplace.</em></h2>
+      <p>Les boîtes de cybersécurité classiques, c'est bien pour les grandes entreprises. Mais une association de 12 membres ou un artisan avec un site vitrine, ça n'a ni le budget ni le besoin du même niveau de prestation.</p>
+      <p>Moi je suis basé à Plouguerneau. Je connais le tissu local. Je viens chez vous, j'explique clairement ce que je trouve, et je vous laisse quelque chose d'actionnable, pas un rapport de 60 pages que personne ne lira.</p>
+    </div>
+    <div class="intro-aside">
+      <div class="intro-aside-title">Je travaille avec</div>
+      <ul>
+        <li>Particuliers du nord Finistère</li>
+        <li>Associations &amp; mairies</li>
+        <li>Artisans &amp; commerçants</li>
+        <li>TPE &amp; petites PME</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CIBLES -->
+<div class="cibles" id="cibles">
+  <div class="cibles-inner">
+    <h2 class="rv">Ce que je fais, selon votre situation</h2>
+
+    <div class="cible-strip rv">
+      <div class="cible-left">
+        <div class="cible-label">🏠 Particuliers</div>
+        <div class="cible-sub">Plouguerneau, Lannilis, Landéda et alentours</div>
+      </div>
+      <div class="cible-right">
+        <ul>
+          <li><strong>Audit OSINT</strong> : ce qu'on trouve sur vous en ligne sans aucune intrusion</li>
+          <li><strong>Vérification fuites</strong> : vos identifiants dans des bases volées ?</li>
+          <li><strong>Installation Bitwarden</strong> : gestionnaire de mots de passe, chez vous</li>
+          <li><strong>Double authentification</strong> : 2FA sur tous vos comptes importants</li>
+          <li><strong>Sauvegarde déconnectée</strong> : vos données protégées si votre PC est volé</li>
+        </ul>
+        <p class="cible-risk">⚠ Un seul mot de passe réutilisé peut suffire à vider un compte bancaire ou usurper votre identité. Un attaquant qui sait chercher met moins de 10 minutes à le trouver en ligne.</p>
+      </div>
+    </div>
+
+    <div class="cible-strip rv">
+      <div class="cible-left">
+        <div class="cible-label">🤝 Associations &amp; entreprises</div>
+        <div class="cible-sub">Clubs, mairies, artisans, commerçants, TPE/PME</div>
+      </div>
+      <div class="cible-right">
+        <ul>
+          <li><strong>Atelier sensibilisation 1h</strong> : démonstration live phishing et OSINT avec vos membres ou salariés</li>
+          <li><strong>Audit OSINT</strong> : empreinte numérique de votre structure, emails exposés, failles visibles</li>
+          <li><strong>Sécurisation des comptes</strong> : email, réseaux sociaux, accès outils partagés</li>
+          <li><strong>Test d'intrusion web</strong> : audit de votre site (OWASP Top 10), rapport priorisé</li>
+          <li><strong>Accompagnement</strong> : Bitwarden, 2FA, sauvegarde 3-2-1 déployés sur place</li>
+        </ul>
+        <p class="cible-risk">⚠ Un ransomware peut chiffrer tous vos fichiers en quelques minutes. La rançon moyenne demandée à une TPE dépasse les 10 000 €. Sans sauvegarde déconnectée, certaines structures ne s'en relèvent pas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES + MOCKUPS -->
+<div class="services" id="services">
+  <div class="services-inner">
+    <p class="rv">Voilà concrètement à quoi ressemblent ces interventions, avec les outils que j'utilise vraiment.</p>
+
+    <!-- OSINT -->
+    <div class="svc rv">
+      <div class="svc-t">
+        <span class="svc-num">01 · Audit OSINT</span>
+        <h3 class="svc-h">Ce qu'un inconnu trouve sur vous en 10 minutes</h3>
+        <p class="svc-p">Je lance une recherche passive sur vous ou votre structure : emails exposés, comptes publics, photos géolocalisées, anciens mots de passe dans les bases de fuites. Vous voyez exactement ce qu'un attaquant voit avant de vous cibler.</p>
+        <ul class="svc-pts">
+          <li>Rapport d'exposition écrit + recommandations</li>
+          <li>Vérification dans les bases de fuites (Have I Been Pwned)</li>
+          <li>Métadonnées photos et documents</li>
+        </ul>
+      </div>
+      <div class="svc-v">
+        <img src="capture-theharvester.png" alt="theHarvester OSINT scan sur le domaine informatique-plouguerneau-antoine-conter.fr sous Kali Linux" loading="lazy" style="width:100%;border-radius:11px;box-shadow:0 20px 50px rgba(0,0,0,.2);display:block">
+      </div>
+    </div>
+
+    <!-- PHISHING -->
+    <div class="svc rev rv">
+      <div class="svc-t">
+        <span class="svc-num">02 · Sensibilisation</span>
+        <h3 class="svc-h">Un email piégé, en direct devant vous</h3>
+        <p class="svc-p">En 1h avec vos équipes, je montre comment un email de phishing crédible est construit et comment il capture des identifiants en quelques secondes. Avec un volontaire consentant. Chacun repart avec une liste d'actions concrètes à faire.</p>
+        <ul class="svc-pts">
+          <li>Phishing simulé et commenté en direct</li>
+          <li>Démonstration OSINT sur volontaire</li>
+          <li>Cas ransomware réels : chiffres et impacts</li>
+          <li>Jusqu'à 15 personnes · Déplacement inclus nord Finistère</li>
+        </ul>
+      </div>
+      <div class="svc-v">
+        <img src="illus-phishing.jpg" alt="Illustration phishing — hameçonnage par email" loading="lazy" style="width:100%;border-radius:11px;box-shadow:0 20px 50px rgba(0,0,0,.15);display:block">
+      </div>
+    </div>
+
+    <!-- WAPT -->
+    <div class="svc rv">
+      <div class="svc-t">
+        <span class="svc-num">03 · Test d'intrusion web</span>
+        <h3 class="svc-h">Les failles de votre site, avant que quelqu'un les exploite</h3>
+        <p class="svc-p">J'audite votre site selon la méthodologie OWASP : injections SQL, XSS, problèmes d'auth, données exposées. Vous recevez un rapport classé par criticité, et je reteste après vos corrections.</p>
+        <ul class="svc-pts">
+          <li>OWASP Top 10 : injections, XSS, auth, config</li>
+          <li>Rapport priorisé + restitution orale</li>
+          <li>Retest post-correctifs inclus</li>
+        </ul>
+      </div>
+      <div class="svc-v">
+        <img src="capture-nikto.png" alt="Scan Nikto sur informatique-plouguerneau-antoine-conter.fr — audit sécurité web Kali Linux" loading="lazy" style="width:100%;border-radius:11px;box-shadow:0 20px 50px rgba(0,0,0,.2);display:block">
+      </div>
+    </div>
+
+    <!-- ACCOMPAGNEMENT -->
+    <div class="svc rev rv">
+      <div class="svc-t">
+        <span class="svc-num">04 · Accompagnement</span>
+        <h3 class="svc-h">Les outils installés, pas juste recommandés</h3>
+        <p class="svc-p">Je viens chez vous déployer les protections sur vos appareils : gestionnaire de mots de passe, double authentification, sauvegarde déconnectée. Une intervention concrète : vous repartez autonomes avec une procédure écrite.</p>
+        <ul class="svc-pts">
+          <li>Bitwarden installé et configuré sur place</li>
+          <li>2FA activé sur tous les comptes importants</li>
+          <li>Sauvegarde déconnectée (règle 3-2-1)</li>
+          <li>Procédure écrite laissée sur place</li>
+        </ul>
+      </div>
+      <div class="svc-v">
+        <img src="capture-bitwarden.png" alt="Bitwarden — gestionnaire de mots de passe sécurisé" loading="lazy" style="width:100%;border-radius:11px;box-shadow:0 20px 50px rgba(0,0,0,.2);display:block">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROFIL -->
+<div class="profil" id="profil">
+  <div class="profil-inner rv">
+    <div class="profil-photo-col">
+      <img src="antoine-stage-inde.jpg" alt="Antoine Conter en stage cybersécurité à Parul University, Inde" loading="lazy">
+    </div>
+    <div class="profil-content">
+      <h2>Pourquoi je suis capable de faire ça</h2>
+      <p>Je suis en cursus ingénieur à <strong>l'ISEN Ouest</strong> (Brest), spécialité cybersécurité. C'est une formation technique, pas une initiation. Elle m'a appris à travailler avec méthode, avec de vrais outils, sur de vraies vulnérabilités.</p>
+      <p>Cet été, j'ai fait un <strong>stage en Inde</strong>. Confronté à des environnements réseau très différents de la France, ça change la façon d'aborder les risques. On voit plus large.</p>
+      <p>Je ne suis pas une agence, je ne revends pas de logiciels. Je viens, je fais le travail, et je vous explique ce que j'ai trouvé.</p>
+      <div class="edu-items">
+        <div class="edu-item">
+          <div class="edu-logo"><img src="logo-isen-ouest.png" alt="ISEN Ouest" loading="lazy"></div>
+          <div>
+            <div class="edu-info-name">ISEN Ouest · Brest</div>
+            <div class="edu-info-sub">Cursus ingénieur · Spécialité cybersécurité</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-logo"><img src="logo-parul-university.jpg" alt="Parul University" loading="lazy"></div>
+          <div>
+            <div class="edu-info-name">Parul University · Vadodara, Inde</div>
+            <div class="edu-info-sub">Stage international · Sécurité réseau et systèmes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="faq">
+  <div class="faq-inner">
+    <h2 class="rv">Ce qu'on me pose comme questions</h2>
+
+    <div class="faq-item rv">
+      <div class="faq-q">Vous intervenez dans quelles communes ?</div>
+      <div class="faq-a">Principalement le Pays des Abers et la Côte des Légendes : Plouguerneau, Lannilis, Landéda, Saint-Pabu, Brignogan, L'Aber-Wrac'h. Je me déplace aussi sur Brest et Landerneau selon les besoins. Si vous avez un doute, appelez, on voit ensemble.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <div class="faq-q">Je suis particulier, j'ai pas grand-chose à protéger.</div>
+      <div class="faq-a">C'est ce que pensent la plupart des gens avant de se faire pirater. Un compte email compromis suffit pour accéder à votre banque, vos impôts, votre messagerie. Un audit OSINT + Bitwarden + 2FA prend moins de 2h. Ça coûte bien moins cher qu'un compte bancaire vidé.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <div class="faq-q">C'est légal, un test d'intrusion ?</div>
+      <div class="faq-a">Oui, à condition d'avoir l'autorisation écrite du propriétaire du système. Je fais signer un document avant chaque intervention. Sans ça, c'est une infraction pénale, même sur votre propre site si vous n'avez pas les droits contractuels sur l'hébergeur.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <div class="faq-q">Vous êtes encore étudiant, ça inspire confiance ?</div>
+      <div class="faq-a">C'est une vraie question. Je suis en cursus ingénieur à l'ISEN Ouest, spécialité cybersécurité, avec un stage en Inde. J'utilise les mêmes outils que les professionnels. La différence : je propose des tarifs adaptés aux petites structures du nord Finistère, pas une facture de grand cabinet parisien.</div>
+    </div>
+
+    <div class="faq-item rv">
+      <div class="faq-q">Combien ça coûte ?</div>
+      <div class="faq-a">Je ne publie pas de grille fixe parce que chaque situation est différente. Je ne publie pas de grille parce que chaque situation est différente. Appelez, on en parle, c'est sans engagement.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-text rv">
+      <h2>Un devis gratuit.</h2>
+      <p>Appelez ou envoyez un message. Je réponds dans la journée, et si je peux pas vous aider, je vous le dis franchement.</p>
+    </div>
+    <div class="contact-actions rv">
+      <a href="tel:+33641537334" class="contact-tel">06 41 53 73 34</a>
+      <div class="contact-links">
+        <a href="https://wa.me/33641537334?text=Bonjour%20Antoine%2C%20je%20voudrais%20un%20devis%20cybersécurité" target="_blank" rel="noopener" class="contact-link">💬 WhatsApp</a>
+        <a href="mailto:antoine.conter@outlook.com?subject=Devis%20cybersécurité" class="contact-link">✉️ antoine.conter@outlook.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter" width="80" height="36">
+      <span>Antoine Conter – Informatique</span>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#tarifs">Tarifs dépannage</a>
+      <a href="projets.html">Réalisations</a>
+      <a href="index.html">Accueil informatique</a>
+    </div>
+    <p class="footer-legal">© 2026 Antoine Conter – Plouguerneau (29880) · <a href="mailto:antoine.conter@outlook.com" style="color:rgba(255,255,255,.2)">antoine.conter@outlook.com</a></p>
+  </div>
+</footer>
+
+<button id="bubble" onclick="window.location.href='#contact'">💬 Me contacter</button>
+
+<script>
+(function(){
+  var hb=document.getElementById('hamburger'),mm=document.getElementById('mobile-menu');
+  function closeMenu(){hb&&hb.classList.remove('open');mm&&mm.classList.remove('open');document.body.style.overflow='';}
+  window.closeMenu=closeMenu;
+  hb&&hb.addEventListener('click',function(){
+    var o=mm.classList.toggle('open');hb.classList.toggle('open');
+    document.body.style.overflow=o?'hidden':'';hb.setAttribute('aria-expanded',String(o));
+  });
+  var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver'in window)||rm){els.forEach(function(e){e.classList.add('on')});}
+  else{
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -50px 0px',threshold:.06});
+    els.forEach(function(e){io.observe(e);});
+  }
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=this.parentElement;
+      var wasOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+      if(!wasOpen)item.classList.add('open');
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(this.getAttribute('href'));
+      if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+scrollY-72,behavior:'smooth'});}
+    });
+  });
+})();
+</script>
+</body>
+</html>
