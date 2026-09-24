@@ -347,6 +347,17 @@
     .faq-a{font-size:.93rem;color:var(--gray);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease}
     .faq-item.open .faq-a{max-height:300px;padding-top:.9rem}
 
+    /* ── CROSS PROMO ── */
+    .cross-promo{padding:3rem 2rem;background:var(--blue-light);border-top:3px solid var(--blue)}
+    .cross-promo-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap}
+    .cross-promo-text{flex:1;min-width:240px}
+    .cross-promo-label{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.4rem;display:block}
+    .cross-promo-text h3{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--ink);margin:0 0 .5rem}
+    .cross-promo-text p{font-size:.9rem;color:var(--gray);line-height:1.6;margin:0}
+    .cross-promo-btn{display:inline-block;padding:.75rem 1.4rem;background:var(--blue);color:#fff;border-radius:8px;font-size:.88rem;font-weight:600;text-decoration:none;white-space:nowrap;transition:background .2s}
+    .cross-promo-btn:hover{background:var(--blue-hover)}
+    @media(max-width:600px){.cross-promo-inner{flex-direction:column;align-items:flex-start}.cross-promo-btn{width:100%;text-align:center}}
+
     /* ── CONTACT ── */
     .contact{padding:5rem 2rem;background:linear-gradient(135deg,var(--blue-dark) 0%,#001830 100%)}
     .contact-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
@@ -729,6 +740,18 @@
       <div class="faq-a">Je ne publie pas de grille fixe parce que chaque situation est différente. Appelez, on en parle, c'est sans engagement.</div>
     </div>
 
+  </div>
+</div>
+
+<!-- RENVOI DEPANNAGE -->
+<div class="cross-promo rv">
+  <div class="cross-promo-inner">
+    <div class="cross-promo-text">
+      <span class="cross-promo-label">Aussi disponible</span>
+      <h3>Besoin de dépannage informatique ?</h3>
+      <p>PC lent, virus, WiFi qui lâche, imprimante récalcitrante : j'interviens aussi pour ça, à domicile, dans tout le nord Finistère. Même secteur, même tarif transparent.</p>
+    </div>
+    <a href="index.html" class="cross-promo-btn">Voir les services informatique →</a>
   </div>
 </div>
 
