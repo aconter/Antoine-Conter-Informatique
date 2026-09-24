@@ -347,6 +347,21 @@
     .faq-a{font-size:.93rem;color:var(--gray);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease}
     .faq-item.open .faq-a{max-height:300px;padding-top:.9rem}
 
+    /* ── REFERENCES ── */
+    .refs{padding:4rem 2rem;background:var(--off)}
+    .refs-inner{max-width:900px;margin:0 auto;text-align:center}
+    .refs h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--ink);margin-bottom:.5rem}
+    .refs h2 span{color:var(--blue)}
+    .refs-sub{font-size:.92rem;color:var(--gray);line-height:1.7;max-width:480px;margin:0 auto 2.5rem}
+    .refs-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-bottom:2rem}
+    .ref-card{background:#fff;border-radius:14px;padding:1.75rem;text-align:left;box-shadow:0 4px 24px rgba(0,0,0,.07);border:1px solid rgba(0,0,0,.05)}
+    .ref-icon{font-size:1.5rem;margin-bottom:.75rem}
+    .ref-name{font-weight:700;color:var(--ink);font-size:.97rem;margin-bottom:.2rem}
+    .ref-location{font-size:.8rem;color:var(--gray);margin-bottom:.8rem}
+    .ref-desc{font-size:.86rem;color:#4b5563;line-height:1.65}
+    .refs-cta{display:inline-block;padding:.7rem 1.5rem;border:2px solid var(--blue);color:var(--blue);border-radius:8px;font-size:.88rem;font-weight:600;text-decoration:none;transition:all .2s}
+    .refs-cta:hover{background:var(--blue);color:#fff}
+
     /* ── CROSS PROMO ── */
     .cross-promo{padding:3rem 2rem;background:var(--blue-light);border-top:3px solid var(--blue)}
     .cross-promo-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:2.5rem;flex-wrap:wrap}
@@ -485,7 +500,7 @@
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-badge"><span class="dot"></span> Disponible · Nord Finistère</div>
-      <h1 class="hero-h1">Cybersécurité en nord Finistère<em>Lannilis, Lesneven, Plabennec, Ploudalmézeau</em></h1>
+      <h1 class="hero-h1">Cybersécurité en nord Finistère<em>audit · sensibilisation · protection numérique</em></h1>
       <p class="hero-sub">Vous n'êtes pas à l'abri. Particuliers, artisans, associations, mairies : chacun a des failles qu'il ne voit pas. Je les identifie avant que quelqu'un d'autre le fasse et je vous aide à les corriger, sur le terrain.</p>
       <div class="hero-btns">
         <a href="#cibles" class="btn btn-primary">Les risques que vous prenez</a>
@@ -707,6 +722,29 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="refs">
+  <div class="refs-inner rv">
+    <h2>Ils m'ont <span>fait confiance</span></h2>
+    <p class="refs-sub">Des professionnels du nord Finistère que j'ai accompagnés sur leur informatique et leur sécurité numérique.</p>
+    <div class="refs-cards">
+      <div class="ref-card rv s1">
+        <div class="ref-icon">🥩</div>
+        <div class="ref-name">Boucherie Armoricaine</div>
+        <div class="ref-location">Atelier de découpe · Lesneven (29260)</div>
+        <p class="ref-desc">Site vitrine créé, données clients protégées, sauvegardes mises en place. Accompagnement complet, sécurité incluse.</p>
+      </div>
+      <div class="ref-card rv s2">
+        <div class="ref-icon">📐</div>
+        <div class="ref-name">Bruno L'Hostis</div>
+        <div class="ref-location">Professeur indépendant · Mathématiques</div>
+        <p class="ref-desc">Site professionnel sécurisé, accès protégés, formulaire de contact sans exposition de données personnelles.</p>
+      </div>
+    </div>
+    <a href="https://www.google.com/maps/place/Antoine+Conter+Informatique/@48.5169611,-4.7706006,10z/data=!3m1!4b1!4m6!3m5!1s0xae66a53b28499ddf:0x8481005283e5e994" target="_blank" rel="noopener" class="refs-cta">⭐ Laisser un avis Google</a>
   </div>
 </div>
 
