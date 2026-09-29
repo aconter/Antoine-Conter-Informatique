@@ -590,6 +590,19 @@
     @keyframes screenPulse{0%,100%{opacity:.85}50%{opacity:1}}
     @keyframes floatOrbit{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(180deg)}100%{transform:translateY(0) rotate(360deg)}}
 
+    /* ===== CYBER BANNER ===== */
+    .cyber-banner{background:linear-gradient(135deg,#001830 0%,#00264d 100%);padding:4rem 2rem;border-top:3px solid var(--blue)}
+    .cyber-banner-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+    .cyber-banner h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:.75rem}
+    .cyber-banner h2 span{color:#7dd3fc}
+    .cyber-banner-sub{font-size:.95rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:1.25rem}
+    .cyber-banner ul{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.75rem}
+    .cyber-banner li{font-size:.9rem;color:rgba(255,255,255,.72);padding-left:1.3rem;position:relative}
+    .cyber-banner li::before{content:'›';position:absolute;left:0;color:#7dd3fc;font-weight:700;font-size:1.1rem}
+    .cyber-banner-btn{display:inline-block;background:#fff;color:var(--blue);padding:.85rem 1.75rem;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap;transition:all .25s ease;box-shadow:0 8px 24px rgba(0,0,0,.3);flex-shrink:0}
+    .cyber-banner-btn:hover{background:#e8f4fd;transform:translateY(-2px)}
+    @media(max-width:768px){.cyber-banner-inner{grid-template-columns:1fr}.cyber-banner-btn{display:block;text-align:center}}
+
     /* ===== HIDDEN SEO LIST ===== */
     .seo-list{position:absolute;left:-9999px;height:1px;width:1px;overflow:hidden}
 
@@ -780,6 +793,23 @@
       </article>
     </div>
     <p class="pricing-footer reveal">Besoin sur-mesure (association, PME, site internet…) ? <strong>Contactez-moi</strong> — on trouve ensemble la solution la plus adaptée.</p>
+  </div>
+</div>
+
+<!-- CYBER BANNER -->
+<div class="cyber-banner">
+  <div class="cyber-banner-inner reveal">
+    <div>
+      <h2>Votre sécurité numérique,<br><span>c'est aussi mon métier.</span></h2>
+      <p class="cyber-banner-sub">Au-delà du dépannage, j'audite et protège vos comptes, votre téléphone et vos données.</p>
+      <ul>
+        <li>Compte Facebook ou email piraté</li>
+        <li>Téléphone Android ou iPhone mal sécurisé</li>
+        <li>Identifiants retrouvés dans une fuite de données</li>
+        <li>Sensibilisation phishing pour votre association ou équipe</li>
+      </ul>
+      <a href="cybersecurite.html" class="cyber-banner-btn">Découvrir mes services cybersécurité →</a>
+    </div>
   </div>
 </div>
 
