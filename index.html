@@ -592,9 +592,9 @@
 
     /* ===== CYBER BANNER ===== */
     .cyber-banner{background:linear-gradient(135deg,#001830 0%,#00264d 100%);padding:4rem 2rem;border-top:3px solid var(--blue)}
-    .cyber-banner-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:3rem;align-items:center}
-    .cyber-banner-img{border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-    .cyber-banner-img img{width:100%;display:block}
+    .cyber-banner-inner{max-width:1100px;margin:0 auto;display:flex;gap:3rem;align-items:center;justify-content:space-between}
+    .cyber-banner-img{flex-shrink:0}
+    .cyber-banner-img img{width:380px;max-width:100%;height:auto;display:block;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.4)}
     .cyber-banner h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:.75rem}
     .cyber-banner h2 span{color:#7dd3fc}
     .cyber-banner-sub{font-size:.95rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:1.25rem}
@@ -603,7 +603,7 @@
     .cyber-banner li::before{content:'›';position:absolute;left:0;color:#7dd3fc;font-weight:700;font-size:1.1rem}
     .cyber-banner-btn{display:inline-block;background:#fff;color:var(--blue);padding:.85rem 1.75rem;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;white-space:nowrap;transition:all .25s ease;box-shadow:0 8px 24px rgba(0,0,0,.3);flex-shrink:0}
     .cyber-banner-btn:hover{background:#e8f4fd;transform:translateY(-2px)}
-    @media(max-width:900px){.cyber-banner-inner{grid-template-columns:1fr}.cyber-banner-img{display:none}.cyber-banner-btn{display:block;text-align:center}}
+    @media(max-width:900px){.cyber-banner-inner{flex-direction:column}.cyber-banner-img{display:none}.cyber-banner-btn{display:block;text-align:center}}
 
     /* ===== HIDDEN SEO LIST ===== */
     .seo-list{position:absolute;left:-9999px;height:1px;width:1px;overflow:hidden}
@@ -813,7 +813,7 @@
       <a href="cybersecurite.html" class="cyber-banner-btn">Découvrir mes services cybersécurité →</a>
     </div>
     <div class="cyber-banner-img">
-      <img src="illustration-cyber.webp" alt="Cybersécurité nord Finistère – protection numérique particuliers et entreprises" loading="lazy" width="420" height="420">
+      <img src="illustration-cyber.webp" alt="Cybersécurité nord Finistère – protection numérique particuliers et entreprises" loading="lazy" width="380" height="380">
     </div>
   </div>
 </div>
