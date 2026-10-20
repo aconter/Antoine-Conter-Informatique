@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /test/
 Disallow: /testprojet
 Disallow: /script.ts
+Disallow: /scripts/
 
 Sitemap: https://informatique-plouguerneau-antoine-conter.fr/sitemap.xml
