@@ -43,7 +43,7 @@ def google():
 
     # Propriété Search Console : domaine ou préfixe d'URL, selon ce qui a été créé.
     candidats = [os.environ.get("GSC_SITE", "").strip()] if os.environ.get("GSC_SITE") else []
-    candidats += [f"sc-domain:{DOMAINE}", SITE]
+    candidats += [SITE, f"sc-domain:{DOMAINE}"]  # préfixe d'URL en premier : c'est la propriété autorisée
     for site in candidats:
         url = ("https://www.googleapis.com/webmasters/v3/sites/"
                f"{urllib.parse.quote(site, safe='')}/sitemaps/{urllib.parse.quote(SITEMAP, safe='')}")
