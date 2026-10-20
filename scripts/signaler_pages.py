@@ -32,6 +32,7 @@ def google():
     info = os.environ.get("GSC_SERVICE_ACCOUNT_JSON", "").strip()
     if not info:
         print("Google : secret GSC_SERVICE_ACCOUNT_JSON absent, étape ignorée.")
+        print("::warning title=Google non contacté::Secret GSC_SERVICE_ACCOUNT_JSON introuvable (Settings > Secrets and variables > Actions > Repository secrets)")
         return True
     from google.oauth2 import service_account
     from google.auth.transport.requests import AuthorizedSession
