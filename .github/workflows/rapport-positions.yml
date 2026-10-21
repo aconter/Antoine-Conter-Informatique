@@ -1,0 +1,25 @@
+name: Rapport des positions Google par commune
+
+# Tous les lundis à 8 h (heure de Paris environ), et à la demande.
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      jours:
+        description: "Nombre de jours analysés"
+        default: "28"
+
+jobs:
+  rapport:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install google-auth requests
+      - name: Positions par commune
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON || secrets.SITE_INTERNET }}
+        run: python scripts/rapport_positions.py ${{ github.event.inputs.jours || '28' }}
