@@ -1,0 +1,21 @@
+name: Etat d'indexation Google
+
+# Tous les jeudis à 8 h (heure de Paris environ), et à la demande.
+on:
+  schedule:
+    - cron: "0 6 * * 4"
+  workflow_dispatch:
+
+jobs:
+  etat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install google-auth requests
+      - name: Inspection des pages du sitemap
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON || secrets.SITE_INTERNET }}
+        run: python scripts/etat_indexation.py
