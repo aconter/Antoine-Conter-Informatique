@@ -22,6 +22,9 @@ COMMUNES = [
     # Entre les Abers et Brest
     "Plabennec", "Bourg-Blanc", "Kersaint-Plabennec", "Le Drennec", "Coat-Méal",
     "Plouvien", "Plouguin", "Gouesnou", "Guipavas", "Bohars", "Milizac",
+    # Couronne de Brest et Iroise
+    "Brest", "Plouzané", "Guilers", "Le Relecq-Kerhuon", "Plougastel", "Saint-Renan",
+    "Locmaria-Plouzané", "Plougonvelin", "Le Conquet", "Trébabu",
 ]
 
 

@@ -2,248 +2,325 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/zones-intervention.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseils.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-fin-windows-10.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-acheter-ordinateur.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-arnaques-en-ligne.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/projets.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-bourg-blanc.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-coat-meal.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-guisseny.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-kerlouan.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-kernilis.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-kersaint-plabennec.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-landeda.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-lannilis.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-le-drennec.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-le-folgoet.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-lesneven.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-loc-brevalaire.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plabennec.html</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouguerneau.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouguin.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouvien.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-saint-pabu.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-treglonou.html</loc>
-    <lastmod>2026-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-sauvegarder-photos.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-fin-windows-10.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-mots-de-passe.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-ordinateur-lent.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-acheter-ordinateur.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-sauvegarder-photos.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://informatique-plouguerneau-antoine-conter.fr/conseil-wifi-box.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-gouesnou.html</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/conseils.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/cybersecurite-brest.html</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-brest.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/cours-nsi-python-linux.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://informatique-plouguerneau-antoine-conter.fr/cybersecurite-tpe.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://informatique-plouguerneau-antoine-conter.fr/cours-nsi-python-linux.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-bohars.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-bourg-blanc.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-brest.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-coat-meal.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-gouesnou.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-guilers.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-guipavas.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-guisseny.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-kerlouan.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-kernilis.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-kersaint-plabennec.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-landeda.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-lannilis.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-le-conquet.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-le-drennec.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-le-folgoet.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-le-relecq-kerhuon.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-lesneven.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-loc-brevalaire.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-locmaria-plouzane.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-milizac-guipronvel.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plabennec.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plougastel-daoulas.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plougonvelin.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouguerneau.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouguin.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouvien.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouzane.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-saint-pabu.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-saint-renan.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-trebabu.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-treglonou.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/projets.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://informatique-plouguerneau-antoine-conter.fr/zones-intervention.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
