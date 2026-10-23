@@ -25,6 +25,9 @@ COMMUNES = [
     # Couronne de Brest et Iroise
     "Brest", "Plouzané", "Guilers", "Le Relecq-Kerhuon", "Plougastel", "Saint-Renan",
     "Locmaria-Plouzané", "Plougonvelin", "Le Conquet", "Trébabu",
+    # Iroise nord, Landerneau, Léon
+    "Ploudalmézeau", "Lampaul-Ploudalmézeau", "Plouarzel", "Brélès", "Landerneau",
+    "Ploudaniel", "Goulven", "Plouider", "Plounévez-Lochrist", "Landivisiau",
 ]
 
 
