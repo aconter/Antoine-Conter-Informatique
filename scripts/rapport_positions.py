@@ -28,6 +28,7 @@ COMMUNES = [
     # Iroise nord, Landerneau, Léon
     "Ploudalmézeau", "Lampaul-Ploudalmézeau", "Plouarzel", "Brélès", "Landerneau",
     "Ploudaniel", "Goulven", "Plouider", "Plounévez-Lochrist", "Landivisiau",
+    "Brignogan", "Saint-Frégant",
 ]
 
 
