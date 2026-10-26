@@ -526,6 +526,22 @@ p{color:#374151}
 }
 @media(prefers-reduced-motion:reduce){.wrow .wbar span{width:100%!important}.lcard::before{transform:scaleX(1)}}
 
+/* RETOUR ACCUEIL */
+.home-strip{padding:1.6rem 1.5rem 0}
+.hs-inner{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;justify-content:center}
+.home-strip a{text-decoration:none;font-size:.88rem;font-weight:600;color:var(--blue-dark);background:#fff;border:1px solid var(--gray-light);border-radius:999px;padding:.5rem 1rem;transition:all .25s}
+.home-strip a:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
+.home-strip .hs-main{display:flex;align-items:center;gap:.6rem;background:var(--blue);color:#fff;border-color:var(--blue);padding:.45rem 1.1rem .45rem .5rem;box-shadow:var(--shadow-blue)}
+.home-strip .hs-main:hover{background:var(--blue-hover);color:#fff}
+.hs-ico{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:1rem}
+.hs-main b{display:block;font-size:.9rem;line-height:1.2}
+.hs-main small{display:block;font-size:.72rem;font-weight:500;opacity:.8}
+.home-float{position:fixed;left:1.2rem;bottom:1.2rem;z-index:1500;background:#fff;color:var(--blue-dark);text-decoration:none;font-weight:700;font-size:.88rem;padding:.65rem 1.1rem;border-radius:999px;box-shadow:var(--shadow-lg);border:1px solid var(--gray-light);opacity:0;transform:translateY(16px);pointer-events:none;transition:all .35s}
+.home-float.on{opacity:1;transform:none;pointer-events:auto}
+.home-float:hover{color:var(--blue);border-color:var(--blue)}
+.callbar .c0{flex:0 0 auto;background:var(--blue-light);color:var(--blue-dark)}
+@media(max-width:760px){.home-float{display:none}.home-strip{padding:1.2rem 1rem 0}.hs-inner{justify-content:flex-start}.home-strip .hs-main{width:100%}}
+
 /* ===== ACCUEIL ===== */
 .hero h1 .h1-seo{display:block;font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sky);margin-bottom:1rem}
 .hero h1 em{font-style:italic;color:var(--sky);position:relative;white-space:nowrap}
@@ -732,6 +748,13 @@ p{color:#374151}
 .me-fig{margin-top:1.6rem;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);position:relative}
 .me-fig img{width:100%;height:auto;display:block}
 .me-fig figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem 1rem .7rem;color:#fff;font-size:.84rem;background:linear-gradient(transparent,rgba(0,0,0,.65))}
+
+/* 3D du hero */
+.hero3d-wrap{position:relative;width:100%;aspect-ratio:5/4;max-height:460px}
+.hero3d-wrap::before{content:'';position:absolute;inset:12% 10%;border-radius:50%;background:radial-gradient(circle,rgba(125,211,252,.22),transparent 65%);filter:blur(10px)}
+#hero3d{position:relative;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y}
+#hero3d:active{cursor:grabbing}
+.hero3d-wrap.no3d{display:none}
 </style>
 </head>
 <body>
@@ -781,30 +804,8 @@ p{color:#374151}
       </div>
     </div>
     <div class="hero-in d5">
-      <div class="ba-switch" role="tablist"><button class="on" data-s="0">😩 Avant</button><button data-s="1">😊 Avec moi</button></div>
-      <div class="ba" id="ba" aria-label="Avant et après mon intervention"><div class="ba-inner">
-        <div class="ba-pane before">
-          <h3><span class="tag">Avant</span> La galère</h3>
-          <ul>
-            <li><i>🐌</i>Le PC met une éternité à démarrer</li>
-            <li><i>🤯</i>Des explications pleines de jargon</li>
-            <li><i>💸</i>« Il faut tout racheter »</li>
-            <li><i>📦</i>Déposer l'ordinateur et attendre une semaine</li>
-          </ul>
-          <p class="big">Une soirée perdue, et de l'argent en moins.</p>
-        </div>
-        <div class="ba-pane after">
-          <h3><span class="tag">Avec moi</span> Ça roule</h3>
-          <ul>
-            <li><i>⚡</i>Réglé chez vous, souvent en une visite</li>
-            <li><i>💬</i>Expliqué avec vos mots</li>
-            <li><i>🔧</i>Réparé avant d'être remplacé</li>
-            <li><i>✅</i>30 €/h, déplacement compris</li>
-          </ul>
-          <p class="big">Du temps gagné, de l'argent économisé.</p>
-        </div>
-      </div></div>
-      <p class="ba-hint">Cliquez sur la carte</p>
+      <div class="hero3d-wrap"><canvas id="hero3d" aria-label="Ordinateur portable en 3D" role="img"></canvas></div>
+      <p class="ba-hint">↔ Faites tourner l'ordinateur</p>
     </div>
   </div>
 </section>
@@ -831,7 +832,7 @@ p{color:#374151}
         <nav class="who-nav" aria-label="Profils professionnels"><a href="#p-artisan" data-t="p-artisan"><span class="e">🛠️</span><span class="t">Artisans et indépendants</span></a><a href="#p-asso" data-t="p-asso"><span class="e">🤝</span><span class="t">Associations et clubs</span></a><a href="#p-tpe" data-t="p-tpe"><span class="e">🏢</span><span class="t">TPE et PME</span></a></nav>
         <div>
       <article class="persona reveal" id="p-artisan" data-n="01">
-        <figure class="p-photo"><img src="photo-artisan.webp?v=2" alt="Antoine Conter sur un poste de travail avec une collègue" width="1600" height="1067" style="object-position:center 50%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
+        <figure class="p-photo"><img src="photo-artisan.webp?v=3" alt="Antoine Conter sur un poste de travail avec une collègue" width="1600" height="1067" style="object-position:center 50%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
         <div class="p-head"><div class="p-emoji">🛠️</div><div><div class="p-kicker">Artisans, commerçants, indépendants</div><h3>Pas le temps de vous occuper de l&#x27;informatique</h3></div></div>
         <p class="p-rec">Vous vous reconnaissez ?</p>
         <div class="bubbles"><span>« Si mon PC lâche, je ne peux plus facturer »</span><span>« Mon site ? Quel site ? »</span></div>
@@ -842,7 +843,7 @@ p{color:#374151}
         <a class="linkline p-link" href="projets.html">Voir mes réalisations <i>→</i></a>
       </article>
       <article class="persona reveal" id="p-asso" data-n="02">
-        <figure class="p-photo"><img src="photo-asso.webp?v=2" alt="Antoine Conter en réunion de travail pendant son stage en cybersécurité" width="1600" height="1067" style="object-position:center 30%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
+        <figure class="p-photo"><img src="photo-asso.webp?v=3" alt="Antoine Conter en réunion de travail pendant son stage en cybersécurité" width="1600" height="1067" style="object-position:center 30%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
         <div class="p-head"><div class="p-emoji">🤝</div><div><div class="p-kicker">Associations et clubs</div><h3>Une asso qui tient sur un vieux mot de passe</h3></div></div>
         <p class="p-rec">Vous vous reconnaissez ?</p>
         <div class="bubbles"><span>« Le compte Facebook, c&#x27;est l&#x27;ancien président qui l&#x27;a »</span><span>« Les bénévoles cliquent sur tout »</span></div>
@@ -853,7 +854,7 @@ p{color:#374151}
         <a class="linkline p-link" href="cybersecurite-tpe.html">Cybersécurité des associations <i>→</i></a>
       </article>
       <article class="persona reveal" id="p-tpe" data-n="03">
-        <figure class="p-photo"><img src="photo-tpe.webp?v=2" alt="Antoine Conter en échange avec un collègue lors d&#x27;une réunion professionnelle" width="1600" height="1067" style="object-position:center 32%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
+        <figure class="p-photo"><img src="photo-tpe.webp?v=3" alt="Antoine Conter avec l&#x27;équipe cybersécurité de Parul University dans leurs bureaux" width="1600" height="1067" style="object-position:center 18%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
         <div class="p-head"><div class="p-emoji">🏢</div><div><div class="p-kicker">TPE et PME</div><h3>« On est trop petits pour être visés »</h3></div></div>
         <p class="p-rec">Vous vous reconnaissez ?</p>
         <div class="bubbles"><span>« Un salarié a cliqué sur un faux mail de livraison »</span><span>« Notre site n&#x27;a jamais été testé »</span></div>
@@ -871,7 +872,7 @@ p{color:#374151}
         <nav class="who-nav" aria-label="Profils particuliers"><a href="#p-senior" data-t="p-senior"><span class="e">👵</span><span class="t">Débutants et seniors</span></a><a href="#p-famille" data-t="p-famille"><span class="e">🏠</span><span class="t">À la maison</span></a><a href="#p-cours" data-t="p-cours"><span class="e">🎓</span><span class="t">Élèves et étudiants</span></a></nav>
         <div>
       <article class="persona reveal" id="p-senior" data-n="01">
-        <figure class="p-photo"><img src="photo-senior.webp?v=2" alt="Personne âgée devant un ordinateur portable" width="1600" height="1067" style="object-position:center 40%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
+        <figure class="p-photo"><img src="photo-senior.webp?v=3" alt="Personne âgée devant un ordinateur portable" width="1600" height="1067" style="object-position:center 40%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
         <div class="p-head"><div class="p-emoji">👵</div><div><div class="p-kicker">Particuliers</div><h3>L&#x27;ordinateur vous stresse un peu</h3></div></div>
         <p class="p-rec">Vous vous reconnaissez ?</p>
         <div class="bubbles"><span>« J&#x27;ai peur de faire une bêtise »</span><span>« Ce mail de la banque, c&#x27;est une arnaque ? »</span></div>
@@ -882,7 +883,7 @@ p{color:#374151}
         <a class="linkline p-link" href="conseil-arnaques-en-ligne.html">Les arnaques à repérer <i>→</i></a>
       </article>
       <article class="persona reveal" id="p-famille" data-n="02">
-        <figure class="p-photo"><img src="photo-famille.webp?v=2" alt="Famille à la maison avec un ordinateur" width="1600" height="1067" style="object-position:center 40%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
+        <figure class="p-photo"><img src="photo-famille.webp?v=3" alt="Famille à la maison avec un ordinateur" width="1600" height="1067" style="object-position:center 40%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
         <div class="p-head"><div class="p-emoji">🏠</div><div><div class="p-kicker">Particuliers</div><h3>À la maison, plus rien ne suit</h3></div></div>
         <p class="p-rec">Vous vous reconnaissez ?</p>
         <div class="bubbles"><span>« Le PC met dix minutes à démarrer »</span><span>« Le Wi-Fi ne passe pas à l&#x27;étage »</span></div>
@@ -893,7 +894,7 @@ p{color:#374151}
         <a class="linkline p-link" href="conseil-acheter-ordinateur.html">Réparer ou racheter ? <i>→</i></a>
       </article>
       <article class="persona reveal" id="p-cours" data-n="03">
-        <figure class="p-photo"><img src="photo-cours.webp?v=2" alt="Étudiant qui apprend la programmation" width="1600" height="1067" style="object-position:center 40%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
+        <figure class="p-photo"><img src="photo-cours.webp?v=3" alt="Étudiant qui apprend la programmation" width="1600" height="1067" style="object-position:center 40%" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></figure>
         <div class="p-head"><div class="p-emoji">🎓</div><div><div class="p-kicker">Élèves et étudiants</div><h3>Vous voulez apprendre pour de vrai</h3></div></div>
         <p class="p-rec">Vous vous reconnaissez ?</p>
         <div class="bubbles"><span>« En NSI, je décroche »</span><span>« Je veux comprendre Python et Linux »</span></div>
@@ -1073,6 +1074,7 @@ p{color:#374151}
 
 <div class="callbar"><a class="c1" href="tel:+33641537334">📞 Appeler</a><a class="c2" href="https://wa.me/33641537334" rel="noopener">WhatsApp</a></div>
 
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script>
 (function(){
   var C='informatique-plouguerneau-antoine-conter.fr',h=location.hostname.toLowerCase();
@@ -1178,6 +1180,115 @@ p{color:#374151}
     // Lien d'un profil depuis un autre lien de la page (#p-xxx) : bascule sur le bon onglet
     function fromHash(){var h=location.hash;if(h.indexOf('#p-')===0){var el=document.querySelector(h);if(el){show(el.closest('.who-group').dataset.g);setTimeout(function(){el.scrollIntoView();},30);}}}
     window.addEventListener('hashchange',fromHash);fromHash();
+  })();
+
+  // ===== Scène 3D du hero : ordinateur portable + bouclier =====
+  (function(){
+    var cv=document.getElementById('hero3d');
+    if(!cv)return;
+    if(typeof THREE==='undefined'){cv.parentNode.classList.add('no3d');return;}
+    var W=cv.clientWidth||520,H=cv.clientHeight||420;
+    var renderer;
+    try{renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});}catch(e){cv.parentNode.classList.add('no3d');return;}
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
+    renderer.setSize(W,H,false);
+    renderer.setClearColor(0x000000,0);
+    var scene=new THREE.Scene();
+    var cam=new THREE.PerspectiveCamera(36,W/H,0.1,100);
+    cam.position.set(0,1.0,5.7);cam.lookAt(0,0.35,0);
+
+    scene.add(new THREE.AmbientLight(0x8fb8e8,0.9));
+    var key=new THREE.DirectionalLight(0xffffff,1.25);key.position.set(3,5,4);scene.add(key);
+    var rim=new THREE.DirectionalLight(0x7dd3fc,0.9);rim.position.set(-4,2,-3);scene.add(rim);
+    var glow=new THREE.PointLight(0x7dd3fc,1.4,9);glow.position.set(0,1.2,1.2);scene.add(glow);
+
+    // Écran dessiné sur un canvas (mis à jour en continu)
+    var sc=document.createElement('canvas');sc.width=1024;sc.height=640;
+    var g=sc.getContext('2d');
+    var tex=new THREE.CanvasTexture(sc);
+    if('colorSpace' in tex)tex.colorSpace=THREE.SRGBColorSpace;
+    var rows=[['Analyse antivirus','Aucune menace'],['Windows 11','À jour'],['Sauvegarde','Photos en sécurité'],['Wi-Fi','Signal excellent']];
+    function rr(x,y,w,h,r){g.beginPath();g.moveTo(x+r,y);g.arcTo(x+w,y,x+w,y+h,r);g.arcTo(x+w,y+h,x,y+h,r);g.arcTo(x,y+h,x,y,r);g.arcTo(x,y,x+w,y,r);g.closePath();}
+    function drawScreen(t){
+      var grd=g.createLinearGradient(0,0,1024,640);grd.addColorStop(0,'#eaf6ff');grd.addColorStop(1,'#ffffff');
+      g.fillStyle=grd;g.fillRect(0,0,1024,640);
+      g.fillStyle='#004070';g.fillRect(0,0,1024,64);
+      g.fillStyle='#7dd3fc';[0,1,2,3].forEach(function(i){g.fillRect(28+(i%2)*14,18+Math.floor(i/2)*14,12,12);});
+      g.fillStyle='#fff';g.font='600 26px Inter, Arial';g.textBaseline='middle';g.fillText('Maintenance du PC',72,33);
+      // bouclier
+      var cx=176,cy=330;
+      g.save();g.translate(cx,cy);
+      var pulse=1+Math.sin(t*2)*0.03;g.scale(pulse,pulse);
+      g.beginPath();g.moveTo(0,-120);g.lineTo(96,-84);g.lineTo(96,-6);g.bezierCurveTo(96,62,48,104,0,124);g.bezierCurveTo(-48,104,-96,62,-96,-6);g.lineTo(-96,-84);g.closePath();
+      var sg=g.createLinearGradient(0,-120,0,124);sg.addColorStop(0,'#0a6fb8');sg.addColorStop(1,'#004070');g.fillStyle=sg;g.fill();
+      g.strokeStyle='#fff';g.lineWidth=16;g.lineCap='round';g.lineJoin='round';
+      g.beginPath();g.moveTo(-40,4);g.lineTo(-10,36);g.lineTo(46,-26);g.stroke();
+      g.restore();
+      // lignes d'état avec barres qui se remplissent en boucle
+      var cyc=(t*0.32)%rows.length;
+      rows.forEach(function(r,i){
+        var y=128+i*118,x=330;
+        rr(x,y,640,92,18);g.fillStyle='#ffffff';g.fill();g.strokeStyle='#dbe7f1';g.lineWidth=2;g.stroke();
+        g.fillStyle='#111827';g.font='600 30px Inter, Arial';g.textBaseline='alphabetic';g.fillText(r[0],x+28,y+40);
+        var p=i<Math.floor(cyc)?1:(i===Math.floor(cyc)?(cyc%1):0);p=Math.min(1,p*1.4);
+        var done=p>=1;
+        g.font='600 24px Inter, Arial';g.textAlign='right';g.fillStyle=done?'#16a34a':'#6B7280';
+        g.fillText(done?('✓ '+r[1]):'En cours…',x+612,y+40);g.textAlign='left';
+        rr(x+28,y+58,584,12,6);g.fillStyle='#e5e7eb';g.fill();
+        if(p>0){rr(x+28,y+58,Math.max(12,584*p),12,6);g.fillStyle=done?'#22c55e':'#0a6fb8';g.fill();}
+      });
+      tex.needsUpdate=true;
+    }
+
+    var laptop=new THREE.Group();
+    var body=new THREE.MeshStandardMaterial({color:0xc9d3de,metalness:0.55,roughness:0.35});
+    var dark=new THREE.MeshStandardMaterial({color:0x1c2533,metalness:0.2,roughness:0.6});
+    var base=new THREE.Mesh(new THREE.BoxGeometry(3.2,0.12,2.1),body);laptop.add(base);
+    var kb=new THREE.Mesh(new THREE.BoxGeometry(2.7,0.02,1.15),dark);kb.position.set(0,0.07,-0.25);laptop.add(kb);
+    var keyMat=new THREE.MeshStandardMaterial({color:0x2a3546,roughness:0.7});
+    for(var r=0;r<4;r++)for(var c=0;c<12;c++){var k=new THREE.Mesh(new THREE.BoxGeometry(0.17,0.025,0.17),keyMat);k.position.set(-1.21+c*0.22,0.09,-0.7+r*0.24);laptop.add(k);}
+    var pad=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.01,0.5),new THREE.MeshStandardMaterial({color:0xb3bfcc,metalness:0.4,roughness:0.3}));pad.position.set(0,0.065,0.66);laptop.add(pad);
+    var lid=new THREE.Group();lid.position.set(0,0.06,-1.05);
+    var shell=new THREE.Mesh(new THREE.BoxGeometry(3.2,2.05,0.08),body);shell.position.set(0,1.02,-0.04);lid.add(shell);
+    var bezel=new THREE.Mesh(new THREE.PlaneGeometry(3.06,1.92),new THREE.MeshBasicMaterial({color:0x0b1220}));bezel.position.set(0,1.02,0.002);lid.add(bezel);
+    var screen=new THREE.Mesh(new THREE.PlaneGeometry(2.9,1.81),new THREE.MeshBasicMaterial({map:tex,toneMapped:false}));screen.position.set(0,1.02,0.004);lid.add(screen);
+    lid.rotation.x=-0.22;
+    laptop.add(lid);
+    laptop.position.y=-0.55;
+    scene.add(laptop);
+
+    // Anneau et points autour (discrets)
+    var ring=new THREE.Mesh(new THREE.TorusGeometry(2.55,0.012,8,140),new THREE.MeshBasicMaterial({color:0x7dd3fc,transparent:true,opacity:0.35}));
+    ring.rotation.x=Math.PI/2.15;ring.position.y=-0.45;scene.add(ring);
+    var dots=[],dotMat=new THREE.MeshBasicMaterial({color:0x7dd3fc});
+    for(var i=0;i<3;i++){var d=new THREE.Mesh(new THREE.SphereGeometry(0.06,16,16),dotMat);scene.add(d);dots.push(d);}
+
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var rotY=-0.45,rotX=0,tY=-0.45,tX=0,drag=false,px=0,py=0,last=0,idle=0,t=0,visible=true;
+    cv.addEventListener('pointerdown',function(e){drag=true;px=e.clientX;py=e.clientY;try{cv.setPointerCapture(e.pointerId);}catch(x){}});
+    cv.addEventListener('pointermove',function(e){if(!drag)return;tY+=(e.clientX-px)*0.01;tX=Math.max(-0.35,Math.min(0.35,tX+(e.clientY-py)*0.006));px=e.clientX;py=e.clientY;idle=0;});
+    window.addEventListener('pointerup',function(){drag=false;});
+    if('IntersectionObserver' in window)new IntersectionObserver(function(es){visible=es[0].isIntersecting;},{threshold:0}).observe(cv);
+
+    function frame(ts){
+      requestAnimationFrame(frame);
+      if(!visible)return;
+      var dt=Math.min((ts-last)/1000||0,0.05);last=ts;t+=dt;idle+=dt;
+      if(!drag&&!reduce){
+        if(idle>2.5){tY+=dt*0.22;tX+=(0-tX)*dt*1.5;}
+      }
+      rotY+=(tY-rotY)*Math.min(1,dt*6);rotX+=(tX-rotX)*Math.min(1,dt*6);
+      laptop.rotation.y=rotY;laptop.rotation.x=rotX;
+      laptop.position.y=-0.55+(reduce?0:Math.sin(t*1.1)*0.06);
+      ring.rotation.z=t*0.15;
+      dots.forEach(function(d,k){var a=t*0.5+k*2.094;d.position.set(Math.cos(a)*2.55,-0.45+Math.sin(a)*0.25*Math.sin(Math.PI/2.15-1.46),Math.sin(a)*2.55*Math.cos(Math.PI/2.15));d.position.y=-0.45-Math.sin(a)*2.55*Math.cos(Math.PI/2.15)*0.0+Math.sin(a)*0.33;});
+      if(Math.floor(t*20)!==Math.floor((t-dt)*20)||reduce)drawScreen(reduce?10:t);
+      renderer.render(scene,cam);
+    }
+    drawScreen(0);
+    requestAnimationFrame(frame);
+    function resize(){var w=cv.clientWidth,h=cv.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();}
+    window.addEventListener('resize',resize);
   })();
 })();
 </script>
