@@ -82,6 +82,42 @@ a{color:var(--blue)}
 .site-footer a{color:rgba(255,255,255,.75);text-decoration:none}
 .site-footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.2rem;margin-bottom:1rem}
 @media(max-width:560px){.logo-name{display:none}}
+
+/* --- animations et illustrations --- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.on{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.ico-h svg,.float{animation:none!important}}
+h2{display:flex;align-items:center;gap:.6rem}
+.ico-h{flex:0 0 34px;width:34px;height:34px;border-radius:10px;background:var(--blue-light);display:inline-flex;align-items:center;justify-content:center;color:var(--blue)}
+.ico-h svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cta h2{justify-content:center}
+.case{position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .35s}
+.case:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.09);border-color:#cfe0ee}
+.case .cico{width:30px;height:30px;margin-bottom:.5rem;color:var(--blue);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.case.win{border-color:var(--blue);background:linear-gradient(180deg,#fff 0%,#f4fafe 100%)}
+.case.win::after{content:'Mon offre';position:absolute;top:.7rem;right:.7rem;background:var(--blue);color:#fff;font-size:.68rem;font-weight:700;padding:.2rem .5rem;border-radius:999px;letter-spacing:.02em}
+ul.check li::before{content:'';position:absolute;left:0;top:.45em;width:13px;height:13px;background:var(--blue);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") no-repeat center/contain;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") no-repeat center/contain}
+ul.check li{transition:transform .25s}ul.check li:hover{transform:translateX(3px)}
+details{transition:border-color .25s,box-shadow .25s}
+details[open]{border-color:#cfe0ee;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:.8rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'';flex:0 0 16px;width:16px;height:16px;background:var(--blue);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 5v14M5 12h14' stroke='%23000' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/contain;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 5v14M5 12h14' stroke='%23000' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/contain;transition:transform .3s}
+details[open] summary::after{transform:rotate(135deg)}
+.chips a{transition:transform .25s,border-color .25s,background .25s}
+.chips a:hover{transform:translateY(-2px);background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn{transition:transform .25s,box-shadow .25s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.16)}
+.facts{position:relative}
+.page-hero{position:relative;overflow:hidden}
+.page-hero>*{position:relative;z-index:1}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(900px 300px at 50% -10%,rgba(125,211,252,.22),transparent 70%);z-index:0}
+.float{position:absolute;opacity:.13;color:#fff;pointer-events:none;z-index:0}
+.float svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.2}
+.f1{width:120px;height:120px;top:8%;left:4%;animation:fl 11s ease-in-out infinite}
+.f2{width:86px;height:86px;bottom:10%;right:6%;animation:fl 14s ease-in-out infinite reverse}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(6deg)}}
+@media(max-width:700px){.float{display:none}h2{font-size:1.25rem}}
 </style>
 </head>
 <body>
@@ -97,6 +133,7 @@ a{color:var(--blue)}
 </header>
 
 <div class="page-hero">
+  <div class="float f1" aria-hidden="true"><svg viewBox="0 0 24 24"><path d='M3 5h18v11H3z'/><path d='M2 19h20'/></svg></div><div class="float f2" aria-hidden="true"><svg viewBox="0 0 24 24"><path d='M4 20c0-9 7-15 16-15 0 9-6 15-16 15z'/><path d='M4 20c3-6 7-9 11-10.5'/></svg></div>
   <div class="breadcrumb"><a href="/">Accueil</a> › Ordinateur reconditionné</div>
   <h1>Ordinateur reconditionné : 350 à 450 €, installé chez vous</h1>
   <p class="sub">Un portable professionnel Dell Latitude ou Lenovo ThinkPad, choisi pour votre usage, vérifié, installé et livré à domicile dans les Abers, autour de Lesneven et dans la couronne de Brest. Prévu pour environ cinq ans.</p>
@@ -108,20 +145,20 @@ a{color:var(--blue)}
 
 <main class="content">
 
-<div class="section">
-  <h2>Le même budget, deux machines très différentes</h2>
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M17 6a7 7 0 1 0 0 12'/><path d='M4 10h9M4 14h9'/></svg></span><span>Le même budget, deux machines très différentes</span></h2>
   <p>Avec 400 € en poche, vous avez le choix entre un ordinateur neuf d'entrée de gamme et un ordinateur professionnel reconditionné. Ce ne sont pas du tout les mêmes machines.</p>
   <div class="cases">
-    <div class="case"><h3>Neuf en grande surface</h3><p>Chez E.Leclerc, Boulanger ou Carrefour, 350 à 450 € achètent un 15 pouces neuf à processeur d'entrée de gamme, 8 Go de mémoire et châssis plastique. Correct pour internet et la bureautique légère, et une durée de vie réaliste de deux à quatre ans.</p></div>
-    <div class="case"><h3>Reconditionné en boutique</h3><p>Une boutique locale qui vend du reconditionné doit payer sa vitrine, son stock et ses salariés. La même machine s'y affiche souvent 100 à 200 € de plus. Le service est là, mais vous payez aussi les murs.</p></div>
-    <div class="case"><h3>Reconditionné chez moi</h3><p>Pour 350 à 450 €, un Dell Latitude ou un Lenovo ThinkPad avec processeur Intel Core i5, 16 Go de mémoire et disque SSD. Je n'ai pas de magasin à financer, donc le budget part dans la machine et dans l'installation.</p></div>
+    <div class="case reveal d2"><svg class="cico" viewBox="0 0 24 24"><circle cx='9' cy='20' r='1.4'/><circle cx='18' cy='20' r='1.4'/><path d='M2 3h3l2.6 12h11L21 7H6'/></svg><h3>Neuf en grande surface</h3><p>Chez E.Leclerc, Boulanger ou Carrefour, 350 à 450 € achètent un 15 pouces neuf à processeur d'entrée de gamme, 8 Go de mémoire et châssis plastique. Correct pour internet et la bureautique légère, et une durée de vie réaliste de deux à quatre ans.</p></div>
+    <div class="case reveal d3"><svg class="cico" viewBox="0 0 24 24"><path d='M21 8 12 3 3 8v8l9 5 9-5z'/><path d='M3 8l9 5 9-5M12 13v8'/></svg><h3>Reconditionné en boutique</h3><p>Une boutique locale qui vend du reconditionné doit payer sa vitrine, son stock et ses salariés. La même machine s'y affiche souvent 100 à 200 € de plus. Le service est là, mais vous payez aussi les murs.</p></div>
+    <div class="case win reveal d1"><svg class="cico" viewBox="0 0 24 24"><path d='M3 5h18v11H3z'/><path d='M2 19h20'/></svg><h3>Reconditionné chez moi</h3><p>Pour 350 à 450 €, un Dell Latitude ou un Lenovo ThinkPad avec processeur Intel Core i5, 16 Go de mémoire et disque SSD. Je n'ai pas de magasin à financer, donc le budget part dans la machine et dans l'installation.</p></div>
   </div>
   <div class="facts">Ce sont des ordres de grandeur, relevés en magasin et susceptibles de bouger avec les promotions. Le principe, lui, ne change pas : à budget égal, le reconditionné professionnel offre un matériel d'une tout autre catégorie.</div>
 </div>
 
-<div class="section">
-  <h2>Pourquoi Dell Latitude et Lenovo ThinkPad</h2>
-  <figure class="vid">
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M3 5h18v11H3z'/><path d='M2 19h20'/></svg></span><span>Pourquoi Dell Latitude et Lenovo ThinkPad</span></h2>
+  <figure class="vid reveal">
     <video autoplay muted loop playsinline preload="metadata" width="562" height="1000" poster="thinkpad-reconditionne-poster.webp" aria-label="Un Lenovo ThinkPad T490 reconditionné, ouvert sur l'écran de connexion, prêt à être livré">
       <source src="thinkpad-reconditionne.mp4" type="video/mp4">
       <source src="thinkpad-reconditionne.webm" type="video/webm">
@@ -141,16 +178,16 @@ a{color:var(--blue)}
   <p>Un modèle grand public au même prix est souvent collé plutôt que vissé, avec une mémoire soudée et une batterie impossible à changer. Quand une pièce lâche, l'ordinateur part à la benne. C'est toute la différence entre un matériel pensé pour durer et un matériel pensé pour être remplacé.</p>
 </div>
 
-<div class="section">
-  <h2>Cinq ans d'usage, et un vrai geste pour la planète</h2>
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M4 20c0-9 7-15 16-15 0 9-6 15-16 15z'/><path d='M4 20c3-6 7-9 11-10.5'/></svg></span><span>Cinq ans d'usage, et un vrai geste pour la planète</span></h2>
   <p>Ces machines ont déjà tourné trois ou quatre ans en entreprise, mais elles ont été conçues pour en faire bien plus. Avec un disque SSD et une batterie en bon état, comptez encore environ cinq ans d'usage courant : internet, mails, bureautique, photos, visio.</p>
   <p>Et c'est là que l'argument écologique devient concret. D'après l'étude de l'ADEME et de l'Arcep sur l'impact environnemental du numérique en France, <strong>78 % de l'empreinte carbone du numérique vient de la fabrication des appareils</strong>, contre seulement 21 % pour leur utilisation.</p>
   <div class="facts">Autrement dit : l'essentiel du mal est déjà fait le jour où l'ordinateur sort de l'usine. Allonger sa vie, ou reprendre une machine déjà fabriquée plutôt que d'en faire produire une neuve, est de loin le geste le plus efficace. Bien plus que d'éteindre sa box la nuit.</div>
   <p>Acheter reconditionné, ce n'est donc pas se contenter de moins. C'est éviter une fabrication, garder un matériel de qualité professionnelle en service, et dépenser moins au passage.</p>
 </div>
 
-<div class="section">
-  <h2>Un conseil honnête, qui part de votre situation</h2>
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.2A8.4 8.4 0 1 1 21 11.5z'/><path d='M8 10h8M8 14h5'/></svg></span><span>Un conseil honnête, qui part de votre situation</span></h2>
   <p>Je commence toujours par la même question : qu'est-ce que vous faites de votre ordinateur ? La réponse change tout, et elle me conduit souvent à vous vendre moins que ce que vous imaginiez.</p>
   <h3>Si vous faites de la bureautique, internet, des mails et des photos</h3>
   <p>Un Core i5 de 2018 avec 16 Go de mémoire et un SSD est largement au-dessus de vos besoins, et le restera dans cinq ans. C'est exactement la machine que je vous proposerai, et il n'y a aucune raison de payer plus.</p>
@@ -163,8 +200,8 @@ a{color:var(--blue)}
   <p>Je ne travaille pas à la commission et je n'ai pas de stock à écouler. Mon intérêt, c'est que la machine vous dure et que vous rappeliez dans trois ans parce que tout s'est bien passé.</p>
 </div>
 
-<div class="section">
-  <h2>Ce qui est compris dans le prix</h2>
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M21 8 12 3 3 8v8l9 5 9-5z'/><path d='M3 8l9 5 9-5M12 13v8'/></svg></span><span>Ce qui est compris dans le prix</span></h2>
   <ul class="check">
     <li>La recherche de la machine qui correspond à votre usage et à votre budget</li>
     <li>La vérification du châssis, de la batterie et de la santé du disque, résultats à l'appui</li>
@@ -178,15 +215,15 @@ a{color:var(--blue)}
   <p>L'ancien ordinateur ne part pas à la poubelle : je peux l'effacer de façon sûre et vous indiquer où le déposer, ou le récupérer pour pièces s'il peut encore servir à quelqu'un.</p>
 </div>
 
-<div class="section">
-  <h2>Où je livre et installe</h2>
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z'/><circle cx='12' cy='10' r='3'/></svg></span><span>Où je livre et installe</span></h2>
   <p>Je me déplace depuis Plouguerneau, sans frais de route, dans tout le nord du Finistère. Chaque commune a sa page, avec les distances, les délais et les magasins les plus proches :</p>
   <div class="chips"><a href="ordinateur-reconditionne-plouguerneau.html">Plouguerneau</a> <a href="ordinateur-reconditionne-lannilis.html">Lannilis</a> <a href="ordinateur-reconditionne-landeda.html">Landéda</a> <a href="ordinateur-reconditionne-guisseny.html">Guissény</a> <a href="ordinateur-reconditionne-kerlouan.html">Kerlouan</a> <a href="ordinateur-reconditionne-saint-pabu.html">Saint-Pabu</a> <a href="ordinateur-reconditionne-plouvien.html">Plouvien</a> <a href="ordinateur-reconditionne-kernilis.html">Kernilis</a> <a href="ordinateur-reconditionne-le-drennec.html">Le Drennec</a> <a href="ordinateur-reconditionne-ploudaniel.html">Ploudaniel</a> <a href="ordinateur-reconditionne-plouguin.html">Plouguin</a> <a href="ordinateur-reconditionne-bourg-blanc.html">Bourg-Blanc</a> <a href="ordinateur-reconditionne-treglonou.html">Tréglonou</a> <a href="ordinateur-reconditionne-plabennec.html">Plabennec</a> <a href="ordinateur-reconditionne-lesneven.html">Lesneven</a> <a href="ordinateur-reconditionne-le-folgoet.html">Le Folgoët</a></div>
   <p style="margin-top:1rem">Votre commune n'est pas dans la liste ? Elle y est probablement quand même : voir <a href="zones-intervention.html">toutes les communes desservies</a>.</p>
 </div>
 
-<div class="section">
-  <h2>Questions fréquentes</h2>
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><circle cx='12' cy='12' r='9'/><path d='M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.6.2-.7.7-.7 1.2v.4'/><path d='M12 17h.01'/></svg></span><span>Questions fréquentes</span></h2>
   <details><summary>Combien coûte un ordinateur reconditionné ?</summary><p>Entre 350 et 450 € pour un portable professionnel Dell Latitude ou Lenovo ThinkPad, avec processeur Intel Core i5, 16 Go de mémoire et disque SSD. Le prix comprend la vérification de la machine, l'installation de Windows et de vos logiciels, le transfert de vos données et la livraison à domicile.</p></details>
 <details><summary>Est-ce moins cher qu'en magasin ?</summary><p>Oui, à qualité égale. Une boutique locale qui vend du reconditionné doit payer sa vitrine et son stock, ce qui se retrouve dans le prix. Je travaille sans magasin, donc le même type de machine vous revient moins cher. Et pour le même budget en grande surface, vous repartez avec du neuf d'entrée de gamme, en plastique, bien moins robuste.</p></details>
 <details><summary>Combien de temps dure un ordinateur reconditionné ?</summary><p>Comptez environ cinq ans d'usage courant. Ces machines ont été conçues pour tourner toute la journée en entreprise, avec un châssis renforcé et des pièces détachées disponibles longtemps. Un neuf d'entrée de gamme au même prix tient plutôt deux à quatre ans.</p></details>
@@ -197,8 +234,8 @@ a{color:var(--blue)}
 <details><summary>Livrez-vous à domicile ?</summary><p>Oui, dans toute ma zone d'intervention : les Abers, la Côte des Légendes, le secteur de Lesneven et la couronne de Brest. Je livre, j'installe et je reste le temps qu'il faut pour que vous soyez à l'aise avec la machine.</p></details>
 </div>
 
-<div class="cta">
-  <h2>Besoin d'un ordinateur sans vous tromper ?</h2>
+<div class="cta reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z'/></svg></span><span>Besoin d'un ordinateur sans vous tromper ?</span></h2>
   <p>Dites-moi ce que vous en faites, je vous dis ce qu'il vous faut vraiment. Le conseil et le devis sont gratuits, même si vous n'achetez rien.</p>
   <div class="btns" style="margin-top:1.2rem">
     <a class="btn btn-w" href="tel:+33641537334">06 41 53 73 34</a>
@@ -227,5 +264,10 @@ a{color:var(--blue)}
 <p>© 2026 Antoine Conter Informatique, dépannage informatique à domicile, Plouguerneau (29880) · <a href="tel:+33641537334">06 41 53 73 34</a> · <a href="mentions-legales.html">Mentions légales</a></p>
 </footer>
 
+<script>
+(function(){var e=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){e.forEach(function(x){x.classList.add('on')});return}
+var o=new IntersectionObserver(function(en){en.forEach(function(t){if(t.isIntersecting){t.target.classList.add('on');o.unobserve(t.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+e.forEach(function(x){o.observe(x)})})();
+</script>
 </body>
 </html>
