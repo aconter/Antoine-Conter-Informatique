@@ -132,6 +132,34 @@ details[open] summary::after{transform:rotate(135deg)}
 .mach ul b{font-weight:600;color:var(--dark);text-align:right}
 .mach .tag{margin-top:auto;background:var(--blue-light);color:var(--blue-dark);font-weight:700;font-size:.92rem;border-radius:9px;padding:.45rem .7rem;text-align:center}
 .mach .note{font-size:.78rem;color:var(--gray);margin-top:.45rem;text-align:center}
+
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.7rem;margin:1.2rem 0}
+.st{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:.9rem .7rem;text-align:center;transition:transform .3s,border-color .3s}
+.st:hover{transform:translateY(-3px);border-color:#cfe0ee}
+.st b{display:block;font-family:'Lora',serif;font-size:1.45rem;color:var(--blue);line-height:1.1}
+.st span{font-size:.8rem;color:var(--gray)}
+.st.me{background:var(--blue);border-color:var(--blue)}.st.me b,.st.me span{color:#fff}
+.grid8{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:.8rem;margin:1.1rem 0}
+.g8{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:#374151;background:#fff;border:1px solid #eef2f6;border-radius:10px;padding:.6rem .7rem;transition:transform .25s,border-color .25s}
+.g8:hover{transform:translateY(-2px);border-color:#cfe0ee}
+.g8 svg{flex:0 0 20px;width:20px;height:20px;color:var(--blue);fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.brands{display:flex;flex-wrap:wrap;gap:.5rem;margin:.9rem 0}
+.brand{border:1.5px solid var(--blue);color:var(--blue);border-radius:9px;padding:.35rem .8rem;font-weight:700;font-size:.85rem;letter-spacing:.01em}
+.big{display:flex;align-items:center;gap:1.1rem;background:linear-gradient(135deg,#0b4f7a,#005f99);color:#fff;border-radius:16px;padding:1.3rem 1.4rem;margin:1.1rem 0}
+.big .n{font-family:'Lora',serif;font-size:2.9rem;line-height:1;font-weight:700}
+.big p{color:rgba(255,255,255,.88);margin:0;font-size:.95rem}
+.advice{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.9rem;margin:1.1rem 0}
+.ad{background:#fff;border:1px solid #e5e7eb;border-left:3px solid var(--blue);border-radius:0 12px 12px 0;padding:.9rem 1rem;transition:transform .3s}
+.ad:hover{transform:translateX(3px)}
+.ad b{display:block;color:var(--blue);font-size:.93rem;margin-bottom:.25rem}
+.ad span{font-size:.88rem;color:#374151}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin:1.1rem 0;counter-reset:s}
+.sp{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:.9rem;position:relative;font-size:.89rem;color:#374151;transition:transform .3s,border-color .3s}
+.sp:hover{transform:translateY(-3px);border-color:#cfe0ee}
+.sp::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;font-size:.82rem;margin-bottom:.5rem}
+.sp b{display:block;color:var(--dark);margin-bottom:.15rem}
+.lead{font-size:1.02rem;color:#374151}
+.section{margin-bottom:2rem;padding-bottom:2rem}
 </style>
   <meta name="geo.region" content="FR-29">
   <meta name="geo.placename" content="Plouguerneau, Finistère">
@@ -162,74 +190,28 @@ details[open] summary::after{transform:rotate(135deg)}
 
 <main class="content">
 
-<div class="section reveal">
-  <p>Vous cherchez un ordinateur à Plouguerneau sans y laisser 800 €, et surtout sans vous retrouver dans deux ans avec une machine qui rame déjà. Je propose une autre voie : un portable professionnel reconditionné, choisi pour votre usage, livré et installé chez vous.</p>
-  <p>Je suis installé à Plouguerneau même, donc pas de déplacement ni de délai : je peux souvent passer le jour même.</p>
-</div>
+<div class="section reveal"><p class="lead">Un ordinateur qui tient cinq ans à Plouguerneau, pour 350 à 450 €, livré et installé chez vous.</p><p>Je suis basé à Plouguerneau. Je suis sur place, donc souvent disponible le jour même.</p><div class="strip"><div class="st me reveal"><b>Sur place</b><span>depuis Plouguerneau</span></div><div class="st reveal d1"><b>4 km</b><span>Lannilis</span></div><div class="st reveal d2"><b>14 km</b><span>Ploudalmézeau</span></div><div class="st reveal d3"><b>24 km</b><span>Brest</span></div></div><p style="font-size:.88rem;color:var(--gray)">Le magasin le plus proche est à 4 km. Moi, je viens à vous.</p></div>
 
-<div class="section reveal">
-  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><circle cx='9' cy='20' r='1.4'/><circle cx='18' cy='20' r='1.4'/><path d='M2 3h3l2.6 12h11L21 7H6'/></svg></span><span>Acheter un ordinateur quand on habite Plouguerneau</span></h2>
-  <p>Aujourd'hui, pour acheter un ordinateur quand on habite Plouguerneau, il faut prendre la voiture : Lannilis est à 4 km, Ploudalmézeau à 14 km, et les grandes surfaces de Brest à 24 km. Comptez l'aller-retour, le parking et l'attente en caisse, puis le retour à la maison avec un carton et un ordinateur à configurer soi-même.</p><p>Je fais le chemin inverse : vous me dites ce dont vous avez besoin, je prépare la machine, et je viens l'installer à Plouguerneau. Vous ne bougez pas, et elle fonctionne en repartant.</p>
-</div>
-
-<div class="section reveal">
-  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M3 5h18v11H3z'/><path d='M2 19h20'/></svg></span><span>Ce que vous avez pour 400 € à Plouguerneau</span></h2>
-  <figure class="vid reveal">
+<div class="section reveal"><h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M3 5h18v11H3z'/><path d='M2 19h20'/></svg></span><span>Trois machines, 350 à 450 €</span></h2><div class="brands"><span class="brand">Dell Latitude</span><span class="brand">Lenovo ThinkPad</span><span class="brand">Core i5</span><span class="brand">SSD</span><span class="brand">Windows 11 Pro</span></div><div class="machines">
+    <div class="mach reveal d1"><div class="pic"><svg viewBox="0 0 84 64"><rect x='8' y='10' width='68' height='42' rx='3'/><path d='M2 56h80l-4 6H6z'/><path d='M14 16h56v30H14z'/></svg></div><h3>Dell Latitude 5410</h3><div class="gen">Intel Core i5 de 10e génération</div><ul><li><span>Processeur</span><b>Core i5-10310U</b></li><li><span>Mémoire</span><b>16 Go</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le bon rapport qualité-prix</div><div class="note">Le plus polyvalent : 16 Go de mémoire, parfait pour garder beaucoup d'onglets et de photos ouverts.</div></div>
+    <div class="mach reveal d2"><div class="pic"><svg viewBox="0 0 84 64"><rect x='6' y='9' width='72' height='44' rx='3'/><path d='M1 57h82l-4 6H5z'/><path d='M12 15h60v32H12z'/><path d='M34 60h16'/></svg></div><h3>Dell Latitude 5400</h3><div class="gen">Intel Core i5 de 8e génération</div><ul><li><span>Processeur</span><b>Core i5-8365U</b></li><li><span>Mémoire</span><b>16 Go</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le plus accessible</div><div class="note">Une génération de moins, mais 16 Go de mémoire et un SSD : largement de quoi tenir cinq ans en usage courant.</div></div>
+    <div class="mach reveal d3"><div class="pic"><svg viewBox="0 0 84 64"><rect x='12' y='12' width='60' height='38' rx='3'/><path d='M4 54h76l-3 6H7z'/><path d='M18 18h48v26H18z'/><circle cx='42' cy='52' r='1.3'/></svg></div><h3>Dell Latitude 5420</h3><div class="gen">Intel Core i5 de 11e génération</div><ul><li><span>Processeur</span><b>Core i5-1145G7</b></li><li><span>Mémoire</span><b>8 Go, extensible à 16</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le plus récent</div><div class="note">La génération la plus récente de la sélection, plus économe en batterie. Mémoire extensible si besoin.</div></div>
+  </div><figure class="vid reveal">
     <video autoplay muted loop playsinline preload="metadata" width="562" height="1000" poster="thinkpad-reconditionne-poster.webp" aria-label="Un Lenovo ThinkPad T490 reconditionné, ouvert sur l'écran de connexion, prêt à être livré">
       <source src="thinkpad-reconditionne.mp4" type="video/mp4">
       <source src="thinkpad-reconditionne.webm" type="video/webm">
     </video>
     <figcaption>Un Lenovo ThinkPad T490 reconditionné, vérifié et configuré avant la livraison.</figcaption>
   </figure>
-  
-  <p>Un Dell Latitude ou un Lenovo ThinkPad avec processeur Intel Core i5, 16 Go de mémoire et disque SSD : les gammes que les entreprises achètent, châssis renforcé et pièces détachées encore disponibles des années après.</p>
-  <p><a href="ordinateur-reconditionne.html"><strong>Comparatif détaillé : grande surface, boutique et reconditionné, prix et marques</strong></a></p>
-</div>
+  <p style="font-size:.88rem;color:var(--gray)">Le stock bouge : si un modèle part, j'en trouve un équivalent.</p></div>
 
-<div class="section reveal">
-  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M3 5h18v11H3z'/><path d='M2 19h20'/></svg></span><span>Trois machines que je propose en ce moment</span></h2>
-  <p>Voici trois configurations représentatives de ce que je livre à Plouguerneau, toutes entre 350 et 450 € installation comprise. Le stock du reconditionné bouge en permanence : si un modèle n'est plus disponible, j'en trouve un équivalent.</p>
-  <div class="machines">
-    <div class="mach reveal d1"><div class="pic"><svg viewBox="0 0 84 64"><rect x='8' y='10' width='68' height='42' rx='3'/><path d='M2 56h80l-4 6H6z'/><path d='M14 16h56v30H14z'/></svg></div><h3>Dell Latitude 5410</h3><div class="gen">Intel Core i5 de 10e génération</div><ul><li><span>Processeur</span><b>Core i5-10310U</b></li><li><span>Mémoire</span><b>16 Go</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le bon rapport qualité-prix</div><div class="note">Le plus polyvalent : 16 Go de mémoire, parfait pour garder beaucoup d'onglets et de photos ouverts.</div></div>
-    <div class="mach reveal d2"><div class="pic"><svg viewBox="0 0 84 64"><rect x='6' y='9' width='72' height='44' rx='3'/><path d='M1 57h82l-4 6H5z'/><path d='M12 15h60v32H12z'/><path d='M34 60h16'/></svg></div><h3>Dell Latitude 5400</h3><div class="gen">Intel Core i5 de 8e génération</div><ul><li><span>Processeur</span><b>Core i5-8365U</b></li><li><span>Mémoire</span><b>16 Go</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le plus accessible</div><div class="note">Une génération de moins, mais 16 Go de mémoire et un SSD : largement de quoi tenir cinq ans en usage courant.</div></div>
-    <div class="mach reveal d3"><div class="pic"><svg viewBox="0 0 84 64"><rect x='12' y='12' width='60' height='38' rx='3'/><path d='M4 54h76l-3 6H7z'/><path d='M18 18h48v26H18z'/><circle cx='42' cy='52' r='1.3'/></svg></div><h3>Dell Latitude 5420</h3><div class="gen">Intel Core i5 de 11e génération</div><ul><li><span>Processeur</span><b>Core i5-1145G7</b></li><li><span>Mémoire</span><b>8 Go, extensible à 16</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le plus récent</div><div class="note">La génération la plus récente de la sélection, plus économe en batterie. Mémoire extensible si besoin.</div></div>
-  </div>
-  <div class="facts">Toutes sont des Dell Latitude, la gamme professionnelle de Dell : châssis renforcé, clavier résistant aux liquides, batterie et disque remplaçables, pièces détachées encore disponibles. Je vérifie l'état du châssis, la santé de la batterie et celle du disque avant de vous les remettre, et je vous montre les résultats.</div>
-</div>
+<div class="section reveal"><h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M4 4h16v16H4z'/><path d='M8 9h8M8 13h8M8 17h5'/></svg></span><span>Livré prêt à l'emploi</span></h2><div class="grid8"><div class="g8 reveal"><svg viewBox='0 0 24 24'><rect x='3' y='4' width='18' height='14' rx='2'/><path d='M8 21h8'/></svg><span>Windows 11 Pro à jour</span></div><div class="g8 reveal"><svg viewBox='0 0 24 24'><path d='M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z'/><path d='M14 3v5h5'/></svg><span>Suite bureautique</span></div><div class="g8 reveal"><svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18'/></svg><span>Favoris et mots de passe</span></div><div class="g8 reveal"><svg viewBox='0 0 24 24'><rect x='3' y='5' width='18' height='14' rx='2'/><path d='m3 7 9 6 9-6'/></svg><span>Messagerie configurée</span></div><div class="g8 reveal"><svg viewBox='0 0 24 24'><path d='M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z'/><path d='m9 12 2 2 4-4'/></svg><span>Antivirus réglé</span></div><div class="g8 reveal"><svg viewBox='0 0 24 24'><path d='M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z'/><path d='M7 3v6h8M7 21v-7h10v7'/></svg><span>Sauvegarde automatique</span></div><div class="g8 reveal"><svg viewBox='0 0 24 24'><path d='M6 9V3h12v6'/><rect x='3' y='9' width='18' height='8' rx='2'/><path d='M6 17h12v4H6z'/></svg><span>Imprimante et scanner</span></div><div class="g8 reveal"><svg viewBox='0 0 24 24'><path d='M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a6 6 0 0 1 7 0'/><path d='M12 19h.01'/></svg><span>Wi-Fi opérationnel</span></div></div><p style="font-size:.9rem">Bureautique : <strong>LibreOffice</strong> par défaut, gratuit et compatible Word et Excel. Ou votre <strong>Microsoft 365</strong> si vous l'avez. Jamais de logiciel sans licence.</p></div>
 
-<div class="section reveal">
-  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M4 4h16v16H4z'/><path d='M8 9h8M8 13h8M8 17h5'/></svg></span><span>Les logiciels installés avec la machine</span></h2>
-  <p>Un ordinateur livré nu ne sert à rien. Je vous le remets avec tout ce qu'il faut pour travailler dès le premier jour, installé, mis à jour et configuré avec vos comptes.</p>
-  <ul class="check">
-    <li>Windows 11 Pro à jour, sans logiciel publicitaire</li>
-    <li>Une suite bureautique : traitement de texte, tableur, présentation</li>
-    <li>Navigateur avec vos favoris et vos mots de passe repris</li>
-    <li>Votre messagerie configurée, anciens messages compris</li>
-    <li>Lecteur PDF, lecteur vidéo, outil de compression</li>
-    <li>Antivirus réglé pour protéger sans ralentir</li>
-    <li>Sauvegarde automatique mise en place et testée</li>
-    <li>Imprimante, scanner et Wi-Fi opérationnels</li>
-  </ul>
-  <p>Pour la bureautique, deux possibilités. <strong>LibreOffice</strong>, gratuit, ouvre et enregistre les fichiers Word, Excel et PowerPoint : il convient à la grande majorité des usages et c'est ce que j'installe par défaut. Si vous avez besoin du vrai <strong>Microsoft Office</strong>, j'installe et je configure votre abonnement Microsoft 365 ou votre licence, et je reprends vos documents et votre boîte mail. Je n'installe jamais de logiciel sans licence valide.</p>
-</div>
+<div class="section reveal"><h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.2A8.4 8.4 0 1 1 21 11.5z'/><path d='M8 10h8M8 14h5'/></svg></span><span>Je conseille avant de vendre</span></h2><div class="advice"><div class="ad reveal"><b>Internet, mails, photos</b><span>Un Core i5 avec 16 Go suffit largement, et pour cinq ans. Inutile de payer plus.</span></div><div class="ad reveal"><b>Montage, 3D, jeux</b><span>Ce n'est pas le terrain de ces machines. Je vous le dis et je vous oriente ailleurs.</span></div><div class="ad reveal"><b>Votre PC actuel tient encore</b><span>Souvent un SSD à 100 ou 150 € suffit. Je commence toujours par vérifier ça.</span></div></div><p style="font-size:.9rem">Pas de commission, pas de stock à écouler. Si le mieux est de ne rien acheter, je le dis.</p></div>
 
-<div class="section reveal">
-  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4.2A8.4 8.4 0 1 1 21 11.5z'/><path d='M8 10h8M8 14h5'/></svg></span><span>Un conseil honnête, pas une vente</span></h2>
-  <p>Je commence toujours par la même question : qu'est-ce que vous faites de votre ordinateur ? La réponse me conduit très souvent à vous vendre moins que ce que vous imaginiez.</p>
-  <h3>Bureautique, internet, mails et photos</h3>
-  <p>Un Core i5 avec 16 Go de mémoire et un SSD est déjà au-dessus de ce besoin, et le restera dans cinq ans. C'est la machine que je vous proposerai, sans raison de payer plus.</p>
-  <h3>Si vous jouez ou travaillez l'image</h3>
-  <p>Là, je vous déconseille le reconditionné professionnel : pas de carte graphique dédiée. Mieux vaut du neuf choisi correctement, et je vous dirai lequel sans rien vous vendre.</p>
-  <h3>Si votre ordinateur actuel peut encore tenir</h3>
-  <p>C'est le cas le plus fréquent, et je le dis avant toute chose. Un SSD et un peu de mémoire sur une machine de cinq ou six ans, c'est souvent 100 à 150 € et un démarrage en quelques secondes au lieu de plusieurs minutes.</p>
-  <p>Je ne travaille pas à la commission et je n'ai pas de stock à écouler. Mon intérêt, c'est que la machine dure et que vous rappeliez dans trois ans parce que tout s'est bien passé.</p>
-</div>
+<div class="section reveal"><div class="big"><div class="n">78 %</div><p>de l'empreinte carbone du numérique vient de la <strong>fabrication</strong> des appareils, contre 21 % de leur usage (ADEME et Arcep). Reprendre une machine déjà faite évite presque tout l'impact.</p></div></div>
 
-<div class="section reveal">
-  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M4 20c0-9 7-15 16-15 0 9-6 15-16 15z'/><path d='M4 20c3-6 7-9 11-10.5'/></svg></span><span>Le geste écologique</span></h2>
-  <p>L'essentiel du mal est fait le jour où l'ordinateur sort de l'usine : la fabrication représente 78 % de l'empreinte carbone du numérique en France, l'usage 21 % (ADEME et Arcep). Votre ancien ordinateur ne part pas à la poubelle : je l'efface de façon sûre et je vous indique où le déposer, ou je le reprends pour pièces.</p>
-  <p>Le prix comprend la recherche de la machine, sa vérification, l'installation de Windows et de vos logiciels, le transfert de vos données, la configuration des mails et de l'imprimante, la livraison à Plouguerneau et une garantie. <a href="ordinateur-reconditionne.html">Le détail complet est ici</a>.</p>
-</div>
+<div class="section reveal"><h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M21 8 12 3 3 8v8l9 5 9-5z'/><path d='M3 8l9 5 9-5M12 13v8'/></svg></span><span>Comment ça se passe</span></h2><div class="steps"><div class="sp reveal"><b>Vous m'appelez</b>Vous me dites ce que vous faites de votre ordinateur.</div><div class="sp reveal"><b>Je cherche</b>Je trouve la machine qui correspond, ni trop ni trop peu.</div><div class="sp reveal"><b>Je prépare</b>Vérification, Windows, logiciels, transfert de vos données.</div><div class="sp reveal"><b>Je livre</b>Installation chez vous, et je reste le temps qu'il faut.</div></div></div>
 
 <div class="section reveal">
   <h2><span class="ico-h"><svg viewBox="0 0 24 24"><circle cx='12' cy='12' r='9'/><path d='M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.6.2-.7.7-.7 1.2v.4'/><path d='M12 17h.01'/></svg></span><span>Questions fréquentes à Plouguerneau</span></h2>
