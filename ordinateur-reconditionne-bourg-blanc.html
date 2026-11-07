@@ -118,6 +118,20 @@ details[open] summary::after{transform:rotate(135deg)}
 .f2{width:86px;height:86px;bottom:10%;right:6%;animation:fl 14s ease-in-out infinite reverse}
 @keyframes fl{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(6deg)}}
 @media(max-width:700px){.float{display:none}h2{font-size:1.25rem}}
+
+.machines{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1rem;margin:1.2rem 0}
+.mach{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:1.1rem;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .35s}
+.mach:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.09);border-color:#cfe0ee}
+.mach .pic{height:74px;margin-bottom:.6rem;color:var(--blue);display:flex;align-items:center;justify-content:center}
+.mach .pic svg{width:92px;height:62px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.mach h3{margin:0 0 .15rem;font-size:1rem;color:var(--blue)}
+.mach .gen{font-size:.8rem;color:var(--gray);margin-bottom:.7rem}
+.mach ul{list-style:none;margin:0 0 .9rem;padding:0;font-size:.89rem;color:#374151}
+.mach ul li{padding:.22rem 0;border-bottom:1px dashed #eef2f6;display:flex;justify-content:space-between;gap:.6rem}
+.mach ul li:last-child{border-bottom:none}
+.mach ul b{font-weight:600;color:var(--dark);text-align:right}
+.mach .tag{margin-top:auto;background:var(--blue-light);color:var(--blue-dark);font-weight:700;font-size:.92rem;border-radius:9px;padding:.45rem .7rem;text-align:center}
+.mach .note{font-size:.78rem;color:var(--gray);margin-top:.45rem;text-align:center}
 </style>
   <meta name="geo.region" content="FR-29">
   <meta name="geo.placename" content="Bourg-Blanc, Finistère">
@@ -170,6 +184,33 @@ details[open] summary::after{transform:rotate(135deg)}
   
   <p>Un Dell Latitude ou un Lenovo ThinkPad avec processeur Intel Core i5, 16 Go de mémoire et disque SSD : les gammes que les entreprises achètent, châssis renforcé et pièces détachées encore disponibles des années après.</p>
   <p><a href="ordinateur-reconditionne.html"><strong>Comparatif détaillé : grande surface, boutique et reconditionné, prix et marques</strong></a></p>
+</div>
+
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M3 5h18v11H3z'/><path d='M2 19h20'/></svg></span><span>Trois machines que je propose en ce moment</span></h2>
+  <p>Voici trois configurations représentatives de ce que je livre à Bourg-Blanc, toutes entre 350 et 450 € installation comprise. Le stock du reconditionné bouge en permanence : si un modèle n'est plus disponible, j'en trouve un équivalent.</p>
+  <div class="machines">
+    <div class="mach reveal d1"><div class="pic"><svg viewBox="0 0 84 64"><rect x='8' y='10' width='68' height='42' rx='3'/><path d='M2 56h80l-4 6H6z'/><path d='M14 16h56v30H14z'/></svg></div><h3>Dell Latitude 5410</h3><div class="gen">Intel Core i5 de 10e génération</div><ul><li><span>Processeur</span><b>Core i5-10310U</b></li><li><span>Mémoire</span><b>16 Go</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le bon rapport qualité-prix</div><div class="note">Le plus polyvalent : 16 Go de mémoire, parfait pour garder beaucoup d'onglets et de photos ouverts.</div></div>
+    <div class="mach reveal d2"><div class="pic"><svg viewBox="0 0 84 64"><rect x='6' y='9' width='72' height='44' rx='3'/><path d='M1 57h82l-4 6H5z'/><path d='M12 15h60v32H12z'/><path d='M34 60h16'/></svg></div><h3>Dell Latitude 5400</h3><div class="gen">Intel Core i5 de 8e génération</div><ul><li><span>Processeur</span><b>Core i5-8365U</b></li><li><span>Mémoire</span><b>16 Go</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le plus accessible</div><div class="note">Une génération de moins, mais 16 Go de mémoire et un SSD : largement de quoi tenir cinq ans en usage courant.</div></div>
+    <div class="mach reveal d3"><div class="pic"><svg viewBox="0 0 84 64"><rect x='12' y='12' width='60' height='38' rx='3'/><path d='M4 54h76l-3 6H7z'/><path d='M18 18h48v26H18z'/><circle cx='42' cy='52' r='1.3'/></svg></div><h3>Dell Latitude 5420</h3><div class="gen">Intel Core i5 de 11e génération</div><ul><li><span>Processeur</span><b>Core i5-1145G7</b></li><li><span>Mémoire</span><b>8 Go, extensible à 16</b></li><li><span>Disque</span><b>SSD 256 Go</b></li><li><span>Écran</span><b>14 pouces</b></li><li><span>Système</span><b>Windows 11 Pro</b></li></ul><div class="tag">Le plus récent</div><div class="note">La génération la plus récente de la sélection, plus économe en batterie. Mémoire extensible si besoin.</div></div>
+  </div>
+  <div class="facts">Toutes sont des Dell Latitude, la gamme professionnelle de Dell : châssis renforcé, clavier résistant aux liquides, batterie et disque remplaçables, pièces détachées encore disponibles. Je vérifie l'état du châssis, la santé de la batterie et celle du disque avant de vous les remettre, et je vous montre les résultats.</div>
+</div>
+
+<div class="section reveal">
+  <h2><span class="ico-h"><svg viewBox="0 0 24 24"><path d='M4 4h16v16H4z'/><path d='M8 9h8M8 13h8M8 17h5'/></svg></span><span>Les logiciels installés avec la machine</span></h2>
+  <p>Un ordinateur livré nu ne sert à rien. Je vous le remets avec tout ce qu'il faut pour travailler dès le premier jour, installé, mis à jour et configuré avec vos comptes.</p>
+  <ul class="check">
+    <li>Windows 11 Pro à jour, sans logiciel publicitaire</li>
+    <li>Une suite bureautique : traitement de texte, tableur, présentation</li>
+    <li>Navigateur avec vos favoris et vos mots de passe repris</li>
+    <li>Votre messagerie configurée, anciens messages compris</li>
+    <li>Lecteur PDF, lecteur vidéo, outil de compression</li>
+    <li>Antivirus réglé pour protéger sans ralentir</li>
+    <li>Sauvegarde automatique mise en place et testée</li>
+    <li>Imprimante, scanner et Wi-Fi opérationnels</li>
+  </ul>
+  <p>Pour la bureautique, deux possibilités. <strong>LibreOffice</strong>, gratuit, ouvre et enregistre les fichiers Word, Excel et PowerPoint : il convient à la grande majorité des usages et c'est ce que j'installe par défaut. Si vous avez besoin du vrai <strong>Microsoft Office</strong>, j'installe et je configure votre abonnement Microsoft 365 ou votre licence, et je reprends vos documents et votre boîte mail. Je n'installe jamais de logiciel sans licence valide.</p>
 </div>
 
 <div class="section reveal">
