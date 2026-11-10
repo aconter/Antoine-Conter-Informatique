@@ -1,0 +1,37 @@
+# Antoine Conter Informatique
+
+> Informaticien à domicile en Finistère nord (Bretagne), basé à Plouguerneau (29880). Dépannage informatique, installation d'ordinateurs, formation, cybersécurité pour particuliers, associations et petites entreprises, ordinateurs reconditionnés, création de sites internet et cours d'informatique (NSI, BTS SIO, Python, Linux).
+
+## L'essentiel
+
+- Micro-entreprise d'Antoine Conter, étudiant ingénieur en cybersécurité (ISEN Brest), installé à Plouguerneau.
+- Intervention à domicile dans 52 communes du nord Finistère : Pays des Abers, Lesneven Côte des Légendes, Pays d'Iroise, Brest Métropole, Pays de Landerneau-Daoulas.
+- Tarif : 35 € de l'heure, déplacement inclus, pour le dépannage et la formation. Installation d'un ordinateur à partir de 50 €. Devis gratuit.
+- Ordinateurs portables professionnels reconditionnés (Dell Latitude, Lenovo ThinkPad) de 350 à 450 €, installés et livrés.
+- Disponibilité : 7 jours sur 7 sur rendez-vous, de 8 h à 20 h en semaine et de 9 h à 18 h le week-end.
+- Contact : 06 41 53 73 34 (appel, SMS, WhatsApp), antoine.conter@outlook.com.
+
+## Pages principales
+
+- [Accueil](https://informatique-plouguerneau-antoine-conter.fr/): services, tarifs, présentation, contact
+- [Zones d'intervention](https://informatique-plouguerneau-antoine-conter.fr/zones-intervention.html): communes desservies, secteur par secteur
+- [Cybersécurité](https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html): compte piraté, sensibilisation au phishing, sécurisation des comptes
+- [Cybersécurité TPE et associations](https://informatique-plouguerneau-antoine-conter.fr/cybersecurite-tpe.html): accompagnement des petites structures
+- [Ordinateur reconditionné](https://informatique-plouguerneau-antoine-conter.fr/ordinateur-reconditionne.html): offre, prix, garantie, livraison
+- [Création de sites internet](https://informatique-plouguerneau-antoine-conter.fr/projets.html): sites vitrines et réalisations
+- [Cours NSI, Python, Linux](https://informatique-plouguerneau-antoine-conter.fr/cours-nsi-python-linux.html): cours particuliers d'informatique
+- [Conseils](https://informatique-plouguerneau-antoine-conter.fr/conseils.html): articles pratiques
+
+## Conseils pratiques
+
+- [Bien choisir son ordinateur](https://informatique-plouguerneau-antoine-conter.fr/conseil-acheter-ordinateur.html)
+- [Ordinateur lent : 6 gestes avant de le changer](https://informatique-plouguerneau-antoine-conter.fr/conseil-ordinateur-lent.html)
+- [Fin de Windows 10 : que faire ?](https://informatique-plouguerneau-antoine-conter.fr/conseil-fin-windows-10.html)
+- [Arnaques en ligne : les bons réflexes](https://informatique-plouguerneau-antoine-conter.fr/conseil-arnaques-en-ligne.html)
+- [Mots de passe et double authentification](https://informatique-plouguerneau-antoine-conter.fr/conseil-mots-de-passe.html)
+- [Sauvegarder ses photos et documents](https://informatique-plouguerneau-antoine-conter.fr/conseil-sauvegarder-photos.html)
+- [Améliorer son Wi-Fi](https://informatique-plouguerneau-antoine-conter.fr/conseil-wifi-box.html)
+
+## Pages par commune
+
+Chaque commune desservie a une page « Dépannage informatique à [commune] », par exemple [Plouguerneau](https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plouguerneau.html), [Lannilis](https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-lannilis.html), [Lesneven](https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-lesneven.html), [Plabennec](https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-plabennec.html), [Brest](https://informatique-plouguerneau-antoine-conter.fr/depannage-informatique-brest.html). La liste complète est dans le [sitemap](https://informatique-plouguerneau-antoine-conter.fr/sitemap.xml).
