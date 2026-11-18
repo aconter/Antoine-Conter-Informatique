@@ -9,6 +9,8 @@
 - Tarif : 35 € de l'heure, déplacement inclus, pour le dépannage et la formation. Installation d'un ordinateur à partir de 50 €. Devis gratuit.
 - Ordinateurs portables professionnels reconditionnés (Dell Latitude, Lenovo ThinkPad) de 350 à 450 €, installés et livrés.
 - Disponibilité : 7 jours sur 7 sur rendez-vous, de 8 h à 20 h en semaine et de 9 h à 18 h le week-end.
+- Visibilité internet : audit de visibilité 50 €, abonnement 40 €/mois, site internet 200 €.
+- Audit OSINT : 40 € pour un particulier, sur devis pour un professionnel selon la taille de la structure, à distance.
 - Contact : 06 41 53 73 34 (appel, SMS, WhatsApp), antoine.conter@outlook.com.
 
 ## Pages principales
@@ -16,6 +18,7 @@
 - [Accueil](https://informatique-plouguerneau-antoine-conter.fr/): services, tarifs, présentation, contact
 - [Zones d'intervention](https://informatique-plouguerneau-antoine-conter.fr/zones-intervention.html): communes desservies, secteur par secteur
 - [Cybersécurité](https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html): compte piraté, sensibilisation au phishing, sécurisation des comptes
+- [Audit OSINT et protection des données](https://informatique-plouguerneau-antoine-conter.fr/audit-osint-protection-donnees.html): ce qu'on trouve sur vous en ligne, à distance partout en Bretagne, particulier 40 €, professionnel sur devis
 - [Cybersécurité TPE et associations](https://informatique-plouguerneau-antoine-conter.fr/cybersecurite-tpe.html): accompagnement des petites structures
 - [Ordinateur reconditionné](https://informatique-plouguerneau-antoine-conter.fr/ordinateur-reconditionne.html): offre, prix, garantie, livraison
 - [Visibilité internet et SEO](https://informatique-plouguerneau-antoine-conter.fr/visibilite-internet.html): fiche Google, annuaires, audit de visibilité, accompagnement mensuel
