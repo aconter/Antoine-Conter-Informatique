@@ -218,7 +218,15 @@ ul.check.vz-one{grid-template-columns:1fr;margin:.3rem 0 1.2rem}
 @media(max-width:800px){.vz-ba-grid{grid-template-columns:1fr}}
 
 .vz-hero .breadcrumb a{color:#fff;text-decoration:underline;text-underline-offset:2px}
-.vz-listings{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.2rem;align-items:start;margin:1.2rem 0}
+.vz-gmap{position:relative;border-radius:12px;overflow:hidden;border:1px solid #e4e8ec;aspect-ratio:16/10;background:#eef4f9}
+.vz-listing .vz-gmap img{display:block;width:100%;height:100%;object-fit:contain;border:0;border-radius:0;padding:1rem 1rem 5.5rem}
+.vz-gmap iframe{display:block;width:100%;height:100%;border:0}
+.vz-gmap-ph{position:absolute;inset:auto 0 0 0;display:flex;flex-direction:column;align-items:center;gap:.35rem;padding:1.6rem .8rem .8rem;background:linear-gradient(to top,rgba(255,255,255,.97) 55%,rgba(255,255,255,0));text-align:center}
+.vz-gmap-btn{font:600 .92rem inherit;font-family:inherit;background:var(--blue);color:#fff;border:0;border-radius:999px;padding:.6rem 1.1rem;cursor:pointer}
+.vz-gmap-btn:hover{background:var(--blue-hover,#0270b0)}
+.vz-gmap-btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.vz-gmap-ph small{font-size:.76rem;color:#374151}
+.vz-listings{display:grid;grid-template-columns:1fr;gap:1.2rem;margin:1.2rem 0}
 .vz-listing{margin:0;background:#fff;border:1px solid #dde5ec;border-radius:18px;padding:1rem;box-shadow:0 10px 30px rgba(6,42,74,.08)}
 .vz-listing img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid #e4e8ec}
 .vz-listing figcaption{font-size:.92rem;color:#374151;margin-top:.8rem;line-height:1.55}
@@ -227,7 +235,7 @@ ul.check.vz-one{grid-template-columns:1fr;margin:.3rem 0 1.2rem}
 .vz-zone{margin-top:1.4rem}
 .vz-zone h3{margin:0 0 .3rem;font-size:1.1rem}
 .vz-zone p{margin:.2rem 0 .4rem}
-@media(max-width:800px){.vz-listings{grid-template-columns:1fr}}
+@media(max-width:600px){.vz-gmap{aspect-ratio:4/5}}
 </style>
 <style id="menu-std">
 .site-header .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
@@ -383,11 +391,17 @@ html .vz-hero .breadcrumb a{color:#0b2e4a}
     <p>Avant de le proposer, je l'ai fait pour ma propre entreprise, basée à Plouguerneau. Les deux fiches sont publiques : vous pouvez les ouvrir et vérifier.</p>
     <div class="vz-listings">
       <figure class="vz-listing">
-        <a href="https://maps.google.com/?cid=9547913039402363284" target="_blank" rel="noopener"><img src="preuve-fiche-google.webp" width="544" height="380" alt="Fiche Google d'Antoine Conter Informatique : note de 5,0 sur 25 avis, catégorie Assistance et services informatiques" loading="lazy" decoding="async"></a>
+        <div class="vz-gmap" id="vz-gmap" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-4.50!3d48.60!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae66a53b28499ddf%3A0x8481005283e5e994!2sAntoine%20Conter%20Informatique!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr">
+          <img src="preuve-fiche-google.webp" width="544" height="380" alt="Fiche Google d'Antoine Conter Informatique : note de 5,0 sur 25 avis, catégorie Assistance et services informatiques" loading="lazy" decoding="async">
+          <div class="vz-gmap-ph">
+            <button type="button" class="vz-gmap-btn" id="vz-gmap-btn">Afficher ma fiche Google en direct</button>
+            <small>La fiche se charge depuis Google Maps, qui peut déposer des cookies.</small>
+          </div>
+        </div>
         <figcaption><b>Fiche Google</b>Note de 5,0 sur 25 avis, catégorie « Assistance et services informatiques », horaires et site internet renseignés. <a href="https://maps.google.com/?cid=9547913039402363284" target="_blank" rel="noopener">Voir ma fiche Google</a></figcaption>
       </figure>
       <figure class="vz-listing">
-        <a href="https://www.pagesjaunes.fr/pros/64303798" target="_blank" rel="noopener"><img src="preuve-fiche-pagesjaunes.webp" width="880" height="214" alt="Fiche PagesJaunes vérifiée d'Antoine Conter Informatique : catégories Formation informatique et Conseils, services, maintenance en informatique" loading="lazy" decoding="async"></a>
+        <a href="https://www.pagesjaunes.fr/pros/64303798" target="_blank" rel="noopener"><img src="preuve-fiche-pagesjaunes.webp" width="1231" height="783" alt="Fiche PagesJaunes vérifiée d'Antoine Conter Informatique à Plouguerneau : catégories Formation informatique et Conseils, services, maintenance en informatique, site internet, photos" loading="lazy" decoding="async"></a>
         <figcaption><b>Fiche PagesJaunes vérifiée</b>Catégories « Formation informatique » et « Conseils, services, maintenance en informatique », avec un lien vers le site. <a href="https://www.pagesjaunes.fr/pros/64303798" target="_blank" rel="noopener">Voir ma fiche PagesJaunes</a></figcaption>
       </figure>
     </div>
@@ -709,5 +723,6 @@ html .vz-hero .breadcrumb a{color:#0b2e4a}
 <p>© 2026 Antoine Conter Informatique, dépannage informatique à domicile, Plouguerneau (29880) · <a href="tel:+33641537334">06 41 53 73 34</a> · <a href="mentions-legales.html">Mentions légales</a></p>
 </footer>
 
+<script>(function(){var m=document.getElementById('vz-gmap'),b=document.getElementById('vz-gmap-btn');if(!m||!b)return;b.addEventListener('click',function(){var f=document.createElement('iframe');f.src=m.dataset.src;f.title="Fiche Google d'Antoine Conter Informatique";f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.allowFullscreen=true;m.innerHTML='';m.classList.add('live');m.appendChild(f);f.focus();});})();</script>
 </body>
 </html>
