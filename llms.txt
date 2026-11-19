@@ -34,6 +34,7 @@
 - [Mots de passe et double authentification](https://informatique-plouguerneau-antoine-conter.fr/conseil-mots-de-passe.html)
 - [Sauvegarder ses photos et documents](https://informatique-plouguerneau-antoine-conter.fr/conseil-sauvegarder-photos.html)
 - [Améliorer son Wi-Fi](https://informatique-plouguerneau-antoine-conter.fr/conseil-wifi-box.html)
+- [Apparaître sur Google Maps quand on est artisan](https://informatique-plouguerneau-antoine-conter.fr/conseil-google-maps-artisan.html)
 
 ## Pages par commune
 
