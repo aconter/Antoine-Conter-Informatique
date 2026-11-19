@@ -821,39 +821,118 @@ p{color:#374151}
 @media(max-width:1020px){.cats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.cats{grid-template-columns:1fr;gap:.6rem}.cats a{padding:.85rem 1rem}.facts-mini{flex-direction:column;gap:.35rem}}
 </style>
+<style id="menu-std">
+.site-header .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-header .site-nav{display:flex;align-items:center;gap:.15rem}
+.site-header .site-nav a{padding:.45rem .7rem;border-radius:8px;font-size:.86rem;font-weight:500;color:#4b5563;text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
+.site-header .site-nav a:hover,.site-header .site-nav a[aria-current="page"]{color:var(--blue,#005f99);background:var(--blue-light,#e8f4fd)}
+.site-header .site-nav a.nav-cta{background:var(--blue,#005f99);color:#fff;font-weight:600;margin-left:.4rem}
+.site-header .site-nav a.nav-cta:hover{filter:brightness(1.1)}
+.site-header .m-tel{display:none;background:var(--blue,#005f99);color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:.5rem .85rem;border-radius:999px;white-space:nowrap;margin-left:auto}
+.site-header .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.site-header .hamburger span{width:22px;height:2px;background:#111827;display:block;transition:all .3s;border-radius:2px}
+.site-header .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.site-header .hamburger.open span:nth-child(2){opacity:0}
+.site-header .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.site-header .hamburger:focus-visible,.site-header .site-nav a:focus-visible{outline:3px solid var(--blue,#005f99);outline-offset:2px}
+nav.mobile-menu{display:none;position:fixed;inset:var(--hh,72px) 0 0 0;background:rgba(255,255,255,.98);z-index:999;flex-direction:column;align-items:center;justify-content:flex-start;gap:1.1rem;padding:2rem 1rem;overflow-y:auto}
+nav.mobile-menu.open{display:flex}
+nav.mobile-menu a{font-size:1.15rem;font-weight:600;color:#111827;text-decoration:none}
+nav.mobile-menu a[aria-current="page"]{color:var(--blue,#005f99)}
+nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem 1.4rem;border-radius:999px;margin-top:.4rem}
+@media(min-width:1081px) and (max-width:1300px){.site-header .logo-name{display:none}.site-header .site-nav a{padding:.45rem .55rem;font-size:.84rem}}
+@media(max-width:1080px){.site-header .site-nav{display:none}.site-header .hamburger{display:flex}.site-header .m-tel{display:inline-block}}
+@media(max-width:760px){.site-header .header-inner{padding:0 1rem;gap:.6rem}}
+@media(max-width:380px){.site-header .m-tel{font-size:0;padding:.5rem .7rem}.site-header .m-tel::before{content:"📞";font-size:1rem}}
+</style>
+<style id="theme-light">
+:root{--blue:#0270b0;--blue-dark:#01579b;--blue-hover:#0277bd;--blue-light:#e1f5fe;--navy:#01579b}
+html .btn-ghost,html .btn-o{background:#fff;color:#01579b;border:2px solid #0270b0}
+html .btn-ghost:hover,html .btn-o:hover{background:#0270b0;color:#fff}
+html .btn-white{background:#0270b0;color:#fff;border-color:#0270b0}
+html .btn-white:hover{background:#0277bd}
+html .site-footer a{color:#01579b}
+html .breadcrumb a{color:#01579b}
+html .ba-hint{color:#33506a}
+html .hs-main small{color:#fff;opacity:1}
+html .hub-home span{color:#fff!important}
+html .btn-gold{color:#0b2e4a}
+html .vz-phone-wrap figcaption{color:#33506a}
+html .vz-replay{color:#01579b;border-color:#0270b0}
+html .cta a:not(.btn){color:#01579b}
+html .hero{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .hero::after{background:linear-gradient(100deg,rgba(225,245,254,.95) 0%,rgba(225,245,254,.82) 55%,rgba(225,245,254,.5) 100%)}
+html .badge{background:rgba(255,255,255,.75);border:1px solid rgba(2,119,189,.22);color:#33506a}
+html .hero h1 .accent{color:#01579b}
+html .hero .sub{color:#33506a}
+html .hero .sub strong{color:#0b2e4a}
+html .btn-ghost{background:rgba(255,255,255,.75);color:#0b2e4a;border-color:rgba(2,119,189,.22)}
+html .btn-ghost:hover{background:rgba(255,255,255,.75)}
+html .stats{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .cyber{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .cyber h2 span{color:#01579b}
+html .cyber p{color:#33506a}
+html .cyber .eyebrow{color:#01579b}
+html .cyber-list li{color:#33506a}
+html .photo-cap{background:#ffffff;color:#0b2e4a}
+html .cta{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .cta p{color:#33506a}
+html .site-footer{background:#e1f5fe;color:#33506a}
+html .site-footer a{color:#33506a}
+html .site-footer a:hover{color:#0b2e4a}
+html .hero h1 .h1-seo{color:#01579b}
+html .hero h1 em{color:#01579b}
+html .hero .sub .no{color:#b42318}
+html .before{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .before .tag{color:#b42318}
+html .before li{background:rgba(255,255,255,.75);color:#0b2e4a}
+html .before .big{color:#b42318}
+html .marquee{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .p-gain{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .p-gain h4{color:#01579b}
+html .p-gain p{color:#0b2e4a}
+html .p-gain .chips2 span{background:rgba(255,255,255,.75)}
+html .site-footer p{color:#33506a}
+html .site-footer p a{text-decoration-color:rgba(2,119,189,.22)}
+html .offer.os{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .offer.os p{color:#33506a}
+html .os .of-prices li{border:1px solid rgba(2,119,189,.22)}
+html .os .of-prices b{color:#01579b}
+html .os .of-prices span{color:#33506a}
+</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-wrap" aria-label="Antoine Conter Informatique, accueil">
-      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter Informatique" width="120" height="48">
+      <img src="/Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter Informatique" width="120" height="48">
       <span class="logo-name">Antoine Conter Informatique</span>
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
-      <a href="#pour-qui">Pour qui ?</a>
-      <a href="depannage-informatique-plouguerneau.html">Dépannage</a>
-      <a href="visibilite-internet.html">Visibilité internet</a>
-      <a href="cybersecurite.html">Cybersécurité</a>
-      <a href="audit-osint-protection-donnees.html">Audit OSINT</a>
-      <a href="conseils.html">Conseils</a>
-      <a href="#avis">Avis</a>
+      <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+      <a href="/visibilite-internet.html">Visibilité internet</a>
+      <a href="/cybersecurite.html">Cybersécurité</a>
+      <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
+      <a href="/ordinateur-reconditionne.html">Ordinateurs</a>
+      <a href="/cours-nsi-python-linux.html">Cours</a>
       <a href="tel:+33641537334" class="nav-cta">📞 06 41 53 73 34</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a href="tel:+33641537334" class="m-tel">📞 Appeler</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
-  <a href="#pour-qui">Pour qui ?</a>
-  <a href="depannage-informatique-plouguerneau.html">Dépannage</a>
-  <a href="#presentation">Qui suis-je</a>
-  <a href="visibilite-internet.html">Visibilité internet</a>
-  <a href="cybersecurite.html">Cybersécurité</a>
-  <a href="audit-osint-protection-donnees.html">Audit OSINT</a>
-  <a href="cours-nsi-python-linux.html">Cours</a>
-  <a href="conseils.html">Conseils</a>
-  <a href="#avis">Avis</a>
-  <a href="#contact" style="color:var(--blue)">Me contacter</a>
+  <a href="/" aria-current="page">Accueil</a>
+  <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+  <a href="/visibilite-internet.html">Visibilité internet</a>
+  <a href="/cybersecurite.html">Cybersécurité</a>
+  <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
+  <a href="/ordinateur-reconditionne.html">Ordinateurs</a>
+  <a href="/cours-nsi-python-linux.html">Cours</a>
+  <a href="/conseils.html">Conseils</a>
+  <a href="/zones-intervention.html">Zones d'intervention</a>
+  <a href="/#contact" class="mm-cta">Me contacter</a>
 </nav>
 
 <!-- HERO -->
@@ -1125,24 +1204,6 @@ p{color:#374151}
   </div>
 </section>
 
-<!-- AVIS -->
-<section class="sec white" id="avis">
-  <div class="inner center">
-    <div class="eyebrow reveal">Références</div>
-    <h2 class="title reveal">Ils m'ont <span>fait confiance</span></h2>
-    <p class="intro reveal">Des professionnels du Finistère nord que j'ai accompagnés sur leur site, leur matériel ou leur sécurité.</p>
-    <div class="refs" style="text-align:left">
-      <div class="ref reveal s1"><div class="k">🥩</div><h3>Boucherie Armoricaine</h3><small>Atelier de découpe · Lesneven</small><p>Site vitrine créé de zéro, référencé localement, formulaire de contact pour éleveurs et particuliers.</p><a href="https://boucheriearmoricaine.com" target="_blank" rel="noopener">boucheriearmoricaine.com →</a></div>
-      <div class="ref reveal s2"><div class="k">📐</div><h3>Bruno L'Hostis</h3><small>Professeur indépendant · Mathématiques</small><p>Site vitrine pour cours particuliers, prise de contact simplifiée pour familles et organismes de financement.</p><a href="https://bruno-lhostis.fr" target="_blank" rel="noopener">bruno-lhostis.fr →</a></div>
-    </div>
-    <div class="btns reveal" style="justify-content:center">
-      <a class="btn btn-primary" href="https://maps.google.com/?cid=9547913039402363284" target="_blank" rel="noopener">⭐ Lire les avis Google</a>
-      <a class="btn btn-outline" href="https://www.google.com/maps/place/Antoine+Conter+Informatique/@48.5169611,-4.7706006,10z/data=!3m1!4b1!4m6!3m5!1s0xae66a53b28499ddf:0x8481005283e5e994" target="_blank" rel="noopener">Laisser un avis</a>
-      <a class="btn btn-outline" href="visibilite-internet.html#realisations">Mes sites internet</a>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="sec white">
   <div class="inner">
@@ -1184,7 +1245,7 @@ p{color:#374151}
       <div class="reveal right">
         <div class="map map-consent" id="map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150000!2d-4.4409462!3d48.5169768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xae66a53b28499ddf%3A0x8481005283e5e994!2sAntoine%20Conter%20Informatique!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"><div class="map-ph"><p><strong>Carte Google Maps</strong></p><p>L'affichage de la carte charge un service de Google, qui peut déposer des cookies.</p><button type="button" class="map-btn" id="map-load">Afficher la carte</button><a href="https://maps.google.com/?cid=9547913039402363284" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></div></div>
         <p style="margin-top:1rem;font-size:.95rem"><strong>Basé à Plouguerneau (29880)</strong>, à Brest en semaine. Intervention à domicile dans tout le Finistère nord, 7j/7 sur rendez-vous.</p>
-        <div class="socials"><a href="https://www.instagram.com/antoine_conter_informatique" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/antoine_conter_informatique" target="_blank" rel="noopener">Facebook</a><a href="mailto:antoine.conter@outlook.com">antoine.conter@outlook.com</a></div>
+        <div class="socials"><a href="https://maps.google.com/?cid=9547913039402363284" target="_blank" rel="noopener">⭐ Avis Google</a><a href="https://www.instagram.com/antoine_conter_informatique" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/antoine_conter_informatique" target="_blank" rel="noopener">Facebook</a><a href="mailto:antoine.conter@outlook.com">antoine.conter@outlook.com</a></div>
       </div>
     </div>
   </div>
@@ -1192,18 +1253,18 @@ p{color:#374151}
 </main>
 <footer class="site-footer">
   <nav>
-    <a href="/">Accueil</a>
-    <a href="#pour-qui">Services</a>
-    <a href="#tarifs">Tarifs</a>
-    <a href="zones-intervention.html">Zones d'intervention</a>
-    <a href="conseils.html">Conseils</a>
-    <a href="cybersecurite.html">Cybersécurité</a>
-    <a href="cybersecurite-tpe.html">Cyber TPE</a>
-    <a href="cours-nsi-python-linux.html">Cours NSI, Python, Linux</a>
-    <a href="ordinateur-reconditionne.html">Ordinateur reconditionné</a>
-    <a href="visibilite-internet.html">Visibilité internet</a>
-    <a href="audit-osint-protection-donnees.html">Audit OSINT</a>
-    <a href="#contact">Contact</a>
+    <a href="/" aria-current="page">Accueil</a>
+    <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+    <a href="/visibilite-internet.html">Visibilité internet</a>
+    <a href="/cybersecurite.html">Cybersécurité</a>
+    <a href="/cybersecurite-tpe.html">Cybersécurité TPE</a>
+    <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
+    <a href="/ordinateur-reconditionne.html">Ordinateur reconditionné</a>
+    <a href="/cours-nsi-python-linux.html">Cours NSI, Python, Linux</a>
+    <a href="/conseils.html">Conseils</a>
+    <a href="/zones-intervention.html">Zones d'intervention</a>
+    <a href="/#tarifs">Tarifs</a>
+    <a href="/#contact">Contact</a>
   </nav>
   <p style="margin-bottom:.6rem">Dépannage informatique à domicile en Finistère nord : <a href="depannage-informatique-bohars.html">Bohars</a> · <a href="depannage-informatique-bourg-blanc.html">Bourg-Blanc</a> · <a href="depannage-informatique-brest.html">Brest</a> · <a href="depannage-informatique-breles.html">Brélès</a> · <a href="depannage-informatique-coat-meal.html">Coat-Méal</a> · <a href="depannage-informatique-gouesnou.html">Gouesnou</a> · <a href="depannage-informatique-goulven.html">Goulven</a> · <a href="depannage-informatique-guilers.html">Guilers</a> · <a href="depannage-informatique-guipavas.html">Guipavas</a> · <a href="depannage-informatique-guisseny.html">Guissény</a> · <a href="depannage-informatique-kerlouan.html">Kerlouan</a> · <a href="depannage-informatique-kernilis.html">Kernilis</a> · <a href="depannage-informatique-kernoues.html">Kernouës</a> · <a href="depannage-informatique-kersaint-plabennec.html">Kersaint-Plabennec</a> · <a href="depannage-informatique-la-forest-landerneau.html">La Forest-Landerneau</a> · <a href="depannage-informatique-lampaul-ploudalmezeau.html">Lampaul-Ploudalmézeau</a> · <a href="depannage-informatique-landerneau.html">Landerneau</a> · <a href="depannage-informatique-landivisiau.html">Landivisiau</a> · <a href="depannage-informatique-landeda.html">Landéda</a> · <a href="depannage-informatique-lannilis.html">Lannilis</a> · <a href="depannage-informatique-lanrivoare.html">Lanrivoaré</a> · <a href="depannage-informatique-le-conquet.html">Le Conquet</a> · <a href="depannage-informatique-le-drennec.html">Le Drennec</a> · <a href="depannage-informatique-le-folgoet.html">Le Folgoët</a> · <a href="depannage-informatique-le-relecq-kerhuon.html">Le Relecq-Kerhuon</a> · <a href="depannage-informatique-lesneven.html">Lesneven</a> · <a href="depannage-informatique-loc-brevalaire.html">Loc-Brévalaire</a> · <a href="depannage-informatique-locmaria-plouzane.html">Locmaria-Plouzané</a> · <a href="depannage-informatique-loperhet.html">Loperhet</a> · <a href="depannage-informatique-milizac-guipronvel.html">Milizac-Guipronvel</a> · <a href="depannage-informatique-plabennec.html">Plabennec</a> · <a href="depannage-informatique-plouarzel.html">Plouarzel</a> · <a href="depannage-informatique-ploudalmezeau.html">Ploudalmézeau</a> · <a href="depannage-informatique-ploudaniel.html">Ploudaniel</a> · <a href="depannage-informatique-plougastel-daoulas.html">Plougastel-Daoulas</a> · <a href="depannage-informatique-plougonvelin.html">Plougonvelin</a> · <a href="depannage-informatique-plouguerneau.html">Plouguerneau</a> · <a href="depannage-informatique-plouguin.html">Plouguin</a> · <a href="depannage-informatique-plouider.html">Plouider</a> · <a href="depannage-informatique-plouneour-brignogan-plages.html">Plounéour-Brignogan-Plages</a> · <a href="depannage-informatique-plounevez-lochrist.html">Plounévez-Lochrist</a> · <a href="depannage-informatique-plouvien.html">Plouvien</a> · <a href="depannage-informatique-plouzane.html">Plouzané</a> · <a href="depannage-informatique-saint-divy.html">Saint-Divy</a> · <a href="depannage-informatique-saint-fregant.html">Saint-Frégant</a> · <a href="depannage-informatique-saint-pabu.html">Saint-Pabu</a> · <a href="depannage-informatique-saint-renan.html">Saint-Renan</a> · <a href="depannage-informatique-saint-thonan.html">Saint-Thonan</a> · <a href="depannage-informatique-trebabu.html">Trébabu</a> · <a href="depannage-informatique-treflez.html">Tréflez</a> · <a href="depannage-informatique-treglonou.html">Tréglonou</a></p>
 <p>© 2026 Antoine Conter Informatique, dépannage informatique à domicile, Plouguerneau (29880) · <a href="tel:+33641537334">06 41 53 73 34</a> · <a href="mentions-legales.html">Mentions légales</a></p>

@@ -470,36 +470,107 @@ p{color:#374151}
 .local-txt{max-width:780px;margin:0 auto}.local-txt p{margin-bottom:1rem;font-size:1rem;line-height:1.75}
 .price-note a:not(.linkline),.ticks a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
 </style>
+<style id="menu-std">
+.site-header .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-header .site-nav{display:flex;align-items:center;gap:.15rem}
+.site-header .site-nav a{padding:.45rem .7rem;border-radius:8px;font-size:.86rem;font-weight:500;color:#4b5563;text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
+.site-header .site-nav a:hover,.site-header .site-nav a[aria-current="page"]{color:var(--blue,#005f99);background:var(--blue-light,#e8f4fd)}
+.site-header .site-nav a.nav-cta{background:var(--blue,#005f99);color:#fff;font-weight:600;margin-left:.4rem}
+.site-header .site-nav a.nav-cta:hover{filter:brightness(1.1)}
+.site-header .m-tel{display:none;background:var(--blue,#005f99);color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:.5rem .85rem;border-radius:999px;white-space:nowrap;margin-left:auto}
+.site-header .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.site-header .hamburger span{width:22px;height:2px;background:#111827;display:block;transition:all .3s;border-radius:2px}
+.site-header .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.site-header .hamburger.open span:nth-child(2){opacity:0}
+.site-header .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.site-header .hamburger:focus-visible,.site-header .site-nav a:focus-visible{outline:3px solid var(--blue,#005f99);outline-offset:2px}
+nav.mobile-menu{display:none;position:fixed;inset:var(--hh,72px) 0 0 0;background:rgba(255,255,255,.98);z-index:999;flex-direction:column;align-items:center;justify-content:flex-start;gap:1.1rem;padding:2rem 1rem;overflow-y:auto}
+nav.mobile-menu.open{display:flex}
+nav.mobile-menu a{font-size:1.15rem;font-weight:600;color:#111827;text-decoration:none}
+nav.mobile-menu a[aria-current="page"]{color:var(--blue,#005f99)}
+nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem 1.4rem;border-radius:999px;margin-top:.4rem}
+@media(min-width:1081px) and (max-width:1300px){.site-header .logo-name{display:none}.site-header .site-nav a{padding:.45rem .55rem;font-size:.84rem}}
+@media(max-width:1080px){.site-header .site-nav{display:none}.site-header .hamburger{display:flex}.site-header .m-tel{display:inline-block}}
+@media(max-width:760px){.site-header .header-inner{padding:0 1rem;gap:.6rem}}
+@media(max-width:380px){.site-header .m-tel{font-size:0;padding:.5rem .7rem}.site-header .m-tel::before{content:"📞";font-size:1rem}}
+</style>
+<style id="theme-light">
+:root{--blue:#0270b0;--blue-dark:#01579b;--blue-hover:#0277bd;--blue-light:#e1f5fe;--navy:#01579b}
+html .btn-ghost,html .btn-o{background:#fff;color:#01579b;border:2px solid #0270b0}
+html .btn-ghost:hover,html .btn-o:hover{background:#0270b0;color:#fff}
+html .btn-white{background:#0270b0;color:#fff;border-color:#0270b0}
+html .btn-white:hover{background:#0277bd}
+html .site-footer a{color:#01579b}
+html .breadcrumb a{color:#01579b}
+html .ba-hint{color:#33506a}
+html .hs-main small{color:#fff;opacity:1}
+html .hub-home span{color:#fff!important}
+html .btn-gold{color:#0b2e4a}
+html .vz-phone-wrap figcaption{color:#33506a}
+html .vz-replay{color:#01579b;border-color:#0270b0}
+html .cta a:not(.btn){color:#01579b}
+html .hero{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .hero::after{background:linear-gradient(100deg,rgba(225,245,254,.95) 0%,rgba(225,245,254,.82) 55%,rgba(225,245,254,.5) 100%)}
+html .breadcrumb{color:#33506a}
+html .breadcrumb a{color:#33506a}
+html .badge{background:rgba(255,255,255,.75);border:1px solid rgba(2,119,189,.22);color:#33506a}
+html .hero h1 .accent{color:#01579b}
+html .rotator{color:#0b2e4a}
+html .hero .sub{color:#33506a}
+html .hero .sub strong{color:#0b2e4a}
+html .btn-ghost{background:rgba(255,255,255,.75);color:#0b2e4a;border-color:rgba(2,119,189,.22)}
+html .btn-ghost:hover{background:rgba(255,255,255,.75)}
+html .stats{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .stat:not(:last-child)::after{background:rgba(255,255,255,.75)}
+html .stat b{color:#0b2e4a}
+html .stat>span{color:#33506a}
+html .cyber{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .cyber h2 span{color:#01579b}
+html .cyber p{color:#33506a}
+html .cyber .eyebrow{color:#01579b}
+html .cyber-list li{color:#33506a}
+html .photo-cap{background:#ffffff;color:#0b2e4a}
+html .cta{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .cta p{color:#33506a}
+html .site-footer{background:#e1f5fe;color:#33506a}
+html .site-footer a{color:#33506a}
+html .site-footer a:hover{color:#0b2e4a}
+html .site-footer p{color:#33506a}
+html .site-footer p a{text-decoration-color:rgba(2,119,189,.22)}
+</style>
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
     <a href="/" class="logo-wrap" aria-label="Antoine Conter Informatique, accueil">
-      <img src="Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter Informatique" width="120" height="48">
+      <img src="/Antoine-CONTER-informatique-Logo.avif" alt="Logo Antoine Conter Informatique" width="120" height="48">
       <span class="logo-name">Antoine Conter Informatique</span>
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
-      <a href="/">Accueil</a>
-      <a href="/#pour-qui">Services</a>
-      <a href="/#tarifs">Tarifs</a>
-      <a href="visibilite-internet.html">Visibilité internet</a>
-      <a href="cybersecurite.html">Cybersécurité</a>
-      <a href="zones-intervention.html">Communes</a>
+      <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+      <a href="/visibilite-internet.html">Visibilité internet</a>
+      <a href="/cybersecurite.html">Cybersécurité</a>
+      <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
+      <a href="/ordinateur-reconditionne.html">Ordinateurs</a>
+      <a href="/cours-nsi-python-linux.html">Cours</a>
       <a href="tel:+33641537334" class="nav-cta">📞 06 41 53 73 34</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a href="tel:+33641537334" class="m-tel">📞 Appeler</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
   <a href="/">Accueil</a>
-  <a href="/#pour-qui">Services</a>
-  <a href="/#tarifs">Tarifs</a>
-  <a href="visibilite-internet.html">Visibilité internet</a>
-  <a href="cybersecurite.html">Cybersécurité</a>
-  <a href="cours-nsi-python-linux.html">Cours</a>
-  <a href="zones-intervention.html">Communes</a>
-  <a href="#contact" style="color:var(--blue)">Me contacter</a>
+  <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+  <a href="/visibilite-internet.html">Visibilité internet</a>
+  <a href="/cybersecurite.html">Cybersécurité</a>
+  <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
+  <a href="/ordinateur-reconditionne.html">Ordinateurs</a>
+  <a href="/cours-nsi-python-linux.html">Cours</a>
+  <a href="/conseils.html">Conseils</a>
+  <a href="/zones-intervention.html">Zones d'intervention</a>
+  <a href="/#contact" class="mm-cta">Me contacter</a>
 </nav>
 
 <!-- HERO -->
@@ -545,7 +616,7 @@ p{color:#374151}
     <a href="cybersecurite.html">🔒 Cybersécurité</a>
     <a href="visibilite-internet.html">🌐 Sites internet</a>
     <a href="/#presentation">👋 Qui suis-je</a>
-    <a href="/#avis">⭐ Avis</a>
+    <a href="https://maps.google.com/?cid=9547913039402363284" target="_blank" rel="noopener">⭐ Avis Google</a>
   </div>
 </nav>
 <!-- STATS -->
@@ -868,7 +939,7 @@ p{color:#374151}
       <a class="reveal s1" href="/#pour-qui"><b>Mes services</b><span>Dépannage, formation, installation, conseil, IA.</span><i>→</i></a>
       <a class="reveal s2" href="audit-osint-protection-donnees.html"><b>Audit OSINT</b><span>Ce qu'on trouve sur vous en ligne, dès 40 €.</span><i>→</i></a>
       <a class="reveal s3" href="cybersecurite.html"><b>Cybersécurité</b><span>Particuliers, associations et TPE.</span><i>→</i></a>
-      <a class="reveal s4" href="/#avis"><b>Avis et références</b><span>Ils m'ont fait confiance.</span><i>→</i></a>
+      <a class="reveal s4" href="https://maps.google.com/?cid=9547913039402363284" target="_blank" rel="noopener"><b>Avis Google</b><span>Ce que disent mes clients.</span><i>→</i></a>
     </div>
   </div>
 </section>
@@ -892,16 +963,16 @@ p{color:#374151}
 <footer class="site-footer">
   <nav>
     <a href="/">Accueil</a>
-    <a href="/#pour-qui">Services</a>
+    <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+    <a href="/visibilite-internet.html">Visibilité internet</a>
+    <a href="/cybersecurite.html">Cybersécurité</a>
+    <a href="/cybersecurite-tpe.html">Cybersécurité TPE</a>
+    <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
+    <a href="/ordinateur-reconditionne.html">Ordinateur reconditionné</a>
+    <a href="/cours-nsi-python-linux.html">Cours NSI, Python, Linux</a>
+    <a href="/conseils.html">Conseils</a>
+    <a href="/zones-intervention.html">Zones d'intervention</a>
     <a href="/#tarifs">Tarifs</a>
-    <a href="zones-intervention.html">Zones d'intervention</a>
-    <a href="conseils.html">Conseils</a>
-    <a href="cybersecurite.html">Cybersécurité</a>
-    <a href="cybersecurite-tpe.html">Cyber TPE</a>
-    <a href="cours-nsi-python-linux.html">Cours NSI, Python, Linux</a>
-    <a href="ordinateur-reconditionne.html">Ordinateur reconditionné</a>
-    <a href="visibilite-internet.html">Visibilité internet</a>
-    <a href="audit-osint-protection-donnees.html">Audit OSINT</a>
     <a href="/#contact">Contact</a>
   </nav>
   <p style="margin-bottom:.6rem">Dépannage informatique à domicile : <a href="depannage-informatique-plouguerneau.html">Plouguerneau</a> · <a href="depannage-informatique-lannilis.html">Lannilis</a> · <a href="depannage-informatique-landeda.html">Landéda</a> · <a href="depannage-informatique-lesneven.html">Lesneven</a> · <a href="depannage-informatique-le-folgoet.html">Le Folgoët</a> · <a href="depannage-informatique-plabennec.html">Plabennec</a> · <a href="depannage-informatique-gouesnou.html">Gouesnou</a> · <a href="depannage-informatique-brest.html">Brest</a> · <a href="depannage-informatique-guipavas.html">Guipavas</a> · <a href="depannage-informatique-plougastel-daoulas.html">Plougastel-Daoulas</a> · <a href="depannage-informatique-le-relecq-kerhuon.html">Le Relecq-Kerhuon</a> · <a href="depannage-informatique-guisseny.html">Guissény</a> · <a href="depannage-informatique-kerlouan.html">Kerlouan</a> · <a href="depannage-informatique-plouneour-brignogan-plages.html">Brignogan</a> · <a href="depannage-informatique-saint-pabu.html">Saint-Pabu</a> · <a href="depannage-informatique-plouvien.html">Plouvien</a> · <a href="depannage-informatique-kernilis.html">Kernilis</a> · <a href="depannage-informatique-le-drennec.html">Le Drennec</a> · <a href="depannage-informatique-ploudaniel.html">Ploudaniel</a> · <a href="depannage-informatique-plouguin.html">Plouguin</a> · <a href="depannage-informatique-bourg-blanc.html">Bourg-Blanc</a> · <a href="depannage-informatique-treglonou.html">Tréglonou</a> · <a href="depannage-informatique-bohars.html">Bohars</a> · <a href="depannage-informatique-breles.html">Brélès</a> · <a href="depannage-informatique-coat-meal.html">Coat-Méal</a> · <a href="depannage-informatique-goulven.html">Goulven</a> · <a href="depannage-informatique-guilers.html">Guilers</a> · <a href="depannage-informatique-kernoues.html">Kernouës</a> · <a href="depannage-informatique-kersaint-plabennec.html">Kersaint-Plabennec</a> · <a href="depannage-informatique-la-forest-landerneau.html">La Forest-Landerneau</a> · <a href="depannage-informatique-lampaul-ploudalmezeau.html">Lampaul-Ploudalmézeau</a> ·Landerneau · <a href="depannage-informatique-landivisiau.html">Landivisiau</a> · <a href="depannage-informatique-lanrivoare.html">Lanrivoaré</a> · <a href="depannage-informatique-le-conquet.html">Le Conquet</a> · <a href="depannage-informatique-loc-brevalaire.html">Loc-Brévalaire</a> · <a href="depannage-informatique-locmaria-plouzane.html">Locmaria-Plouzané</a> · <a href="depannage-informatique-loperhet.html">Loperhet</a> · <a href="depannage-informatique-milizac-guipronvel.html">Milizac-Guipronvel</a> · <a href="depannage-informatique-plouarzel.html">Plouarzel</a> · <a href="depannage-informatique-ploudalmezeau.html">Ploudalmézeau</a> · <a href="depannage-informatique-plougonvelin.html">Plougonvelin</a> · <a href="depannage-informatique-plouider.html">Plouider</a> · <a href="depannage-informatique-plounevez-lochrist.html">Plounévez-Lochrist</a> · <a href="depannage-informatique-plouzane.html">Plouzané</a> · <a href="depannage-informatique-saint-divy.html">Saint-Divy</a> · <a href="depannage-informatique-saint-fregant.html">Saint-Frégant</a> · <a href="depannage-informatique-saint-renan.html">Saint-Renan</a> · <a href="depannage-informatique-saint-thonan.html">Saint-Thonan</a> · <a href="depannage-informatique-trebabu.html">Trébabu</a> · <a href="depannage-informatique-treflez.html">Tréflez</a></p>
