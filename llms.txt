@@ -22,7 +22,6 @@
 - [Cybersécurité TPE et associations](https://informatique-plouguerneau-antoine-conter.fr/cybersecurite-tpe.html): accompagnement des petites structures
 - [Ordinateur reconditionné](https://informatique-plouguerneau-antoine-conter.fr/ordinateur-reconditionne.html): offre, prix, garantie, livraison
 - [Visibilité internet et SEO](https://informatique-plouguerneau-antoine-conter.fr/visibilite-internet.html): fiche Google, annuaires, audit de visibilité, accompagnement mensuel
-- [Création de sites internet](https://informatique-plouguerneau-antoine-conter.fr/projets.html): sites vitrines et réalisations
 - [Cours NSI, Python, Linux](https://informatique-plouguerneau-antoine-conter.fr/cours-nsi-python-linux.html): cours particuliers d'informatique
 - [Conseils](https://informatique-plouguerneau-antoine-conter.fr/conseils.html): articles pratiques
 
