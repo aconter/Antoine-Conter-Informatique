@@ -138,6 +138,7 @@ a{color:var(--blue)}
 .site-nav a:hover{color:var(--blue);background:var(--blue-light)}
 .site-nav a.nav-cta{background:var(--blue);color:#fff;box-shadow:var(--shadow-blue)}
 .site-nav a.nav-cta:hover{background:var(--blue-hover)}
+@media(min-width:1021px) and (max-width:1260px){.logo-name{display:none}.site-nav a{padding:.45rem .55rem;font-size:.82rem}}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{width:22px;height:2px;background:var(--dark);display:block;transition:all .3s;border-radius:2px}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
@@ -762,7 +763,7 @@ p{color:#374151}
 #hero3d:active{cursor:grabbing}
 .hero3d-wrap.no3d{display:none}
 .site-footer p{color:rgba(255,255,255,.62)}.site-footer p a{text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(255,255,255,.35)}
-.essentiel{padding-top:3.5rem;padding-bottom:1rem}.facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}.facts-grid>div{background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:1rem 1.2rem}.facts-grid dt{font-weight:700;color:var(--blue);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem}.facts-grid dd{margin:0;font-size:.95rem;color:#374151}.facts-grid a{color:var(--blue)}
+.essentiel{padding-top:3.5rem;padding-bottom:1rem}
 .price-note a:not(.linkline),.ticks a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
 
 /* Offres en ligne (visibilite + OSINT) */
@@ -802,6 +803,23 @@ p{color:#374151}
 .ticks a{font-weight:600}
 @media(max-width:860px){.offers{grid-template-columns:1fr}}
 @media(max-width:520px){.offer{padding:1.3rem 1.1rem}.of-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}.of-prices li{min-width:0;padding:.45rem .55rem}.of-prices b{font-size:1.05rem}.of-prices span{font-size:.72rem}}
+
+/* L'essentiel : categories de services */
+.cats{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 0;padding:0}
+.cats a{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr auto;column-gap:.8rem;row-gap:.25rem;height:100%;background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:1.1rem 1.2rem;text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+.cats a:hover{border-color:var(--blue);box-shadow:var(--shadow-md)}
+.cats a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.c-ico{grid-row:1/4;font-size:1.5rem;line-height:1.2}
+.cats b{color:var(--blue-dark);font-size:1.02rem}
+.c-txt{font-size:.9rem;color:#374151}
+.c-price{font-size:.86rem;font-weight:700;color:var(--blue);margin-top:.15rem;align-self:end}
+.facts-mini{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;margin-top:1.3rem;font-size:.88rem;color:#374151}
+.facts-mini div{display:flex;gap:.4rem}
+.facts-mini dt{font-weight:700;color:var(--blue)}
+.facts-mini dd{margin:0}
+.facts-mini a{color:var(--blue)}
+@media(max-width:1020px){.cats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.cats{grid-template-columns:1fr;gap:.6rem}.cats a{padding:.85rem 1rem}.facts-mini{flex-direction:column;gap:.35rem}}
 </style>
 </head>
 <body>
@@ -814,7 +832,7 @@ p{color:#374151}
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="#pour-qui">Pour qui ?</a>
-      <a href="#tarifs">Tarifs</a>
+      <a href="depannage-informatique-plouguerneau.html">Dépannage</a>
       <a href="visibilite-internet.html">Visibilité internet</a>
       <a href="cybersecurite.html">Cybersécurité</a>
       <a href="audit-osint-protection-donnees.html">Audit OSINT</a>
@@ -827,7 +845,7 @@ p{color:#374151}
 </header>
 <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
   <a href="#pour-qui">Pour qui ?</a>
-  <a href="#tarifs">Tarifs</a>
+  <a href="depannage-informatique-plouguerneau.html">Dépannage</a>
   <a href="#presentation">Qui suis-je</a>
   <a href="visibilite-internet.html">Visibilité internet</a>
   <a href="cybersecurite.html">Cybersécurité</a>
@@ -874,13 +892,19 @@ p{color:#374151}
 <section class="sec essentiel" id="essentiel" aria-labelledby="essentiel-titre">
   <div class="inner">
     <h2 class="title" id="essentiel-titre">L'essentiel <span>en 30 secondes</span></h2>
-    <dl class="facts-grid">
-      <div><dt>Qui</dt><dd>Antoine Conter, informaticien en micro-entreprise, étudiant ingénieur en cybersécurité à l'ISEN Brest.</dd></div>
-      <div><dt>Où</dt><dd>À domicile dans <a href="zones-intervention.html">52 communes du nord Finistère</a>, depuis Plouguerneau : Pays des Abers, Lesneven Côte des Légendes, Pays d'Iroise, Brest Métropole.</dd></div>
-      <div><dt>Quoi</dt><dd>Dépannage, installation, formation, <a href="cybersecurite.html">cybersécurité</a>, <a href="audit-osint-protection-donnees.html">audit OSINT</a>, <a href="ordinateur-reconditionne.html">ordinateurs reconditionnés</a>, <a href="visibilite-internet.html">création de sites et visibilité internet</a> et <a href="cours-nsi-python-linux.html">cours d'informatique</a>.</dd></div>
-      <div><dt>Combien</dt><dd>35 € de l'heure, déplacement inclus. Installation d'un ordinateur dès 50 €. Devis gratuit.</dd></div>
-      <div><dt>Quand</dt><dd>7 jours sur 7 sur rendez-vous : 8 h à 20 h en semaine, 9 h à 18 h le week-end.</dd></div>
-      <div><dt>Contact</dt><dd><a href="tel:+33641537334">06 41 53 73 34</a> (appel, SMS, WhatsApp) ou <a href="mailto:antoine.conter@outlook.com">antoine.conter@outlook.com</a>.</dd></div>
+    <ul class="cats">
+      <li><a href="depannage-informatique-plouguerneau.html"><span class="c-ico" aria-hidden="true">🛠️</span><b>Dépannage à domicile</b><span class="c-txt">PC lent, virus, Wi-Fi, imprimante, installation d'un ordinateur.</span><span class="c-price">35 €/h, déplacement inclus</span></a></li>
+      <li><a href="visibilite-internet.html"><span class="c-ico" aria-hidden="true">🌐</span><b>Visibilité internet</b><span class="c-txt">Fiche Google, PagesJaunes et site vitrine pour être trouvé dans vos communes.</span><span class="c-price">Audit 50 €, site 200 €</span></a></li>
+      <li><a href="cybersecurite.html"><span class="c-ico" aria-hidden="true">🔒</span><b>Cybersécurité</b><span class="c-txt">Compte piraté, téléphone mal protégé, arnaques, atelier anti-phishing.</span><span class="c-price">Particuliers, TPE, associations</span></a></li>
+      <li><a href="audit-osint-protection-donnees.html"><span class="c-ico" aria-hidden="true">🔎</span><b>Audit OSINT</b><span class="c-txt">Ce qu'un inconnu trouve sur vous en ligne, et comment le retirer.</span><span class="c-price">Dès 40 €, à distance</span></a></li>
+      <li><a href="ordinateur-reconditionne.html"><span class="c-ico" aria-hidden="true">💻</span><b>Ordinateur reconditionné</b><span class="c-txt">Portable professionnel vérifié, installé et livré chez vous.</span><span class="c-price">350 à 450 €</span></a></li>
+      <li><a href="cours-nsi-python-linux.html"><span class="c-ico" aria-hidden="true">🎓</span><b>Cours d'informatique</b><span class="c-txt">NSI, BTS SIO, Python et Linux, chez vous ou en visio.</span><span class="c-price">35 €/h</span></a></li>
+    </ul>
+    <dl class="facts-mini">
+      <div><dt>Qui</dt><dd>Antoine Conter, étudiant ingénieur en cybersécurité à l'ISEN Brest</dd></div>
+      <div><dt>Où</dt><dd>À domicile dans <a href="zones-intervention.html">52 communes du nord Finistère</a>, depuis Plouguerneau</dd></div>
+      <div><dt>Quand</dt><dd>7 j/7 sur rendez-vous, 8 h-20 h en semaine, 9 h-18 h le week-end</dd></div>
+      <div><dt>Contact</dt><dd><a href="tel:+33641537334">06 41 53 73 34</a>, appel, SMS ou WhatsApp</dd></div>
     </dl>
   </div>
 </section>
