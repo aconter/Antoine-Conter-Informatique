@@ -35,6 +35,7 @@
 - [Sauvegarder ses photos et documents](https://informatique-plouguerneau-antoine-conter.fr/conseil-sauvegarder-photos.html)
 - [Améliorer son Wi-Fi](https://informatique-plouguerneau-antoine-conter.fr/conseil-wifi-box.html)
 - [Apparaître sur Google Maps quand on est artisan](https://informatique-plouguerneau-antoine-conter.fr/conseil-google-maps-artisan.html)
+- [Email dans une fuite de données : vérifier et réagir](https://informatique-plouguerneau-antoine-conter.fr/conseil-fuite-donnees-email.html)
 
 ## Pages par commune
 
