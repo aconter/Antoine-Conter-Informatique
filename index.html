@@ -804,22 +804,31 @@ p{color:#374151}
 @media(max-width:860px){.offers{grid-template-columns:1fr}}
 @media(max-width:520px){.offer{padding:1.3rem 1.1rem}.of-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}.of-prices li{min-width:0;padding:.45rem .55rem}.of-prices b{font-size:1.05rem}.of-prices span{font-size:.72rem}}
 
-/* L'essentiel : categories de services */
-.cats{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0 0;padding:0}
-.cats a{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto 1fr auto;column-gap:.8rem;row-gap:.25rem;height:100%;background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:1.1rem 1.2rem;text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
-.cats a:hover{border-color:var(--blue);box-shadow:var(--shadow-md)}
+/* L'essentiel : depannage et formation en premier, puis les autres services */
+.cats-main{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem}
+.cat-big{display:flex;flex-direction:column;gap:.6rem;background:#fff;border:2px solid var(--blue-light);border-radius:18px;padding:1.6rem 1.6rem 1.4rem;text-decoration:none;color:inherit;box-shadow:var(--shadow-md);transition:border-color .2s,transform .2s}
+.cat-big:hover{border-color:var(--blue);transform:translateY(-2px)}
+.cat-big:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.cbig-ico{font-size:2rem;line-height:1}
+.cat-big h3{font-family:var(--font-display);font-size:1.45rem;line-height:1.2;color:var(--blue-dark)}
+.cat-big p{font-size:.97rem;color:#374151}
+.cat-big .ticks{margin:.1rem 0 .2rem}
+.cbig-price{margin-top:auto;align-self:flex-start;font-weight:700;font-size:.95rem;color:#fff;background:var(--blue);padding:.45rem .9rem;border-radius:999px}
+.cats{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin:1rem 0 0;padding:0}
+.cats a{display:flex;flex-direction:column;gap:.2rem;height:100%;background:#fff;border:1px solid var(--gray-light);border-radius:14px;padding:.9rem 1rem;text-decoration:none;color:inherit;transition:border-color .2s}
+.cats a:hover{border-color:var(--blue)}
 .cats a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.c-ico{grid-row:1/4;font-size:1.5rem;line-height:1.2}
-.cats b{color:var(--blue-dark);font-size:1.02rem}
-.c-txt{font-size:.9rem;color:#374151}
-.c-price{font-size:.86rem;font-weight:700;color:var(--blue);margin-top:.15rem;align-self:end}
+.c-ico{font-size:1.3rem;line-height:1.2}
+.cats b{color:var(--blue-dark);font-size:.95rem}
+.c-price{font-size:.84rem;font-weight:700;color:var(--blue);margin-top:auto}
 .facts-mini{display:flex;flex-wrap:wrap;gap:.5rem 1.8rem;margin-top:1.3rem;font-size:.88rem;color:#374151}
 .facts-mini div{display:flex;gap:.4rem}
 .facts-mini dt{font-weight:700;color:var(--blue)}
 .facts-mini dd{margin:0}
 .facts-mini a{color:var(--blue)}
-@media(max-width:1020px){.cats{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.cats{grid-template-columns:1fr;gap:.6rem}.cats a{padding:.85rem 1rem}.facts-mini{flex-direction:column;gap:.35rem}}
+@media(max-width:1020px){.cats{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.cats-main{grid-template-columns:1fr}.cat-big{padding:1.3rem 1.2rem}.cat-big h3{font-size:1.3rem}}
+@media(max-width:620px){.cats{grid-template-columns:1fr 1fr;gap:.6rem}.cats a{padding:.8rem .9rem}.facts-mini{flex-direction:column;gap:.35rem}}
 </style>
 <style id="menu-std">
 .site-header .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
@@ -846,11 +855,11 @@ nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem
 @media(max-width:380px){.site-header .m-tel{font-size:0;padding:.5rem .7rem}.site-header .m-tel::before{content:"📞";font-size:1rem}}
 </style>
 <style id="theme-light">
-:root{--blue:#0270b0;--blue-dark:#01579b;--blue-hover:#0277bd;--blue-light:#e1f5fe;--navy:#01579b}
-html .btn-ghost,html .btn-o{background:#fff;color:#01579b;border:2px solid #0270b0}
-html .btn-ghost:hover,html .btn-o:hover{background:#0270b0;color:#fff}
-html .btn-white{background:#0270b0;color:#fff;border-color:#0270b0}
-html .btn-white:hover{background:#0277bd}
+:root{--blue:#0266a3;--blue-dark:#01579b;--blue-hover:#0270b0;--blue-light:#d4ebf9;--navy:#01579b}
+html .btn-ghost,html .btn-o{background:#fff;color:#01579b;border:2px solid #0266a3}
+html .btn-ghost:hover,html .btn-o:hover{background:#0266a3;color:#fff}
+html .btn-white{background:#0266a3;color:#fff;border-color:#0266a3}
+html .btn-white:hover{background:#0270b0}
 html .site-footer a{color:#01579b}
 html .breadcrumb a{color:#01579b}
 html .ba-hint{color:#33506a}
@@ -858,43 +867,43 @@ html .hs-main small{color:#fff;opacity:1}
 html .hub-home span{color:#fff!important}
 html .btn-gold{color:#0b2e4a}
 html .vz-phone-wrap figcaption{color:#33506a}
-html .vz-replay{color:#01579b;border-color:#0270b0}
+html .vz-replay{color:#01579b;border-color:#0266a3}
 html .cta a:not(.btn){color:#01579b}
-html .hero{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
-html .hero::after{background:linear-gradient(100deg,rgba(225,245,254,.95) 0%,rgba(225,245,254,.82) 55%,rgba(225,245,254,.5) 100%)}
+html .hero{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
+html .hero::after{background:linear-gradient(100deg,rgba(212,235,249,.95) 0%,rgba(212,235,249,.82) 55%,rgba(212,235,249,.5) 100%)}
 html .badge{background:rgba(255,255,255,.75);border:1px solid rgba(2,119,189,.22);color:#33506a}
 html .hero h1 .accent{color:#01579b}
 html .hero .sub{color:#33506a}
 html .hero .sub strong{color:#0b2e4a}
 html .btn-ghost{background:rgba(255,255,255,.75);color:#0b2e4a;border-color:rgba(2,119,189,.22)}
 html .btn-ghost:hover{background:rgba(255,255,255,.75)}
-html .stats{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
-html .cyber{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .stats{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
+html .cyber{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
 html .cyber h2 span{color:#01579b}
 html .cyber p{color:#33506a}
 html .cyber .eyebrow{color:#01579b}
 html .cyber-list li{color:#33506a}
 html .photo-cap{background:#ffffff;color:#0b2e4a}
-html .cta{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .cta{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
 html .cta p{color:#33506a}
-html .site-footer{background:#e1f5fe;color:#33506a}
+html .site-footer{background:#d4ebf9;color:#33506a}
 html .site-footer a{color:#33506a}
 html .site-footer a:hover{color:#0b2e4a}
 html .hero h1 .h1-seo{color:#01579b}
 html .hero h1 em{color:#01579b}
 html .hero .sub .no{color:#b42318}
-html .before{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .before{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
 html .before .tag{color:#b42318}
 html .before li{background:rgba(255,255,255,.75);color:#0b2e4a}
 html .before .big{color:#b42318}
-html .marquee{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
-html .p-gain{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .marquee{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
+html .p-gain{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
 html .p-gain h4{color:#01579b}
 html .p-gain p{color:#0b2e4a}
 html .p-gain .chips2 span{background:rgba(255,255,255,.75)}
 html .site-footer p{color:#33506a}
 html .site-footer p a{text-decoration-color:rgba(2,119,189,.22)}
-html .offer.os{background:linear-gradient(160deg,#e1f5fe 0%,#f3faff 100%);color:#0b2e4a}
+html .offer.os{background:linear-gradient(160deg,#d4ebf9 0%,#eaf5fd 100%);color:#0b2e4a}
 html .offer.os p{color:#33506a}
 html .os .of-prices li{border:1px solid rgba(2,119,189,.22)}
 html .os .of-prices b{color:#01579b}
@@ -971,13 +980,36 @@ html .os .of-prices span{color:#33506a}
 <section class="sec essentiel" id="essentiel" aria-labelledby="essentiel-titre">
   <div class="inner">
     <h2 class="title" id="essentiel-titre">L'essentiel <span>en 30 secondes</span></h2>
+    <div class="cats-main">
+      <a class="cat-big" href="/depannage-informatique-plouguerneau.html">
+        <span class="cbig-ico" aria-hidden="true">🛠️</span>
+        <h3>Dépannage informatique à domicile</h3>
+        <p>Votre ordinateur rame, ne démarre plus, le Wi-Fi coupe ou l'imprimante refuse d'imprimer : je viens chez vous et je règle le problème.</p>
+        <ul class="ticks">
+          <li>PC lent, virus, mises à jour bloquées</li>
+          <li>Wi-Fi, box, imprimante, mails</li>
+          <li>Installation d'un nouvel ordinateur dès 50 €</li>
+        </ul>
+        <span class="cbig-price">35 €/h, déplacement inclus</span>
+      </a>
+      <a class="cat-big" href="/depannage-informatique-plouguerneau.html#tarifs">
+        <span class="cbig-ico" aria-hidden="true">👵</span>
+        <h3>Formation pour débutants et seniors</h3>
+        <p>L'ordinateur, la tablette ou le téléphone vous stressent ? Je vous apprends à votre rythme, sur votre matériel, sans jargon et avec patience.</p>
+        <ul class="ticks">
+          <li>Mails, photos, visio avec la famille</li>
+          <li>Repérer les arnaques avant de cliquer</li>
+          <li>Devenir autonome, sans dépendre de personne</li>
+        </ul>
+        <span class="cbig-price">35 €/h, chez vous</span>
+      </a>
+    </div>
     <ul class="cats">
-      <li><a href="depannage-informatique-plouguerneau.html"><span class="c-ico" aria-hidden="true">🛠️</span><b>Dépannage à domicile</b><span class="c-txt">PC lent, virus, Wi-Fi, imprimante, installation d'un ordinateur.</span><span class="c-price">35 €/h, déplacement inclus</span></a></li>
-      <li><a href="visibilite-internet.html"><span class="c-ico" aria-hidden="true">🌐</span><b>Visibilité internet</b><span class="c-txt">Fiche Google, PagesJaunes et site vitrine pour être trouvé dans vos communes.</span><span class="c-price">Audit 50 €, site 200 €</span></a></li>
-      <li><a href="cybersecurite.html"><span class="c-ico" aria-hidden="true">🔒</span><b>Cybersécurité</b><span class="c-txt">Compte piraté, téléphone mal protégé, arnaques, atelier anti-phishing.</span><span class="c-price">Particuliers, TPE, associations</span></a></li>
-      <li><a href="audit-osint-protection-donnees.html"><span class="c-ico" aria-hidden="true">🔎</span><b>Audit OSINT</b><span class="c-txt">Ce qu'un inconnu trouve sur vous en ligne, et comment le retirer.</span><span class="c-price">Dès 40 €, à distance</span></a></li>
-      <li><a href="ordinateur-reconditionne.html"><span class="c-ico" aria-hidden="true">💻</span><b>Ordinateur reconditionné</b><span class="c-txt">Portable professionnel vérifié, installé et livré chez vous.</span><span class="c-price">350 à 450 €</span></a></li>
-      <li><a href="cours-nsi-python-linux.html"><span class="c-ico" aria-hidden="true">🎓</span><b>Cours d'informatique</b><span class="c-txt">NSI, BTS SIO, Python et Linux, chez vous ou en visio.</span><span class="c-price">35 €/h</span></a></li>
+      <li><a href="visibilite-internet.html"><span class="c-ico" aria-hidden="true">🌐</span><b>Visibilité internet</b><span class="c-price">Audit 50 €, site 200 €</span></a></li>
+      <li><a href="cybersecurite.html"><span class="c-ico" aria-hidden="true">🔒</span><b>Cybersécurité</b><span class="c-price">Particuliers et pros</span></a></li>
+      <li><a href="audit-osint-protection-donnees.html"><span class="c-ico" aria-hidden="true">🔎</span><b>Audit OSINT</b><span class="c-price">Dès 40 €</span></a></li>
+      <li><a href="ordinateur-reconditionne.html"><span class="c-ico" aria-hidden="true">💻</span><b>Ordinateur reconditionné</b><span class="c-price">350 à 450 €</span></a></li>
+      <li><a href="cours-nsi-python-linux.html"><span class="c-ico" aria-hidden="true">🎓</span><b>Cours NSI, Python, Linux</b><span class="c-price">35 €/h</span></a></li>
     </ul>
     <dl class="facts-mini">
       <div><dt>Qui</dt><dd>Antoine Conter, étudiant ingénieur en cybersécurité à l'ISEN Brest</dd></div>
