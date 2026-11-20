@@ -470,30 +470,6 @@ p{color:#374151}
 .local-txt{max-width:780px;margin:0 auto}.local-txt p{margin-bottom:1rem;font-size:1rem;line-height:1.75}
 .price-note a:not(.linkline),.ticks a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}
 </style>
-<style id="menu-std">
-.site-header .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.site-header .site-nav{display:flex;align-items:center;gap:.15rem}
-.site-header .site-nav a{padding:.45rem .7rem;border-radius:8px;font-size:.86rem;font-weight:500;color:#4b5563;text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
-.site-header .site-nav a:hover,.site-header .site-nav a[aria-current="page"]{color:var(--blue,#005f99);background:var(--blue-light,#e8f4fd)}
-.site-header .site-nav a.nav-cta{background:var(--blue,#005f99);color:#fff;font-weight:600;margin-left:.4rem}
-.site-header .site-nav a.nav-cta:hover{filter:brightness(1.1)}
-.site-header .m-tel{display:none;background:var(--blue,#005f99);color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:.5rem .85rem;border-radius:999px;white-space:nowrap;margin-left:auto}
-.site-header .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
-.site-header .hamburger span{width:22px;height:2px;background:#111827;display:block;transition:all .3s;border-radius:2px}
-.site-header .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
-.site-header .hamburger.open span:nth-child(2){opacity:0}
-.site-header .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-.site-header .hamburger:focus-visible,.site-header .site-nav a:focus-visible{outline:3px solid var(--blue,#005f99);outline-offset:2px}
-nav.mobile-menu{display:none;position:fixed;inset:var(--hh,72px) 0 0 0;background:rgba(255,255,255,.98);z-index:999;flex-direction:column;align-items:center;justify-content:flex-start;gap:1.1rem;padding:2rem 1rem;overflow-y:auto}
-nav.mobile-menu.open{display:flex}
-nav.mobile-menu a{font-size:1.15rem;font-weight:600;color:#111827;text-decoration:none}
-nav.mobile-menu a[aria-current="page"]{color:var(--blue,#005f99)}
-nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem 1.4rem;border-radius:999px;margin-top:.4rem}
-@media(min-width:1081px) and (max-width:1300px){.site-header .logo-name{display:none}.site-header .site-nav a{padding:.45rem .55rem;font-size:.84rem}}
-@media(max-width:1080px){.site-header .site-nav{display:none}.site-header .hamburger{display:flex}.site-header .m-tel{display:inline-block}}
-@media(max-width:760px){.site-header .header-inner{padding:0 1rem;gap:.6rem}}
-@media(max-width:380px){.site-header .m-tel{font-size:0;padding:.5rem .7rem}.site-header .m-tel::before{content:"📞";font-size:1rem}}
-</style>
 <style id="theme-light">
 :root{--blue:#0266a3;--blue-dark:#01579b;--blue-hover:#0270b0;--blue-light:#d4ebf9;--navy:#01579b}
 html .btn-ghost,html .btn-o{background:#fff;color:#01579b;border:2px solid #0266a3}
@@ -538,6 +514,30 @@ html .site-footer a:hover{color:#0b2e4a}
 html .site-footer p{color:#33506a}
 html .site-footer p a{text-decoration-color:rgba(2,119,189,.22)}
 </style>
+<style id="menu-std">
+.site-header .header-inner{max-width:1200px;margin:0 auto;height:100%;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-header .site-nav{display:flex;align-items:center;gap:.15rem}
+.site-header .site-nav a{padding:.45rem .7rem;border-radius:8px;font-size:.86rem;font-weight:500;color:#4b5563;text-decoration:none;white-space:nowrap;transition:color .2s,background .2s}
+.site-header .site-nav a:hover,.site-header .site-nav a[aria-current="page"]{color:var(--blue,#005f99);background:var(--blue-light,#e8f4fd)}
+.site-header .site-nav a.nav-cta{background:var(--blue,#005f99);color:#fff;font-weight:600;margin-left:.4rem}
+.site-header .site-nav a.nav-cta:hover{filter:brightness(1.1)}
+.site-header .m-tel{display:none;background:var(--blue,#005f99);color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:.5rem .85rem;border-radius:999px;white-space:nowrap;margin-left:auto}
+.site-header .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.site-header .hamburger span{width:22px;height:2px;background:#111827;display:block;transition:all .3s;border-radius:2px}
+.site-header .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.site-header .hamburger.open span:nth-child(2){opacity:0}
+.site-header .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.site-header .hamburger:focus-visible,.site-header .site-nav a:focus-visible{outline:3px solid var(--blue,#005f99);outline-offset:2px}
+nav.mobile-menu{display:none;position:fixed;inset:var(--hh,72px) 0 0 0;background:rgba(255,255,255,.98);z-index:999;flex-direction:column;align-items:center;justify-content:flex-start;gap:1.1rem;padding:2rem 1rem;overflow-y:auto}
+nav.mobile-menu.open{display:flex}
+nav.mobile-menu a{font-size:1.15rem;font-weight:600;color:#111827;text-decoration:none}
+nav.mobile-menu a[aria-current="page"]{color:var(--blue,#005f99)}
+nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem 1.4rem;border-radius:999px;margin-top:.4rem}
+@media(min-width:1081px) and (max-width:1300px){.site-header .logo-name{display:none}.site-header .site-nav a{padding:.45rem .55rem;font-size:.84rem}}
+@media(max-width:1080px){.site-header .site-nav{display:none}.site-header .hamburger{display:flex}.site-header .m-tel{display:inline-block}}
+@media(max-width:760px){.site-header .header-inner{padding:0 1rem;gap:.6rem}}
+@media(max-width:380px){.site-header .m-tel{font-size:0;padding:.5rem .7rem}.site-header .m-tel::before{content:"📞";font-size:1rem}}
+</style>
 </head>
 <body>
 
@@ -568,6 +568,7 @@ html .site-footer p a{text-decoration-color:rgba(2,119,189,.22)}
   <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
   <a href="/ordinateur-reconditionne.html">Ordinateurs</a>
   <a href="/cours-nsi-python-linux.html">Cours</a>
+  <a href="/recuperation-donnees.html">Récupération de données</a>
   <a href="/conseils.html">Conseils</a>
   <a href="/zones-intervention.html">Zones d'intervention</a>
   <a href="/#contact" class="mm-cta">Me contacter</a>
@@ -659,7 +660,7 @@ html .site-footer p a{text-decoration-color:rgba(2,119,189,.22)}
       <div class="price reveal s3"><span class="name">Installation</span><span class="amt">dès 50 €<small></small></span><p>Windows, logiciels, transfert de données.</p></div>
       <div class="price reveal s4"><span class="name">Cours NSI, Python, Linux</span><span class="amt">35 €<small> / heure</small></span><p>Lycée, BTS SIO, reconversion.</p></div>
     </div>
-    <p class="price-note reveal"><a href="visibilite-internet.html">Site internet 200 €, audit de visibilité 50 €</a>, <a href="audit-osint-protection-donnees.html">audit OSINT dès 40 €</a>. Cybersécurité pour une structure : sur devis. <a class="linkline" href="/#tarifs">Détail des forfaits sur l'accueil <i>→</i></a></p>
+    <p class="price-note reveal"><a href="visibilite-internet.html">Site internet 200 €, audit de visibilité 50 €</a>, <a href="audit-osint-protection-donnees.html">audit OSINT dès 40 €</a>, <a href="recuperation-donnees.html">récupération de données : diagnostic 30 €</a>. Cybersécurité pour une structure : sur devis. <a class="linkline" href="/#tarifs">Détail des forfaits sur l'accueil <i>→</i></a></p>
   </div>
 </section>
 
@@ -995,6 +996,7 @@ html .site-footer p a{text-decoration-color:rgba(2,119,189,.22)}
   <nav>
     <a href="/">Accueil</a>
     <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+    <a href="/recuperation-donnees.html">Récupération de données</a>
     <a href="/visibilite-internet.html">Visibilité internet</a>
     <a href="/cybersecurite.html">Cybersécurité</a>
     <a href="/cybersecurite-tpe.html">Cybersécurité TPE</a>
