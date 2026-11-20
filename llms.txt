@@ -18,7 +18,7 @@
 - [Accueil](https://informatique-plouguerneau-antoine-conter.fr/): services, tarifs, présentation, contact
 - [Zones d'intervention](https://informatique-plouguerneau-antoine-conter.fr/zones-intervention.html): communes desservies, secteur par secteur
 - [Cybersécurité](https://informatique-plouguerneau-antoine-conter.fr/cybersecurite.html): compte piraté, sensibilisation au phishing, sécurisation des comptes
-- [Récupération de données](https://informatique-plouguerneau-antoine-conter.fr/recuperation-donnees.html): disque dur (HDD), SSD, clé USB et carte SD : fichiers effacés, support illisible, PC qui ne démarre plus ; diagnostic à domicile 30 €, récupération seule 60 €, récupération avec transfert des données de 100 à 150 €, tâche supplémentaire 35 €/h, nord Finistère
+- [Récupération de données](https://informatique-plouguerneau-antoine-conter.fr/recuperation-donnees.html): disque dur (HDD), SSD, clé USB et carte SD : fichiers effacés, support illisible, PC qui ne démarre plus ; diagnostic à domicile 30 €, récupération avec transfert des données de 100 à 150 €, tâche supplémentaire 35 €/h, nord Finistère
 - [Audit OSINT et protection des données](https://informatique-plouguerneau-antoine-conter.fr/audit-osint-protection-donnees.html): ce qu'on trouve sur vous en ligne, à distance partout en Bretagne, particulier 40 €, professionnel sur devis
 - [Cybersécurité TPE et associations](https://informatique-plouguerneau-antoine-conter.fr/cybersecurite-tpe.html): accompagnement des petites structures
 - [Ordinateur reconditionné](https://informatique-plouguerneau-antoine-conter.fr/ordinateur-reconditionne.html): offre, prix, garantie, livraison
