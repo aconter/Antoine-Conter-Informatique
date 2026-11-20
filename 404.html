@@ -122,7 +122,8 @@ nav.mobile-menu.open{display:flex}
 nav.mobile-menu a{font-size:1.15rem;font-weight:600;color:#111827;text-decoration:none}
 nav.mobile-menu a[aria-current="page"]{color:var(--blue,#005f99)}
 nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem 1.4rem;border-radius:999px;margin-top:.4rem}
-@media(min-width:1081px) and (max-width:1300px){.site-header .logo-name{display:none}.site-header .site-nav a{padding:.45rem .55rem;font-size:.84rem}}
+.site-header .logo-wrap{flex-shrink:0}.site-header .logo-name{white-space:nowrap}
+@media(min-width:1081px) and (max-width:1360px){.site-header .logo-name{display:none}.site-header .site-nav a{padding:.45rem .55rem;font-size:.84rem}}
 @media(max-width:1080px){.site-header .site-nav{display:none}.site-header .hamburger{display:flex}.site-header .m-tel{display:inline-block}}
 @media(max-width:760px){.site-header .header-inner{padding:0 1rem;gap:.6rem}}
 @media(max-width:380px){.site-header .m-tel{font-size:0;padding:.5rem .7rem}.site-header .m-tel::before{content:"📞";font-size:1rem}}
@@ -138,6 +139,7 @@ nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+      <a href="/recuperation-donnees.html">Récupération</a>
       <a href="/visibilite-internet.html">Visibilité internet</a>
       <a href="/cybersecurite.html">Cybersécurité</a>
       <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
@@ -152,12 +154,12 @@ nav.mobile-menu a.mm-cta{background:var(--blue,#005f99);color:#fff;padding:.7rem
 <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
   <a href="/">Accueil</a>
   <a href="/depannage-informatique-plouguerneau.html">Dépannage</a>
+  <a href="/recuperation-donnees.html">Récupération de données</a>
   <a href="/visibilite-internet.html">Visibilité internet</a>
   <a href="/cybersecurite.html">Cybersécurité</a>
   <a href="/audit-osint-protection-donnees.html">Audit OSINT</a>
   <a href="/ordinateur-reconditionne.html">Ordinateurs</a>
   <a href="/cours-nsi-python-linux.html">Cours</a>
-  <a href="/recuperation-donnees.html">Récupération de données</a>
   <a href="/conseils.html">Conseils</a>
   <a href="/zones-intervention.html">Zones d'intervention</a>
   <a href="/#contact" class="mm-cta">Me contacter</a>
